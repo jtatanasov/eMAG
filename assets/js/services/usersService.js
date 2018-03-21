@@ -50,6 +50,8 @@ var userService = (function () {
         this.orders = []; //maybe this.orders = new Orders() ?
         this.favoriteProducts = []; //maybe this.favouriteProducts = new Products() ?
         this.cart = []; //?
+
+        this.photo = '';
     }
 
     User.nextId = 0;
@@ -124,8 +126,6 @@ var userService = (function () {
         sessionStorage.setItem('isLogged', false);
         sessionStorage.setItem('loggedUser', null);
     }
-
-
 
     return new UserStorage();
 })();

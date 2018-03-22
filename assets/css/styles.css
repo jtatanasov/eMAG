@@ -46,7 +46,7 @@ header {
     padding: 1em;
     display: inline-block;
 }
-#main-nav a {
+#main-nav li > a {
     letter-spacing: 0.7px;
     color: white;
     text-decoration: none;
@@ -57,6 +57,7 @@ header {
     left: -1.2em;
     width: 25px;
     padding-right: 0.2em;
+    filter: invert(100%);
     -webkit-filter: invert(100%);
 }
 .carret {
@@ -68,4 +69,110 @@ header {
     border-top: 4px dashed;
     border-right: 4px solid transparent;
     border-left: 4px solid transparent;
+}
+
+.nav-extensions {
+    position: absolute;
+    top: 100%;
+    left: -120%;
+    width: 300px;
+    font-size: 12px;
+    border: 1px solid white;
+    border-radius: 5px;
+    display: inline-block; 
+    box-shadow: 5px 5px 5px #888888;
+}
+
+.nav-extensions > div {
+    display: inline-block;
+}
+
+#first-acc-extension {
+    box-sizing: border-box;
+    background-color: #ffffff;
+    width:100%;
+    padding: 0.4em;
+    
+}
+
+#first-acc-extension img {
+    width: 35px;
+    padding: 0.1em;
+    margin-left: 0.4em;
+    margin-right: 0.4em;
+}
+#first-acc-extension p {
+    display: inline-block;
+    width:80%;
+    padding: 0.2em;
+    line-height: 1.5em;
+}
+
+
+#second-acc-extension {
+    width:100%;
+    background-color: #E9EBEE;
+    box-sizing: border-box;
+    padding: 1em;
+    
+}
+
+#second-acc-extension button {
+    font-size: 12px;
+    padding: 0.4em;
+    background-color: #005EB8;
+    color: white;
+    border-radius: 5px;
+    margin-left: 0.5em;
+    
+}
+#second-acc-extension button:hover {
+    background-color: rgb(15, 75, 131);
+}   
+
+
+#second-acc-extension button span {
+    padding: 0.4em;
+}
+#second-acc-extension a {
+    color:#005EB8;
+    font-size: 12px;
+    margin-left: 2em
+}
+
+#first-fav-extension {
+    box-sizing: border-box;
+    background-color: #ffffff;
+    width:100%;
+    padding: 0.4em;
+    text-align: center;
+}
+
+#second-fav-extension {
+    width:100%;
+    background-color: #E9EBEE;
+    box-sizing: border-box;
+    padding: 0.4em;
+    text-align: center;
+}
+
+#second-fav-extension button {
+    font-size: 16px;
+    padding: 0.3em;
+    width: 90%;
+    background-color: #005EB8;
+    color: white;
+    border-radius: 5px;
+}
+
+#second-fav-extension button:hover {
+    background-color: rgb(15, 75, 131);
+} 
+
+#first-cart-extension {
+    box-sizing: border-box;
+    background-color: #E9EBEE;
+    width:100%;
+    padding: 0.4em;
+    text-align: center;
 }

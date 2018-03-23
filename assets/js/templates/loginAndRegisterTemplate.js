@@ -18,10 +18,10 @@
                         <div class="col-lg-12">
                             <form id="login-form" action="https://phpoll.com/login/process" method="post" role="form" style="display: block;">
                                 <div class="form-group">
-                                    <input type="email" name="email" id="login-email" tabindex="1" class="form-control" placeholder="Email адрес" value=""/>
+                                    <input type="text" name="email" id="login-email" tabindex="1" class="form-control" placeholder="Email адрес" value="" />
                                 </div>
                                 <div class="form-group">
-                                    <input type="password" name="password" id="login-password" tabindex="2" class="form-control" placeholder="Парола"/>
+                                    <input type="password" name="password" id="login-password" tabindex="2" class="form-control" placeholder="Парола" />
                                 </div>
                                 <div class="form-group">
                                     <div class="row">
@@ -33,13 +33,17 @@
                             </form>
                             <form id="register-form" action="https://phpoll.com/register/process" method="post" role="form" style="display: none;">
                                 <div class="form-group">
-                                    <input type="email" name="email" id="register-email" tabindex="1" class="form-control" placeholder="Email адрес" value=""/>
+										<input type="text" name="fullname" id="fullname" tabindex="1" class="form-control" placeholder="Име и фамилия" value=""/>
                                 </div>
                                 <div class="form-group">
-                                    <input type="password" name="password" id="register-password" tabindex="2" class="form-control" placeholder="Парола"/>
+                                    <input type="text" name="email" id="register-email" tabindex="1" class="form-control" placeholder="Email адрес" value="" />
                                 </div>
                                 <div class="form-group">
-                                    <input type="password" name="confirm-password" id="confirm-password" tabindex="2" class="form-control" placeholder="Confirm Password"/>
+                                    <input type="password" name="password" id="register-password" tabindex="2" class="form-control" placeholder="Парола" />
+                                    <span id='password-conditions'>Паролата трябва да съдържа поне 6 символа и поне една цифра!</span>
+                                </div>
+                                <div class="form-group">
+                                    <input type="password" name="confirm-password" id="confirm-password" tabindex="2" class="form-control" placeholder="Потвърди парола" />
                                 </div>
                                 <div class="form-group">
                                     <div class="row">

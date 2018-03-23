@@ -106,20 +106,28 @@ var userService = (function () {
             localStorage.setItem('users', JSON.stringify(this.users));
             return newUser.id; //?
         } else {
-            throw new Error('Existing user with this username!');
+            // throw new Error('Existing user with this email!');
+            return false;
         }
     }
 
     UserStorage.prototype.login = function(email, password) {
+        
         var user = this.users.find(u => (u.email === email && u.password === password));
+        
         if(user) {
-            delete user.password;
+            // delete user.password;
             isLogged = true;
             loggedUser = JSON.stringify(user);
+            loggedUser = JSON.parse(loggedUser);
+            delete loggedUser.password;
+            loggedUser = JSON.stringify(loggedUser);
             sessionStorage.setItem('isLogged', isLogged);
             sessionStorage.setItem('loggedUser', loggedUser);
             return user.id;
-        } 
+        } else {
+            return false;
+        }
     }
 
     UserStorage.prototype.logout = function() {

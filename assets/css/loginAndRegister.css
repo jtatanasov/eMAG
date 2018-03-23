@@ -77,19 +77,14 @@
     color: #fff;
     font-weight: bold;
 	background-color: rgb(68, 143, 184);
-	border-color: #53A3CD;
+	border-color: #00415d;
 }
 /* .btn-login:hover,
 .btn-login:focus {
 } */
-.forgot-password {
-	text-decoration: underline;
-	color: #888;
-}
-.forgot-password:hover,
-.forgot-password:focus {
-	text-decoration: underline;
-	color: #666;
+
+#password-conditions {
+    color: #53A3CD;
 }
 
 .btn-register {

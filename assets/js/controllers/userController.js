@@ -39,7 +39,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
         
         //todo logged user
-        $('#logout-btn').click(function(event) {
+        $('#logout-btn').parent().click(function(event) {
             userService.logout();
             //todo redirect
         });

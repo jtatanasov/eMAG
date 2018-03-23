@@ -39,7 +39,7 @@ header {
     list-style-type: none;
 }
 
-#main-nav li {
+#main-nav > ul > li {
     position: relative;
     margin-left: 2em;
     padding: 1em;
@@ -225,4 +225,25 @@ header {
 #list-logged-user li a {
     color: black;
     cursor: pointer;
+}
+
+.favorite-products {
+    display: block;
+    margin: 0.8em 0.4em;
+}
+
+.favorite-products p {
+    display: inline-block;
+}
+
+.products-names {
+    width:32%;
+    margin: 0.5em;
+    margin-left: 0;
+}
+.product-prices {
+    margin-left:1em;
+    box-sizing: border-box;
+    font-weight: bold;
+    color: #005EB8;
 }

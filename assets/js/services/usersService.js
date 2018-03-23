@@ -1,7 +1,5 @@
 var isLogged = false;
-sessionStorage.setItem('isLogged', isLogged);
 var loggedUser = null;
-sessionStorage.setItem('loggedUser', loggedUser);
 
 var userService = (function () {
     function isValidMail(email) {

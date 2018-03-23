@@ -13,27 +13,20 @@ document.addEventListener('DOMContentLoaded', function () {
         event.preventDefault();
 
         myAccLink.style.color = '#E9EBEE';
+
+        var firstNavExtension = null;
         var logged = JSON.parse(sessionStorage.getItem('isLogged'));
         if(!logged) {
-            templatePath = 'assets/js/templates/loggedOutUserAcc.js';
+            firstNavExtension = document.getElementsByClassName('nav-extensions')[0];
         }
         //todo logged user
 
-        getTemplate(templatePath)
-            .then(function (data) {
-                var li = myAccLink.parentNode;
-                li.innerHTML += data;
+        firstNavExtension.style.display = 'block';
 
-                var div = li.lastChild;
-                div.addEventListener('mouseleave', function () {
-                    myAccLink.style.color = '#FFFFFF';
-                    li.removeChild(div);
-                });
-
-            })
-            .catch(function (error) {
-
-            });
+        firstNavExtension.addEventListener('mouseleave', function() {
+            firstNavExtension.style.display = 'none';
+            myAccLink.style.color = '#ffffff';
+        })
     }, false);
 
 
@@ -44,54 +37,48 @@ document.addEventListener('DOMContentLoaded', function () {
     myFavsLink.addEventListener('mouseenter', function (event) {
         event.preventDefault();
 
+        myFavsLink.style.color = '#E9EBEE';
+
+        var secondNavExtension = null;
+
         var logged = JSON.parse(sessionStorage.getItem('isLogged'));
         if(!logged) {
-            templatePath = 'assets/js/templates/loggedOutUserFavs.js';
+            secondNavExtension = document.getElementsByClassName('nav-extensions')[1];
         }
-        
         //todo logged user
+            
+        secondNavExtension.style.display = 'block';
+        secondNavExtension.style.left = '-190%';
 
-        getTemplate(templatePath)
-            .then(function (data) {
-                var li = myFavsLink.parentNode;
-                li.innerHTML += data;
-                var div = li.lastChild;
-                div.style.left = '-190%';
-                div.addEventListener('mouseleave', function () {
-                    li.removeChild(div);
-                });
-
-            })
-            .catch(function (error) {
-
-            });
+        secondNavExtension.addEventListener('mouseleave', function() {
+            secondNavExtension.style.display = 'none';
+            myFavsLink.style.color = '#ffffff';
+        })
+      
     }, false);
 
     
     myCartLink.addEventListener('mouseenter', function (event) {
         event.preventDefault();
 
+        myCartLink.style.color = '#E9EBEE';
+
+        var thirdNavExtension = null;
+
         var logged = JSON.parse(sessionStorage.getItem('isLogged'));
         if(!logged) {
-            templatePath = 'assets/js/templates/loggedOutUserCart.js';
+            thirdNavExtension = document.getElementsByClassName('nav-extensions')[2];
         }
-        
         //todo logged user
-        
-        getTemplate(templatePath)
-            .then(function (data) {
-                var li = myCartLink.parentNode;
-                li.innerHTML += data;
-                var div = li.lastChild;
-                // div.style.left = '-40%';
-                div.addEventListener('mouseleave', function () {
-                    li.removeChild(div);
-                });
+            
+        thirdNavExtension.style.display = 'block';
+        thirdNavExtension.style.left = '-105%';
 
-            })
-            .catch(function (error) {
-
-            });
+        thirdNavExtension.addEventListener('mouseleave', function() {
+            thirdNavExtension.style.display = 'none';
+            myCartLink.style.color = '#ffffff';
+        });
+      
     }, false);
 
 });

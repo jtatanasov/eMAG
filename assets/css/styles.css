@@ -81,6 +81,7 @@ header {
     border-radius: 5px;
     display: inline-block; 
     box-shadow: 5px 5px 5px #888888;
+    display: none;
 }
 
 .nav-extensions > div {

@@ -177,3 +177,52 @@ header {
     padding: 0.4em;
     text-align: center;
 }
+
+.logged-user-extensions {
+    background-color: #fff;
+    position: absolute;
+    top: 100%;
+    left: -60%;
+    display: inline-block; 
+    box-shadow: 5px 5px 5px #888888;
+    z-index: 100;
+    border: 1px solid white;
+    border-radius: 5px;
+    width: 15em;
+    display: none;
+}
+
+.logged-user-extensions hr {
+    margin:0;
+}
+
+#hello-div h4 {
+    font-size: 1.1em;
+    font-weight: bold;
+    padding-left: 0.5em;
+    padding-right: 1em;
+    line-height: 1.2em;
+    text-align: center;
+}
+
+#list-logged-user {
+    margin: 0.4em auto;    
+}
+
+#list-logged-user > ul {
+    text-align: left;
+}
+#list-logged-user li {
+    margin-bottom: 0.4em;
+    display:block;
+    padding:0.3em;
+}
+
+#list-logged-user li:hover a {
+    color: #005EB8;
+}
+
+#list-logged-user li a {
+    color: black;
+    cursor: pointer;
+}

@@ -13,9 +13,8 @@
     <!-- Login and Register Forms -->
     <link rel="stylesheet" href="assets/css/loginAndRegister.css">
     <link href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
-    <script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
     <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.0/js/bootstrap.min.js"></script>
-
     <script src="node_modules/handlebars/dist/handlebars.min.js"></script>
     <script src="assets/js/getTemplate.js"></script>
     <script src='assets/js/services/usersService.js'></script>
@@ -44,6 +43,30 @@
                                 <span>влез в акаунт</span>
                             </button>
                             <a id='register-btn' style="color:black" href="">Нов акаунт</a>
+                        </div>
+                    </div>
+                    <div class='logged-user-extensions'>
+                        <div id='hello-div'>
+                            <h4>Здравейте</h4>
+                        </div>
+                        <hr/>
+                        <div id='list-logged-user'>
+                            <ul>
+                                <li>
+                                    <a>Моите поръчки</a>
+                                </li>
+                                <li>
+                                    <a>Любими</a>
+                                </li>
+                                <li>
+                                    <a>Лични данни</a>
+                                </li>
+                                <hr/>
+
+                                <li>
+                                    <a id='logout-btn'>Изход</a>
+                                </li>
+                            </ul>
                         </div>
                     </div>
 
@@ -87,7 +110,7 @@
     <footer>
 
     </footer>
-      
+
 </body>
 
 </html>

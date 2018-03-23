@@ -7,27 +7,47 @@ document.addEventListener('DOMContentLoaded', function () {
     //todo
     myAccLink.addEventListener('click', function (event) {
         event.preventDefault();
-
+        var logged = JSON.parse(sessionStorage.getItem('isLogged'));
+        if (!logged) {
+            login(false);
+        }
     })
-    myAccLink.addEventListener('mouseenter', function (event) {
+    
+    var isNameAppended = false;
+    myAccLink.parentNode.addEventListener('mouseenter', function (event) {
         event.preventDefault();
 
         myAccLink.style.color = '#E9EBEE';
-
         var firstNavExtension = null;
+
         var logged = JSON.parse(sessionStorage.getItem('isLogged'));
         if (!logged) {
-            firstNavExtension = document.getElementsByClassName('nav-extensions')[0];
-
+            firstNavExtension = $('.nav-extensions')[0];
+        } else {
+            firstNavExtension = $('.logged-user-extensions')[0];
+            
+            if(!isNameAppended) {
+                var fullName = ', ' + JSON.parse(sessionStorage.getItem('loggedUser')).fullname;
+                $('#hello-div > h4')[0].append(fullName);
+                isNameAppended = true;
+            }
+            
         }
-        //todo logged user
-
         firstNavExtension.style.display = 'block';
+
+        
+        //todo logged user
+        $('#logout-btn').click(function(event) {
+            userService.logout();
+            //todo redirect
+        });
+        //todo the other buttons
+
 
         //loggedout user
         var loginBtn = document.getElementById('login-btn');
         loginBtn.addEventListener('click', login);
-        $('#register-btn').click(function(event) {
+        $('#register-btn').click(function (event) {
             event.preventDefault();
             login(false);
         });
@@ -41,8 +61,13 @@ document.addEventListener('DOMContentLoaded', function () {
 
     //todo
     myFavsLink.addEventListener('click', function (event) {
+        event.preventDefault();
+        var logged = JSON.parse(sessionStorage.getItem('isLogged'));
+        if (!logged) {
+            login(false);
+        }
+    });
 
-    }, false)
     myFavsLink.addEventListener('mouseenter', function (event) {
         event.preventDefault();
 
@@ -60,7 +85,7 @@ document.addEventListener('DOMContentLoaded', function () {
         secondNavExtension.style.left = '-190%';
 
         //loggedout user
-        $('#login-btn-favs').click(function(event) {
+        $('#login-btn-favs').click(function (event) {
             event.preventDefault();
             login(false);
         })
@@ -72,7 +97,13 @@ document.addEventListener('DOMContentLoaded', function () {
 
     }, false);
 
-
+    myCartLink.addEventListener('click', function (event) {
+        event.preventDefault();
+        var logged = JSON.parse(sessionStorage.getItem('isLogged'));
+        if (!logged) {
+            login(false);
+        }
+    });
     myCartLink.addEventListener('mouseenter', function (event) {
         event.preventDefault();
 
@@ -87,7 +118,6 @@ document.addEventListener('DOMContentLoaded', function () {
         //todo logged user
 
         thirdNavExtension.style.display = 'block';
-        thirdNavExtension.style.left = '-105%';
 
         thirdNavExtension.addEventListener('mouseleave', function () {
             thirdNavExtension.style.display = 'none';
@@ -103,9 +133,9 @@ document.addEventListener('DOMContentLoaded', function () {
             .then(function (data) {
                 document.getElementsByTagName('main')[0].innerHTML = data;
 
-                if(!!isRegister)
+                if (!!isRegister)
                     navigateLoginAndRegister(isRegister);
-                else 
+                else
                     navigateLoginAndRegister();
 
                 $('#login-submit').click(function (event) {
@@ -116,7 +146,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
 
                     var errSpan = $('<span style="color:red"></span>');
-                   
+
                     if (!isValidMail(emailInput)) {
                         errSpan.text('Невалиден email адрес!');
                         $('#login-email')[0].after(errSpan[0]);
@@ -132,7 +162,7 @@ document.addEventListener('DOMContentLoaded', function () {
                         return;
                     }
 
-                    if(!userService.login(emailInput, passInput)) {
+                    if (!userService.login(emailInput, passInput)) {
                         errSpan.text('Невалиден email адрес или парола!');
                         $('#login-password')[0].after(errSpan[0]);
 
@@ -143,8 +173,8 @@ document.addEventListener('DOMContentLoaded', function () {
                     }
                 });
 
-                var passConditions =  $('#password-conditions')[0];
-                $('#register-submit').click(function(event) {
+                var passConditions = $('#password-conditions')[0];
+                $('#register-submit').click(function (event) {
                     event.preventDefault();
 
                     var emailInput = $('#register-email').val(),
@@ -179,7 +209,7 @@ document.addEventListener('DOMContentLoaded', function () {
                         });
                         return;
                     }
-                    if(passInput !== confirmPassInput) {
+                    if (passInput !== confirmPassInput) {
                         errSpan.text('Невалидно потвърждение!');
                         $('#confirm-password')[0].after(errSpan[0]);
 
@@ -187,7 +217,7 @@ document.addEventListener('DOMContentLoaded', function () {
                         return;
                     }
 
-                    if(!userService.register(emailInput, fullNameInput, passInput)) {
+                    if (!userService.register(emailInput, fullNameInput, passInput)) {
                         errSpan.text('Вече има съществуващ потребител с такъв email адрес!');
                         $('#confirm-password')[0].after(errSpan[0]);
 
@@ -196,14 +226,13 @@ document.addEventListener('DOMContentLoaded', function () {
                         //todo logged user
                         userService.login(emailInput, passInput);
                     }
-                   
+
                 });
             });
 
     }
-
     function navigateLoginAndRegister(isRegister) {
-        if(!isRegister) {
+        if (!isRegister) {
             $('#login-form')[0].style.display = 'none';
             $('#login-form-link').removeClass('active');
             $('#register-form-link').addClass('active');
@@ -234,7 +263,7 @@ document.addEventListener('DOMContentLoaded', function () {
     function isValidPassword(pass) {
         return (typeof pass === 'string' && pass.length >= 6 && hasNumber(pass))
     }
-    
+
     function hasNumber(str) {
         return /\d/.test(str);
     }

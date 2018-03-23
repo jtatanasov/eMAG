@@ -1,0 +1,134 @@
+[
+  {
+    "name": "Смартфон Apple iPhone X, 256 GB, 4 G, Space Grey",
+    "cathegory": "Телефони, таблети и лаптопи",
+    "subcathegory": "Мобилни телефони и аксесоари",
+    "type": "Мобилни телефони",
+    "quantity": "100",
+    "availability": true,
+    "main_url": "https://s11emagst.akamaized.net/products/8892/8891494/images/res_d7d63673fac35dac5f93604c4a7bd059_full.jpg",
+    "gallery": [
+      "https://s11emagst.akamaized.net/products/8892/8891492/images/res_205b4d3c6d3bef241f2a440c7788919c_full.jpg",
+      "https://s11emagst.akamaized.net/products/8892/8891492/images/res_9bd81e41619bb8f52f2dad3c6c32e71d_450x450_btpm.jpg"
+    ],
+    "brand": "Apple",
+    "price": "2598.99",
+    "salePrice": "",
+    "onSale": false,
+    "description": "Винаги сме искали да създадем iPhone, който целият да е екран. С който изживяването да те погълне изцяло. И който да е толкова интелигентен, че да реагира на докосване, на глас и дори – на поглед. С iPhone X осъществихме тази идея. Кажи \"здравей\" на бъдещето.",
+    "specifics": [
+      {
+        "name": "iPhone",
+        "spec": "iPhoneX"
+      },
+      {
+        "name": "Тип телефон",
+        "spec": "Smartphone"
+      },
+      {
+        "name": "Цвят",
+        "spec": "Сив"
+      },
+      {
+        "name": "Операционна система",
+        "spec": "iOS 11"
+      },
+      {
+        "name": "Вид SIM карта",
+        "spec": "nanoSIM"
+      },
+      {
+        "name": "Вътрешна памет",
+        "spec": "250 GB"
+      },
+      {
+        "name": "RAM памет",
+        "spec": "3 GB"
+      }
+    ]
+  },
+  {
+    "name": "Смартфон Samsung Galaxy J5 (2017), Dual Sim, 16GB, 4G, Black",
+    "cathegory": "Телефони, таблети и лаптопи",
+    "subcathegory": "Мобилни телефони и аксесоари",
+    "type": "Мобилни телефони",
+    "quantity": "80",
+    "availability": true,
+    "main_url": "https://s11emagst.akamaized.net/products/7955/7954789/images/res_394a075bd973c02ea7c56cf606faec63_450x450_i83j.jpg",
+    "gallery": [
+      "https://s11emagst.akamaized.net/products/7955/7954789/images/res_0ee2aa052bc82dcb422d060ec4aeaf8d_450x450_ihbc.jpg",
+      "https://s11emagst.akamaized.net/products/7955/7954789/images/res_a80777278fec7e8ede198affd4dff50e_450x450_h1vm.jpg"
+    ],
+    "brand": "Samsung",
+    "price": "359.99",
+    "salePrice": "",
+    "onSale": false,
+    "description": "Когато стилът допълва функционалността. Проектиран с най-голямо внимание към детайлите, новият Samsung Galaxy J5 има зашеметяващ метален корпус без никакво изпъкване на камерата за превъзходен захват и 2.5D стъкло, предпазващо 5,2-инчовия му HD дисплей за допълнителна издръжливост.",
+    "specifics": [
+      {
+        "name": "Тип телефон",
+        "spec": "Smartphone"
+      },
+      {
+        "name": "Sim слотове",
+        "spec": "Dual SIM"
+      },
+      {
+        "name": "Touchscreen",
+        "spec": "Да"
+      },
+      {
+        "name": "Модел процесор",
+        "spec": "Octa Core"
+      },
+      {
+        "name": "Цвят",
+        "spec": "Черен"
+      },
+      {
+        "name": "Операционна систма",
+        "spec": "Android"
+      },
+      {
+        "name": "Вътрешна памет",
+        "spec": "16 GB"
+      },
+      {
+        "name": "RAM памет",
+        "spec": "2 GB"
+      }
+    ]
+  },
+  {
+    "name": "Nike, Спортни обувки Court Royale, Черен/Бял",
+    "cathegory": "Мода",
+    "subcathegory": "Жени",
+    "type": "Дамски обувки",
+    "quantity": "60",
+    "availability": true,
+    "main_url": "https://s11emagst.akamaized.net/products/5100/5099541/images/res_201a7319dd0a31baf58dd2051fa8bced_450x450_n26m.jpg?v2",
+    "gallery": [
+      "https://s11emagst.akamaized.net/products/6377/6376109/images/res_9524b92f6db2883d201d105b1ef09d39_450x450_m936.jpg?v2",
+      "https://s11emagst.akamaized.net/products/6377/6376109/images/res_52d1259cd458e4a658e446b7be8eba55_450x450_oni9.jpg?v2"
+    ],
+    "brand": "Nike",
+    "price": "84.90",
+    "salePrice": "122.90",
+    "onSale": true,
+    "description": "",
+    "specifics": [
+      {
+        "name": "Размер",
+        "spec": "5.5 USD"
+      },
+      {
+        "name": "Цвят",
+        "spec": "Черен/Бял"
+      },
+      {
+        "name": "Състав",
+        "spec": "Кожа"
+      }
+    ]
+  }
+]

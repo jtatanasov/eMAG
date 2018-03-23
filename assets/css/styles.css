@@ -19,9 +19,9 @@ header {
     position: absolute;
     top: 1em;
     box-sizing: border-box;
-    padding: 0.2em;
+    padding: 0.3em;
     border-radius: 10px;
-    font-size: 1.4em;
+    font-size: 1.3em;
     margin-left: 1em;
     width: 40%;
 }
@@ -32,7 +32,6 @@ header {
 
 #main-nav {
     box-sizing: border-box;
-    /* border: 1px solid red; */
     font-size: 0.9em;
     float: right;
 }
@@ -81,6 +80,7 @@ header {
     border-radius: 5px;
     display: inline-block; 
     box-shadow: 5px 5px 5px #888888;
+    z-index: 100;
     display: none;
 }
 

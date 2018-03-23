@@ -5,7 +5,7 @@ document.addEventListener('DOMContentLoaded', function () {
         myCartLink = document.getElementById('my-cart');
 
     //todo
-    myAccLink.addEventListener('click', function(event) {
+    myAccLink.addEventListener('click', function (event) {
         event.preventDefault();
 
     })
@@ -16,14 +16,18 @@ document.addEventListener('DOMContentLoaded', function () {
 
         var firstNavExtension = null;
         var logged = JSON.parse(sessionStorage.getItem('isLogged'));
-        if(!logged) {
+        if (!logged) {
             firstNavExtension = document.getElementsByClassName('nav-extensions')[0];
+
         }
         //todo logged user
 
         firstNavExtension.style.display = 'block';
 
-        firstNavExtension.addEventListener('mouseleave', function() {
+        var loginBtn = document.getElementById('login-btn');
+        loginBtn.addEventListener('click', login);
+
+        firstNavExtension.addEventListener('mouseleave', function () {
             firstNavExtension.style.display = 'none';
             myAccLink.style.color = '#ffffff';
         })
@@ -31,7 +35,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
 
     //todo
-    myFavsLink.addEventListener('click', function(event) {
+    myFavsLink.addEventListener('click', function (event) {
 
     }, false)
     myFavsLink.addEventListener('mouseenter', function (event) {
@@ -42,22 +46,22 @@ document.addEventListener('DOMContentLoaded', function () {
         var secondNavExtension = null;
 
         var logged = JSON.parse(sessionStorage.getItem('isLogged'));
-        if(!logged) {
+        if (!logged) {
             secondNavExtension = document.getElementsByClassName('nav-extensions')[1];
         }
         //todo logged user
-            
+
         secondNavExtension.style.display = 'block';
         secondNavExtension.style.left = '-190%';
 
-        secondNavExtension.addEventListener('mouseleave', function() {
+        secondNavExtension.addEventListener('mouseleave', function () {
             secondNavExtension.style.display = 'none';
             myFavsLink.style.color = '#ffffff';
         })
-      
+
     }, false);
 
-    
+
     myCartLink.addEventListener('mouseenter', function (event) {
         event.preventDefault();
 
@@ -66,19 +70,48 @@ document.addEventListener('DOMContentLoaded', function () {
         var thirdNavExtension = null;
 
         var logged = JSON.parse(sessionStorage.getItem('isLogged'));
-        if(!logged) {
+        if (!logged) {
             thirdNavExtension = document.getElementsByClassName('nav-extensions')[2];
         }
         //todo logged user
-            
+
         thirdNavExtension.style.display = 'block';
         thirdNavExtension.style.left = '-105%';
 
-        thirdNavExtension.addEventListener('mouseleave', function() {
+        thirdNavExtension.addEventListener('mouseleave', function () {
             thirdNavExtension.style.display = 'none';
             myCartLink.style.color = '#ffffff';
         });
-      
+
     }, false);
 
+
+    function login() {
+        getTemplate('assets/js/templates/loginAndRegisterTemplate.js')
+            .then(function (data) {
+                document.getElementsByTagName('main')[0].innerHTML = data;
+
+                navigateLoginAndRegister();
+            });
+
+    }
+
+    function navigateLoginAndRegister() {
+        $('#login-form-link').click(function (e) {
+            e.preventDefault();
+
+            $("#login-form").delay(100).fadeIn(100);
+            $("#register-form").fadeOut(100);
+            $('#register-form-link').removeClass('active');
+            $(this).addClass('active');
+        });
+        $('#register-form-link').click(function (e) {
+            e.preventDefault();
+
+            $("#register-form").delay(100).fadeIn(100);
+            $("#login-form").fadeOut(100);
+            $('#login-form-link').removeClass('active');
+            $(this).addClass('active');
+        });
+    }
 });

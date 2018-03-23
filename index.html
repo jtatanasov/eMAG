@@ -9,6 +9,13 @@
     <link rel="shortcut icon" type="image/x-icon" href="assets/images/icons/e-favicon.png" />
     <link rel="stylesheet" href="assets/css/reset.css">
     <link rel="stylesheet" href="assets/css/styles.css">
+
+    <!-- Login and Register Forms -->
+    <link rel="stylesheet" href="assets/css/loginAndRegister.css">
+    <link href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+    <script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
+    <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.0/js/bootstrap.min.js"></script>
+
     <script src="node_modules/handlebars/dist/handlebars.min.js"></script>
     <script src="assets/js/getTemplate.js"></script>
     <script src='assets/js/services/usersService.js'></script>
@@ -18,7 +25,7 @@
 <body>
     <header>
         <img id='logo' src='assets/images/emag-logo.png' />
-        <input id='search' type="search">
+        <input id='search' type="search" placeholder="Какво търсиш днес?">
         <nav id='main-nav'>
             <ul>
                 <li>
@@ -29,11 +36,13 @@
                     </a>
                     <div class='nav-extensions'>
                         <div id='first-acc-extension'>
-                            <img src="assets/images/icons/acc-icon.png" alt=""/>
+                            <img src="assets/images/icons/acc-icon.png" alt="" />
                             <p>Влез в акаунта си и се възползвай от предимствата!</p>
                         </div>
                         <div id='second-acc-extension'>
-                            <button id='login-btn'><span>влез в акаунт</span></button>
+                            <button id='login-btn'>
+                                <span>влез в акаунт</span>
+                            </button>
                             <a id='register-btn' style="color:black" href="http://abv.bg">Нов акаунт</a>
                         </div>
                     </div>
@@ -78,6 +87,7 @@
     <footer>
 
     </footer>
+      
 </body>
 
 </html>

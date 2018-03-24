@@ -1,6 +1,8 @@
 var isLogged = false;
 var loggedUser = null;
 
+var User;
+
 var userService = (function () {
     function isValidMail(email) {
         var re = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
@@ -23,7 +25,7 @@ var userService = (function () {
     function isValidTitle(title) {
         return (title === 'mr' || title === 'mrs' || title === 'miss')
     }
-    function User(email, fullname, password) {
+    User = function (email, fullname, password) {
         this.id = ++User.nextId;
 
         if (isValidMail(email)) {
@@ -56,38 +58,60 @@ var userService = (function () {
 
     User.nextId = 0;
 
-    User.prototype.addPhoneNumber = function (newPhoneNumber) {
+    UserStorage.prototype.changeName = function(id, newName) {
+        var user = this.getUserById(id);
+        if (isValidString(fullname)) {
+            user.fullname = fullname;
+            sessionStorage.setItem('loggedUser', JSON.stringify(user));
+        }
+    }
+    UserStorage.prototype.addPhoneNumber = function (id, newPhoneNumber) { 
+        var user = this.getUserById(id);
+
         if (isValidPhoneNumber(newPhoneNumber)) {
-            this.phoneNumber = newPhoneNumber;
+            user.phoneNumber = newPhoneNumber;
+            sessionStorage.setItem('loggedUser', JSON.stringify(user));
         }
     }
-    User.prototype.addAddress = function (newAddress) {
+    UserStorage.prototype.addAddress = function (id, newAddress) {
+        var user = this.getUserById(id);
+
         if (isValidString(newAddress)) {
-            this.address = newAddress;
+            user.address = newAddress;
+            sessionStorage.setItem('loggedUser', JSON.stringify(user));
         }
     }
-    User.prototype.addTitle = function (title) {
+    UserStorage.prototype.addTitle = function (id, title) {
+        var user = this.getUserById(id);
         if (isValidTitle(title)) {
-            this.title = title;
+            user.title = title;
+            sessionStorage.setItem('loggedUser', JSON.stringify(user));
         }
     }
 
     //?? order instaceof Order?
-    User.prototype.ordering = function () {
-        if (this.cart.length != 0) {
-            this.cart.forEach(product => this.orders.push(product));
+    UserStorage.prototype.ordering = function (id) {
+        
+        var user = this.getUserById(id);
+        if (user.cart.length != 0) {
+            user.cart.forEach(product => user.orders.push(product));
+            sessionStorage.setItem('loggedUser', JSON.stringify(user));
         } else {
             throw new Error('The cart is empty!');
         }
     }
 
     //?? instaceof
-    User.prototype.addFavourite = function (product) {
-        this.favoriteProducts.push(product);
+    UserStorage.prototype.addFavourite = function (id, product) {
+        var user = this.getUserById(id);
+        user.favoriteProducts.push(product);
+        sessionStorage.setItem('loggedUser', JSON.stringify(user));
     }
     //?? instanceof 
-    User.prototype.addToCart = function (product) {
+    UserStorage.prototype.addToCart = function (id, product) {
+        var user = this.getUserById(id);
         this.cart.push(product);
+        sessionStorage.setItem('loggedUser', JSON.stringify(user));
     }
 
 
@@ -128,6 +152,10 @@ var userService = (function () {
         } else {
             return false;
         }
+    }
+
+    UserStorage.prototype.getUserById = function(id) {
+        return this.users.find(u => u.id == id);
     }
 
     UserStorage.prototype.logout = function() {

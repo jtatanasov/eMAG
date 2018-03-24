@@ -4,6 +4,15 @@ document.addEventListener('DOMContentLoaded', function () {
         myFavsLink = document.getElementById('my-favorites'),
         myCartLink = document.getElementById('my-cart');
 
+
+    var asideElement = $('aside')[0],
+        categoriestList = '';
+    getTemplate('assets/js/templates/categoriestListTemplate.js')
+        .then(function (data) {
+            categoriestList = data;
+            asideElement.innerHTML = categoriestList;
+        });
+
     //todo
     myAccLink.addEventListener('click', function (event) {
         event.preventDefault();
@@ -36,9 +45,79 @@ document.addEventListener('DOMContentLoaded', function () {
         firstNavExtension.style.display = 'block';
 
 
-        $('#logout-btn').click(function (event) {
+        $('#logout-btn').parent().click(function (event) {
             userService.logout();
             //todo redirect
+        });
+
+        $('#personal-data').parent().click(function (event) {
+            event.preventDefault();
+
+
+            asideElement.innerHTML = '';
+
+            getTemplate('assets/js/templates/editProfileTemplate.js')
+                .then(function (data) {
+                    var user = JSON.parse(sessionStorage.getItem('loggedUser'));
+                    var template = Handlebars.compile(data);
+                    var html = template(user);
+                    var userName = user.fullname;
+                    $('main').html(html);
+                    $('#fullname').val(userName);
+                    document.querySelectorAll('#profile-options > ul > li')[0].classList.add('active-option');
+
+                    document.getElementById('save-profile-edits-btn').addEventListener('click', function (event) {
+                        event.preventDefault();
+
+                        var errSpan = $('<p>');
+                        errSpan.css('color', 'red');
+                        errSpan.css('margin-top', '-2em');
+                        errSpan.css('margin-left', '40%')
+
+                        var radioBtnInput = $('input[name=title]:checked').val(),
+                            fullNameInput = $('#fullname').val(),
+                            phoneInput = $('#mobile-number').val();
+
+                        if (!isValidString(fullNameInput)) {
+                            errSpan.text("Невалидно име!");
+
+                            $('#fullname').parent()[0].after(errSpan[0]);
+
+                            $('#fullname').focus(() => errSpan.remove());
+                            return;
+                        }
+
+                        if (!isValidPhoneNumber(phoneInput)) {
+                            errSpan.text("Невалиден телефонен номер!");
+
+                            $('#mobile-number').parent()[0].after(errSpan[0]);
+
+                            $('#mobile-number').focus(() => errSpan.remove());
+                            return;
+                        }
+
+                        var loggedU = JSON.parse(sessionStorage.getItem('loggedUser'));
+                        var currUser = userService.getUserById(loggedU.id);
+
+                        if (radioBtnInput !== 'undefined') {
+                            userService.addTitle(currUser.id, radioBtnInput);
+                        }
+                        userService.changeName(currUser.id, fullNameInput);
+                        userService.addPhoneNumber(currUser.id, phoneInput);
+
+                        var successSpan = $('<span>');
+                        successSpan.text("Промените са запазени успешно!");
+                        successSpan.css('margin-left', '2em');
+                        successSpan.css('color', 'green');
+                        $('#save-profile-edits-btn')[0].after(successSpan[0]);
+
+                        successSpan.fadeOut(2000);
+                    });
+
+
+
+
+                });
         });
         //todo the other buttons
 
@@ -160,11 +239,6 @@ document.addEventListener('DOMContentLoaded', function () {
 
     }, false);
 
-    var asideElement = $('aside')[0];
-    getTemplate('assets/js/templates/categoriestListTemplate.js')
-        .then(function (data) {
-            asideElement.innerHTML = data;
-        })
 
 
     function login(isRegister) {
@@ -308,5 +382,10 @@ document.addEventListener('DOMContentLoaded', function () {
     }
     function isValidString(str) {
         return (typeof str === 'string' && str.length > 0);
+    }
+
+    function isValidPhoneNumber(phone) {
+        var re = /^[\+]?[(]?[0-9]{3}[)]?[-\s\.]?[0-9]{3}[-\s\.]?[0-9]{4,6}$/im;
+        return re.test(String(phone));
     }
 });

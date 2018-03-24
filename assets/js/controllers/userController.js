@@ -167,7 +167,12 @@ document.addEventListener('DOMContentLoaded', function () {
         });
 
     }, false);
-
+    
+    var asideElement = $('aside')[0];
+    getTemplate('assets/js/templates/categoriestListTemplate.js')
+    .then(function(data) {
+        asideElement.innerHTML = data;
+    })
 
 
     function login(isRegister) {

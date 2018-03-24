@@ -218,10 +218,14 @@ header {
 #list-logged-user li {
     margin-bottom: 0.4em;
     display:block;
+    cursor: pointer;
     padding:0.3em;
 }
 
-#list-logged-user li:hover li,a {
+#list-logged-user li:hover {
+    background-color: #E9EBEE;
+}
+#list-logged-user li:hover a {
     cursor: pointer;
     color: #005EB8;
 }
@@ -273,9 +277,10 @@ header {
 #second-nav > ul > li:first-of-type {
     float: left;
     margin-left: 3%;
-    width: 10em;
+    padding-left: 1em;
+    width: 16em;
     background-color: #22a7f0;
-    text-align: center;
+    text-align: left;
 }
 
 #second-nav > ul > li:last-of-type {
@@ -296,4 +301,38 @@ header {
     height: 100%;
     padding: 0.5em;
     align-content: center;
+}
+
+aside {
+    float:left;
+    font-size: 0.9em;
+    margin-left: 3%;
+    width: 15em;
+}
+
+#categories-list {
+    padding-top: 0.5em;
+    width:17.8em;
+    background-color: #fff;
+}
+#categories-list li {
+    padding: 0.5em;
+    cursor: pointer;
+    padding-bottom: 1em;
+}
+
+#categories-list li > img {
+    width: 20px;
+    margin-right: 0.3em;
+}
+
+#categories-list li > a {
+    color: #000;
+    text-decoration: none;
+}
+#categories-list li:hover {
+    background-color: #E9EBEE;
+}
+#categories-list li:hover > a {
+    color: #005EB8;
 }

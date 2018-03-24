@@ -10,8 +10,6 @@ document.addEventListener('DOMContentLoaded', function () {
         var logged = JSON.parse(sessionStorage.getItem('isLogged'));
         if (!logged) {
             login(false);
-        } else {
-            //redirect to edit profile page
         }
     })
     
@@ -39,7 +37,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
         
         //todo logged user
-        $('#logout-btn').parent().click(function(event) {
+        $('#logout-btn').click(function(event) {
             userService.logout();
             //todo redirect
         });
@@ -67,8 +65,6 @@ document.addEventListener('DOMContentLoaded', function () {
         var logged = JSON.parse(sessionStorage.getItem('isLogged'));
         if (!logged) {
             login(false);
-        } else {
-            //redirect
         }
     });
 
@@ -82,30 +78,11 @@ document.addEventListener('DOMContentLoaded', function () {
         var logged = JSON.parse(sessionStorage.getItem('isLogged'));
         if (!logged) {
             secondNavExtension = document.getElementsByClassName('nav-extensions')[1];
-            secondNavExtension.style.left = '-190%';
-        }else {
-            secondNavExtension = $('.logged-user-extensions')[1];
-            
-            secondNavExtension.style.left = '-100%';
-            var favs = JSON.parse(sessionStorage.getItem('loggedUser')).favoriteProducts;
-            
-            if(favs.length > 0) {
-                getTemplate('assets/js/templates/favoriteProductsInNavTemplate.js')
-                .then(function(data) {
-                    var template = Handlebars.compile(data);
-                    var html = template({products : favs});
-                    secondNavExtension.innerHTML = html;
-
-                });
-            } else {
-                secondNavExtension.style.padding = '0.4em';
-                secondNavExtension.innerText = 'Нямаш любими продукти!';
-            }
         }
         //todo logged user
 
         secondNavExtension.style.display = 'block';
-        
+        secondNavExtension.style.left = '-190%';
 
         //loggedout user
         $('#login-btn-favs').click(function (event) {
@@ -125,8 +102,6 @@ document.addEventListener('DOMContentLoaded', function () {
         var logged = JSON.parse(sessionStorage.getItem('isLogged'));
         if (!logged) {
             login(false);
-        } else {
-            //redirect to my cart page
         }
     });
     myCartLink.addEventListener('mouseenter', function (event) {
@@ -139,25 +114,8 @@ document.addEventListener('DOMContentLoaded', function () {
         var logged = JSON.parse(sessionStorage.getItem('isLogged'));
         if (!logged) {
             thirdNavExtension = document.getElementsByClassName('nav-extensions')[2];
-        } else {
-            thirdNavExtension = $('.logged-user-extensions')[2];
-            
-            thirdNavExtension.style.left = '-50%';
-            var cart = JSON.parse(sessionStorage.getItem('loggedUser')).cart;
-            
-            if(cart.length > 0) {
-                getTemplate('assets/js/templates/favoriteProductsInNavTemplate.js')
-                .then(function(data) {
-                    var template = Handlebars.compile(data);
-                    var html = template({products : cart});
-                    thirdNavExtension.innerHTML = html;
-
-                });
-            } else {
-                thirdNavExtension.style.padding = '0.4em';
-                thirdNavExtension.innerText = 'Нямаш добавени продукти в количката!';
-            }
         }
+        //todo logged user
 
         thirdNavExtension.style.display = 'block';
 

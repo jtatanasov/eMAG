@@ -135,32 +135,14 @@ var productsService = (function () {
 
         return brands;
     }
+
+    ProductsList.prototype.allProductsOnSale = function(){
+        return this._productsList.filter(el => el.onSale);
+    }
+
+    ProductsList.prototype.productsOnSale = function(products){
+        return products.filter(el => el.onSale);
+    }
+
     return new ProductsList();
 })();
-
-
-// var _productsList = null;
-// var products = {};
-// var path = "/assets/data/products.json"
-// function loadProducts(path) {
-//     return new Promise(function (resolve, reject) {
-//         var xhr = new XMLHttpRequest;
-
-//         xhr.open("GET", path, true);
-//         xhr.send(null);
-
-//         xhr.addEventListener("load", function () {
-//             var data = JSON.parse(xhr.responseText);
-//             resolve(data);
-//             reject(xhr.statusText);
-//         });
-//     });
-// }
-
-// loadProducts(path).then(function (data) {
-//     _productsList = data;
-// }).catch(function (error) {
-//     throw new Error("Error occured: " + error);
-// });
-
-

@@ -14,25 +14,25 @@
                     <label for="title">Обръщание</label>
                 </div>
                 <div class='inputs'>
-                    <input id='titleMr' type="radio" value='mr' name='title'/>
+                    <input id='titleMr' type="radio" value='mr' name='title' />
                     <label>Г-н</label>
-                    <input id='titleMrs' type="radio" value='mrs' name='title'/>
+                    <input id='titleMrs' type="radio" value='mrs' name='title' />
                     <label>Г-жа</label>
-                    <input id='titleMiss' type="radio" value='miss' name='title'/>
+                    <input id='titleMiss' type="radio" value='miss' name='title' />
                     <label>Г-жица</label>
                 </div>
                 <div class='labels'>
                     <label for="fullname">Име и фамилия</label>
                 </div>
                 <div class='inputs'>
-                    <input id='fullname' type="text" value="{{fullname}}"/>
+                    <input id='fullname' type="text" value="{{fullname}}" />
                 </div>
 
                 <div class='labels'>
                     <label for="mobile-number">Мобилен телефон</label>
                 </div>
                 <div class='inputs'>
-                    <input id='mobile-number' type="text" value="{{phoneNumber}}"/>
+                    <input id='mobile-number' type="text" value="{{phoneNumber}}" />
                 </div>
 
 
@@ -43,31 +43,60 @@
         <h3>Адрес</h3>
         <section>
             {{#if address}}
-                <p>{{adress}}</p>
-                <button class='address-buttons' id='edit-address'>редактирай</button>
-                <button class='address-buttons' id='delete-address'>изтрий</button>
+                <p style='display: inline-block' width='60%'>{{ address }}</p>
+            <button class='address-buttons' id='delete-address'>изтрий</button>
+            <button class='address-buttons' id='edit-address'>редактирай</button>
+            {{ else}}
+            <p>Не си добавил адрес за доставка. Можеш да го направиш от долния бутон</p>
+            <button class='address-buttons' id='add-address'>&CirclePlus; Добави адрес</button>
             {{/if}}
-            {{#unless adress}}
-                <p>Не си добавил адрес за доставка. Можеш да го направиш от долния бутон</p>
-                <button class='address-buttons' id='add-address'>&CirclePlus; Добави адрес</button>
-            {{/unless}}
+            <div id="myModal" class="modal">
+                <div class="modal-content">
+                    <span class="close">&times;</span>
+                    <h3>Добави адрес за доставка</h3>
+                    <div class='labels'>
+                        <label for="address-name">Име и фамилия</label>
+                    </div>
+                    <div class='inputs'>
+                        <input id='address-name' type="text" value="{{fullname}}" />
+                    </div>
+
+                    <div class='labels'>
+                        <label for="address-mobile-number">Мобилен телефон</label>
+                    </div>
+                    <div class='inputs'>
+                        <input id='address-mobile-number' type="text" value="{{phoneNumber}}" />
+                    </div>
+                    <div class='labels'>
+                        <label for="address">Адрес</label>
+                    </div>
+                    <div class='inputs'>
+                        {{#if address}}
+                        <input id='address' type="text" value={{ address }} />
+                        {{ else}}
+                        <input id='address' type="text" value='' />
+                        {{/if}}
+                    </div>
+                    <button id='save-address'>Запази</button>
+                </div>
+            </div>
         </section>
 
         <h3>Промяна на email адрес</h3>
         <section>
-            <p id='current-email'>Настоящ email адрес: {{email}}</p>
+            <p id='current-email'>Настоящ email адрес: {{ email }}</p>
             <form>
                 <div class='labels'>
                     <label for='new-email'>Нов email адрес</label>
                 </div>
                 <div class='inputs'>
-                    <input type='email' id='new-email'/>
+                    <input type='email' id='new-email' />
                 </div>
                 <div class='labels'>
                     <label for='confirm-new-email'>Потвърди email адрес</label>
                 </div>
                 <div class='inputs'>
-                    <input type='email' id='confirm-new-email'/>
+                    <input type='email' id='confirm-new-email' />
                 </div>
 
                 <button id='save-new-email'>Запази</button>
@@ -78,16 +107,22 @@
         <section>
             <form>
                 <div class='labels'>
+                    <label for='old-password'>Стара парола</label>
+                </div>
+                <div class='inputs'>
+                    <input type='password' id='old-password' />
+                </div>
+                <div class='labels'>
                     <label for='new-password'>Нова парола</label>
                 </div>
                 <div class='inputs'>
-                    <input type='password' id='new-password'/>
+                    <input type='password' id='new-password' />
                 </div>
                 <div class='labels'>
-                    <label for='confirm-password'>Потвърди парола</label>
+                    <label for='confirm-new-password'>Потвърди парола</label>
                 </div>
                 <div class='inputs'>
-                    <input type='password' id='confirm-password'/>
+                    <input type='password' id='confirm-new-password' />
                 </div>
 
                 <button id='save-new-password'>Запази</button>

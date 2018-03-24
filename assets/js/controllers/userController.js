@@ -1,4 +1,8 @@
-document.addEventListener('DOMContentLoaded', function () {
+document.addEventListener('DOMContentLoaded', userController);
+
+var isNameAppended = false;
+
+function userController() {
     var templatePath = '';
     var myAccLink = document.getElementById('my-account'),
         myFavsLink = document.getElementById('my-favorites'),
@@ -7,11 +11,16 @@ document.addEventListener('DOMContentLoaded', function () {
 
     var asideElement = $('aside')[0],
         categoriestList = '';
-    getTemplate('assets/js/templates/categoriestListTemplate.js')
-        .then(function (data) {
-            categoriestList = data;
-            asideElement.innerHTML = categoriestList;
-        });
+
+    $('main').html('');
+    var page = location.hash.slice(1);
+    if (page === '') {
+        getTemplate('assets/js/templates/categoriestListTemplate.js')
+            .then(function (data) {
+                categoriestList = data;
+                asideElement.innerHTML = categoriestList;
+            });
+    }
 
     //todo
     myAccLink.addEventListener('click', function (event) {
@@ -19,10 +28,12 @@ document.addEventListener('DOMContentLoaded', function () {
         var logged = JSON.parse(sessionStorage.getItem('isLogged'));
         if (!logged) {
             login(false);
+        } else {
+            $('aside').empty();
+            location.replace('#edit-profile');
         }
     })
 
-    var isNameAppended = false;
     myAccLink.parentNode.addEventListener('mouseenter', function (event) {
         event.preventDefault();
 
@@ -47,77 +58,15 @@ document.addEventListener('DOMContentLoaded', function () {
 
         $('#logout-btn').parent().click(function (event) {
             userService.logout();
+            location.replace('#');
             //todo redirect
         });
 
         $('#personal-data').parent().click(function (event) {
             event.preventDefault();
-
-
-            asideElement.innerHTML = '';
-
-            getTemplate('assets/js/templates/editProfileTemplate.js')
-                .then(function (data) {
-                    var user = JSON.parse(sessionStorage.getItem('loggedUser'));
-                    var template = Handlebars.compile(data);
-                    var html = template(user);
-                    var userName = user.fullname;
-                    $('main').html(html);
-                    $('#fullname').val(userName);
-                    document.querySelectorAll('#profile-options > ul > li')[0].classList.add('active-option');
-
-                    document.getElementById('save-profile-edits-btn').addEventListener('click', function (event) {
-                        event.preventDefault();
-
-                        var errSpan = $('<p>');
-                        errSpan.css('color', 'red');
-                        errSpan.css('margin-top', '-2em');
-                        errSpan.css('margin-left', '40%')
-
-                        var radioBtnInput = $('input[name=title]:checked').val(),
-                            fullNameInput = $('#fullname').val(),
-                            phoneInput = $('#mobile-number').val();
-
-                        if (!isValidString(fullNameInput)) {
-                            errSpan.text("Невалидно име!");
-
-                            $('#fullname').parent()[0].after(errSpan[0]);
-
-                            $('#fullname').focus(() => errSpan.remove());
-                            return;
-                        }
-
-                        if (!isValidPhoneNumber(phoneInput)) {
-                            errSpan.text("Невалиден телефонен номер!");
-
-                            $('#mobile-number').parent()[0].after(errSpan[0]);
-
-                            $('#mobile-number').focus(() => errSpan.remove());
-                            return;
-                        }
-
-                        var loggedU = JSON.parse(sessionStorage.getItem('loggedUser'));
-                        var currUser = userService.getUserById(loggedU.id);
-
-                        if (radioBtnInput !== 'undefined') {
-                            userService.addTitle(currUser.id, radioBtnInput);
-                        }
-                        userService.changeName(currUser.id, fullNameInput);
-                        userService.addPhoneNumber(currUser.id, phoneInput);
-
-                        var successSpan = $('<span>');
-                        successSpan.text("Промените са запазени успешно!");
-                        successSpan.css('margin-left', '2em');
-                        successSpan.css('color', 'green');
-                        $('#save-profile-edits-btn')[0].after(successSpan[0]);
-
-                        successSpan.fadeOut(2000);
-                    });
-
-
-
-
-                });
+            
+            $('aside').empty();
+            location.replace('#edit-profile');
         });
         //todo the other buttons
 
@@ -154,6 +103,7 @@ document.addEventListener('DOMContentLoaded', function () {
         var secondNavExtension = null;
 
         var logged = JSON.parse(sessionStorage.getItem('isLogged'));
+
         if (!logged) {
             secondNavExtension = document.getElementsByClassName('nav-extensions')[1];
             secondNavExtension.style.left = '-190%';
@@ -176,7 +126,6 @@ document.addEventListener('DOMContentLoaded', function () {
                 secondNavExtension.innerText = 'Нямаш любими продукти!';
             }
         }
-
 
         secondNavExtension.style.display = 'block';
 
@@ -388,4 +337,4 @@ document.addEventListener('DOMContentLoaded', function () {
         var re = /^[\+]?[(]?[0-9]{3}[)]?[-\s\.]?[0-9]{3}[-\s\.]?[0-9]{4,6}$/im;
         return re.test(String(phone));
     }
-});
+}

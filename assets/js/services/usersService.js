@@ -63,7 +63,31 @@ var userService = (function () {
         if (isValidString(fullname)) {
             user.fullname = fullname;
             sessionStorage.setItem('loggedUser', JSON.stringify(user));
+            localStorage.setItem('users', JSON.stringify(this.users));
         }
+    }
+
+    UserStorage.prototype.changeMail = function(id, newEmail) {
+        var user = this.getUserById(id);
+        if (isValidMail(newEmail)) {
+            user.email = newEmail;
+            sessionStorage.setItem('loggedUser', JSON.stringify(user));
+            localStorage.setItem('users', JSON.stringify(this.users));
+        }
+    }
+
+    UserStorage.prototype.changePassword = function(id, newPass) {
+        var user = this.getUserById(id);
+        if(isValidPassword(newPass)) {
+            user.password = newPass;
+            sessionStorage.setItem('loggedUser', JSON.stringify(user));
+            localStorage.setItem('users', JSON.stringify(this.users));
+        }
+    }
+
+    UserStorage.prototype.checkPassword = function(id, pass) {
+        var user = this.getUserById(id);
+        return (user.password === pass)
     }
     UserStorage.prototype.addPhoneNumber = function (id, newPhoneNumber) { 
         var user = this.getUserById(id);
@@ -71,21 +95,31 @@ var userService = (function () {
         if (isValidPhoneNumber(newPhoneNumber)) {
             user.phoneNumber = newPhoneNumber;
             sessionStorage.setItem('loggedUser', JSON.stringify(user));
+            localStorage.setItem('users', JSON.stringify(this.users));
         }
     }
     UserStorage.prototype.addAddress = function (id, newAddress) {
         var user = this.getUserById(id);
-
+        console.log(newAddress);
         if (isValidString(newAddress)) {
             user.address = newAddress;
             sessionStorage.setItem('loggedUser', JSON.stringify(user));
+            localStorage.setItem('users', JSON.stringify(this.users));
         }
+    }
+
+    UserStorage.prototype.deleteAddress = function(id) {
+        var user = this.getUserById(id);
+        user.address = '';
+        sessionStorage.setItem('loggedUser', JSON.stringify(user));
+        localStorage.setItem('users', JSON.stringify(this.users));
     }
     UserStorage.prototype.addTitle = function (id, title) {
         var user = this.getUserById(id);
         if (isValidTitle(title)) {
             user.title = title;
             sessionStorage.setItem('loggedUser', JSON.stringify(user));
+            localStorage.setItem('users', JSON.stringify(this.users));
         }
     }
 
@@ -96,6 +130,7 @@ var userService = (function () {
         if (user.cart.length != 0) {
             user.cart.forEach(product => user.orders.push(product));
             sessionStorage.setItem('loggedUser', JSON.stringify(user));
+            localStorage.setItem('users', JSON.stringify(this.users));
         } else {
             throw new Error('The cart is empty!');
         }
@@ -106,12 +141,14 @@ var userService = (function () {
         var user = this.getUserById(id);
         user.favoriteProducts.push(product);
         sessionStorage.setItem('loggedUser', JSON.stringify(user));
+        localStorage.setItem('users', JSON.stringify(this.users));
     }
     //?? instanceof 
     UserStorage.prototype.addToCart = function (id, product) {
         var user = this.getUserById(id);
         this.cart.push(product);
         sessionStorage.setItem('loggedUser', JSON.stringify(user));
+        localStorage.setItem('users', JSON.stringify(this.users));
     }
 
 

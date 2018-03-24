@@ -442,7 +442,8 @@ main {
 
 #save-profile-edits-btn,
 #save-new-email,
-#save-new-password {
+#save-new-password,
+#save-address {
     font-size: 0.9em;
     padding: 0.5em 1.2em;
     background-color: #005EB8;
@@ -454,7 +455,8 @@ main {
 
 #save-profile-edits-btn:hover,
 #save-new-email:hover,
-#save-new-password:hover  {
+#save-new-password:hover,
+#save-address:hover  {
     background-color: #00415d;
     border: 1px solid #00415d;
 }
@@ -467,6 +469,11 @@ main {
     border: 1px solid #005EB8;
     border-radius: 5px;
     margin-left: 0.5em;
+    float:right;
+}
+
+#add-address {
+    float: none;
 }
 
 .address-buttons:hover {
@@ -478,4 +485,44 @@ main {
     font-weight: bold;
     font-size: 1.1em;
     margin-bottom: 2em;
+}
+
+
+
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    padding-top: 100px; /* Location of the box */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+}
+
+/* Modal Content */
+.modal-content {
+    background-color: #fefefe;
+    margin: auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%;
+}
+
+/* The Close Button */
+.close {
+    color: #aaaaaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: #000;
+    text-decoration: none;
+    cursor: pointer;
 }

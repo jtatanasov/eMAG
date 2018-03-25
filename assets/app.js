@@ -6,13 +6,12 @@ document.addEventListener('DOMContentLoaded', function () {
             case 'edit-profile':
                 editProfileController();
                 break;
-            // case 'praskovi':
-            //     praskoviController();
-            //     break;
-            // case 'addPraskova':
-            //     addPraskovaController();
-            //     break;
-
+            case 'login':
+                loginAndRegisterController();
+                break;
+            case 'register':
+                loginAndRegisterController(true);
+                break;
             default:
                 userController();
                 break;

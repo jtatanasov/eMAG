@@ -54,7 +54,7 @@ header {
     text-decoration: none;
 }
 .icons {
-    position: absolute;
+    /* position: absolute; */
     top: 0.5em;
     left: -1.2em;
     width: 25px;
@@ -76,7 +76,7 @@ header {
 .nav-extensions {
     position: absolute;
     top: 100%;
-    left: -120%;
+    left: -100%;
     width: 300px;
     font-size: 12px;
     border: 1px solid white;
@@ -438,7 +438,10 @@ main {
 #save-profile-edits-btn,
 #save-new-email,
 #save-new-password,
-#save-address {
+#save-address,
+#add-all-to-cart,
+#delete-all-favs,
+#add-fav-to-cart {
     font-size: 0.9em;
     padding: 0.5em 1.2em;
     background-color: #005EB8;
@@ -451,7 +454,10 @@ main {
 #save-profile-edits-btn:hover,
 #save-new-email:hover,
 #save-new-password:hover,
-#save-address:hover  {
+#save-address:hover,
+#add-all-to-cart:hover,
+#delete-all-favs:hover,
+#add-fav-to-cart:hover  {
     background-color: #00415d;
     border: 1px solid #00415d;
 }
@@ -520,4 +526,46 @@ main {
     color: #000;
     text-decoration: none;
     cursor: pointer;
+}
+
+#favs {
+    width: 100%;
+    margin-top: 3em;
+}
+
+#favs tr {
+    border-top: 1px solid #bbb;
+}
+.fav-product-img {
+    display: inline-block;
+    padding: 1em 0;
+}
+
+.fav-product-img img {
+    width: 11em;
+}
+.fav-name {
+    padding-top: 0;
+}
+.fav-name h2 a {
+    text-decoration: none;
+    color: #000;
+    font-size: 0.5em;
+}
+.product-description {
+    height: 100%;
+    vertical-align: top;
+}
+
+.fav-price {
+    font-size: 1.2em;
+    color: red;
+    font-weight: bold;
+}
+
+
+#no-fav-products,
+#no-orders {
+    font-size: 1.5em;
+
 }

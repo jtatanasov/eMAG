@@ -27,6 +27,13 @@ function editProfileController() {
 
                 location.replace('#my-orders');
             });
+            
+            $('#option-my-cart').click(function(event) {
+                event.preventDefault();
+
+                location.replace('#my-cart');
+            });
+           
 
             $('#save-profile-edits-btn').click(function (event) {
                 event.preventDefault();

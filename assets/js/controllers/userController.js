@@ -44,6 +44,7 @@ function userController() {
             firstNavExtension = $('.nav-extensions')[0];
         } else {
             firstNavExtension = $('.logged-user-extensions')[0];
+            firstNavExtension.style.left = '-30%';
 
             if (!isNameAppended) {
                 var fullName = ', ' + JSON.parse(sessionStorage.getItem('loggedUser')).fullname;
@@ -106,7 +107,7 @@ function userController() {
         if (!logged) {
             login();
         } else {
-
+            location.replace('#my-favorite-products');
             //TODO LOGGED
         }
     });
@@ -122,11 +123,11 @@ function userController() {
 
         if (!logged) {
             secondNavExtension = document.getElementsByClassName('nav-extensions')[1];
-            secondNavExtension.style.left = '-190%';
+            secondNavExtension.style.left = '-140%';
+         
         } else {
             secondNavExtension = $('.logged-user-extensions')[1];
 
-            secondNavExtension.style.left = '-100%';
             var favs = JSON.parse(sessionStorage.getItem('loggedUser')).favoriteProducts;
 
             if (favs.length > 0) {
@@ -163,6 +164,8 @@ function userController() {
         var logged = JSON.parse(sessionStorage.getItem('isLogged'));
         if (!logged) {
             location.replace('#login');
+        } else {
+            location.replace('#my-cart');
         }
     });
     myCartLink.addEventListener('mouseenter', function (event) {
@@ -175,10 +178,11 @@ function userController() {
         var logged = JSON.parse(sessionStorage.getItem('isLogged'));
         if (!logged) {
             thirdNavExtension = document.getElementsByClassName('nav-extensions')[2];
+            thirdNavExtension.style.left = '-80%';
         } else {
             thirdNavExtension = $('.logged-user-extensions')[2];
+            thirdNavExtension.style.left = '-20%';
 
-            thirdNavExtension.style.left = '-50%';
             var cart = JSON.parse(sessionStorage.getItem('loggedUser')).cart;
 
             if (cart.length > 0) {

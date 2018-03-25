@@ -9,15 +9,15 @@
     </div>
     <div id='profile-option-content'>
         <div id='view-orders'>
-            <h3>Моите поръчки</h3>
+            <h3>Мояте количка</h3>
             <section>
-                {{#if orders}}
-
-                    {{#each orders}}
+                {{#if cart}}
+                <table>
+                    {{#each cart}}
                   
                     {{/ each}}
                     {{ else}}
-                    <div id='no-orders'>Нямате направени поръчки</div>
+                    <div id='no-orders'>Нямате добавени продукти в количката!</div>
                     {{/if}}
                 </table>
             </section>

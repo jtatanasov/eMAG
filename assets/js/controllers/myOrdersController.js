@@ -25,6 +25,13 @@ function myOrdersController() {
 
                 location.replace('#my-favorite-products');
             });
+            
+            $('#option-my-cart').click(function(event) {
+                event.preventDefault();
+
+                location.replace('#my-cart');
+            });
+           
 
             $('#save-profile-edits-btn').click(function (event) {
                 event.preventDefault();

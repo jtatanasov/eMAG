@@ -17,6 +17,10 @@ document.addEventListener('DOMContentLoaded', function () {
                 break;
             case 'my-favorite-products':
                 myFavoriteProductsController();
+                break;
+            case 'my-cart':
+                myCartController();
+                break;
             default:
                 userController();
                 break;

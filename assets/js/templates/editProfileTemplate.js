@@ -4,6 +4,7 @@
             <li id='option-personal-data'>Лични данни</li>
             <li id='option-my-orders'>Моите поръчки</li>
             <li id='option-my-favs'>Любими продукти</li>
+            <li id='option-my-cart'>Моята количка</li>
         </ul>
     </div>
     <div id='profile-option-content'>

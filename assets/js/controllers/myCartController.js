@@ -1,19 +1,18 @@
-function myFavoriteProductsController() {
+function myCartController() {
     $('aside').hide();
-    getTemplate('assets/js/templates/myFavoriteProductsTemplate.js')
+    getTemplate('assets/js/templates/myCartTemplate.js')
         .then(function (data) {
 
             var user = JSON.parse(sessionStorage.getItem('loggedUser'));
             var template = Handlebars.compile(data);
             var html = template(user);
             var userName = user.fullname;
-
-
+            var title = user.title;
 
             $('main').html(html);
 
             $('#fullname').val(userName);
-            $('#option-my-favs').addClass('active-option');
+            $('#option-my-cart').addClass('active-option');
 
             $('#option-personal-data').click(function(event) {
                 event.preventDefault();
@@ -21,18 +20,19 @@ function myFavoriteProductsController() {
                 location.replace('#edit-profile');
             });
             
+            $('#option-my-favs').click(function(event) {
+                event.preventDefault();
+
+                location.replace('#my-favorite-products');
+            });
+            
             $('#option-my-orders').click(function(event) {
                 event.preventDefault();
 
                 location.replace('#my-orders');
             });
-            
-            $('#option-my-cart').click(function(event) {
-                event.preventDefault();
-
-                location.replace('#my-cart');
-            });
            
+
             $('#save-profile-edits-btn').click(function (event) {
                 event.preventDefault();
 

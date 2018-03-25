@@ -20,10 +20,14 @@
                 <table id='favs'>
                     {{#each favoriteProducts}}
                     <tr>
-                        <td class='fav-product-img'><a href=''><img class='' src='https://s0emagst.akamaized.net/products/3635/3634374/images/res_d242c1c1a0263be93887c386c8ed148c_150x150_c8nn.jpg' /></a></td>
-                        <td class='product-description'><div class='fav-name'><h2><a href=''>Тонколони 2.0 А+ МСлкадф</a></h2></div>
+                        <td class='fav-product-img'><a href=''><img class='' src={{main_url}} /></a></td>
+                        <td class='product-description'><div class='fav-name'><h2><a href=''>{{name}}</a></h2></div>
+                            {{#if availability}}
                             <div class='availability'><span >В наличност</span></div>
-                            <div class='fav-price'><span>19.00лв</span></div></td>
+                            {{else}}
+                            <div class='availability'><span >Не е в наличност</span></div>
+                            {{/if}}
+                            <div class='fav-price'><span>{{price}}</span></div></td>
                         <td><button id='add-fav-to-cart'>Добави в количката</button></td>
                     </tr>
                     {{/ each}}

@@ -43,7 +43,7 @@ header {
     list-style-type: none;
 }
 
-#main-nav li {
+#main-nav > ul > li {
     position: relative;
     margin-left: 2em;
     padding: 1em;
@@ -236,10 +236,9 @@ header {
     color: black;
     cursor: pointer;
 }
-
 .favorite-products {
     display: block;
-    margin: 0.8em 0.4em;
+    margin: 1em 1em;
 }
 
 .favorite-products p {
@@ -401,7 +400,7 @@ main {
     background-color: #E4F1F9;
     padding-left: 2em;
     text-align:left;
-    padding-bottom: 2em;
+    padding-bottom: 5em;
 }
 
 #profile-option-content > div > h3 {

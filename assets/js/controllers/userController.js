@@ -131,12 +131,14 @@ function userController() {
             secondNavExtension = $('.logged-user-extensions')[1];
 
             var favs = JSON.parse(sessionStorage.getItem('loggedUser')).favoriteProducts;
-
-            if (favs.length > 0) {
+            if (favs.length > 0) {                
                 getTemplate('assets/js/templates/favoriteProductsInNavTemplate.js')
                     .then(function (data) {
+                        
                         var template = Handlebars.compile(data);
-                        var html = template({ products: favs });
+                        var html = template({ favoriteProducts: favs });
+                        secondNavExtension.style.width = '20em';
+                        secondNavExtension.style.left = '-100%';
                         secondNavExtension.innerHTML = html;
 
                     });

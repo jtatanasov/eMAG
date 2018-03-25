@@ -191,6 +191,7 @@ body{
     font-family: 'Open Sans', sans-serif;
     font-weight: bold;
     font-size: 0.9em;
+    width: 100%;
 }
 
 #product-nav>ul{
@@ -291,7 +292,6 @@ body{
 
 
 #buy-nav{
-    border: 1px solid purple;
     background-color: white;
     position: fixed;
     top: 0;
@@ -370,4 +370,20 @@ button{
     font-size: 1.1em;
     font-weight: bold;
     margin-right: 5%;
+}
+
+#sticky-navs{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+}
+
+#sticky-navs>div{
+    position: relative;
+    margin: auto;
+}
+
+#product-nav-container{
+    height: 44.9063px;
 }

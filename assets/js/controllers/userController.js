@@ -17,25 +17,14 @@ function userController() {
     $('#categories-button').click(function (event) {
         event.preventDefault();
     });
+
     var isAsideLoaded = false;
     var page = location.hash.slice(1);
     if (page === '') {
         asideElement.fadeIn('1000');
         isAsideLoaded = true;
-    } else {
-        isAsideLoaded = false;
-        asideElement.fadeOut('1000');
-        $('#categories-button').click(function (event) {
+        $('#categories').click(function (event) {
             event.preventDefault();
-            console.log('click', isAsideLoaded);
-            if (!isAsideLoaded) {
-                isAsideLoaded = true
-                asideElement.fadeIn('1000');
-                
-            } else {
-                asideElement.fadeOut('1000');
-                isAsideLoaded = false;
-            }
         });
     }
 
@@ -45,7 +34,6 @@ function userController() {
         if (!logged) {
             location.replace('#login');
         } else {
-            $('aside').empty();
             location.replace('#edit-profile');
         }
     })
@@ -81,21 +69,18 @@ function userController() {
         $('#personal-data').parent().click(function (event) {
             event.preventDefault();
 
-            // $('aside').empty();
             location.replace('#edit-profile');
         });
 
         $('#my-orders').parent().click(function (event) {
             event.preventDefault();
 
-            // $('aside').empty();
             location.replace('#my-orders');
         });
 
         $('#my-favorite-products').parent().click(function (event) {
             event.preventDefault();
 
-            // $('aside').empty();
             location.replace('#my-favorite-products');
         });
         //TODO other buttons

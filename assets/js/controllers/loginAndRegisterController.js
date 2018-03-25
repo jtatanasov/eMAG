@@ -1,7 +1,20 @@
 function loginAndRegisterController(isRegister) {
     
-    $('aside').fadeOut();
-    
+    var asideElement = $('aside');
+    asideElement.fadeOut();
+    var isAsideLoaded = false;
+    asideElement.fadeOut('1000');
+    $('#categories').click(function (event) {
+        event.preventDefault();
+        if (!isAsideLoaded) {
+            isAsideLoaded = true
+            asideElement.fadeIn('1000');
+
+        } else {
+            asideElement.fadeOut('1000');
+            isAsideLoaded = false;
+        }
+    });
     getTemplate('assets/js/templates/loginAndRegisterTemplate.js')
         .then(function (data) {
             document.getElementsByTagName('main')[0].innerHTML = data;

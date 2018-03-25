@@ -1,6 +1,19 @@
 function editProfileController() {
-    
-    $('aside').fadeOut();
+    var asideElement = $('aside');
+    asideElement.fadeOut();
+    var isAsideLoaded = false;
+    asideElement.fadeOut('1000');
+    $('#categories').click(function (event) {
+        event.preventDefault();
+        if (!isAsideLoaded) {
+            isAsideLoaded = true
+            asideElement.fadeIn('1000');
+
+        } else {
+            asideElement.fadeOut('1000');
+            isAsideLoaded = false;
+        }
+    });
     getTemplate('assets/js/templates/editProfileTemplate.js')
         .then(function (data) {
 
@@ -17,24 +30,24 @@ function editProfileController() {
             $('#fullname').val(userName);
             $('#option-personal-data').addClass('active-option');
 
-            $('#option-my-favs').click(function(event) {
+            $('#option-my-favs').click(function (event) {
                 event.preventDefault();
 
                 location.replace('#my-favorite-products');
             });
-            
-            $('#option-my-orders').click(function(event) {
+
+            $('#option-my-orders').click(function (event) {
                 event.preventDefault();
 
                 location.replace('#my-orders');
             });
-            
-            $('#option-my-cart').click(function(event) {
+
+            $('#option-my-cart').click(function (event) {
                 event.preventDefault();
 
                 location.replace('#my-cart');
             });
-           
+
 
             $('#save-profile-edits-btn').click(function (event) {
                 event.preventDefault();
@@ -239,31 +252,31 @@ function editProfileController() {
             });
         });
 
-    
-        function navigateLoginAndRegister(isRegister) {
-            if (isRegister != undefined) {
-                $('#login-form')[0].style.display = 'none';
-                $('#login-form-link').removeClass('active');
-                $('#register-form-link').addClass('active');
-                $('#register-form')[0].style.display = 'block';
-            }
-            $('#login-form-link').click(function (e) {
-                e.preventDefault();
-    
-                $("#login-form").delay(100).fadeIn(100);
-                $("#register-form").fadeOut(100);
-                $('#register-form-link').removeClass('active');
-                $(this).addClass('active');
-            });
-            $('#register-form-link').click(function (e) {
-                e.preventDefault();
-    
-                $("#register-form").delay(100).fadeIn(100);
-                $("#login-form").fadeOut(100);
-                $('#login-form-link').removeClass('active');
-                $(this).addClass('active');
-            });
+
+    function navigateLoginAndRegister(isRegister) {
+        if (isRegister != undefined) {
+            $('#login-form')[0].style.display = 'none';
+            $('#login-form-link').removeClass('active');
+            $('#register-form-link').addClass('active');
+            $('#register-form')[0].style.display = 'block';
         }
+        $('#login-form-link').click(function (e) {
+            e.preventDefault();
+
+            $("#login-form").delay(100).fadeIn(100);
+            $("#register-form").fadeOut(100);
+            $('#register-form-link').removeClass('active');
+            $(this).addClass('active');
+        });
+        $('#register-form-link').click(function (e) {
+            e.preventDefault();
+
+            $("#register-form").delay(100).fadeIn(100);
+            $("#login-form").fadeOut(100);
+            $('#login-form-link').removeClass('active');
+            $(this).addClass('active');
+        });
+    }
     function configureAddress() {
         var modal = $('#myModal');
         var span = $(".close");

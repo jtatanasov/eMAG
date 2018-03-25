@@ -388,11 +388,11 @@ main {
     padding-bottom: 2em;
 }
 
-#profile-option-content > h3 {
+#profile-option-content > div > h3 {
     font-weight: bold;
 }
 
-#profile-option-content > section {
+#profile-option-content > div > section {
     width: 95%;
     background-color: #fff;
     margin-top: 2em;
@@ -404,11 +404,6 @@ main {
     box-sizing: border-box;
     display: inline-block;
 }
-
-/* #edit-profile > div > label {
-    margin-right: 1em;
-    margin-bottom: 2em;
-} */
 
 .labels {
     margin-right: 1em;

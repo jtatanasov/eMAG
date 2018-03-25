@@ -1,25 +1,24 @@
-function editProfileController() {
+function myFavoriteProductsController() {
     $('aside').hide();
-    getTemplate('assets/js/templates/editProfileTemplate.js')
+    getTemplate('assets/js/templates/myFavoriteProductsTemplate.js')
         .then(function (data) {
 
             var user = JSON.parse(sessionStorage.getItem('loggedUser'));
             var template = Handlebars.compile(data);
             var html = template(user);
             var userName = user.fullname;
-            var title = user.title;
+
+
 
             $('main').html(html);
-            if (title !== '') {
-                $('input[value=' + title + ']').attr('checked', 'checked');
-            }
-            $('#fullname').val(userName);
-            $('#option-personal-data').addClass('active-option');
 
-            $('#option-my-favs').click(function(event) {
+            $('#fullname').val(userName);
+            $('#option-my-favs').addClass('active-option');
+
+            $('#option-personal-data').click(function(event) {
                 event.preventDefault();
 
-                location.replace('#my-favorite-products');
+                location.replace('#edit-profile');
             });
             
             $('#option-my-orders').click(function(event) {
@@ -27,7 +26,7 @@ function editProfileController() {
 
                 location.replace('#my-orders');
             });
-
+           
             $('#save-profile-edits-btn').click(function (event) {
                 event.preventDefault();
 

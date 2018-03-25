@@ -1,6 +1,6 @@
-function editProfileController() {
+function myOrdersController() {
     $('aside').hide();
-    getTemplate('assets/js/templates/editProfileTemplate.js')
+    getTemplate('assets/js/templates/myOrdersTemplate.js')
         .then(function (data) {
 
             var user = JSON.parse(sessionStorage.getItem('loggedUser'));
@@ -10,22 +10,20 @@ function editProfileController() {
             var title = user.title;
 
             $('main').html(html);
-            if (title !== '') {
-                $('input[value=' + title + ']').attr('checked', 'checked');
-            }
-            $('#fullname').val(userName);
-            $('#option-personal-data').addClass('active-option');
 
+            $('#fullname').val(userName);
+            $('#option-my-orders').addClass('active-option');
+
+            $('#option-personal-data').click(function(event) {
+                event.preventDefault();
+
+                location.replace('#edit-profile');
+            });
+            
             $('#option-my-favs').click(function(event) {
                 event.preventDefault();
 
                 location.replace('#my-favorite-products');
-            });
-            
-            $('#option-my-orders').click(function(event) {
-                event.preventDefault();
-
-                location.replace('#my-orders');
             });
 
             $('#save-profile-edits-btn').click(function (event) {

@@ -3,15 +3,20 @@ document.addEventListener('DOMContentLoaded', function () {
         var page = location.hash.slice(1);
 
         switch (page) {
-            case 'edit-profile':
-                editProfileController();
-                break;
             case 'login':
                 loginAndRegisterController();
                 break;
             case 'register':
                 loginAndRegisterController(true);
                 break;
+            case 'edit-profile':
+                editProfileController();
+                break;
+            case 'my-orders':
+                myOrdersController();
+                break;
+            case 'my-favorite-products':
+                myFavoriteProductsController();
             default:
                 userController();
                 break;

@@ -8,16 +8,17 @@ function userController() {
         myFavsLink = document.getElementById('my-favorites'),
         myCartLink = document.getElementById('my-cart');
 
-    var asideElement = $('aside')[0],
+    var asideElement = $('aside'),
         categoriestList = '';
 
     $('main').html('');
     var page = location.hash.slice(1);
-    if (page !== '#edit-profile') {
+    if (page === '') {
         getTemplate('assets/js/templates/categoriestListTemplate.js')
             .then(function (data) {
                 categoriestList = data;
-                asideElement.innerHTML = categoriestList;
+                asideElement.html(categoriestList);
+                asideElement.show();
             });
     }
 
@@ -64,6 +65,20 @@ function userController() {
 
             $('aside').empty();
             location.replace('#edit-profile');
+        });
+
+        $('#my-orders').parent().click(function(event) {
+            event.preventDefault();
+
+            $('aside').empty();
+            location.replace('#my-orders');
+        });
+
+        $('#my-favorite-products').parent().click(function(event) {
+            event.preventDefault();
+
+            $('aside').empty();
+            location.replace('#my-favorite-products');
         });
         //TODO other buttons
 

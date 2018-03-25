@@ -1,0 +1,373 @@
+body{
+    font-family: 'Open Sans', sans-serif;
+    margin: 0
+}
+
+#product-container{
+    font-family: 'Open Sans', sans-serif;
+    width: 90%;
+    margin: auto;
+    padding: 1.6em 1.2em;
+}
+
+
+#product-path{
+    display: inline-block;
+    list-style-type: none;
+    padding-left: 0;
+    margin: 0;
+}
+
+#product-path>li{
+    float: left;
+    margin-left: 0.5em;
+    color: rgb(158,158,158);
+    font-family: 'Open Sans', sans-serif;
+    font-size: 0.8em;
+}
+
+#product-path>li:first-of-type{
+    margin-left: 0; 
+}
+
+#product-path>li>a{
+    color: rgb(104,159,213);
+    text-decoration: none;
+}
+
+#product-path>li>a:hover{
+    color: rgb(55,98,139);
+    text-decoration: underline;
+}
+
+#product-path>li::before{
+    content: "/";
+    padding-right: 0.5em;
+}
+
+#product-path>li:first-of-type::before{
+    content: none;
+}
+
+#product-name{
+    margin: 0;
+    font-size: 2em;
+}
+
+#product-header>hr{
+    border: 0;
+    height: 0;
+    border-top: 1px solid rgba(0, 0, 0, 0.1);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+    margin-top: 1em;
+}
+
+#product-body{
+    display: inline-block;
+    width: 100%;
+    margin-top: 1%;
+}
+
+#product-body>div{
+    float:left;
+}
+
+#product-image-container{
+    width: 68%;
+    box-sizing: border-box;
+    padding-left: 4em;
+}
+
+#product-main-image{
+    width: 65%;
+}
+
+#product-user-menu{
+    box-sizing: border-box;
+    width: 25%;
+}
+
+#price-availability{
+    margin-top: 5%;
+    margin-bottom: 15%;
+}
+
+#product-price{
+    color: rgb(239,40,9);
+    font-size: 1.7em;
+    font-weight: bold;
+    margin-bottom: 2%;
+}
+
+#product-availability{
+    background-color:rgb(0,153,0);
+    color: white;
+    display: inline;
+    border-radius: 3px;
+    font-size: 0.7em;
+    font-weight: bold;
+    padding: 0.1em 0.5em 0.2em 0.5em;
+}
+
+.unavailable{
+    background-color: rgb(239,40,9);
+}
+
+#user-buttons>button{
+    outline: none;
+    border-radius: 3px;
+    display: inline-block;
+    width: 100%;
+    margin: 2% auto; 
+}
+
+#add-to-cart, #buy-nav-button{
+    background-color: rgb(0,94,184);
+    border: none;
+    /* border: 1px solid rgb(0,94,184); */
+    color: white;
+    margin-left: 0;
+    margin-top: 0;
+    padding-left: 0;
+    padding-top: 0;
+    margin-bottom: 0;
+    padding-bottom: 0;
+}
+
+#add-to-cart:hover, #buy-nav-button:hover{
+    background-color: rgb(0,68,133);
+}
+
+#add-to-cart>div, #buy-nav-add-to-cart{
+    float: left;
+    width: 20%;
+    background-color: red;
+    border-radius: 2.5px;
+    border-bottom-right-radius: 70%;
+    /* -moz-border-radius-bottomright: 10px;
+    -webkit-border-bottom-right-radius: 10px; */
+}
+
+#cart-icon, #nav-cart-icon{
+    margin: 0;
+    padding: 0.6em;
+    height: 35px;
+    border-radius: 3px;
+    -webkit-filter: invert(100%);
+    filter: invert(100%);
+}
+
+#add-to-favorites{
+    color: rgb(0,94,184);
+    border: none;
+    border: 1px solid rgb(0,94,184);
+    font-size: 1em;
+    background-color: white;
+}
+
+#add-to-favorites:hover{
+    background-color: rgb(235,245,255);
+}
+
+.icon{
+    height: 30px;
+    margin: 3%;
+    margin-right: 0;
+    float: left;
+    color: rgb(0,94,184);
+}
+
+.button-text{
+   display: inline-block;
+   font-size: 1.25em;
+   padding: 5%;
+   width: 70%;
+}
+
+#product-nav{
+    background-color:  rgb(0,94,184);
+    margin: 0;
+    color: white;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: bold;
+    font-size: 0.9em;
+}
+
+#product-nav>ul{
+    margin-left: 4%;
+    padding: 0.2em 0;
+}
+
+.details{
+    display: inline-block;
+    /* margin-left: 5%; */
+    cursor: pointer;
+    padding: 0.7em 2em; 
+    border-radius: 5px;
+}
+
+.details>a{
+    all:unset;
+}
+
+.details:hover{
+    background-color: rgb(51,126,198);
+}
+
+.selected-detail{
+    background-color: rgb(242,247,251);
+}
+
+.detailes-about-product{
+    width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 2%;
+    font-family: 'Open Sans', sans-serif;
+    color: rgb(60,60,60);
+    font-size: 0.9em;
+
+}
+
+
+#description>h1{
+    all: unset;
+    font-size: 2em;
+}
+
+#description>p{
+    margin-top: 2.5%;
+    width: 60%;
+}
+
+/* #specifics-container{
+    background-color: rgb(233,235,238);
+} */
+
+#specifics>table{
+    margin-top: 4%;
+    border-spacing:0;
+    width: 100%;
+    margin-bottom: 5%;
+}
+
+#specifics>table>thead{
+    margin-bottom: 5%;
+}
+
+#specifics>table>thead>tr>th{
+    all: unset;
+    font-size: 2em;
+}
+
+#specifics>table>tbody{
+    grid-row: auto;
+    border-radius: 2px;
+    width: 100%;
+    /* padding-top: 5em; */
+}
+
+#specifics>table>tbody>tr{
+    background-color: white;
+}
+
+#specifics>table>tbody>tr:first-of-type>td{
+    padding-top: 2em;
+}
+
+#specifics>table>tbody>tr:nth-of-type(even){
+    background-color: rgb(239,249,254);
+}
+
+#specifics>table>tbody>tr>td{
+    padding: 0.6em;
+    font-size: 1em;
+}
+
+#specifics>table>tbody>tr>td:nth-of-type(odd){
+    width: 34%;
+    color: rgb(151, 155, 155);
+}
+
+
+#buy-nav{
+    border: 1px solid purple;
+    background-color: white;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+}
+
+#buy-nav-div{
+    width: 90%;
+    margin: auto;
+    padding-top: 0.4em;
+}
+
+.buy-nav{
+    display: inline-block;
+}
+
+#buy-nav-div>img{
+    height: 50px;
+    margin-right: 3%;
+    float: left;
+    padding-bottom: 0.4em;
+}
+
+#buy-nav-div>a{
+    all: unset;
+    font-family: 'Open Sans', sans-serif;
+    color: rgb(60,60,60);
+    float: left;
+    padding-top: 1em;
+    width: 50%;
+    cursor: pointer;
+}
+
+#buy-nav-div>a:hover{
+    color: rgb(0,68,133);
+}
+
+#add-to-cart-buy-nav-div{
+    width: 35%;
+    text-align: right;
+    float: right;
+    margin-top: 0.5%;
+}
+
+#buy-nav-button{
+    width: 55%;
+    border-radius: 5px;
+}
+
+#buy-nav-add-to-cart{
+    width: 18%;
+    border-radius: 4.5px;
+    border-bottom-right-radius: 55%;
+}
+
+#nav-cart-icon{
+    height: 30px;
+    padding: 0.45em;
+    padding-left: 0.3em;
+}
+
+
+#buy-nav-txt{
+    padding-bottom: 0.6em;
+    padding-top: 0.6em;
+    font-size: 1.3em;
+}
+
+button{
+    cursor: pointer;
+}
+
+#add-to-cart-buy-nav-div>span{
+    color: red;
+    font-size: 1.1em;
+    font-weight: bold;
+    margin-right: 5%;
+}

@@ -7,7 +7,12 @@ function editProfileController() {
             var template = Handlebars.compile(data);
             var html = template(user);
             var userName = user.fullname;
+            var title = user.title;
+            
             $('main').html(html);
+            if(title !== '') {
+                $('input[value=' + title + ']').attr('checked', 'checked');
+            }
             $('#fullname').val(userName);
             document.querySelectorAll('#profile-options > ul > li')[0].classList.add('active-option');
 

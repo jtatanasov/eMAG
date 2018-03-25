@@ -40,7 +40,7 @@ function loginAndRegisterController(isRegister) {
                     $('#login-email').focus(() => errSpan.remove());
                     $('#login-password').focus(() => errSpan.remove());
                 } else {
-                    //todo logged successfully!
+                    location.replace('#');
                 }
             });
 
@@ -94,8 +94,8 @@ function loginAndRegisterController(isRegister) {
 
                     $('#register-email').focus(() => errSpan.remove());
                 } else {
-                    //todo logged user
                     userService.login(emailInput, passInput);
+                    location.replace('#');
                 }
 
             });
@@ -124,5 +124,25 @@ function loginAndRegisterController(isRegister) {
             $('#login-form-link').removeClass('active');
             $(this).addClass('active');
         });
+    }
+
+    function isValidMail(email) {
+        var re = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+        return re.test(String(email).toLowerCase());
+    }
+    function isValidPassword(pass) {
+        return (typeof pass === 'string' && pass.length >= 6 && hasNumber(pass))
+    }
+
+    function hasNumber(str) {
+        return /\d/.test(str);
+    }
+    function isValidString(str) {
+        return (typeof str === 'string' && str.length > 0);
+    }
+
+    function isValidPhoneNumber(phone) {
+        var re = /^[\+]?[(]?[0-9]{3}[)]?[-\s\.]?[0-9]{3}[-\s\.]?[0-9]{4,6}$/im;
+        return re.test(String(phone));
     }
 }

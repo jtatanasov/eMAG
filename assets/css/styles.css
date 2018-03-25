@@ -3,6 +3,7 @@ html {
 }
 body {
     font-family: Arial, Helvetica, sans-serif;
+    position:relative;
 }
 header {
     padding: 1em;
@@ -266,19 +267,19 @@ header {
          box-shadow: 0 4px 40px -4px #413b3b;
 }
 
-#second-nav > ul {
+#second-nav ul {
     box-sizing: border-box;
     margin:0;
     height: 100%;
 }
-#second-nav > ul >li {
+#second-nav ul >li {
     display: inline-block;
     box-sizing: border-box;
     height: 100%;
     text-align: -webkit-match-parent;
 }
 
-#second-nav > ul > li:first-of-type {
+#second-nav ul > li:first-of-type {
     float: left;
     margin-left: 3%;
     padding-left: 1em;
@@ -287,20 +288,34 @@ header {
     text-align: left;
 }
 
-#second-nav > ul > li:last-of-type {
-    float:right;
-    margin-right: 5%;
+#second-nav ul > li:last-of-type {
+    margin-left: 65%;
     color: #005EB8;
 }
 
-#categories > img {
+aside {
+    visibility: visible;
+    position: absolute;
+    left: 2.2em;
+    z-index: 200;
+}
+
+#categories {
+    visibility: visible;
+}
+#categories img {
     filter: invert(100%);
     -webkit-filter: invert(100%);
     width: 20px;
     margin-right: 1em;
 }
 
-#second-nav > ul > li > div {
+#categories a {
+    color: white;
+    text-decoration: none;
+}
+
+#second-nav ul > li > div {
     box-sizing: border-box;
     height: 100%;
     padding: 0.5em;
@@ -341,6 +356,7 @@ header {
 }
 
 main {
+    position: relative;
     margin-top:0.9em;
     background-color: #fafafa; 
     text-align: center;

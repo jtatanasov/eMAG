@@ -12,14 +12,31 @@ function userController() {
         categoriestList = '';
 
     $('main').html('');
+
+
+    $('#categories-button').click(function (event) {
+        event.preventDefault();
+    });
+    var isAsideLoaded = false;
     var page = location.hash.slice(1);
     if (page === '') {
-        getTemplate('assets/js/templates/categoriestListTemplate.js')
-            .then(function (data) {
-                categoriestList = data;
-                asideElement.html(categoriestList);
-                asideElement.show();
-            });
+        asideElement.fadeIn('1000');
+        isAsideLoaded = true;
+    } else {
+        isAsideLoaded = false;
+        asideElement.fadeOut('1000');
+        $('#categories-button').click(function (event) {
+            event.preventDefault();
+            console.log('click', isAsideLoaded);
+            if (!isAsideLoaded) {
+                isAsideLoaded = true
+                asideElement.fadeIn('1000');
+                
+            } else {
+                asideElement.fadeOut('1000');
+                isAsideLoaded = false;
+            }
+        });
     }
 
     myAccLink.addEventListener('click', function (event) {
@@ -64,21 +81,21 @@ function userController() {
         $('#personal-data').parent().click(function (event) {
             event.preventDefault();
 
-            $('aside').empty();
+            // $('aside').empty();
             location.replace('#edit-profile');
         });
 
-        $('#my-orders').parent().click(function(event) {
+        $('#my-orders').parent().click(function (event) {
             event.preventDefault();
 
-            $('aside').empty();
+            // $('aside').empty();
             location.replace('#my-orders');
         });
 
-        $('#my-favorite-products').parent().click(function(event) {
+        $('#my-favorite-products').parent().click(function (event) {
             event.preventDefault();
 
-            $('aside').empty();
+            // $('aside').empty();
             location.replace('#my-favorite-products');
         });
         //TODO other buttons
@@ -124,7 +141,7 @@ function userController() {
         if (!logged) {
             secondNavExtension = document.getElementsByClassName('nav-extensions')[1];
             secondNavExtension.style.left = '-140%';
-         
+
         } else {
             secondNavExtension = $('.logged-user-extensions')[1];
 

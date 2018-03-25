@@ -1,5 +1,6 @@
 function myOrdersController() {
-    $('aside').hide();
+    
+    $('aside').fadeOut();
     getTemplate('assets/js/templates/myOrdersTemplate.js')
         .then(function (data) {
 

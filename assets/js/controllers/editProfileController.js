@@ -1,5 +1,6 @@
 function editProfileController() {
-    $('aside').hide();
+    
+    $('aside').fadeOut();
     getTemplate('assets/js/templates/editProfileTemplate.js')
         .then(function (data) {
 

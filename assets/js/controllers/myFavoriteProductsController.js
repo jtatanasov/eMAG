@@ -1,5 +1,6 @@
 function myFavoriteProductsController() {
-    $('aside').hide();
+   
+    $('aside').fadeOut();
     getTemplate('assets/js/templates/myFavoriteProductsTemplate.js')
         .then(function (data) {
 

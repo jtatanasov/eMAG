@@ -11,6 +11,7 @@
         <div id='view-orders'>
             <h3>Моите поръчки</h3>
             <section>
+                <table>
                 {{#if orders}}
 
                     {{#each orders}}

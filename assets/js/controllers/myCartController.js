@@ -1,5 +1,5 @@
 function myCartController() {
-    $('aside').hide();
+    // $('aside').hide();
     getTemplate('assets/js/templates/myCartTemplate.js')
         .then(function (data) {
 

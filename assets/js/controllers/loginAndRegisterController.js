@@ -1,4 +1,7 @@
 function loginAndRegisterController(isRegister) {
+    
+    $('aside').fadeOut();
+    
     getTemplate('assets/js/templates/loginAndRegisterTemplate.js')
         .then(function (data) {
             document.getElementsByTagName('main')[0].innerHTML = data;

@@ -42,6 +42,7 @@ function loginAndRegisterController(isRegister) {
                     $('#login-email').on('focus', () => errSpan.remove());
                     $('#login-password').on('focus', () => errSpan.remove());
                 } else {
+                    userController();
                     location.replace('#');
                 }
             });
@@ -97,6 +98,7 @@ function loginAndRegisterController(isRegister) {
                     $('#register-email').on('focus', () => errSpan.remove());
                 } else {
                     userService.login(emailInput, passInput);
+                    userController();
                     location.replace('#');
                 }
 

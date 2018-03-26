@@ -91,11 +91,10 @@ function userController() {
             firstNavExtension = $('.logged-user-extensions').eq(0);
             firstNavExtension.css('left', '-30%');
 
-            if (!isNameAppended) {
-                var fullName = ', ' + JSON.parse(sessionStorage.getItem('loggedUser')).fullname;
-                $('#hello-div > h4')[0].append(fullName);
-                isNameAppended = true;
-            }
+            var fullName = JSON.parse(sessionStorage.getItem('loggedUser')).fullname;
+            $('#hello-div > h4').text('Здравейте, ' + fullName);
+            isNameAppended = true;
+
 
         }
 

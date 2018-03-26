@@ -1,5 +1,7 @@
 var product = productsService.getProduct(productName);
-//как ще се подава продукта 
+var user = sessionStorage.getItem('loggedUser', loggedUser);
+user = JSON.parse(user);
+//как ще се подава продукта и юзъра?
 
 getTemplate('sthTemplate.js')
     .then(function (data) {
@@ -71,10 +73,29 @@ getTemplate('sthTemplate.js')
             }
         });
 
-        //
+        //adding to cart:
 
+        $("#add-to-cart").click(function(event){
+            event.preventDefault();
+            userService.addToCart(user.id, product);
 
+            ////да има ли проверка? в емга иска да се логват чак след като вече тръгнат да поръчват нещата?
+            // if(sessionStorage.getItem('isLogged')){
+            //     userService.addToCart(user.id, product);
+            // } else {
+            //     //?? 
+            // } 
+        })
 
+        //adding to favorites
+        $("#add-to-favorites, #buy-nav-button").click(function(event){
+            event.preventDefault();
+            if(sessionStorage.getItem('isLogged')){
+                userService.addFavourite(user.id, product);
+            } else {
+                //redirect to login page
+            } 
+        })
         //
     })
     .catch(function (error) {

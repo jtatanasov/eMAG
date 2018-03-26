@@ -1,0 +1,15 @@
+#outer-container-products{
+    width: 90%;
+    border: 1px solid purple;
+    margin: auto;
+    border-radius: 5px;
+    background-color: rgb(233,235,238);
+}
+
+.icon{
+    height: 30px;
+}
+
+aside{
+    float: left;
+}

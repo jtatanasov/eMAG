@@ -32,14 +32,14 @@
                 <div id="user-buttons">
                     <button id="add-to-cart">
                         <div>
-                            <img id="cart-icon" class="icon" src="cart-icon.png" alt="" />
+                            <img id="cart-icon" class="icon" src="assets/images/icons/cart-icon.png" alt="" />
                         </div>
                         <span class="button-text"> Добави в количката</span>
                     </button>
 
                     <button id="add-to-favorites">
                         <span>
-                            <img id="heart-icon" class="icon" src="heart-icon.png" alt="" />
+                            <img id="heart-icon" class="icon" src="assets/images/icons/button-heart-icon.png" alt="" />
                         </span>
                         <span class="button-text">
                             Добави в любими
@@ -89,11 +89,12 @@
         </div>
     </section>
 
+    {/* todo: add refs to the subcathegory and type pages */}
     <div id="buy-nav-container">
         <section id="buy-nav">
             <div id="buy-nav-div">
-                <img class="buy-nav" src="" alt="" />
-                <a class="buy-nav " href="">{{ name }}</a>
+                <img class="buy-nav" src="{{main_url}}" alt="" /> 
+                <a class="buy-nav " href="">{{name}}</a>
                 <div id="add-to-cart-buy-nav-div">
                     <span class="buy-nav">
                         2598
@@ -102,7 +103,7 @@
                         </span>
                     <button class="buy-nav" id="buy-nav-button">
                         <div id="buy-nav-add-to-cart">
-                            <img id="nav-cart-icon" class="icon" src="cart-icon.png" alt="" />
+                            <img id="nav-cart-icon" class="icon" src="assets/images/icons/cart-icon.png" alt="" />
                         </div>
                         <span class="button-text" id="buy-nav-txt"> Добави в количката</span>
                     </button>

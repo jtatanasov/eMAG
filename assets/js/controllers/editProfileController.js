@@ -1,28 +1,15 @@
 function editProfileController() {
-    var asideElement = $('aside');
-    asideElement.fadeOut();
-    var isAsideLoaded = false;
-    asideElement.fadeOut('1000');
-    $('#categories').click(function (event) {
-        event.preventDefault();
-        if (!isAsideLoaded) {
-            isAsideLoaded = true
-            asideElement.fadeIn('1000');
-
-        } else {
-            asideElement.fadeOut('1000');
-            isAsideLoaded = false;
-        }
-    });
-    getTemplate('assets/js/templates/editProfileTemplate.js')
+    showAndHideAside();
+    $.get('assets/js/templates/editProfileTemplate.js')
         .then(function (data) {
 
-            var user = JSON.parse(sessionStorage.getItem('loggedUser'));
-            var template = Handlebars.compile(data);
-            var html = template(user);
-            var userName = user.fullname;
-            var title = user.title;
+            var user = JSON.parse(sessionStorage.getItem('loggedUser')),
+                template = Handlebars.compile(data),
+                html = template(user),
+                userName = user.fullname,
+                title = user.title;
 
+            
             $('main').html(html);
             if (title !== '') {
                 $('input[value=' + title + ']').attr('checked', 'checked');
@@ -30,26 +17,26 @@ function editProfileController() {
             $('#fullname').val(userName);
             $('#option-personal-data').addClass('active-option');
 
-            $('#option-my-favs').click(function (event) {
+            $('#option-my-favs').on('click', function (event) {
                 event.preventDefault();
 
                 location.replace('#my-favorite-products');
             });
 
-            $('#option-my-orders').click(function (event) {
+            $('#option-my-orders').on('click', function (event) {
                 event.preventDefault();
 
                 location.replace('#my-orders');
             });
 
-            $('#option-my-cart').click(function (event) {
+            $('#option-my-cart').on('click', function (event) {
                 event.preventDefault();
 
                 location.replace('#my-cart');
             });
 
 
-            $('#save-profile-edits-btn').click(function (event) {
+            $('#save-profile-edits-btn').on('click', function (event) {
                 event.preventDefault();
 
                 var errSpan = $('<p>');
@@ -64,38 +51,34 @@ function editProfileController() {
                 if (!isValidString(fullNameInput)) {
                     errSpan.text("Невалидно име!");
 
-                    $('#fullname').parent()[0].after(errSpan[0]);
+                    $('#fullname').parent().eq(0).after(errSpan.eq(0));
 
-                    $('#fullname').focus(() => errSpan.remove());
+                    $('#fullname').on('focus', () => errSpan.remove());
                     return;
                 }
 
                 if (!isValidPhoneNumber(phoneInput)) {
                     errSpan.text("Невалиден телефонен номер!");
 
-                    $('#mobile-number').parent()[0].after(errSpan[0]);
+                    $('#mobile-number').parent().eq(0).after(errSpan.eq(0));
 
-                    $('#mobile-number').focus(() => errSpan.remove());
+                    $('#mobile-number').on('focus', () => errSpan.remove());
                     return;
                 }
 
-                var loggedU = JSON.parse(sessionStorage.getItem('loggedUser'));
-                var currUser = userService.getUserById(loggedU.id);
-
                 if (radioBtnInput !== 'undefined') {
-                    userService.addTitle(currUser.id, radioBtnInput);
+                    userService.addTitle(user.id, radioBtnInput);
                 }
-                userService.changeName(currUser.id, fullNameInput);
-                userService.addPhoneNumber(currUser.id, phoneInput);
+                userService.changeName(user.id, fullNameInput);
+                userService.addPhoneNumber(user.id, phoneInput);
 
                 var successSpan = $('<span>');
                 successSpan.text("Промените са запазени успешно!");
                 successSpan.css('margin-left', '2em');
                 successSpan.css('color', 'green');
-                $('#save-profile-edits-btn')[0].after(successSpan[0]);
+                $('#save-profile-edits-btn').eq(0).after(successSpan.eq(0));
 
                 successSpan.fadeOut(2000);
-
             });
 
             var modal = $('#myModal');
@@ -103,45 +86,36 @@ function editProfileController() {
             $('#add-address').click(function (event) {
                 event.preventDefault();
                 configureAddress();
-
             });
 
 
-            $('#edit-address').click(function (event) {
+            $('#edit-address').on('click', function (event) {
                 event.preventDefault();
 
-                var loggedU = JSON.parse(sessionStorage.getItem('loggedUser'));
-                var currUser = userService.getUserById(loggedU.id);
-
-                var tmpAddress = currUser.address;
+                var tmpAddress = user.address;
                 $('#address').val(tmpAddress);
 
                 configureAddress();
-
             });
 
-
-            span.click(function () {
+            span.on('click', function () {
                 modal.css('display', 'none');
             });
 
-            $(window).click(function (event) {
+            $(window).on('click', function (event) {
                 if (event.target == modal[0]) {
                     modal.css('display', 'none');
                 }
             });
 
-            $('#delete-address').click(function (event) {
+            $('#delete-address').on('click', function (event) {
                 event.preventDefault();
-                var loggedU = JSON.parse(sessionStorage.getItem('loggedUser'));
-                var currUser = userService.getUserById(loggedU.id);
 
-
-                userService.deleteAddress(currUser.id);
+                userService.deleteAddress(user.id);
                 editProfileController();
             });
 
-            $('#save-new-email').click(function (event) {
+            $('#save-new-email').on('click', function (event) {
                 event.preventDefault();
 
                 var newEmail = $('#new-email').val(),
@@ -155,16 +129,16 @@ function editProfileController() {
                 if (!isValidMail(newEmail)) {
                     errSpan.text("Невалиден email адрес!");
 
-                    $('#new-email').parent()[0].after(errSpan[0]);
+                    $('#new-email').parent().eq(0).after(errSpan.eq(0));
 
-                    $('#new-email').focus(() => errSpan.remove());
+                    $('#new-email').on('focus', () => errSpan.remove());
                     return;
                 }
 
                 if (!isValidMail(confirmNewEmail) || newEmail !== confirmNewEmail) {
                     errSpan.text("Невалидно потвъждение на email адреса!");
 
-                    $('#confirm-new-email').parent()[0].after(errSpan[0]);
+                    $('#confirm-new-email').parent().eq(0).after(errSpan.eq(0));
 
                     $('#confirm-new-email').focus(() => errSpan.remove());
                     return;
@@ -174,31 +148,25 @@ function editProfileController() {
                 successSpan.text("Email адресът е запазен успешно!");
                 successSpan.css('margin-left', '2em');
                 successSpan.css('color', 'green');
-                $('#save-new-email')[0].after(successSpan[0]);
+                $('#save-new-email').eq(0).after(successSpan.eq(0));
 
                 successSpan.fadeOut(2500);
 
-                var loggedU = JSON.parse(sessionStorage.getItem('loggedUser'));
-                var currUser = userService.getUserById(loggedU.id);
-
-
-                userService.changeMail(currUser.id, newEmail);
-
+                userService.changeMail(user.id, newEmail);
 
                 $('#new-email').val('');
                 $('#confirm-new-email').val('');
-
+                setTimeout(editProfileController, 2500);
             });
 
-            $('#save-new-password').click(function (event) {
+            $('#save-new-password').on('click', function (event) {
                 event.preventDefault();
 
                 var oldPass = $('#old-password').val(),
                     newPass = $('#new-password').val(),
                     confirmNewPass = $('#confirm-new-password').val();
 
-                var loggedU = JSON.parse(sessionStorage.getItem('loggedUser'));
-                var currUser = userService.getUserById(loggedU.id);
+                var currUser = userService.getUserById(user.id);            
 
                 var errSpan = $('<p>');
                 errSpan.css('color', 'red');
@@ -208,27 +176,26 @@ function editProfileController() {
                 if (!userService.checkPassword(currUser.id, oldPass)) {
                     errSpan.text("Невалидна парола!");
 
-                    $('#old-password').parent()[0].after(errSpan[0]);
+                    $('#old-password').parent().eq(0).after(errSpan.eq(0));
 
-                    $('#old-password').focus(() => errSpan.remove());
+                    $('#old-password').on('focus', () => errSpan.remove());
                     return;
                 }
                 if (!isValidPassword(newPass)) {
                     errSpan.text("Невалидна парола!");
 
-                    $('#new-password').parent()[0].after(errSpan[0]);
+                    $('#new-password').parent().eq(0).after(errSpan.eq(0));
 
-                    $('#new-password').focus(() => errSpan.remove());
+                    $('#new-password').on('focus', () => errSpan.remove());
                     return;
                 }
 
                 if (!isValidPassword(confirmNewPass) || newPass !== confirmNewPass) {
                     errSpan.text("Невалидно потвъждение на паролата!");
 
-                    console.log()
-                    $('#confirm-new-password').parent()[0].after(errSpan[0]);
+                    $('#confirm-new-password').parent().eq(0).after(errSpan.eq(0));
 
-                    $('#confirm-new-password').focus(() => errSpan.remove());
+                    $('#confirm-new-password').on('focus', () => errSpan.remove());
                     return;
                 }
 
@@ -236,54 +203,26 @@ function editProfileController() {
                 successSpan.text("Паролата е записана успешно!");
                 successSpan.css('margin-left', '2em');
                 successSpan.css('color', 'green');
-                $('#save-new-password')[0].after(successSpan[0]);
+                $('#save-new-password').eq(0).after(successSpan.eq(0));
 
                 successSpan.fadeOut(2500);
-
-                var loggedU = JSON.parse(sessionStorage.getItem('loggedUser'));
-                var currUser = userService.getUserById(loggedU.id);
-
 
                 userService.changePassword(currUser.id, newPass);
                 $('#old-password').val('');
                 $('#new-password').val('');
                 $('#confirm-new-password').val('');
 
+                setTimeout(editProfileController, 2500);
+
             });
         });
-
-
-    function navigateLoginAndRegister(isRegister) {
-        if (isRegister != undefined) {
-            $('#login-form')[0].style.display = 'none';
-            $('#login-form-link').removeClass('active');
-            $('#register-form-link').addClass('active');
-            $('#register-form')[0].style.display = 'block';
-        }
-        $('#login-form-link').click(function (e) {
-            e.preventDefault();
-
-            $("#login-form").delay(100).fadeIn(100);
-            $("#register-form").fadeOut(100);
-            $('#register-form-link').removeClass('active');
-            $(this).addClass('active');
-        });
-        $('#register-form-link').click(function (e) {
-            e.preventDefault();
-
-            $("#register-form").delay(100).fadeIn(100);
-            $("#login-form").fadeOut(100);
-            $('#login-form-link').removeClass('active');
-            $(this).addClass('active');
-        });
-    }
+   
     function configureAddress() {
         var modal = $('#myModal');
         var span = $(".close");
         modal.css('display', 'block');
 
-        $('#save-address').click(function (event) {
-            console.log('save-addrssss');
+        $('#save-address').on('click', function (event) {
             var addressName = $('#address-name').val(),
                 addressPhone = $('#address-mobile-number').val(),
                 address = $('#address').val();
@@ -296,25 +235,25 @@ function editProfileController() {
             if (!isValidString(addressName)) {
                 errSpan.text("Невалидно име!");
 
-                $('#address-name').parent()[0].after(errSpan[0]);
+                $('#address-name').parent().eq(0).after(errSpan.eq(0));
 
-                $('#address-name').focus(() => errSpan.remove());
+                $('#address-name').on('focus', () => errSpan.remove());
                 return;
             }
             if (!isValidPhoneNumber(addressPhone)) {
                 errSpan.text("Невалиден телефонен номер!");
 
-                $('#address-mobile-number').parent()[0].after(errSpan[0]);
+                $('#address-mobile-number').parent().eq(0).after(errSpan.eq(0));
 
-                $('#address-mobile-number').focus(() => errSpan.remove());
+                $('#address-mobile-number').on('focus', () => errSpan.remove());
                 return;
             }
             if (!isValidString(address)) {
                 errSpan.text("Невалиден адрес!");
 
-                $('#address').parent()[0].after(errSpan[0]);
+                $('#address').parent().eq(0).after(errSpan.eq(0));
 
-                $('#address').focus(() => errSpan.remove());
+                $('#address').on('focus', () => errSpan.remove());
                 return;
             }
 
@@ -322,7 +261,7 @@ function editProfileController() {
             successSpan.text("Адресът е запазен успешно!");
             successSpan.css('margin-left', '2em');
             successSpan.css('color', 'green');
-            $('#save-address')[0].after(successSpan[0]);
+            $('#save-address').eq(0).after(successSpan.eq(0));
 
             successSpan.fadeOut(2500);
             modal.fadeOut(3000);

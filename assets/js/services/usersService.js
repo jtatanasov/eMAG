@@ -100,7 +100,6 @@ var userService = (function () {
     }
     UserStorage.prototype.addAddress = function (id, newAddress) {
         var user = this.getUserById(id);
-        console.log(newAddress);
         if (isValidString(newAddress)) {
             user.address = newAddress;
             sessionStorage.setItem('loggedUser', JSON.stringify(user));

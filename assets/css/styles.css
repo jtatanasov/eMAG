@@ -238,7 +238,7 @@ header {
 }
 .favorite-products {
     display: block;
-    margin: 1em 1em;
+    margin: 0.1em 0.1em;
 }
 
 .favorite-products p {

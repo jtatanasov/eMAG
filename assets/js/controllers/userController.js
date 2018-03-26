@@ -107,7 +107,7 @@ function userController() {
         event.preventDefault();
         var logged = JSON.parse(sessionStorage.getItem('isLogged'));
         if (!logged) {
-            login();
+            location.replace('#login');
         } else {
             location.replace('#my-favorite-products');
             //TODO LOGGED

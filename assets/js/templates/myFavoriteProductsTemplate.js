@@ -20,15 +20,18 @@
                 <table id='favs'>
                     {{#each favoriteProducts}}
                     <tr>
-                        <td class='fav-product-img'><a href=''><img class='' src={{main_url}} /></a></td>
-                        <td class='product-description'><div class='fav-name'><h2><a href=''>{{name}}</a></h2></div>
+                        <td class='fav-product-img'><a href=''><img class='' src={{ main_url }} /></a></td>
+                        <td class='product-description'><div class='fav-name'><h2><a href=''>{{ name }}</a></h2></div>
                             {{#if availability}}
                             <div class='availability'><span >В наличност</span></div>
-                            {{else}}
+                            {{ else}}
                             <div class='availability'><span >Не е в наличност</span></div>
                             {{/if}}
-                            <div class='fav-price'><span>{{price}}</span></div></td>
-                        <td><button id='add-fav-to-cart'>Добави в количката</button></td>
+                            <div class='fav-price'><span>{{ price }} лв.</span></div></td>
+                        <td class='buttons-curr-fav-product'>
+                        <button class='add-curr-fav-to-cart'><img width='15px' class='icons' src='assets/images/icons/cart-icon.png' />Добави в количката</button>
+                            <button class='delete-curr-fav'>Изтрий</button>
+                        </td>
                     </tr>
                     {{/ each}}
                     {{ else}}

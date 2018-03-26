@@ -11,10 +11,11 @@
         <div id='view-orders'>
             <h3>Мояте количка</h3>
             <section>
+                /* todo products in cart */
                 {{#if cart}}
                 <table>
                     {{#each cart}}
-                  
+                    
                     {{/ each}}
                     {{ else}}
                     <div id='no-orders'>Нямате добавени продукти в количката!</div>

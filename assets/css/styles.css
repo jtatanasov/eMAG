@@ -456,7 +456,8 @@ main {
 #save-address,
 #add-all-to-cart,
 #delete-all-favs,
-#add-fav-to-cart {
+.add-curr-fav-to-cart,
+.delete-curr-fav {
     font-size: 0.9em;
     padding: 0.5em 1.2em;
     background-color: #005EB8;
@@ -472,7 +473,8 @@ main {
 #save-address:hover,
 #add-all-to-cart:hover,
 #delete-all-favs:hover,
-#add-fav-to-cart:hover  {
+.add-curr-fav-to-cart:hover,
+.delete-curr-fav:hover  {
     background-color: #00415d;
     border: 1px solid #00415d;
 }
@@ -565,12 +567,15 @@ main {
 .fav-name h2 a {
     text-decoration: none;
     color: #000;
-    font-size: 0.5em;
+    font-size: 0.4em;
 }
 .product-description {
     height: 100%;
     vertical-align: top;
+    padding-left: 0.5em;
+    width: 40%;
 }
+
 
 .fav-price {
     font-size: 1.2em;
@@ -578,6 +583,14 @@ main {
     font-weight: bold;
 }
 
+.buttons-curr-fav-product {
+    text-align: right;
+    width: 33%;
+}
+.buttons-curr-fav-product > button {
+    display: inline;
+    margin: 0.2em;
+}
 
 #no-fav-products,
 #no-orders {

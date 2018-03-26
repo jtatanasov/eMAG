@@ -1,12 +1,12 @@
-document.addEventListener('DOMContentLoaded', userController);
+$(userController);
 
 var isNameAppended = false;
 
 function userController() {
     var templatePath = '';
-    var myAccLink = document.getElementById('my-account'),
-        myFavsLink = document.getElementById('my-favorites'),
-        myCartLink = document.getElementById('my-cart');
+    var myAccLink = $('#my-account'),
+        myFavsLink = $('#my-favorites'),
+        myCartLink = $('#my-cart');
 
     var asideElement = $('aside'),
         categoriestList = '';
@@ -14,7 +14,7 @@ function userController() {
     $('main').html('');
 
 
-    $('#categories-button').click(function (event) {
+    $('#categories-button').on('click', function (event) {
         event.preventDefault();
     });
 
@@ -23,12 +23,12 @@ function userController() {
     if (page === '') {
         asideElement.fadeIn('1000');
         isAsideLoaded = true;
-        $('#categories').click(function (event) {
+        $('#categories').on('click', function (event) {
             event.preventDefault();
         });
     }
 
-    myAccLink.addEventListener('click', function (event) {
+    myAccLink.on('click', function (event) {
         event.preventDefault();
         var logged = JSON.parse(sessionStorage.getItem('isLogged'));
         if (!logged) {
@@ -38,18 +38,18 @@ function userController() {
         }
     })
 
-    myAccLink.parentNode.addEventListener('mouseenter', function (event) {
+    myAccLink.parent().on('mouseenter', function (event) {
         event.preventDefault();
 
-        myAccLink.style.color = '#E9EBEE';
+        myAccLink.css('color', '#E9EBEE');
         var firstNavExtension = null;
 
         var logged = JSON.parse(sessionStorage.getItem('isLogged'));
         if (!logged) {
-            firstNavExtension = $('.nav-extensions')[0];
+            firstNavExtension = $('.nav-extensions').eq(0);
         } else {
-            firstNavExtension = $('.logged-user-extensions')[0];
-            firstNavExtension.style.left = '-30%';
+            firstNavExtension = $('.logged-user-extensions').eq(0);
+            firstNavExtension.css('left', '-30%');
 
             if (!isNameAppended) {
                 var fullName = ', ' + JSON.parse(sessionStorage.getItem('loggedUser')).fullname;
@@ -58,27 +58,27 @@ function userController() {
             }
 
         }
-        firstNavExtension.style.display = 'block';
 
+        firstNavExtension.css('display', 'block');
 
-        $('#logout-btn').parent().click(function (event) {
+        $('#logout-btn').parent().on('click', function (event) {
             userService.logout();
             location.replace('#');
         });
 
-        $('#personal-data').parent().click(function (event) {
+        $('#personal-data').parent().on('click', function (event) {
             event.preventDefault();
 
             location.replace('#edit-profile');
         });
 
-        $('#my-orders').parent().click(function (event) {
+        $('#my-orders').parent().on('click', function (event) {
             event.preventDefault();
 
             location.replace('#my-orders');
         });
 
-        $('#my-favorite-products').parent().click(function (event) {
+        $('#my-favorite-products').parent().on('click', function (event) {
             event.preventDefault();
 
             location.replace('#my-favorite-products');
@@ -86,25 +86,27 @@ function userController() {
         //TODO other buttons
 
 
-        $('#login-btn').click(function (event) {
+        $('#login-btn').on('click', function (event) {
             event.preventDefault();
             location.replace('#login');
         });
-        $('#register-btn').click(function (event) {
+
+        $('#register-btn').on('click', function (event) {
             event.preventDefault();
             location.replace('#register');
         });
 
-        firstNavExtension.addEventListener('mouseleave', function () {
-            firstNavExtension.style.display = 'none';
-            myAccLink.style.color = '#ffffff';
+        firstNavExtension.on('mouseleave', function () {
+            firstNavExtension.css('display', 'none');
+            myAccLink.css('color', '#fff');
         })
-    }, false);
+    });
 
 
-    //TODO LOGGED
-    myFavsLink.addEventListener('click', function (event) {
+    // TODO LOGGED
+    myFavsLink.on('click', function (event) {
         event.preventDefault();
+
         var logged = JSON.parse(sessionStorage.getItem('isLogged'));
         if (!logged) {
             location.replace('#login');
@@ -114,56 +116,56 @@ function userController() {
         }
     });
 
-    myFavsLink.addEventListener('mouseenter', function (event) {
+    myFavsLink.parent().on('mouseenter', function (event) {
         event.preventDefault();
 
-        myFavsLink.style.color = '#E9EBEE';
+        myFavsLink.css('color', '#E9EBEE');
 
         var secondNavExtension = null;
 
         var logged = JSON.parse(sessionStorage.getItem('isLogged'));
 
         if (!logged) {
-            secondNavExtension = document.getElementsByClassName('nav-extensions')[1];
-            secondNavExtension.style.left = '-140%';
-
+            secondNavExtension = $('.nav-extensions').eq(1);
+            secondNavExtension.css('left', '-140%');
         } else {
-            secondNavExtension = $('.logged-user-extensions')[1];
+            secondNavExtension = $('.logged-user-extensions').eq(1);
 
             var favs = JSON.parse(sessionStorage.getItem('loggedUser')).favoriteProducts;
-            if (favs.length > 0) {                
-                getTemplate('assets/js/templates/favoriteProductsInNavTemplate.js')
+            if (favs.length > 0) {
+                $.get('assets/js/templates/favoriteProductsInNavTemplate.js')
                     .then(function (data) {
-                        
+
                         var template = Handlebars.compile(data);
                         var html = template({ favoriteProducts: favs });
-                        secondNavExtension.style.width = '20em';
-                        secondNavExtension.style.left = '-100%';
-                        secondNavExtension.innerHTML = html;
+
+                        secondNavExtension.css('width', '20em');
+                        secondNavExtension.css('left', '-100%');
+
+                        secondNavExtension.html(html);
 
                     });
             } else {
-                secondNavExtension.style.padding = '0.4em';
-                secondNavExtension.innerText = 'Нямаш любими продукти!';
+                secondNavExtension.css('padding', '0.4em');
+                secondNavExtension.text('Нямаш любими продукти!');
             }
         }
 
-        secondNavExtension.style.display = 'block';
+        secondNavExtension.css('display', 'block');
 
-        //loggedout user
-        $('#login-btn-favs').click(function (event) {
+        $('#login-btn-favs').on('click', function (event) {
             event.preventDefault();
             location.replace('#login');
         });
 
-        secondNavExtension.addEventListener('mouseleave', function () {
-            secondNavExtension.style.display = 'none';
-            myFavsLink.style.color = '#ffffff';
+        secondNavExtension.on('mouseout', function () {
+            secondNavExtension.css('display', 'none');
+            myFavsLink.css('color', '#fff');
         })
 
-    }, false);
+    });
 
-    myCartLink.addEventListener('click', function (event) {
+    myCartLink.on('click', function (event) {
         event.preventDefault();
         var logged = JSON.parse(sessionStorage.getItem('isLogged'));
         if (!logged) {
@@ -172,44 +174,43 @@ function userController() {
             location.replace('#my-cart');
         }
     });
-    myCartLink.addEventListener('mouseenter', function (event) {
+
+    myCartLink.on('mouseenter', function (event) {
         event.preventDefault();
 
-        myCartLink.style.color = '#E9EBEE';
+        myCartLink.css('color', '#E9EBEE');
 
         var thirdNavExtension = null;
 
         var logged = JSON.parse(sessionStorage.getItem('isLogged'));
         if (!logged) {
-            thirdNavExtension = document.getElementsByClassName('nav-extensions')[2];
-            thirdNavExtension.style.left = '-80%';
+            thirdNavExtension = $('.nav-extensions').eq(2);
+            thirdNavExtension.css('left', '-80%');
         } else {
-            thirdNavExtension = $('.logged-user-extensions')[2];
-            thirdNavExtension.style.left = '-20%';
+            thirdNavExtension = $('.logged-user-extensions').eq(2);
+            thirdNavExtension.css('left', '-20%');
 
             var cart = JSON.parse(sessionStorage.getItem('loggedUser')).cart;
 
             if (cart.length > 0) {
-                getTemplate('assets/js/templates/favoriteProductsInNavTemplate.js')
+                $.get('assets/js/templates/favoriteProductsInNavTemplate.js')
                     .then(function (data) {
                         var template = Handlebars.compile(data);
                         var html = template({ products: cart });
-                        thirdNavExtension.innerHTML = html;
+                        thirdNavExtension.html(html);
 
                     });
             } else {
-                thirdNavExtension.style.padding = '0.4em';
-                thirdNavExtension.innerText = 'Нямаш добавени продукти в количката!';
+                thirdNavExtension.css('padding', '0.4em');
+                thirdNavExtension.text('Нямаш добавени продукти в количката!');
             }
         }
 
-        thirdNavExtension.style.display = 'block';
+        thirdNavExtension.css('display', 'block');
 
-        thirdNavExtension.addEventListener('mouseleave', function () {
-            thirdNavExtension.style.display = 'none';
-            myCartLink.style.color = '#ffffff';
+        thirdNavExtension.on('mouseleave', function () {
+            thirdNavExtension.css('display', 'none');
+            myCartLink.css('color', '#fff');
         });
-
-    }, false);
-
+    });
 }

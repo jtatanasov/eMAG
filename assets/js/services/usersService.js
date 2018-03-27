@@ -143,6 +143,15 @@ var userService = (function () {
         localStorage.setItem('users', JSON.stringify(this.users));
     }
 
+    UserStorage.prototype.deleteFavorite = function(id, productId) {
+        var user = this.getUserById(id);
+        var index = user.favoriteProducts.findIndex(pr => pr.id == productId );
+        user.favoriteProducts.splice(index, 1);
+        
+        sessionStorage.setItem('loggedUser', JSON.stringify(user));
+        localStorage.setItem('users', JSON.stringify(this.users));
+    }
+
     UserStorage.prototype.deleteAllFavorites = function(id) {
         var user = this.getUserById(id);
         user.favoriteProducts = [];

@@ -43,6 +43,15 @@ function myFavoriteProductsController() {
                 event.preventDefault();
 
                 userService.deleteAllFavorites(user.id);
+            });
+
+            $('.delete-curr-fav').on('click', function(event) {
+                event.preventDefault();
+                var row = $(this).closest('tr[fav-product-id]');
+                var productId = row.attr('fav-product-id');
+                userService.deleteFavorite(user.id, productId);
+
+                row.fadeOut(500);
             })
         })
         .catch(function (error) {

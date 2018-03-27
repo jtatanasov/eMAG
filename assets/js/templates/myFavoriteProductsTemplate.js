@@ -19,7 +19,7 @@
 
                 <table id='favs'>
                     {{#each favoriteProducts}}
-                    <tr>
+                    <tr fav-product-id={{id}}>
                         <td class='fav-product-img'><a href=''><img class='' src={{ main_url }} /></a></td>
                         <td class='product-description'><div class='fav-name'><h2><a href=''>{{ name }}</a></h2></div>
                             {{#if availability}}

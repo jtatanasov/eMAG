@@ -68,6 +68,32 @@ function userController() {
         });
     }
 
+
+    //ASK NIKI
+
+    // ctgsBtn();
+    // function ctgsBtn() {
+    //     if (page !== '') {
+    //         $(window).on('mousewheel', function (event) {
+    //             if (event.originalEvent.wheelDelta < 0) {
+    //                 $('header > a').before($('<a href="" id="categories-btn"><img id="categories-btn-img" width="20px" src="assets/images/icons/list-icon.png" /></a>'));
+    //                 $(window).off();
+
+    //                 //todo onclick
+    //                 $(document).on('scroll', function () {
+    //                     if ($(window).scrollTop() === 0) {
+    //                         $("#categories-btn").remove();
+    //                         ctgsBtn();
+    //                     }
+    //                 });
+    //             }
+    //         });
+    //     }
+    // }
+
+
+
+
     myAccLink.on('click', function (event) {
         event.preventDefault();
         var logged = JSON.parse(sessionStorage.getItem('isLogged'));
@@ -97,7 +123,6 @@ function userController() {
 
 
         }
-
         firstNavExtension.fadeIn('500');
 
         $('#logout-btn').parent().on('click', function (event) {

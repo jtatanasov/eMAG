@@ -86,7 +86,7 @@ header {
     border-radius: 5px;
     display: inline-block; 
     box-shadow: 5px 5px 5px #888888;
-    z-index: 100;
+    z-index: 10;
     display: none;
 }
 
@@ -191,7 +191,7 @@ header {
     left: -60%;
     display: inline-block; 
     box-shadow: 5px 5px 5px #888888;
-    z-index: 100;
+    z-index: 10;
     border: 1px solid white;
     border-radius: 5px;
     width: 15em;
@@ -309,14 +309,16 @@ aside {
 #categories {
     visibility: visible;
 }
-#categories img {
+#categories img,
+#categories-btn-img {
     filter: invert(100%);
     -webkit-filter: invert(100%);
     width: 20px;
     margin-right: 1em;
 }
 
-#categories a {
+#categories a,
+#categories-button {
     color: white;
     text-decoration: none;
 }

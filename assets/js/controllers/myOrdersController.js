@@ -1,7 +1,7 @@
 function myOrdersController() {
     showAndHideAside();
     
-    $.get('assets/js/templates/myOrdersTemplate.js')
+    $.get('assets/js/templates/myOrdersTemplate.html')
         .then(function (data) {
 
             var user = JSON.parse(sessionStorage.getItem('loggedUser'));

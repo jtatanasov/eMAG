@@ -1,6 +1,6 @@
 function editProfileController() {
     showAndHideAside();
-    $.get('assets/js/templates/editProfileTemplate.js')
+    $.get('assets/js/templates/editProfileTemplate.html')
         .then(function (data) {
 
             var user = JSON.parse(sessionStorage.getItem('loggedUser')),

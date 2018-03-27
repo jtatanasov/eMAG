@@ -1,7 +1,7 @@
 function myFavoriteProductsController() {
     showAndHideAside();
     
-    $.get('assets/js/templates/myFavoriteProductsTemplate.js')
+    $.get('assets/js/templates/myFavoriteProductsTemplate.html')
         .then(function (data) {
 
             var user = JSON.parse(sessionStorage.getItem('loggedUser'));

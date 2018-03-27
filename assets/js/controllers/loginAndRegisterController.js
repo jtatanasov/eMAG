@@ -1,7 +1,7 @@
 function loginAndRegisterController(isRegister) {
     showAndHideAside();
     
-    $.get('assets/js/templates/loginAndRegisterTemplate.js')
+    $.get('assets/js/templates/loginAndRegisterTemplate.html')
         .then(function (data) {
             $('main').html(data);
 

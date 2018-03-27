@@ -1,7 +1,7 @@
 function myCartController() {
     showAndHideAside();
     
-    $.get('assets/js/templates/myCartTemplate.js')
+    $.get('assets/js/templates/myCartTemplate.html')
         .then(function (data) {
 
             var user = JSON.parse(sessionStorage.getItem('loggedUser'));

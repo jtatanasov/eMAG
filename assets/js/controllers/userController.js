@@ -195,7 +195,7 @@ function userController() {
 
             var favs = JSON.parse(sessionStorage.getItem('loggedUser')).favoriteProducts;
             if (favs.length > 0) {
-                $.get('assets/js/templates/favoriteProductsInNavTemplate.js')
+                $.get('assets/js/templates/favoriteProductsInNavTemplate.html')
                     .then(function (data) {
 
                         var template = Handlebars.compile(data);
@@ -255,7 +255,7 @@ function userController() {
             var cart = JSON.parse(sessionStorage.getItem('loggedUser')).cart;
 
             if (cart.length > 0) {
-                $.get('assets/js/templates/cartInNavTemplate.js')
+                $.get('assets/js/templates/cartInNavTemplate.html')
                     .then(function (data) {
                         var template = Handlebars.compile(data);
                         var html = template({ cart: cart });

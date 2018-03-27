@@ -135,7 +135,7 @@ function userController() {
             location.replace('#register');
         });
 
-        firstNavExtension.on('mouseleave', function () {
+        myAccLink.parent().on('mouseleave', function () {
             firstNavExtension.fadeOut('500');
             myAccLink.css('color', '#fff');
         })
@@ -195,7 +195,7 @@ function userController() {
             location.replace('#login');
         });
 
-        secondNavExtension.on('mouseout', function () {
+        myFavsLink.parent().on('mouseout', function () {
             secondNavExtension.fadeOut('500');
             myFavsLink.css('color', '#fff');
         })
@@ -248,7 +248,7 @@ function userController() {
 
         thirdNavExtension.fadeIn('500');
 
-        thirdNavExtension.on('mouseleave', function () {
+        myCartLink.parent().on('mouseleave', function () {
             thirdNavExtension.fadeOut('500');
             myCartLink.css('color', '#fff');
         });

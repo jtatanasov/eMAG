@@ -1,0 +1,71 @@
+<div id='order-page'>
+    <h2>Данни за поръчката</h2>
+    <section id='delivery-info'>
+        <h3>Данни за доставка</h3>
+        <div class='order-sections' id='order-address'>
+            <h4>Адрес за доставка</h4>
+            {{#if address}}
+            <div id='address-container'>{{address}}</div>
+            {{else}}
+            <div id='address-container'>Не сте попълнили адрес. Можете да го направите от
+                <a href='' id='go-to-address-fill'>тук</a>
+            </div>
+            {{/if}}
+        </div>
+    </section>
+    <section id='payment'>
+        <h3>Начин на плащане</h3>
+        <div class='order-sections' id='order-payment'>
+            <div>
+                <input required name='payment-type' type="radio" id='cash-payment' value='' />
+                <label for='cash-payment'>Наложен платеж</label>
+            </div>
+            <div>
+                <input disabled name='payment-type' type="radio" id='card-payment' value='' />
+                <label for='card-payment'>Плащане с карта</label>
+                <span id='sorry-message'>В момента това плащане е неактивно. Моля да ни извините!</span>
+            </div>
+        </div>
+
+    </section>
+    <section id='acc-info'>
+        <h3>Информация акаунт</h3>
+        <div class='order-sections' id='order-acc'>
+            <h4>Информацията в тази секция ще бъде свързана с акаунта ти в eMAG. Моля, провери данните по-долу преди да продължиш.</h4>
+            <div class='order-inputs'>
+                <label>Име</label>
+                <br/>
+                <input id='order-name' type='text' value='{{fullname}}' />
+            </div>
+            <div class='order-inputs'>
+                <label>Телефон</label>
+                <br/>
+                <input id='order-phone' type='text' value='{{phoneNumber}}' />
+            </div>
+        </div>
+    </section>
+    <div id='order-info'>
+        <div>
+            <table>
+                <caption>
+                    <h3>Информация за поръчката</h3>
+                </caption>
+                <tr>
+                    <td>Всички продукти: </td>
+                    <td class='amounts'>{{processingOrder.productsPrice}} лв.</td>
+                </tr>
+                <tr>
+                    <td>Цена за доставка:</td>
+                    <td class='amounts'>{{processingOrder.deliveryPrice}} лв.</td>
+                </tr>
+
+            </table>
+        </div>
+
+        <div id='finish-order'>
+            <h3>Общо:</h3>
+            <p id='order-price'>{{processingOrder.totalPrice}} лв.</p>
+            <button id='finish-order-btn'>Завърши поръчка</button>
+        </div>
+    </div>
+</div>

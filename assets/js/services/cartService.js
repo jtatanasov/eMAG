@@ -8,7 +8,5 @@ var Cart = (function(event) {
 
     }
 
-    
-
     return Cart;
 })();

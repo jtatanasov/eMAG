@@ -53,8 +53,14 @@ function myCartController() {
                 $('#delivery-td').css('font-weight', 'bold');
             }
 
-            var currOrder = new Order();
-            // console.log(currOrder);
+            $('#order-button').on('click', function(event) {
+                event.preventDefault();
+                var currOrder = new Order(user.cart.products);
+                userService.addOrderInProcess(user.id, currOrder);
+                location.replace('#order');
+                
+            })
+
         });
 }
 

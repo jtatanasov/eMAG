@@ -8,6 +8,7 @@ body {
 header {
     padding: 1em;
     display: inline-block;
+    z-index: 200;
     box-sizing: border-box;
     width: 100%;
     background-color: #005EB8;
@@ -466,7 +467,8 @@ main {
 #delete-all-favs,
 .add-curr-fav-to-cart,
 .delete-curr-fav,
-#order-button {
+#order-button,
+#finish-order-btn {
     font-size: 0.9em;
     padding: 0.5em 1.2em;
     background-color: #005EB8;
@@ -484,7 +486,8 @@ main {
 #delete-all-favs:hover,
 .add-curr-fav-to-cart:hover,
 .delete-curr-fav:hover,
-#order-button:hover  {
+#order-button:hover,
+#finish-order-btn:hover  {
     background-color: #00415d;
     border: 1px solid #00415d;
 }
@@ -666,4 +669,118 @@ main {
     margin-top: 1em;
 }
 
- 
+#order-page {
+    display: inline-block;
+    border-radius: 10px;
+    width: 70%;
+    margin: 2em auto;
+}
+
+#order-page h2 {
+    text-align: left;
+    margin-left: 1em;
+}
+
+#order-page > section {
+    width: 100%;
+    background-color: #E4F1F9;
+    border-radius: 5px;
+    text-align: left;
+    margin-bottom: 2em;
+    padding-bottom: 2em;
+}
+
+#order-page > section > h3 {
+    display: inline-block;
+    margin-left: 3em;
+}
+
+.order-sections {
+    width: 95%;
+    background-color:#fff;
+    border-radius: 5px;
+    margin: 1em auto;
+    padding: 2em;
+}
+
+#order-address h4 {
+    font-size: 1.5em;
+}
+
+#address-container {
+    margin-top: 2em;
+    font-size: 1.2em;
+}
+
+#order-payment {
+    font-size: 1.3em;
+}
+
+#sorry-message {
+    margin-left: 2em;
+    color: rgb(233, 57, 57);
+    font-size: 0.8em;
+}
+
+#order-acc > h4 {
+    font-size: 1.2em;
+    width: 70%;
+}
+
+.order-inputs {
+    display: inline-block;
+    width: 45%;
+}
+
+.order-inputs input {
+    width: 90%;
+    border-radius: 5px;
+    padding: 0.2em;
+    outline: none;
+}
+
+#order-info {
+    width: 100%;
+    display:inline-block;
+    padding: 1em;
+    margin-bottom: 5em;
+}
+
+#order-info > h3 {
+    text-align: left;
+    margin-left: 2em;
+}
+
+#order-info > div:first-of-type {
+    display :inline-block;
+    width: 40%;
+    text-align: left;
+    padding-right: 2em;
+}
+#order-info > div > table {
+    width: 100%;
+    text-align: left;
+    line-height: 1.5em;
+    margin-top: 2em;
+    font-size: 1.2em;
+}
+
+#order-info > div > table tr {
+    margin-top: 1em;
+}
+
+#finish-order {
+    border-left: 1px solid #aaaaaa;
+    width: 40%;
+    display: inline-block;
+    text-align: center;
+    padding-left: 2em;
+    font-weight: bold;
+}
+
+#finish-order > button {
+    font-weight: normal;
+}
+#order-price {
+    font-size: 1.8em;
+}

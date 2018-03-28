@@ -270,6 +270,7 @@ function editProfileController() {
             var loggedU = JSON.parse(sessionStorage.getItem('loggedUser'));
             var currUser = userService.getUserById(loggedU.id);
 
+            userService.addPhoneNumber(currUser.id, addressPhone);
             userService.addAddress(currUser.id, address);
 
             setTimeout(editProfileController, 2000);

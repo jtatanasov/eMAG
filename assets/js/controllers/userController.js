@@ -50,7 +50,7 @@ function ctgsBtn() {
 
     if (page !== '') {
         $(document).on('scroll', function () {
-            if ($(window).scrollTop() > 0) {
+            if ($(window).scrollTop() > 40) {
                 if(!isAsideLoaded) {
                 $("#categories-btn").show('500');
                 isAsideLoaded = true;

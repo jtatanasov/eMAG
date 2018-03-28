@@ -21,6 +21,8 @@ document.addEventListener('DOMContentLoaded', function () {
             case 'my-cart':
                 myCartController();
                 break;
+            case 'order':
+                orderController();
             default:
                 userController();
                 break;

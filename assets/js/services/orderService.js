@@ -1,9 +1,10 @@
 var Order = (function() {
-    function Order() {
-        this.products = [];
-        this.productsPrice = 0;
-        this.deliveryPrice = 0;
-        this.totalPrice = 0;
+    
+    function Order(products) {
+        this.products = products;
+        this.productsPrice = this.calculateProductsPrice();
+        this.deliveryPrice = this.calculateDeliveryPrice();
+        this.totalPrice = this.calculateTotalPrice();
     }
 
     Order.prototype.calculateProductsPrice = function() {
@@ -29,4 +30,4 @@ var Order = (function() {
         return this.totalPrice;
     }
     return Order;
-});
+})();

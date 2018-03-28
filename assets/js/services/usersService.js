@@ -52,9 +52,59 @@ var userService = (function () {
         this.cart = new Cart();
 
         this.photo = '';
+
+        this.processingOrder = null;
     }
 
     User.nextId = 0;
+
+    function UserStorage() {
+        if (localStorage.getItem('users')) {
+            this.users = JSON.parse(localStorage.getItem('users'));
+        } else {
+            this.users = [];
+        }
+    }
+
+    UserStorage.prototype.register = function (email, fullname, password) {
+        if (!this.users.find(u => u.email === email)) {
+            var newUser = new User(email, fullname, password);
+            this.users.push(newUser);
+            localStorage.setItem('users', JSON.stringify(this.users));
+            return newUser.id; //?
+        } else {
+            // throw new Error('Existing user with this email!');
+            return false;
+        }
+    }
+
+    UserStorage.prototype.login = function (email, password) {
+
+        var user = this.users.find(u => (u.email === email && u.password === password));
+
+        if (user) {
+            // delete user.password;
+            isLogged = true;
+            loggedUser = JSON.stringify(user);
+            loggedUser = JSON.parse(loggedUser);
+            delete loggedUser.password;
+            loggedUser = JSON.stringify(loggedUser);
+            sessionStorage.setItem('isLogged', isLogged);
+            sessionStorage.setItem('loggedUser', loggedUser);
+            return user.id;
+        } else {
+            return false;
+        }
+    }
+
+    UserStorage.prototype.getUserById = function (id) {
+        return this.users.find(u => u.id == id);
+    }
+
+    UserStorage.prototype.logout = function () {
+        sessionStorage.setItem('isLogged', false);
+        sessionStorage.setItem('loggedUser', null);
+    }
 
     UserStorage.prototype.changeName = function (id, newName) {
         var user = this.getUserById(id);
@@ -121,16 +171,10 @@ var userService = (function () {
     }
 
     //?? order instaceof Order?
-    UserStorage.prototype.ordering = function (id) {
-
+    UserStorage.prototype.ordering = function (id, order) {
         var user = this.getUserById(id);
-        if (user.cart.length != 0) {
-            user.cart.forEach(product => user.orders.push(product));
-            sessionStorage.setItem('loggedUser', JSON.stringify(user));
-            localStorage.setItem('users', JSON.stringify(this.users));
-        } else {
-            throw new Error('The cart is empty!');
-        }
+
+        user.orders.push(order);
     }
 
     //?? instaceof
@@ -183,15 +227,15 @@ var userService = (function () {
         localStorage.setItem('users', JSON.stringify(this.users));
     }
 
-    UserStorage.prototype.removeFromCart = function(id, productId) {
+    UserStorage.prototype.removeFromCart = function (id, productId) {
         var user = this.getUserById(id);
-        
+
         var index = user.cart.products.findIndex(pr => pr.id == productId);
         user.cart.products.splice(index, 1);
         user.cart.productsPrice = this.calculateProductsInCartPrice(user);
         user.cart.deliveryPrice = this.calculateDeliveryInCartPrice(user);
         user.cart.totalPrice = this.calculateTotalInCartPrice(user);
-        
+
         sessionStorage.setItem('loggedUser', JSON.stringify(user));
         localStorage.setItem('users', JSON.stringify(this.users));
     }
@@ -222,53 +266,24 @@ var userService = (function () {
         return user.cart.totalPrice;
     }
 
+    UserStorage.prototype.addOrderInProcess = function(id, order) {
+        if (order instanceof Order) {
+            var user = this.getUserById(id);
 
-    function UserStorage() {
-        if (localStorage.getItem('users')) {
-            this.users = JSON.parse(localStorage.getItem('users'));
-        } else {
-            this.users = [];
-        }
-    }
-
-    UserStorage.prototype.register = function (email, fullname, password) {
-        if (!this.users.find(u => u.email === email)) {
-            var newUser = new User(email, fullname, password);
-            this.users.push(newUser);
+            user.processingOrder = order;
+            sessionStorage.setItem('loggedUser', JSON.stringify(user));
             localStorage.setItem('users', JSON.stringify(this.users));
-            return newUser.id; //?
-        } else {
-            // throw new Error('Existing user with this email!');
-            return false;
         }
     }
 
-    UserStorage.prototype.login = function (email, password) {
+    UserStorage.prototype.removeOrderInProcess = function(id, order) {
+        if(order instanceof Order) {
+            var user = this.getUserById(id);
 
-        var user = this.users.find(u => (u.email === email && u.password === password));
-
-        if (user) {
-            // delete user.password;
-            isLogged = true;
-            loggedUser = JSON.stringify(user);
-            loggedUser = JSON.parse(loggedUser);
-            delete loggedUser.password;
-            loggedUser = JSON.stringify(loggedUser);
-            sessionStorage.setItem('isLogged', isLogged);
-            sessionStorage.setItem('loggedUser', loggedUser);
-            return user.id;
-        } else {
-            return false;
+            user.processingOrder = null;
+            sessionStorage.setItem('loggedUser', JSON.stringify(user));
+            localStorage.setItem('users', JSON.stringify(this.users));
         }
-    }
-
-    UserStorage.prototype.getUserById = function (id) {
-        return this.users.find(u => u.id == id);
-    }
-
-    UserStorage.prototype.logout = function () {
-        sessionStorage.setItem('isLogged', false);
-        sessionStorage.setItem('loggedUser', null);
     }
 
     return new UserStorage();

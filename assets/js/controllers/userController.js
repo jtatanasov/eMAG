@@ -164,7 +164,11 @@ function userController() {
 
             location.replace('#my-favorite-products');
         });
-        //TODO myCart button
+        $('#my-cart-btn').parent().on('click', function(event) {
+            event.preventDefault();
+
+            location.replace('#my-cart');
+        })
 
 
         $('#login-btn').on('click', function (event) {
@@ -236,8 +240,8 @@ function userController() {
             event.preventDefault();
             location.replace('#login');
         });
-
-        myFavsLink.parent().on('mouseout', function () {
+        
+        myFavsLink.parent().on('mouseleave', function () {
             secondNavExtension.fadeOut('500');
             myFavsLink.css('color', '#fff');
         })
@@ -271,7 +275,7 @@ function userController() {
 
             var cart = JSON.parse(sessionStorage.getItem('loggedUser')).cart;
 
-            if (cart.length > 0) {
+            if (cart.products.length > 0) {
                 $.get('assets/js/templates/cartInNavTemplate.html')
                     .then(function (data) {
                         var template = Handlebars.compile(data);

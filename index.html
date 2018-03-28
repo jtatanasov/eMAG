@@ -19,6 +19,8 @@
 
     <!-- -->
     <script src="assets/js/getTemplate.js"></script>
+    <script src="assets/js/services/cartService.js"></script>
+    <script src="assets/js/services/orderService.js"></script>
     <script src='assets/js/services/usersService.js'></script>
     <script src='assets/js/controllers/userController.js'></script>
     <script src="assets/js/controllers/loginAndRegisterController.js"></script>
@@ -37,8 +39,12 @@
 
 <body>
     <header>
-        <a href="" id="categories-btn" style="display:none"><img id="categories-btn-img" width="20px" src="assets/images/icons/list-icon.png" /></a>
-        <a href='#'><img id='logo' src='assets/images/emag-logo.png' /></a>
+        <a href="" id="categories-btn" style="display:none">
+            <img id="categories-btn-img" width="20px" src="assets/images/icons/list-icon.png" />
+        </a>
+        <a href='#'>
+            <img id='logo' src='assets/images/emag-logo.png' />
+        </a>
         <input id='search' type="search" placeholder="Какво търсиш днес?">
         <nav id='main-nav'>
             <ul>
@@ -75,6 +81,9 @@
                                 </li>
                                 <li>
                                     <a id='personal-data'>Лични данни</a>
+                                </li>
+                                <li>
+                                    <a id='my-cart-btn'>Моята количка</a>
                                 </li>
                                 <hr/>
 
@@ -128,7 +137,9 @@
         <ul>
             <li>
                 <div id='categories'>
-                    <a id='categories-button' href=''><img src='assets/images/icons/list-icon.png' />Категории</a></div>
+                    <a id='categories-button' href=''>
+                        <img src='assets/images/icons/list-icon.png' />Категории</a>
+                </div>
             </li>
             <li>
                 <div id='emag-info'>eMAG Инфо</div>
@@ -138,23 +149,62 @@
 
     <aside>
         <ul id='categories-list'>
-            <li><img src='assets/images/icons/categories/mobile-icon.png'/><a>Телефони, таблети и лаптопи</a></li>
-            <li><img src='assets/images/icons/categories/mouse-icon.png'/><a>Компютри & периферия</a></li>
-            <li><img src='assets/images/icons/categories/tv-icon.png'/><a>TV, Електроника & Gaming</a></li>
-            <li><img src='assets/images/icons/categories/wm-icon.png'/><a>Големи електроуреди</a></li>
-            <li><img src='assets/images/icons/categories/mixer-icon.png'/><a>Малки електроуреди</a></li>
-            <li><img src='assets/images/icons/categories/clothes-icon.png'/><a>Мода</a></li>
-            <li><img src='assets/images/icons/categories/mirror-icon.png'/><a>Здраве и красота</a></li>
-            <li><img src='assets/images/icons/categories/sofa-icon.png'/><a>Дом, Градина & Petshop</a></li>
-            <li><img src='assets/images/icons/categories/books-icon.png'/><a>Книги, Офис и Подаръци</a></li>
-            <li><img src='assets/images/icons/categories/toys-icon.png'/><a>Играчки & Детски артикули</a></li>
-            <li><img src='assets/images/icons/categories/sport-icon.png'/><a>Спорт & свободно време</a></li>
-            <li><img src='assets/images/icons/categories/car-icon.png'/><a>Застраховки & Авто</a></li>
-            <li><img src='assets/images/icons/categories/food-icon.png'/><a>Храни & Напитки</a></li>
+            <li>
+                <img src='assets/images/icons/categories/mobile-icon.png' />
+                <a>Телефони, таблети и лаптопи</a>
+            </li>
+            <li>
+                <img src='assets/images/icons/categories/mouse-icon.png' />
+                <a>Компютри & периферия</a>
+            </li>
+            <li>
+                <img src='assets/images/icons/categories/tv-icon.png' />
+                <a>TV, Електроника & Gaming</a>
+            </li>
+            <li>
+                <img src='assets/images/icons/categories/wm-icon.png' />
+                <a>Големи електроуреди</a>
+            </li>
+            <li>
+                <img src='assets/images/icons/categories/mixer-icon.png' />
+                <a>Малки електроуреди</a>
+            </li>
+            <li>
+                <img src='assets/images/icons/categories/clothes-icon.png' />
+                <a>Мода</a>
+            </li>
+            <li>
+                <img src='assets/images/icons/categories/mirror-icon.png' />
+                <a>Здраве и красота</a>
+            </li>
+            <li>
+                <img src='assets/images/icons/categories/sofa-icon.png' />
+                <a>Дом, Градина & Petshop</a>
+            </li>
+            <li>
+                <img src='assets/images/icons/categories/books-icon.png' />
+                <a>Книги, Офис и Подаръци</a>
+            </li>
+            <li>
+                <img src='assets/images/icons/categories/toys-icon.png' />
+                <a>Играчки & Детски артикули</a>
+            </li>
+            <li>
+                <img src='assets/images/icons/categories/sport-icon.png' />
+                <a>Спорт & свободно време</a>
+            </li>
+            <li>
+                <img src='assets/images/icons/categories/car-icon.png' />
+                <a>Застраховки & Авто</a>
+            </li>
+            <li>
+                <img src='assets/images/icons/categories/food-icon.png' />
+                <a>Храни & Напитки</a>
+            </li>
         </ul>
     </aside>
     <main>
-       
+
     </main>
 
     <footer>

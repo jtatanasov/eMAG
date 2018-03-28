@@ -9,19 +9,79 @@
     </div>
     <div id='profile-option-content'>
         <div id='view-orders'>
-            <h3>Мояте количка</h3>
+            <h3>Моята количка</h3>
+            {{#if cart.products}} {{#each cart.products}}
             <section>
-                /* todo products in cart */
-                {{#if cart}}
-                <table>
-                    {{#each cart}}
-                    
-                    {{/ each}}
-                    {{ else}}
-                    <div id='no-orders'>Нямате добавени продукти в количката!</div>
-                    {{/if}}
+
+                <table width='100%'>
+                    <tr cart-product-id={{id}}>
+                        <td class='cart-product-img'>
+                            <a href=''>
+                                <img width='200px' class='' src={{ main_url }} />
+                            </a>
+                        </td>
+                        <td class='product-description'>
+                            <div class='cart-product-name'>
+                                <h2>
+                                    <a href=''>{{ name }}</a>
+                                </h2>
+                            </div>
+                            {{#if availability}}
+                            <div class='availability'>
+                                <span>Наличност: В наличност</span>
+                            </div>
+                            {{ else}}
+                            <div class='availability'>
+                                <span>Наличност: Не е в наличност</span>
+                            </div>
+                            {{/if}}
+                            <div>
+                                <span>Гранция: 12 месеца</span>
+                            </div>
+                        </td>
+                        <td class='cart-price-td'>
+                            <div class="cart-price">
+                                <div>{{price}} лв.</div>
+                                <div>
+                                    <a href="" class='delete-from-cart'>
+                                        изтрий
+                                    </a>
+                                </div>
+                            </div>
+                        </td>
+                    </tr>
+
+
+
+
                 </table>
             </section>
+            {{/ each}}
+            <div id='total'>
+                <table>
+                    <tr>
+                        <td>Всички продукти:</td>
+                        <td class='amounts'>{{cart.productsPrice}} лв.</td>
+                    </tr>
+                    <tr>
+                        <td>Цена на доставка:</td>
+                        <td class='amounts' id='delivery-td'>{{cart.deliveryPrice}} лв.</td>
+                    </tr>
+                    <tr>
+                        <td>Общо:</td>
+                        <td class='amounts'>{{cart.totalPrice}} лв.</td>
+                    </tr>
+
+                </table>
+                <button id='order-button'>Поръчай</button>
+            </div>
+
+            {{ else}}
+            <section>
+                <div id='no-orders'>Нямате добавени продукти в количката!</div>
+            </section>
+
+            {{/if}}
         </div>
     </div>
 </div>

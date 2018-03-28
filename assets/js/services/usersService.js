@@ -1,8 +1,6 @@
 var isLogged = false;
 var loggedUser = null;
 
-var User;
-
 var userService = (function () {
     function isValidMail(email) {
         var re = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
@@ -51,7 +49,7 @@ var userService = (function () {
 
         this.orders = []; //maybe this.orders = new Orders() ?
         this.favoriteProducts = []; //maybe this.favouriteProducts = new Products() ?
-        this.cart = []; //?
+        this.cart = new Cart();
 
         this.photo = '';
     }
@@ -138,28 +136,33 @@ var userService = (function () {
     //?? instaceof
     UserStorage.prototype.addFavourite = function (id, product) {
         var user = this.getUserById(id);
-        user.favoriteProducts.push(product);
+
+        var containProduct = user.favoriteProducts.some((pr) => pr.name === product.name);
+
+        if (!containProduct) {
+            user.favoriteProducts.push(product);
+        }
         sessionStorage.setItem('loggedUser', JSON.stringify(user));
         localStorage.setItem('users', JSON.stringify(this.users));
     }
 
-    UserStorage.prototype.getFavoriteProductById = function(id, productId) {
+    UserStorage.prototype.getFavoriteProductById = function (id, productId) {
         var user = this.getUserById(id);
         var product = user.favoriteProducts.find(pr => pr.id == productId);
-        if(product) {
+        if (product) {
             return product;
         }
     }
-    UserStorage.prototype.deleteFavorite = function(id, productId) {
+    UserStorage.prototype.deleteFavorite = function (id, productId) {
         var user = this.getUserById(id);
-        var index = user.favoriteProducts.findIndex(pr => pr.id == productId );
+        var index = user.favoriteProducts.findIndex(pr => pr.id == productId);
         user.favoriteProducts.splice(index, 1);
-        
+
         sessionStorage.setItem('loggedUser', JSON.stringify(user));
         localStorage.setItem('users', JSON.stringify(this.users));
     }
 
-    UserStorage.prototype.deleteAllFavorites = function(id) {
+    UserStorage.prototype.deleteAllFavorites = function (id) {
         var user = this.getUserById(id);
         user.favoriteProducts = [];
         sessionStorage.setItem('loggedUser', JSON.stringify(user));
@@ -168,14 +171,55 @@ var userService = (function () {
     //?? instanceof 
     UserStorage.prototype.addToCart = function (id, product) {
         var user = this.getUserById(id);
-        
-        var containProduct = user.cart.some((pr) => pr.name === product.name);
 
+        var containProduct = user.cart.products.some((pr) => pr.name === product.name);
         if (!containProduct) {
-            user.cart.push(product);
+            user.cart.products.push(product);
+            user.cart.productsPrice = this.calculateProductsInCartPrice(user);
+            user.cart.deliveryPrice = this.calculateDeliveryInCartPrice(user);
+            user.cart.totalPrice = this.calculateTotalInCartPrice(user);
         }
         sessionStorage.setItem('loggedUser', JSON.stringify(user));
         localStorage.setItem('users', JSON.stringify(this.users));
+    }
+
+    UserStorage.prototype.removeFromCart = function(id, productId) {
+        var user = this.getUserById(id);
+        
+        var index = user.cart.products.findIndex(pr => pr.id == productId);
+        user.cart.products.splice(index, 1);
+        user.cart.productsPrice = this.calculateProductsInCartPrice(user);
+        user.cart.deliveryPrice = this.calculateDeliveryInCartPrice(user);
+        user.cart.totalPrice = this.calculateTotalInCartPrice(user);
+        
+        sessionStorage.setItem('loggedUser', JSON.stringify(user));
+        localStorage.setItem('users', JSON.stringify(this.users));
+    }
+
+    UserStorage.prototype.calculateProductsInCartPrice = function (user) {
+        var price = 0;
+        user.cart.productsPrice = user.cart.products.reduce(function (price, product) {
+            return price + product.price;
+        }, 0);
+        return user.cart.productsPrice;
+    }
+
+    UserStorage.prototype.calculateDeliveryInCartPrice = function (user) {
+        if (user.cart.productsPrice >= 1000) {
+            user.cart.deliveryPrice = null;
+        } else {
+            user.cart.deliveryPrice = Number((0.05 * user.cart.productsPrice).toFixed(2));
+        }
+        return user.cart.deliveryPrice;
+    }
+
+    UserStorage.prototype.calculateTotalInCartPrice = function (user) {
+        if (!user.cart.deliveryPrice) {
+            user.cart.totalPrice = user.cart.productsPrice;
+        } else {
+            user.cart.totalPrice = user.cart.productsPrice + user.cart.deliveryPrice;
+        }
+        return user.cart.totalPrice;
     }
 
 

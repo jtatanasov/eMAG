@@ -240,7 +240,7 @@ header {
 }
 .favorite-products {
     display: block;
-    margin: 0.1em 0.1em;
+    margin: 0.1em 0.5em;
 }
 
 .favorite-products p {
@@ -408,7 +408,7 @@ main {
     background-color: #E4F1F9;
     padding-left: 2em;
     text-align:left;
-    padding-bottom: 5em;
+    padding-bottom: 9em;
 }
 
 #profile-option-content > div > h3 {
@@ -465,7 +465,8 @@ main {
 #add-all-to-cart,
 #delete-all-favs,
 .add-curr-fav-to-cart,
-.delete-curr-fav {
+.delete-curr-fav,
+#order-button {
     font-size: 0.9em;
     padding: 0.5em 1.2em;
     background-color: #005EB8;
@@ -482,7 +483,8 @@ main {
 #add-all-to-cart:hover,
 #delete-all-favs:hover,
 .add-curr-fav-to-cart:hover,
-.delete-curr-fav:hover  {
+.delete-curr-fav:hover,
+#order-button:hover  {
     background-color: #00415d;
     border: 1px solid #00415d;
 }
@@ -603,5 +605,65 @@ main {
 #no-fav-products,
 #no-orders {
     font-size: 1.5em;
-
 }
+
+.cart-product-img {
+    width: 100px;
+}
+.cart-product-name > h2 > a {
+    font-size: 0.5em;
+    color: #000;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.cart-product-name > h2 > a:hover {
+    text-decoration: underline;
+}
+
+.quantity > select {
+    border-radius: 5px;
+    cursor: pointer;
+    padding: 0.1em;
+}
+
+.quantity > select:focus {
+    outline: none;
+}
+
+.cart-price-td {
+    padding-top:3em;
+    vertical-align:top;
+}
+.cart-price {
+    text-align: center;
+    font-size:1.5em;
+}
+
+.delete-from-cart {
+    text-align: left;
+    font-size: 0.7em;
+}
+
+#total {
+    float:right;
+    font-size: 1.2em;
+    margin: 3em 2em;
+    margin-bottom: 0;
+}
+
+#total > table {
+    padding-bottom: 1em;
+}
+
+.amounts {
+    text-align: right;
+    padding-left: 0.3em;
+}
+
+#total > button {
+    float: right;
+    margin-top: 1em;
+}
+
+ 

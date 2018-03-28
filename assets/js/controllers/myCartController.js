@@ -34,7 +34,27 @@ function myCartController() {
 
                 location.replace('#my-orders');
             });
-            //TODO
+
+            $('.delete-from-cart').on('click', function(event) {
+                event.preventDefault();
+
+                var row = $(this).closest('tr[cart-product-id]');
+                var productId = row.attr('cart-product-id');
+                
+                userService.removeFromCart(user.id, productId);
+
+                row.closest($('section')).fadeOut(500);
+                setTimeout(myCartController, 500);
+            });
+            
+            if($('#delivery-td').html() == ' лв.') {
+                $('#delivery-td').html('БЕЗПЛАТНА');
+                $('#delivery-td').css('color', 'green');
+                $('#delivery-td').css('font-weight', 'bold');
+            }
+
+            var currOrder = new Order();
+            // console.log(currOrder);
         });
 }
 

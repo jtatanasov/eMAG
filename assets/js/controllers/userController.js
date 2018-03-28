@@ -42,6 +42,34 @@ function navigateLoginAndRegister(isRegister) {
         $(this).addClass('active');
     });
 }
+
+function ctgsBtn() {
+    var page = location.hash.slice(1);
+    var asideElement = $('aside');
+    var isAsideLoaded = false;
+
+    if (page !== '') {
+        $(document).on('scroll', function () {
+            if ($(window).scrollTop() > 0) {
+                if(!isAsideLoaded) {
+                $("#categories-btn").show('500');
+                isAsideLoaded = true;
+            }
+
+            } else {
+                asideElement.css('top', '8.8em');
+                asideElement.css('left', '2.3em');
+                $("#categories-btn").hide('500');
+                isAsideLoaded = false;
+            }
+        });
+    }
+    else {
+        $(document).off('scroll');
+    }
+}
+
+
 function userController() {
     var templatePath = '';
     var myAccLink = $('#my-account'),
@@ -68,31 +96,21 @@ function userController() {
         });
     }
 
+    ctgsBtn();
 
-    //ASK NIKI
-
-    // ctgsBtn();
-    // function ctgsBtn() {
-    //     if (page !== '') {
-    //         $(window).on('mousewheel', function (event) {
-    //             if (event.originalEvent.wheelDelta < 0) {
-    //                 $('header > a').before($('<a href="" id="categories-btn"><img id="categories-btn-img" width="20px" src="assets/images/icons/list-icon.png" /></a>'));
-    //                 $(window).off();
-
-    //                 //todo onclick
-    //                 $(document).on('scroll', function () {
-    //                     if ($(window).scrollTop() === 0) {
-    //                         $("#categories-btn").remove();
-    //                         ctgsBtn();
-    //                     }
-    //                 });
-    //             }
-    //         });
-    //     }
-    // }
-
-
-
+    $("#categories-btn").on('click', function (event) {
+        console.log(isAsideLoaded);
+        event.preventDefault();
+        if (!isAsideLoaded) {
+            isAsideLoaded = true;
+            asideElement.css('top', '6.15em');
+            asideElement.css('left', '0')
+            asideElement.show('500');
+        } else {
+            asideElement.hide('500');
+            isAsideLoaded = false;
+        }
+    });
 
     myAccLink.on('click', function (event) {
         event.preventDefault();

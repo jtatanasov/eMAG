@@ -1,5 +1,6 @@
 function editProfileController() {
     showAndHideAside();
+    ctgsBtn();
     $.get('assets/js/templates/editProfileTemplate.html')
         .then(function (data) {
 

@@ -1,5 +1,6 @@
 function myOrdersController() {
     showAndHideAside();
+    ctgsBtn();
     
     $.get('assets/js/templates/myOrdersTemplate.html')
         .then(function (data) {

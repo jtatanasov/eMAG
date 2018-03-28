@@ -20,6 +20,7 @@
 
     <!-- Products -->
     <script src="assets/js/services/productsService.js"></script>
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
     <link rel="stylesheet" href="assets/css/typesOfProductsPage.css">
     <script src="assets/js/controllers/productPageController.js"></script>
 
@@ -207,9 +208,7 @@
                         <aside id="side-navigation">
                 
                             <div id="side-nav-types-container">
-                                <h1>
-                                    <a href="">Мобилни телефони и аксесоари</a>
-                                </h1>
+                                <a id="side-nav-main-link" href="">Мобилни телефони и аксесоари</a>
                                 <ul id="side-nav-types-list">
                                     <li class="side-nav-type-option">Мобилни телефони</li>
                                     <li class="side-nav-type-option">Калъфи за мобилни телефони</li>
@@ -227,7 +226,7 @@
                 
                                 <ul id="filters-list">
                 
-                                    <li>
+                                    <ul>
                                         <h1>
                                             <span class="filter-title">Наличност</span>
                                             <img src="assets/images/icons/arrow-up.png" class="icon filter-arrow" alt=""/>
@@ -250,9 +249,9 @@
                                                 </input>
                                             </div>
                                         </li>
-                                    </li>
+                                    </ul>
                 
-                                    <li>
+                                    <ul>
                                         <h1>
                                             <span class="filter-title">Производител</span>
                                                 <img src="assets/images/icons/arrow-up.png" class="icon filter-arrow" alt=""/>
@@ -266,7 +265,7 @@
                                                 </input>
                                             </div>
                                         </li>
-                                    </li>
+                                    </ul>
                                 </ul>                        
                             
                             </div>
@@ -276,15 +275,14 @@
                             <div id="main-content-container">
                                 <div id="main-container-nav">
                                     <div id="main-container-header">
-                                        <h1>Мобилни телефони</h1>
-                                        <span>(1237 продукта)</span>
+                                        <h1>Мобилни телефони <span>1237 продукта</span></h1>   
                                         <hr />
                                     </div>
                 
                                     <div id="selected-filters">
                                         <ul>
                                             <li>
-                                                <h1 class="filters-result-title"></h1>
+                                                <h1 class="filters-result-title">наличност:</h1>
                                                 <div class="select-container-div">
                                                     <select name="availability" id="availability-select">
                                                         <option value="available">В наличност <span>(1423)</span></option>
@@ -297,7 +295,7 @@
                                             </li>
                 
                                             <li>
-                                                <h1 class="filters-result-title"></h1>
+                                                <h1 class="filters-result-title">производител:</h1>
                                                 <div class="select-container-div">
                                                         <select name="distributor" id="distributor-select">
                                                             <option value="available">Samsung <span>(1423)</span></option>
@@ -311,7 +309,7 @@
                                         <hr />
                 
                                         <div id="sort-by-price">
-                                            <span>Подреди по </span>
+                                            <span>Подреди по:</span>
                                             <select name="price-sort" id="price-sort-select">
                                                     <option value="lowest">Цена възх.</option>
                                                     <option value="highest">Цена низх.</option>

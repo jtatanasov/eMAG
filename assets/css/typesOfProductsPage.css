@@ -1,11 +1,13 @@
 #outer-container-products{
     width: 93%;
-    border: 1px solid purple;
     margin: auto;
     border-radius: 5px;
     background-color: rgb(233,235,238);
     font-family: 'Open Sans', sans-serif;
     display: inline-block;
+    -webkit-font-smoothing: antialiased;
+-moz-osx-font-smoothing: grayscale;
+-webkit-text-stroke: 0.45px rgba(0, 0, 0, 0.1);
 }
 
 #inner-container-products{
@@ -14,7 +16,6 @@
 
 #header-products{
     text-align: left;
-    border: 1px solid red;
 }
 
 .icon{
@@ -36,7 +37,6 @@ hr {
     margin-left: 2%;
     margin-top: 2%;
     font-size: 1.1em;
-    border: 1px solid green;
 }
 
 #path>li{
@@ -72,35 +72,283 @@ hr {
 
 /* aside style: */
 aside{
+    box-sizing: border-box;
     float: left;
-    width: 20%;
+    width: 18%;
     position: static;
 }
 
-#side-nav-types-container{
+#side-nav-types-container{  
     background-color: rgb(225,243,253);
     border-radius: 2%;  
-    border: 1px solid red;
+    box-shadow: 0px 0px 4px 0px rgba(148, 148, 148, 0.15);
+    -moz-box-shadow: 0px 0px 4px 0px rgba(148, 148, 148, 0.15);
+    -webkit-box-shadow: 0px 0px 4px 0px rgba(148, 148, 148, 0.15);
+    text-align: left;
+    padding: 1em;
+    padding-bottom: 0.3em;
+    color: rgb(0, 94, 184);
 }
+
+#side-nav-main-link{
+    all:unset;
+    cursor: pointer;
+    font-weight: bolder;
+    font-size: 1.1em;
+}
+
+#side-nav-types-container>ul{
+    margin-left: 5%;
+    margin-top: 5%;
+}
+
+#side-nav-types-container>ul>li{
+    margin-bottom: 3%;
+    font-size: 0.95em;
+    cursor: pointer;
+}
+
+#filter-container{
+    margin-top: 5%;
+}
+
+#clear-filters-container{
+    display: inline-block;
+    width: 100%;
+    font-size: 1em;
+    border-radius: 4px;
+    box-shadow: 0px 0px 4px 0px rgba(148, 148, 148, 0.15);
+    -moz-box-shadow: 0px 0px 4px 0px rgba(148, 148, 148, 0.15);
+    -webkit-box-shadow: 0px 0px 4px 0px rgba(148, 148, 148, 0.15);
+    background: white;
+    /* margin: 5% 0; */
+    cursor: pointer;
+    padding: 0.7em 1em;
+}
+
+#clear-filters-container:hover{
+    color: rgb(206, 38, 12);
+}
+
+#clear-filters-container>span:first-child{
+    padding-top: 0.1em;
+    float: left;
+}
+
+#clear-filters-container>span:last-child{
+    float: right;
+}
+
+#clear-filters-container>span>img{
+    width: 0.9em;
+    height: 0.9em;
+}
+
+#filters-list>*{
+    margin: 3% 0;
+}
+
+#filters-list>ul{
+    display: inline-block;
+    width: 100%;
+    border-radius: 4px;
+    box-shadow: 0px 0px 4px 0px rgba(148, 148, 148, 0.15);
+    -moz-box-shadow: 0px 0px 4px 0px rgba(148, 148, 148, 0.15);
+    -webkit-box-shadow: 0px 0px 4px 0px rgba(148, 148, 148, 0.15);
+    background: white;
+    padding: 0.5em 1em;
+}
+
+#filters-list>ul>h1{
+    all:unset;
+    box-sizing: border-box;
+    display: inline-block;
+    vertical-align: middle;
+    width: 100%;
+    font-weight: bold;
+    font-size: 1em;
+    margin-bottom: 5%;
+}
+#filters-list>ul>h1>span{
+    float:left;
+}
+
+#filters-list>ul>h1>img{
+    margin-top: 2%;
+    float: right;
+    width: 0.8em;
+    height: 0.8em;
+}
+
+#filters-list>ul>li{
+    text-align: left;
+}
+
+type["checkbox"]{
+    background-color: white;
+}
+
 
 /* main content style*/
 #main-content-outer-container{
-    width: 78%;
+    box-sizing: border-box;
+    font-family: 'Open Sans', sans-serif;
+    width: 80%;
     float: right;
+    
 }
 
     /* main container navigation style: */
 
 #main-container-nav{
     background-color: white;
-    border: 1px solid purple;
     border-radius: 4px;
+    padding: 0.8em;
+    display: inline-block;
+    width: 100%;
+    box-shadow: 0px 0px 4px 0px rgba(148, 148, 148, 0.15);
+    -moz-box-shadow: 0px 0px 4px 0px rgba(148, 148, 148, 0.15);
+    -webkit-box-shadow: 0px 0px 4px 0px rgba(148, 148, 148, 0.15);
 }
+
+#main-container-header{
+    display: inline-block;
+    float: left;
+    width: 100%;
+}
+
+#main-container-header>h1{
+    all: unset;
+    float: left;
+    font-size: 1.85em;
+}
+
+#main-container-header>h1>span{
+    padding-left: 0.6em;
+    font-size: 0.6em;
+}
+
+#main-container-header>hr{
+    width: 100%;
+}
+
+#selected-filters{
+    display: inline-block;
+    width: 100%;
+}
+
+#selected-filters>ul{
+    display: block;
+    width: 100%;
+}
+
+#selected-filters>ul>li{
+    display: inline-block;
+    float: left;
+    margin: 1%;
+    width: 20%;
+}
+
+#selected-filters>ul>li>h1{
+    all:unset;
+    float: left;
+    margin-left: 5%;
+    margin-bottom: 3%;
+    color: rgb(131, 131, 131);
+}
+
+.select-container-div>select{
+    background: transparent;
+    width: 85%;
+    font-size: 0.8em;
+    font-weight: bold;
+    border: 0;
+    border-radius: 0;
+    height: 2.4em;
+    -webkit-appearance: none;
+    border-right: 1px solid #ccc;
+    box-sizing: border-box;
+    padding-left: 1em;
+}
+
+/* TODO: style the drop down arrow / how??? */
+.select-container-div{
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    background: url("assets/images/icons/arrow-down.png");
+    background-color: rgb(238,238,238);
+    border: 1px solid #ccc;
+    border-radius: 3px;
+}
+
+.select-container-div>span{
+    box-sizing: border-box;
+    background-color: white;
+    float: right;
+    width: 15%;
+    height: 100%;
+    padding-top: 0.2em;
+    padding-bottom: 0.3em;  
+}
+
+.select-container-div>span>img{
+    width: 0.8em;
+    height: 0.8em;
+}
+
+.select-container-div>span:hover{
+    cursor: pointer;
+    background-color: rgb(238,238,238);
+}
+
+.select-container-div>select:focus{
+    background-color: white;
+}
+
+.select-container-div>select>option{
+    font-size: 1.1em;
+    background-color: white;
+    color: rgb(131, 131, 131);
+}
+
+#selected-filters>hr{
+    width: 100%;
+}
+
+#sort-by-price{
+    display: inline-block;
+    width: 50%;
+    text-align: left;
+    float: left;
+    font-size: 0.9em;
+}
+
+#sort-by-price>span{
+    padding-right: 1em;
+}
+
+/* добавяне на стрелка за дропдаун */
+#sort-by-price>select{
+    all: unset;
+    color:  rgb(131, 131, 131);
+    border: 1px solid #ccc;
+    border-radius: 3px;
+    padding: 0.4em 0.5em;
+    width: 20%;
+    cursor: pointer;
+}
+
+#sort-by-price>select>option{
+    border:  1px solid #ccc;
+    border-radius: 3px;
+}
+
+
 
     /* products on page style */
 
 #available-products{
-    border: 1px solid purple;
     border-radius: 4px;
     margin: 1% 0;
 }

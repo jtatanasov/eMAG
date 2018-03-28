@@ -44,8 +44,18 @@ function myFavoriteProductsController() {
                 event.preventDefault();
 
                 userService.deleteAllFavorites(user.id);
+                setTimeout(myFavoriteProductsController, 500);
             });
 
+            $('.add-curr-fav-to-cart').on('click', function(event) {
+                event.preventDefault();
+
+                var productId = $(this).closest('tr[fav-product-id]').attr('fav-product-id');
+                var product = userService.getFavoriteProductById(user.id, productId);
+
+                userService.addToCart(user.id, product);
+            });
+            
             $('.delete-curr-fav').on('click', function(event) {
                 event.preventDefault();
                 var row = $(this).closest('tr[fav-product-id]');
@@ -53,10 +63,12 @@ function myFavoriteProductsController() {
                 userService.deleteFavorite(user.id, productId);
 
                 row.fadeOut(500);
-            })
+            });
+
+
         })
         .catch(function (error) {
-
+            throw new Error(error);
         });
 
 }

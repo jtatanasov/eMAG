@@ -99,7 +99,6 @@ function userController() {
     ctgsBtn();
 
     $("#categories-btn").on('click', function (event) {
-        console.log(isAsideLoaded);
         event.preventDefault();
         if (!isAsideLoaded) {
             isAsideLoaded = true;

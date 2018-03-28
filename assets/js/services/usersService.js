@@ -240,6 +240,14 @@ var userService = (function () {
         localStorage.setItem('users', JSON.stringify(this.users));
     }
 
+    UserStorage.prototype.emptyCart = function(id) {
+        var user = this.getUserById(id);
+        user.cart = new Cart();
+
+        sessionStorage.setItem('loggedUser', JSON.stringify(user));
+        localStorage.setItem('users', JSON.stringify(this.users));
+    }
+
     UserStorage.prototype.calculateProductsInCartPrice = function (user) {
         var price = 0;
         user.cart.productsPrice = user.cart.products.reduce(function (price, product) {

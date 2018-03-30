@@ -784,3 +784,17 @@ main {
 #order-price {
     font-size: 1.8em;
 }
+
+#profile-option-content > #view-orders > section {
+    padding-bottom: 10em;
+}
+
+#profile-option-content > #view-orders > #no-products {
+    padding-bottom: 1em;
+}
+
+.amounts-orders {
+    font-size: 1.5em;
+    color: #005EB8;
+}
+

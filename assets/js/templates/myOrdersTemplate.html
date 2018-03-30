@@ -10,18 +10,51 @@
     <div id='profile-option-content'>
         <div id='view-orders'>
             <h3>Моите поръчки</h3>
-            <section>
-                <table>
-                {{#if orders}}
+            {{#if orders}} {{#each orders}}
 
-                    {{#each orders}}
-                  
-                    {{/ each}}
-                    {{ else}}
-                    <div id='no-orders'>Нямате направени поръчки</div>
-                    {{/if}}
+            <section>
+                {{#each products}}
+                <table width='100%'>
+                    <tr order-product-id={{id}}>
+                        <td class='order-product-img'>
+                            <a href=''>
+                                <img width='200px' class='' src={{ main_url }} />
+                            </a>
+                        </td>
+                        <td class='product-description'>
+                            <div class='cart-product-name'>
+                                <h2>
+                                    <a href=''>{{ name }}</a>
+                                </h2>
+                            </div>
+                        </td>
+                        <td class='cart-price-td'>
+                            <div class="cart-price">
+                                <div>{{price}} лв.</div>
+                            </div>
+                        </td>
+                    </tr>
                 </table>
+
+                {{/each}}
+
+                <div id='total'>
+                    <table>
+                        <tr class='amounts-orders'>
+                            <td>Общо:</td>
+                            <td class='amounts'>{{totalPrice}} лв.</td>
+                        </tr>
+
+                    </table>
+                </div>
             </section>
+
+
+            {{/ each}} {{ else}}
+            <section id='no-products' style="padding-bottom:1m">
+                <div id='no-orders'>Нямате направени поръчки</div>
+            </section>
+            {{/if}}
         </div>
     </div>
 </div>

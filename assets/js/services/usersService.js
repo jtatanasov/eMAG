@@ -230,7 +230,7 @@ var userService = (function () {
     }
 
     function updateStorage(loggedUser, users) {
-        delete loggedUser.password;
+        //delete loggedUser.password;
         sessionStorage.setItem('loggedUser', JSON.stringify(loggedUser));
         localStorage.setItem('users', JSON.stringify(users));
     }

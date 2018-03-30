@@ -288,7 +288,7 @@ function userController() {
                     });
             } else {
                 thirdNavExtension.css('padding', '0.4em');
-                thirdNavExtension.text('Нямаш добавени продукти в количката!');
+                thirdNavExtension.text('Нямате добавени продукти в количката!');
             }
         }
 

@@ -67,9 +67,7 @@ function myCartController() {
                 var currOrder = new Order(user.cart.products);
                 userService.addOrderInProcess(user.id, currOrder);
                 location.replace('#order');
-
             })
-
         });
 }
 

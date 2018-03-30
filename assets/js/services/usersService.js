@@ -110,8 +110,7 @@ var userService = (function () {
         var user = this.getUserById(id);
         if (isValidString(fullname)) {
             user.fullname = fullname;
-            sessionStorage.setItem('loggedUser', JSON.stringify(user));
-            localStorage.setItem('users', JSON.stringify(this.users));
+            updateStorage(user, this.users);
         }
     }
 
@@ -119,8 +118,7 @@ var userService = (function () {
         var user = this.getUserById(id);
         if (isValidMail(newEmail)) {
             user.email = newEmail;
-            sessionStorage.setItem('loggedUser', JSON.stringify(user));
-            localStorage.setItem('users', JSON.stringify(this.users));
+            updateStorage(user, this.users);
         }
     }
 
@@ -128,8 +126,7 @@ var userService = (function () {
         var user = this.getUserById(id);
         if (isValidPassword(newPass)) {
             user.password = newPass;
-            sessionStorage.setItem('loggedUser', JSON.stringify(user));
-            localStorage.setItem('users', JSON.stringify(this.users));
+            updateStorage(user, this.users);
         }
     }
 
@@ -142,31 +139,27 @@ var userService = (function () {
 
         if (isValidPhoneNumber(newPhoneNumber)) {
             user.phoneNumber = newPhoneNumber;
-            sessionStorage.setItem('loggedUser', JSON.stringify(user));
-            localStorage.setItem('users', JSON.stringify(this.users));
+            updateStorage(user, this.users);
         }
     }
     UserStorage.prototype.addAddress = function (id, newAddress) {
         var user = this.getUserById(id);
         if (isValidString(newAddress)) {
             user.address = newAddress;
-            sessionStorage.setItem('loggedUser', JSON.stringify(user));
-            localStorage.setItem('users', JSON.stringify(this.users));
+            updateStorage(user, this.users);
         }
     }
 
     UserStorage.prototype.deleteAddress = function (id) {
         var user = this.getUserById(id);
         user.address = '';
-        sessionStorage.setItem('loggedUser', JSON.stringify(user));
-        localStorage.setItem('users', JSON.stringify(this.users));
+        updateStorage(user, this.users);
     }
     UserStorage.prototype.addTitle = function (id, title) {
         var user = this.getUserById(id);
         if (isValidTitle(title)) {
             user.title = title;
-            sessionStorage.setItem('loggedUser', JSON.stringify(user));
-            localStorage.setItem('users', JSON.stringify(this.users));
+            updateStorage(user, this.users);
         }
     }
 
@@ -175,8 +168,7 @@ var userService = (function () {
 
         user.orders.push(order);
 
-        sessionStorage.setItem('loggedUser', JSON.stringify(user));
-        localStorage.setItem('users', JSON.stringify(this.users));
+        updateStorage(user, this.users);
     }
 
     //?? instaceof
@@ -188,8 +180,7 @@ var userService = (function () {
         if (!containProduct) {
             user.favoriteProducts.push(product);
         }
-        sessionStorage.setItem('loggedUser', JSON.stringify(user));
-        localStorage.setItem('users', JSON.stringify(this.users));
+        updateStorage(user, this.users);
     }
 
     UserStorage.prototype.getFavoriteProductById = function (id, productId) {
@@ -204,15 +195,13 @@ var userService = (function () {
         var index = user.favoriteProducts.findIndex(pr => pr.id == productId);
         user.favoriteProducts.splice(index, 1);
 
-        sessionStorage.setItem('loggedUser', JSON.stringify(user));
-        localStorage.setItem('users', JSON.stringify(this.users));
+        updateStorage(user, this.users);
     }
 
     UserStorage.prototype.deleteAllFavorites = function (id) {
         var user = this.getUserById(id);
         user.favoriteProducts = [];
-        sessionStorage.setItem('loggedUser', JSON.stringify(user));
-        localStorage.setItem('users', JSON.stringify(this.users));
+        updateStorage(user, this.users);
     }
 
     UserStorage.prototype.updateCart = function (id, cart) {
@@ -220,8 +209,7 @@ var userService = (function () {
 
         user.cart = cart;
 
-        sessionStorage.setItem('loggedUser', JSON.stringify(user));
-        localStorage.setItem('users', JSON.stringify(this.users));
+        updateStorage(user, this.users);
     }
 
     UserStorage.prototype.addOrderInProcess = function (id, order) {
@@ -229,8 +217,7 @@ var userService = (function () {
             var user = this.getUserById(id);
 
             user.processingOrder = order;
-            sessionStorage.setItem('loggedUser', JSON.stringify(user));
-            localStorage.setItem('users', JSON.stringify(this.users));
+            updateStorage(user, this.users);
         }
     }
 
@@ -239,9 +226,13 @@ var userService = (function () {
         var user = this.getUserById(id);
 
         user.processingOrder = null;
-        sessionStorage.setItem('loggedUser', JSON.stringify(user));
-        localStorage.setItem('users', JSON.stringify(this.users));
+        updateStorage(user, this.users);
     }
 
+    function updateStorage(loggedUser, users) {
+        delete loggedUser.password;
+        sessionStorage.setItem('loggedUser', JSON.stringify(loggedUser));
+        localStorage.setItem('users', JSON.stringify(users));
+    }
     return new UserStorage();
 })();

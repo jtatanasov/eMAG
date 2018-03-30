@@ -210,7 +210,7 @@
                             <div id="side-nav-types-container">
                                 <a id="side-nav-main-link" href="">Мобилни телефони и аксесоари</a>
                                 <ul id="side-nav-types-list">
-                                    <li class="side-nav-type-option">Мобилни телефони</li>
+                                    <li class="side-nav-type-option type-selected-option">Мобилни телефони</li>
                                     <li class="side-nav-type-option">Калъфи за мобилни телефони</li>
                                     <li class="side-nav-type-option">Батерии</li>
                                 </ul>
@@ -227,27 +227,23 @@
                                 <ul id="filters-list">
                 
                                     <ul>
-                                        <h1>
+                                        <h1 id="availability-filter-list">
                                             <span class="filter-title">Наличност</span>
                                             <img src="assets/images/icons/arrow-up.png" class="icon filter-arrow" alt=""/>
                                         </h1>
                                         <li>
-                                            <div>
                                                 <input type="checkbox" name="availability" id="availability-filter"> В наличност
                                                     <span class="number-of-results">
                                                         (1237)
                                                     </span>
                                                 </input>
-                                            </div>
                                         </li>
                                         <li>
-                                            <div>
                                                 <input type="checkbox" name="availability" id="sale-filter"> Промоции
                                                     <span class="number-of-results">
                                                         (459)
                                                     </span>
                                                 </input>
-                                            </div>
                                         </li>
                                     </ul>
                 
@@ -257,13 +253,11 @@
                                                 <img src="assets/images/icons/arrow-up.png" class="icon filter-arrow" alt=""/>
                                         </h1>
                                         <li>
-                                            <div>
                                                 <input type="checkbox" name="availability" id="availability-filter"> Samsung
                                                     <span class="number-of-results">
                                                         (1237)
                                                     </span>
                                                 </input>
-                                            </div>
                                         </li>
                                     </ul>
                                 </ul>                        
@@ -323,16 +317,18 @@
                                         <div class="single-product-nav">
                                             <img src="assets/images/icons/gray-heart-icon.png" class="icon" alt="" />
                                         </div>
-                                        <img src="https://s11emagst.akamaized.net/products/8892/8891494/images/res_d7d63673fac35dac5f93604c4a7bd059_200x200_fspo.jpg" class="single-product-image" alt="" />
+                                        <div class="single-product-img-container">
+                                            <img src="https://s11emagst.akamaized.net/products/8892/8891494/images/res_d7d63673fac35dac5f93604c4a7bd059_200x200_fspo.jpg" class="single-product-image" alt="" />
+                                        </div>       
                                         <a href="" class="single-product-title">Смартфон Apple iPhone X, 256 GB, 4 G, Space Grey</a>
-                                        <p class="single-product-availability">в наличност</p>
+                                        <p class="single-product-availability, product-available">в наличност</p>
                                         <p class="single-product-price">2579<sup>99</sup> лв.</p>
                 
                                         <button class="single-product-buy-button">
-                                            <div id="buy-nav-add-to-cart">
-                                                <img id="nav-cart-icon" class="icon" src="assets/images/icons/cart-icon.png" alt="" />
+                                            <div class="buy-nav-add-to-cart">
+                                                <img class="nav-cart-icon" class="icon" src="assets/images/icons/cart-icon.png" alt="" />
                                             </div>
-                                            <span class="button-text" id="buy-nav-txt"> Добави в количката</span>
+                                            <span class="button-text" class="buy-nav-txt"> Добави в количката</span>
                                         </button>
                                     </article>
 
@@ -340,17 +336,57 @@
                                             <div class="single-product-nav">
                                                 <img src="assets/images/icons/gray-heart-icon.png" class="icon" alt="" />
                                             </div>
-                                            <img src="https://s11emagst.akamaized.net/products/8892/8891494/images/res_d7d63673fac35dac5f93604c4a7bd059_200x200_fspo.jpg" class="single-product-image" alt="" />
+                                            <div class="single-product-img-container">
+                                                <img src="https://s11emagst.akamaized.net/products/8892/8891494/images/res_d7d63673fac35dac5f93604c4a7bd059_200x200_fspo.jpg" class="single-product-image" alt="" />
+                                            </div> 
                                             <a href="" class="single-product-title">Смартфон Apple iPhone X, 256 GB, 4 G, Space Grey</a>
-                                            <p class="single-product-availability">в наличност</p>
+                                            <p class="single-product-availability, product-unavailable">изчерпан</p>
                                             <p class="single-product-price">2579<sup>99</sup> лв.</p>
                     
                                             <button class="single-product-buy-button">
-                                                <div id="buy-nav-add-to-cart">
-                                                    <img id="nav-cart-icon" class="icon" src="assets/images/icons/cart-icon.png" alt="" />
+                                                <div class="buy-nav-add-to-cart">
+                                                    <img class="nav-cart-icon" class="icon" src="assets/images/icons/cart-icon.png" alt="" />
                                                 </div>
-                                                <span class="button-text" id="buy-nav-txt"> Добави в количката</span>
+                                                <span class="button-text" class="buy-nav-txt"> Добави в количката</span>
                                             </button>
+                                    </article>
+
+                                    <article class="single-product-container">
+                                        <div class="single-product-nav">
+                                            <img src="assets/images/icons/gray-heart-icon.png" class="icon" alt="" />
+                                        </div>
+                                        <div class="single-product-img-container">
+                                            <img src="https://s11emagst.akamaized.net/products/8892/8891494/images/res_d7d63673fac35dac5f93604c4a7bd059_200x200_fspo.jpg" class="single-product-image" alt="" />
+                                        </div>       
+                                        <a href="" class="single-product-title">Смартфон Apple iPhone X, 256 GB, 4 G, Space Grey</a>
+                                        <p class="single-product-availability, product-available">в наличност</p>
+                                        <p class="single-product-price">2579<sup>99</sup> лв.</p>
+                
+                                        <button class="single-product-buy-button">
+                                            <div class="buy-nav-add-to-cart">
+                                                <img class="nav-cart-icon" class="icon" src="assets/images/icons/cart-icon.png" alt="" />
+                                            </div>
+                                            <span class="button-text" class="buy-nav-txt"> Добави в количката</span>
+                                        </button>
+                                    </article>
+
+                                    <article class="single-product-container">
+                                        <div class="single-product-nav">
+                                            <img src="assets/images/icons/gray-heart-icon.png" class="icon" alt="" />
+                                        </div>
+                                        <div class="single-product-img-container">
+                                            <img src="https://s11emagst.akamaized.net/products/8892/8891494/images/res_d7d63673fac35dac5f93604c4a7bd059_200x200_fspo.jpg" class="single-product-image" alt="" />
+                                        </div>       
+                                        <a href="" class="single-product-title">Смартфон Apple iPhone X, 256 GB, 4 G, Space Grey</a>
+                                        <p class="single-product-availability, product-available">в наличност</p>
+                                        <p class="single-product-price">2579<sup>99</sup> лв.</p>
+                
+                                        <button class="single-product-buy-button">
+                                            <div class="buy-nav-add-to-cart">
+                                                <img class="nav-cart-icon" class="icon" src="assets/images/icons/cart-icon.png" alt="" />
+                                            </div>
+                                            <span class="button-text" class="buy-nav-txt"> Добави в количката</span>
+                                        </button>
                                     </article>
                 
                                     <div id="result-pages-nav">
@@ -363,7 +399,7 @@
                 
                                         <div id="pages-buttons">
                                             <button disabled id="back-page">Назад</button>
-                                            <button id="page-1">1</button>
+                                            <button class="current-page" id="page-1">1</button>
                                             <button id="page-2">2</button>
                                             <button disabled id="buffer-button">...</button>
                                             <button id="page-last">6</button>

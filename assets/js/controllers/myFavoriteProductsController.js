@@ -1,6 +1,7 @@
 function myFavoriteProductsController() {
     showAndHideAside();
     ctgsBtn();
+    $('#jssor_1').hide();
     
     $.get('assets/js/templates/myFavoriteProductsTemplate.html')
         .then(function (data) {

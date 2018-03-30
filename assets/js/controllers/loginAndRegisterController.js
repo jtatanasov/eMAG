@@ -1,6 +1,7 @@
 function loginAndRegisterController(isRegister) {
     showAndHideAside();
     ctgsBtn();
+    $('#jssor_1').hide();
     
     $.get('assets/js/templates/loginAndRegisterTemplate.html')
         .then(function (data) {

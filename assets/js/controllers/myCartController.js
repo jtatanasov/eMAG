@@ -1,6 +1,7 @@
 function myCartController() {
     showAndHideAside();
     ctgsBtn();
+    $('#jssor_1').hide();
 
     $.get('assets/js/templates/myCartTemplate.html')
         .then(function (data) {

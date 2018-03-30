@@ -80,8 +80,11 @@ function userController() {
         categoriestList = '';
 
     $('main').html('');
-
-
+    $('#jssor_1').show();
+    // $.get('assets/js/templates/sliderTemplate.html')
+    // .then(function(data) {
+    //     $('aside').after(data);
+    // });
     $('#categories-button').on('click', function (event) {
         event.preventDefault();
     });
@@ -299,4 +302,6 @@ function userController() {
             myCartLink.css('color', '#fff');
         });
     });
+
+    
 }

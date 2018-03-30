@@ -1,6 +1,7 @@
 function orderController() {
     showAndHideAside();
     ctgsBtn();
+    $('#jssor_1').hide();
 
     $.get('assets/js/templates/orderTemplate.html')
         .then(function (data) {

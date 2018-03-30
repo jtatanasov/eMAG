@@ -36,7 +36,9 @@ function orderController() {
                     var order = user.processingOrder;
                     userService.removeOrderInProcess(user.id, order);
                     userService.ordering(user.id, order);
-                    userService.emptyCart(user.id);
+
+                    var tmpCart = new Cart();
+                    userService.updateCart(user.id, tmpCart);
                     location.replace('#');
                 }
             });

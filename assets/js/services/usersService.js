@@ -170,11 +170,13 @@ var userService = (function () {
         }
     }
 
-    //?? order instaceof Order?
     UserStorage.prototype.ordering = function (id, order) {
         var user = this.getUserById(id);
 
         user.orders.push(order);
+
+        sessionStorage.setItem('loggedUser', JSON.stringify(user));
+        localStorage.setItem('users', JSON.stringify(this.users));
     }
 
     //?? instaceof
@@ -212,69 +214,17 @@ var userService = (function () {
         sessionStorage.setItem('loggedUser', JSON.stringify(user));
         localStorage.setItem('users', JSON.stringify(this.users));
     }
-    //?? instanceof 
-    UserStorage.prototype.addToCart = function (id, product) {
+
+    UserStorage.prototype.updateCart = function (id, cart) {
         var user = this.getUserById(id);
 
-        var containProduct = user.cart.products.some((pr) => pr.name === product.name);
-        if (!containProduct) {
-            user.cart.products.push(product);
-            user.cart.productsPrice = this.calculateProductsInCartPrice(user);
-            user.cart.deliveryPrice = this.calculateDeliveryInCartPrice(user);
-            user.cart.totalPrice = this.calculateTotalInCartPrice(user);
-        }
-        sessionStorage.setItem('loggedUser', JSON.stringify(user));
-        localStorage.setItem('users', JSON.stringify(this.users));
-    }
-
-    UserStorage.prototype.removeFromCart = function (id, productId) {
-        var user = this.getUserById(id);
-
-        var index = user.cart.products.findIndex(pr => pr.id == productId);
-        user.cart.products.splice(index, 1);
-        user.cart.productsPrice = this.calculateProductsInCartPrice(user);
-        user.cart.deliveryPrice = this.calculateDeliveryInCartPrice(user);
-        user.cart.totalPrice = this.calculateTotalInCartPrice(user);
+        user.cart = cart;
 
         sessionStorage.setItem('loggedUser', JSON.stringify(user));
         localStorage.setItem('users', JSON.stringify(this.users));
     }
 
-    UserStorage.prototype.emptyCart = function(id) {
-        var user = this.getUserById(id);
-        user.cart = new Cart();
-
-        sessionStorage.setItem('loggedUser', JSON.stringify(user));
-        localStorage.setItem('users', JSON.stringify(this.users));
-    }
-
-    UserStorage.prototype.calculateProductsInCartPrice = function (user) {
-        var price = 0;
-        user.cart.productsPrice = user.cart.products.reduce(function (price, product) {
-            return price + product.price;
-        }, 0);
-        return user.cart.productsPrice;
-    }
-
-    UserStorage.prototype.calculateDeliveryInCartPrice = function (user) {
-        if (user.cart.productsPrice >= 1000) {
-            user.cart.deliveryPrice = null;
-        } else {
-            user.cart.deliveryPrice = Number((0.05 * user.cart.productsPrice).toFixed(2));
-        }
-        return user.cart.deliveryPrice;
-    }
-
-    UserStorage.prototype.calculateTotalInCartPrice = function (user) {
-        if (!user.cart.deliveryPrice) {
-            user.cart.totalPrice = user.cart.productsPrice;
-        } else {
-            user.cart.totalPrice = user.cart.productsPrice + user.cart.deliveryPrice;
-        }
-        return user.cart.totalPrice;
-    }
-
-    UserStorage.prototype.addOrderInProcess = function(id, order) {
+    UserStorage.prototype.addOrderInProcess = function (id, order) {
         if (order instanceof Order) {
             var user = this.getUserById(id);
 
@@ -284,14 +234,13 @@ var userService = (function () {
         }
     }
 
-    UserStorage.prototype.removeOrderInProcess = function(id, order) {
-        if(order instanceof Order) {
-            var user = this.getUserById(id);
+    UserStorage.prototype.removeOrderInProcess = function (id, order) {
 
-            user.processingOrder = null;
-            sessionStorage.setItem('loggedUser', JSON.stringify(user));
-            localStorage.setItem('users', JSON.stringify(this.users));
-        }
+        var user = this.getUserById(id);
+
+        user.processingOrder = null;
+        sessionStorage.setItem('loggedUser', JSON.stringify(user));
+        localStorage.setItem('users', JSON.stringify(this.users));
     }
 
     return new UserStorage();

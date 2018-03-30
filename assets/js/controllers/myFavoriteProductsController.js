@@ -37,7 +37,9 @@ function myFavoriteProductsController() {
                 event.preventDefault();
 
                 var userFavs = user.favoriteProducts;
-                userFavs.forEach((fav) => userService.addToCart(user.id, fav));
+                var tmpCart = new Cart();
+                userFavs.forEach((fav) => tmpCart.addToCart(fav));
+                userService.updateCart(user.id, tmpCart);
             });
 
             $('#delete-all-favs').on('click', function(event) {
@@ -53,7 +55,13 @@ function myFavoriteProductsController() {
                 var productId = $(this).closest('tr[fav-product-id]').attr('fav-product-id');
                 var product = userService.getFavoriteProductById(user.id, productId);
 
-                userService.addToCart(user.id, product);
+                //implementing like this, because storage doesnt keep methods of Cart
+                var currUserCartProducts = user.cart.products;
+                var tmpCart = new Cart();
+                currUserCartProducts.forEach(pr => tmpCart.addToCart(pr));
+                tmpCart.addToCart(product);
+                console.log(tmpCart);
+                userService.updateCart(user.id, tmpCart);
             });
             
             $('.delete-curr-fav').on('click', function(event) {

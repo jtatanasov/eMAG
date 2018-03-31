@@ -1,15 +1,14 @@
-var product = productsService.getProduct(productName);
+var product = productsService.getProduct(id);
 var user = sessionStorage.getItem('loggedUser', loggedUser);
 user = JSON.parse(user);
-//как ще се подава продукта и юзъра?
 
-getTemplate('sthTemplate.js')
+getTemplate('assets/js/templates/productPageTemplate.html')
     .then(function (data) {
 
         //loading the template
         var template = Handlebars.compile(data);
         var html = template(product);
-        $("main").innerHTML = html;
+        $("main").innerHTML(html);
 
         var spec = product.specifics;
 

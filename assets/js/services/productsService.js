@@ -14,6 +14,7 @@ function loadProducts(path) {
 }
 
 var productsService = (function () {
+    const PRODUCTS_ON_PAGE = 20;
     function ProductsList() {
         var self = this;
         var path = "/assets/data/products.json"
@@ -31,20 +32,20 @@ var productsService = (function () {
         });
     }
 
-    ProductsList.prototype.getProduct = function (name) {
-        return this._productsList.find(el => (el.name === name));
+    ProductsList.prototype.getProduct = function (id) {
+        return this._productsList.find(el => (el.id === id));
     }
 
 
-    ProductsList.prototype.buyProduct = function (name, quantity) {
-        var product = this.getProduct(name);
+    ProductsList.prototype.buyProduct = function (id, quantity) {
+        var product = this.getProduct(id);
         if ((product.availability) && (product.quantity >= quantity)) {
             product.quantity -= quantity;
             if (product.quantity <= 0) {
                 product.availability = false;
             }
         } else {
-            throw new Error("This product (or the amount you're looking to buy) is not available at the moment: " + name);
+            throw new Error("This product (or the amount you're looking to buy) is not available at the moment: " + product.name);
         }
     }
 
@@ -136,12 +137,35 @@ var productsService = (function () {
         return brands;
     }
 
+    ProductsList.prototype.productsOfABrand = function(brand){
+        return this._productsList.filter(el => el.brand === brand);
+    }
+
     ProductsList.prototype.allProductsOnSale = function(){
         return this._productsList.filter(el => el.onSale);
     }
 
     ProductsList.prototype.productsOnSale = function(products){
         return products.filter(el => el.onSale);
+    }
+
+    ProductsList.prototype.numberOfPages = function(productsArray){
+        var productsQuantity = productsArray.length;
+        var numberOfPages = productsQuantity / PRODUCTS_ON_PAGE;
+        var pages = new Array(numberOfPages);
+        var count = 1;
+        numberOfPages.forEach((el, index) => {
+            pages[count-1].push(el);
+            if(index === ((PRODUCTS_ON_PAGE * count) - 1)){
+                count++;
+            }
+        });
+
+        return pages;
+    }
+
+    ProductsList.prototype.loadProductsOnPage = function(pages, page){
+        return pages[page];
     }
 
     return new ProductsList();

@@ -1,62 +1,36 @@
-<<<<<<< HEAD
-=======
-var cathegory = cathegory;
-var sybcathegory = subcathegory;
-var type = type;
-//^как ще ги взимаме / session storage;
-
-var user = sessionStorage.getItem('loggedUser', loggedUser);
-user = JSON.parse(user);
-
-var productsType = productsService.getTypesOfProducts(cathegory, subcathegory, type);
-var allTypes = productsService.getTypesInSubcathegory(cathegory, subcathegory);
-var availableProducts = productsService.showAvailable(productsType);
-var productOnSale = productsService.productsOnSale(productsType);
-var brands = productsService.availableBrands(productsType);
-var currentPage = 1;
-var availablePages = productsService.numberOfPages(productsType);
-
-getTemplate('assets/js/templates/typesOfProductsPage.html')
-    .then(function (data) {
-    
-        //filling the cathegory and subcathegory fields:
-
-        $("#cathegory").html(cathegory);
-        $("#subcathegory>a").html(subcathegory);
-        
-        $("#main-container-header>h1").html(`${type}<span>${productsType.length} продукта</span>`);
->>>>>>> 76b89252795754d61a03468958129225ed9774d8
 
 function typesOfProductsPageController() {
     // var cathegory = cathegory;
     // var sybcathegory = subcathegory;
     // var type = type;
-    //^как ще ги взимаме
+    //^как ще ги взимаме / sessionStorage
 
     var user = sessionStorage.getItem('loggedUser', loggedUser);
     user = JSON.parse(user);
     var cathegory = 'Телефони, таблети и лаптопи';
     var subcathegory = 'Мобилни телефони и аксесоари';
     var type = 'Мобилни телефони';
-    
+
     var productsType = productsService.getTypesOfProducts(cathegory, subcathegory, type);
     var allTypes = productsService.getTypesInSubcathegory(cathegory, subcathegory);
     var availableProducts = productsService.showAvailable(productsType);
     var productOnSale = productsService.productsOnSale(productsType);
     var brands = productsService.availableBrands(productsType);
     var currentPage = 1;
-    var availablePages = productsService.numberOfPages(productsType);
+    // var availablePages = productsService.numberOfPages(productsType);
+    
+
 
     getTemplate('assets/js/templates/typesOfProductsPage.html')
         .then(function (data) {
 
             //filling the cathegory and subcathegory fields:
-
+            $('main').html(data);
             $("#cathegory").html(cathegory);
             $("#subcathegory>a").html(subcathegory);
 
             $("#main-container-header>h1").html(`${type}<span>${productsType.length} продукта</span>`);
-            console.log(data);
+            
             //filling out side-nav:
 
             $("#side-nav-main-link").html(subcathegory);
@@ -102,8 +76,8 @@ function typesOfProductsPageController() {
 
             //load products on page
 
-            var currentPageProducts = productsService.loadProductsOnPage(availablePages, currentPage);
-            currentPageProducts.forEach(el => {
+            // var currentPageProducts = productsService.loadProductsOnPage(availablePages, currentPage);
+            allTypes.forEach(el => {
                 var toAppend = `<article class="single-product-container" id="${el.id}">
             <div class="single-product-nav">
                 <img src="assets/images/icons/gray-heart-icon.png" class="icon" alt="" />

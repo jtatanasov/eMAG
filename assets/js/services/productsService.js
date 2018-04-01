@@ -150,20 +150,20 @@ var productsService = (function () {
         return products.filter(el => el.onSale);
     }
 
-    ProductsList.prototype.numberOfPages = function(productsArray){
-        var productsQuantity = productsArray.length;
-        var numberOfPages = productsQuantity * PRODUCTS_ON_PAGE;
-        var pages = new Array(numberOfPages);
-        var count = 1;
-        productsArray.forEach((el, index) => {
-            pages[count-1].push(el);
-            if(index === ((PRODUCTS_ON_PAGE * count) - 1)){
-                count++;
-            }
-        });
+    // ProductsList.prototype.numberOfPages = function(productsArray){
+    //     var productsQuantity = productsArray.length;
+    //     var numberOfPages = productsQuantity * PRODUCTS_ON_PAGE;
+    //     var pages = new Array(numberOfPages);
+    //     var count = 1;
+    //     productsArray.forEach((el, index) => {
+    //         pages[count-1].push(el);
+    //         if(index === ((PRODUCTS_ON_PAGE * count) - 1)){
+    //             count++;
+    //         }
+    //     });
 
-        return pages;
-    }
+    //     return pages;
+    // }
 
     ProductsList.prototype.loadProductsOnPage = function(pages, page){
         return pages[page];

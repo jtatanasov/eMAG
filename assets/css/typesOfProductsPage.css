@@ -334,9 +334,11 @@ aside{
 
 #sort-by-price>span{
     padding-right: 0.5em;
+    display: inline-block
 }
 
 #sort-by-price>select{
+    display: inline-block;
     all: unset;
     color:  rgb(131, 131, 131);
     border: 1px solid #ccc;
@@ -349,7 +351,7 @@ aside{
 
 #sort-by-price>select>option{
     border:  1px solid #ccc;
-    border-radius: 3px;
+    border-radius: 5px;
 }
 
 

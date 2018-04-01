@@ -82,7 +82,7 @@
     
                         <div id="selected-filters">
                             <ul>
-                                <li>
+                                <li style="display:none" id="filters-top-nav-availability">
                                     <h1 class="filters-result-title">наличност:</h1>
                                     <div class="select-container-div">
                                         <select name="availability" id="availability-select">
@@ -95,11 +95,10 @@
                                     </div>
                                 </li>
     
-                                <li>
+                                <li style="display:none" id="filters-top-nav-distributor">
                                     <h1 class="filters-result-title">производител:</h1>
                                     <div class="select-container-div">
                                             <select name="distributor" id="distributor-select">
-                                                <!-- <option value="samsung">Samsung <span>(1423)</span></option> -->
                                             </select>
                                             <span>
                                                 <img src="assets/images/icons/clear-filters-icon.png" class="icon, delete-filter" alt=""/>
@@ -107,11 +106,12 @@
                                     </div>
                                 </li>
                             </ul>
-                            <hr />
+                            <hr style="display:none" id="hr-filters-nav-top" />
     
                             <div id="sort-by-price">
                                 <span>Подреди по:</span>
                                 <select name="price-sort" id="price-sort-select">
+                                        <option selected disabled value=""></option>
                                         <option value="lowest">Цена възх.</option>
                                         <option value="highest">Цена низх.</option>
                                 </select>
@@ -119,26 +119,7 @@
                         </div>    
                     </div>
     
-                    <section id="available-products">
-                        <!-- <article class="single-product-container">
-                            <div class="single-product-nav">
-                                <img src="assets/images/icons/gray-heart-icon.png" class="icon" alt="" />
-                            </div>
-                            <div class="single-product-img-container">
-                                <img src="https://s11emagst.akamaized.net/products/8892/8891494/images/res_d7d63673fac35dac5f93604c4a7bd059_200x200_fspo.jpg" class="single-product-image" alt="" />
-                            </div>       
-                            <a href="" class="single-product-title">Смартфон Apple iPhone X, 256 GB, 4 G, Space Grey</a>
-                            <p class="single-product-availability, product-available">в наличност</p>
-                            <p class="single-product-price">2579<sup>99</sup> лв.</p>
-    
-                            <button class="single-product-buy-button">
-                                <div class="buy-nav-add-to-cart">
-                                    <img class="nav-cart-icon" class="icon" src="assets/images/icons/cart-icon.png" alt="" />
-                                </div>
-                                <span class="button-text" class="buy-nav-txt"> Добави в количката</span>
-                            </button>
-                        </article>
-     -->
+                    <section id="available-products"> 
                     </section>
 
                     <div id="end-nav-products-container">

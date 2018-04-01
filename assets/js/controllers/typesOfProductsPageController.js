@@ -1,4 +1,4 @@
-function loadProductsOnPage(arr){
+var loadProductsOnPage = function(arr){
    
         arr.forEach(el => {
                 var toAppend = `<article class="single-product-container" id="${el.id}">
@@ -67,8 +67,12 @@ function typesOfProductsPageController() {
 
             $("#main-container-header>h1").html(`${type}<span>${productsType.length} продукта</span>`);
             
-            //filling out side-nav:
 
+            //load products on page
+            var currentPageProducts = productsService.loadProductsOnPage(availablePages, (currentPage - 1));
+            loadProductsOnPage(currentPageProducts);
+
+            //filling out side-nav:
             $("#side-nav-main-link").html(subcathegory);
             allTypes.forEach(el => {
                 $("#side-nav-types-list").append(`<li class="side-nav-type-option">${el}</li>`);
@@ -80,42 +84,86 @@ function typesOfProductsPageController() {
             //filters specifics
             //availability
             $($("#availability-filter ~ span")[0]).html(`(${availableProducts.length})`);
-            //$($("option[value='available']")[0]).html(`В наличност (${availableProducts.length})`)
+            $($("option[value='available']")[0]).html(`В наличност (${availableProducts.length})`)
             //sale
             $($("#sale-filter ~ span")[0]).html(`(${productOnSale.length})`);
-            //$($("option[value='sale']")[0]).html(`Промоция (${productOnSale.length})`)
+            $($("option[value='sale']")[0]).html(`Промоция (${productOnSale.length})`)
             //brands
-        // $($("#manufacturer-filter ~ span")[0]).html(`(${brands.length})`);
-        brands.forEach(el => {
-            var elBrandProducts = productsService.productsOfABrand(el);
-            $("#manufacturer-filter-list").parent().append(`<li>
-            <input type="checkbox" name=""> ${el}
-                <span class="number-of-results">
-                    (${elBrandProducts.length})
-                </span>
-            </input>
-             </li>`);
-            //     $("#distributor-select").append(`
-            // <option value="${el.toLowerCase()}">${el} <span>(${elBrandProducts.length})</span></option>
-            // `)
+            $($("#manufacturer-filter ~ span")[0]).html(`(${brands.length})`);
+            brands.forEach(el => {
+                var elBrandProducts = productsService.productsOfABrand(el);
+                $("#manufacturer-filter-list").parent().append(`<li>
+                <input type="checkbox" name=""> ${el}
+                    <span class="number-of-results">
+                        (${elBrandProducts.length})
+                    </span>
+                </input>
+                </li>`);
+                    $("#distributor-select").append(`
+                <option value="${el.toLowerCase()}">${el} <span>(${elBrandProducts.length})</span></option>
+                `)
+                })
+
+
+            //sidebar filters listener
+                //availability filter
+
+                $("#availability-filter").parent().on("click", function(event){
+                    if(!(event.target.id == "availability-filter")){
+                        $("#availability-filter").trigger("click")
+                    }
+                })
+
+            $("#availability-filter").on("change", function(event){
+                // event.preventDefault();
+                // $("#availability-filter").trigger("click");
+                if($("#availability-filter").is(":checked")){
+                    $("#filters-top-nav-availability").css({"display": "inline-block"});
+                    if(($('#hr-filters-nav-top').css('display') == 'none')){
+                        $("#hr-filters-nav-top").css({"display": "inline-block"})
+                    }
+                } else {
+                    $("#filters-top-nav-availability").css({"display": "none"});
+                    if(!($('#hr-filters-nav-top').css('display') == 'none') 
+                    && $("#filters-top-nav-distributor".css('display') == 'none')){
+                        $('#hr-filters-nav-top').css({"display": "none"})
+                    }
+                }
             })
 
-        //sort by price:
-        $("#price-sort-select").on("change", function(){
-            var sel = $("#price-sort-select option:selected").val();
-            var sortArr = currentProductsOnPage.slice();
-            sortArr = (sel == "lowest") ? productsService.sortLowestPrice(sortArr) : productsService.sortHighestPrice(sortArr);
-            $("#available-products").html("");
-            loadProductsOnPage(sortArr);
-        });
+            $("#sale-filter").parent().on("click", function(event){
+                if(!(event.target.id == "sale-filter")){
+                    $("#sale-filter").trigger("click")
+                }
+            })
 
-            //load products on page
-            
-            var currentPageProducts = productsService.loadProductsOnPage(availablePages, (currentPage - 1));
-            loadProductsOnPage(currentPageProducts);
+            $("#sale-filter").on("change", function(event){
+                if($("#sale-filter").is(":checked")){
+                    $("#filters-top-nav-availability").css({"display": "inline-block"});
+                    if(($('#hr-filters-nav-top').css('display') == 'none')){
+                        $("#hr-filters-nav-top").css({"display": "inline-block"})
+                    }
+                } else {
+                    $("#filters-top-nav-availability").css({"display": "none"});
+                    if(!($('#hr-filters-nav-top').css('display') == 'none') 
+                    && $("#filters-top-nav-distributor".css('display') == 'none')){
+                        $('#hr-filters-nav-top').css({"display": "none"})
+                    }
+                }
+            })
+                
+            //sort by price:
+            $("#price-sort-select").on("change", function(){
+                var sel = $("#price-sort-select option:selected").val();
+                var sortArr = currentProductsOnPage.slice();
+                sortArr = (sel == "lowest") ? productsService.sortLowestPrice(sortArr) : productsService.sortHighestPrice(sortArr);
+                $("#available-products").html("");
+                loadProductsOnPage(sortArr);
+            });
+
+
 
             //adding to cart:
-
             $(".single-product-buy-button").on("click", function (event) {
                 event.preventDefault();
                 var productID = event.target.closest("article")[0].id;

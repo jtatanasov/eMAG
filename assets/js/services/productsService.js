@@ -84,7 +84,6 @@ var productsService = (function () {
         console.log(cathegory, subcathegory, type);
         var products = this.getProductsInSubcathegory(cathegory, subcathegory);
         var toReturn = products.filter(el => el.type === type);
-        console.log(toReturn);
         return toReturn;
     }
 

@@ -11,22 +11,14 @@ function typesOfProductsPageController() {
     var subcathegory = 'Мобилни телефони и аксесоари';
     var type = 'Мобилни телефони';
 
-    var productsType = [];
-    productsService.getTypesOfProducts(cathegory, subcathegory, type).forEach(el => productsType.push(JSON.parse(JSON.stringify(el))));
-    console.log("products of type: " + productsType);
+    var productsType = productsService.getTypesOfProducts(cathegory, subcathegory, type);
     var allTypes = productsService.getTypesInSubcathegory(cathegory, subcathegory);
-    // console.log("available types: " + allTypes);
     var availableProducts = productsService.showAvailable(productsType);
     var productOnSale = productsService.productsOnSale(productsType);
-    // console.log("available products: " + availableProducts);
     var brands = productsService.availableBrands(productsType);
-    // console.log("available brands: " + brands);
     var currentPage = 1;
     var availablePages = productsService.numberOfPages(productsType);
-    // console.log("available pages: " + availablePages);
     
-
-
     getTemplate('assets/js/templates/typesOfProductsPage.html')
         .then(function (data) {
 
@@ -81,7 +73,7 @@ function typesOfProductsPageController() {
         });
 
             //load products on page
-            var currentPageProducts = productsService.loadProductsOnPage(availablePages, currentPage);
+            var currentPageProducts = productsService.loadProductsOnPage(availablePages, (currentPage - 1));
             currentPageProducts.forEach(el => {
                 var toAppend = `<article class="single-product-container" id="${el.id}">
             <div class="single-product-nav">
@@ -110,7 +102,7 @@ function typesOfProductsPageController() {
             </button>
             </article>`
 
-                $("#available-products").append(toAppend);
+                $(toAppend).insertBefore("#result-pages-nav");
             });
 
 
@@ -121,12 +113,11 @@ function typesOfProductsPageController() {
                 var productID = event.target.closest("article")[0].id;
                 userService.addToCart(user.id, productID);
 
-                ////да има ли проверка? в емга иска да се логват чак след като вече тръгнат да поръчват нещата?
-                // if(sessionStorage.getItem('isLogged')){
-                //     userService.addToCart(user.id, product);
-                // } else {
-                //     //?? 
-                // } 
+                if(sessionStorage.getItem('isLogged')){
+                    userService.addToCart(user.id, product);
+                } else {
+                    //redirect to login page
+                } 
             })
 
             //adding to favorites
@@ -148,11 +139,11 @@ function typesOfProductsPageController() {
 
             //buttons
             availablePages.forEach((el, index) => {
-                var elToAppend = `<button id="page-${index + 1}">${index + 1}</button>`
-                if ((index + 1) === currentPage) {
-                    elToAppend.addClass("current-page");
-                }
+                var elToAppend = `<button id="page-${index + 1}">${index + 1}</button>`    
                 $(elToAppend).insertAfter("#back-page");
+                if ((index + 1) == currentPage) {
+                    $(`#page-${index + 1}`).addClass("current-page");
+                }
 
                 //TODO: логиката на буферния бутон??
                 if((availablePages.length > 4) && (index )){

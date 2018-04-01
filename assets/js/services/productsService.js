@@ -20,9 +20,7 @@ var productsService = (function () {
         var path = "/assets/data/products.json"
         this._productsList = null;
         loadProducts(path).then(function (data) {
-            console.log(data);
             self._productsList = data;
-            console.log(self._productsList);
             self.cathegories = [];
             self._productsList.forEach(el => {
                 if (!self.cathegories.some(cath => cath === el.cathegory)) {
@@ -52,7 +50,9 @@ var productsService = (function () {
     }
 
     ProductsList.prototype.getProductsInCathegory = function (cathegory) {
-        return this._productsList.filter(el => el.cathegory === cathegory);
+        var toReturn = this._productsList.filter(el => el.cathegory === cathegory);
+        // console.log(toReturn);
+        return JSON.parse(JSON.stringify(toReturn));
     }
 
     ProductsList.prototype.getSubcathegories = function (cathegory) {
@@ -82,7 +82,9 @@ var productsService = (function () {
 
     ProductsList.prototype.getTypesOfProducts = function (cathegory, subcathegory, type) {
         var products = this.getProductsInSubcathegory(cathegory, subcathegory);
-        return products.filter(el => el.type === type);
+        var toReturn = products.filter(el => el.type === type);
+        console.log(toReturn);
+        return toReturn;
     }
 
     ProductsList.prototype.sortLowestPrice = function (products) {
@@ -151,20 +153,23 @@ var productsService = (function () {
         return products.filter(el => el.onSale);
     }
 
-    // ProductsList.prototype.numberOfPages = function(productsArray){
-    //     var productsQuantity = productsArray.length;
-    //     var numberOfPages = productsQuantity * PRODUCTS_ON_PAGE;
-    //     var pages = new Array(numberOfPages);
-    //     var count = 1;
-    //     productsArray.forEach((el, index) => {
-    //         pages[count-1].push(el);
-    //         if(index === ((PRODUCTS_ON_PAGE * count) - 1)){
-    //             count++;
-    //         }
-    //     });
+    ProductsList.prototype.numberOfPages = function(productsArray){
+        var productsQuantity = productsArray.length;
+        var numberOfPages = Math.ceil(productsQuantity / PRODUCTS_ON_PAGE);
+        var pages = [];
+        for(var p = 1; p <= numberOfPages; p++){
+            pages.push([]);
+        }
+        var count = 1;
+        productsArray.forEach((el, index) => {
+            pages[count-1].push(el);
+            if(index === ((PRODUCTS_ON_PAGE * count) - 1)){
+                count++;
+            }
+        });
 
-    //     return pages;
-    // }
+        return pages;
+    }
 
     ProductsList.prototype.loadProductsOnPage = function(pages, page){
         return pages[page];

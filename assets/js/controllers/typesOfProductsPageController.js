@@ -11,13 +11,19 @@ function typesOfProductsPageController() {
     var subcathegory = 'Мобилни телефони и аксесоари';
     var type = 'Мобилни телефони';
 
-    var productsType = productsService.getTypesOfProducts(cathegory, subcathegory, type);
+    var productsType = [];
+    productsService.getTypesOfProducts(cathegory, subcathegory, type).forEach(el => productsType.push(JSON.parse(JSON.stringify(el))));
+    console.log("products of type: " + productsType);
     var allTypes = productsService.getTypesInSubcathegory(cathegory, subcathegory);
+    // console.log("available types: " + allTypes);
     var availableProducts = productsService.showAvailable(productsType);
     var productOnSale = productsService.productsOnSale(productsType);
+    // console.log("available products: " + availableProducts);
     var brands = productsService.availableBrands(productsType);
+    // console.log("available brands: " + brands);
     var currentPage = 1;
-    // var availablePages = productsService.numberOfPages(productsType);
+    var availablePages = productsService.numberOfPages(productsType);
+    // console.log("available pages: " + availablePages);
     
 
 
@@ -75,9 +81,8 @@ function typesOfProductsPageController() {
         });
 
             //load products on page
-            console.log(productsType);
-            // var currentPageProducts = productsService.loadProductsOnPage(availablePages, currentPage);
-            productsType.forEach(el => {
+            var currentPageProducts = productsService.loadProductsOnPage(availablePages, currentPage);
+            currentPageProducts.forEach(el => {
                 var toAppend = `<article class="single-product-container" id="${el.id}">
             <div class="single-product-nav">
                 <img src="assets/images/icons/gray-heart-icon.png" class="icon" alt="" />
@@ -136,37 +141,37 @@ function typesOfProductsPageController() {
             })
 
             //page navigation:
-        //     $($($("#pages-info")[0]).children()[0]).html(`${(currentPage - 1) * currentPageProducts.length + 1}-
-        // ${currentPage * currentPageProducts.length}`);
+            $($($("#pages-info")[0]).children()[0]).html(`${(currentPage - 1) * currentPageProducts.length + 1}-
+        ${currentPage * currentPageProducts.length}`);
 
             $($($("#pages-info")[0]).children()[1]).html(productsType.length);
 
             //buttons
-            // availablePages.forEach((el, index) => {
-            //     var elToAppend = `<button id="page-${index + 1}">${index + 1}</button>`
-            //     if ((index + 1) === currentPage) {
-            //         elToAppend.addClass("current-page");
-            //     }
-            //     $(elToAppend).insertAfter("#back-page");
+            availablePages.forEach((el, index) => {
+                var elToAppend = `<button id="page-${index + 1}">${index + 1}</button>`
+                if ((index + 1) === currentPage) {
+                    elToAppend.addClass("current-page");
+                }
+                $(elToAppend).insertAfter("#back-page");
 
                 //TODO: логиката на буферния бутон??
-                // if((availablePages.length > 4) && (index )){
-                //     $(`<button disabled id="buffer-button">...</button>`).insertBefore(elToAppend);
-                // }
-            // })
+                if((availablePages.length > 4) && (index )){
+                    $(`<button disabled id="buffer-button">...</button>`).insertBefore(elToAppend);
+                }
+            })
 
             //disable buttons
-            // if (currentPage != 1) {
-            //     $("#back-page").prop('disabled', false);
-            // } else {
-            //     $("#back-page").prop('disabled', true);
-            // }
+            if (currentPage != 1) {
+                $("#back-page").prop('disabled', false);
+            } else {
+                $("#back-page").prop('disabled', true);
+            }
 
-            // if (currentPage === availablePages.length) {
-            //     $("#forward-page").prop('disabled', true);
-            // } else {
-            //     $("#forward-page").prop('disabled', false);
-            // }
+            if (currentPage === availablePages.length) {
+                $("#forward-page").prop('disabled', true);
+            } else {
+                $("#forward-page").prop('disabled', false);
+            }
 
             //TODO: придвиживане с бутоните за страниците отдолу
 

@@ -36,6 +36,7 @@ function typesOfProductsPageController() {
     showAndHideAside();
     ctgsBtn();
     $("#jssor_1").hide();
+    $('#emag-info-nav').hide();
 
     var clickedType = localStorage.getItem('product');
     clickedType = JSON.parse(clickedType);

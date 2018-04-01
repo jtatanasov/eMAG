@@ -2,6 +2,7 @@ function myCartController() {
     showAndHideAside();
     ctgsBtn();
     $('#jssor_1').hide();
+    $('#emag-info-nav').hide();
 
     $.get('assets/js/templates/myCartTemplate.html')
         .then(function (data) {

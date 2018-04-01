@@ -2,6 +2,7 @@ function myFavoriteProductsController() {
     showAndHideAside();
     ctgsBtn();
     $('#jssor_1').hide();
+    $('#emag-info-nav').hide();
     
     $.get('assets/js/templates/myFavoriteProductsTemplate.html')
         .then(function (data) {

@@ -48,25 +48,66 @@ function ctgsBtn() {
     var asideElement = $('aside');
     var isAsideLoaded = false;
 
-    if (page !== '') {
-        $(document).on('scroll', function () {
-            if ($(window).scrollTop() > 40) {
-                if (!isAsideLoaded) {
-                    $("#categories-btn").show('500');
-                    isAsideLoaded = true;
-                }
+    $(document).on('scroll', function () {
+        if ($(window).scrollTop() > 40) {
+            if (!isAsideLoaded) {
 
-            } else {
-                $('#categories-list').css('top', '10.8em');
-                $('#categories-list').css('left', '0');
-                $("#categories-btn").hide('500');
-                isAsideLoaded = false;
+                asideElement.hide('500');
+                $('#second-nav').hide('500');
+                $("#categories-btn").show('500');
+                isAsideLoaded = true;
             }
-        });
+
+        } else {
+            $('#categories-list').css('top', '10.8em');
+            $('#categories-list').css('left', '0');
+            $("#categories-btn").hide('500');
+            $('#second-nav').show('500');
+            if (page == '') {
+                asideElement.show('500');
+            }
+            isAsideLoaded = false;
+        }
+    });
+
+}
+
+function emagInfoNav() {
+    var page = location.hash.slice(1);
+    if(page == '') {
+        $('#emag-info-nav').css('padding-top', '40em');
+    } else {
+        $('#emag-info-nav').css('padding-top', '0');
     }
-    else {
-        $(document).off('scroll');
-    }
+    $('#online').on('mouseenter', function(event) {
+        $('#online-div').fadeIn('500');
+    })
+
+    $('#online').on('mouseleave', function() {
+        $('#online-div').fadeOut('500');
+    })
+
+    $('#back').on('mouseenter', function(event) {
+        $('#back-div').fadeIn('500');
+    })
+
+    $('#back').on('mouseleave', function() {
+        $('#back-div').fadeOut('500');
+    })
+    $('#delivery').on('mouseenter', function(event) {
+        $('#delivery-div').fadeIn('500');
+    })
+
+    $('#delivery').on('mouseleave', function() {
+        $('#delivery-div').fadeOut('500');
+    })
+    $('#many-products').on('mouseenter', function(event) {
+        $('#many-products-div').fadeIn('500');
+    })
+
+    $('#many-products').on('mouseleave', function() {
+        $('#many-products-div').fadeOut('500');
+    })
 }
 
 
@@ -81,7 +122,9 @@ function userController() {
 
     $('main').html('');
     $('#jssor_1').show();
-
+    $('#emag-info-nav').show();
+    emagInfoNav();
+    
     $('#categories-button').on('click', function (event) {
         event.preventDefault();
     });
@@ -366,5 +409,5 @@ function userController() {
 
         });
 
-
+        
 }

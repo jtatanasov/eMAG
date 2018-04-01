@@ -2,6 +2,7 @@ function editProfileController() {
     showAndHideAside();
     ctgsBtn();
     $('#jssor_1').hide();
+    $('#emag-info-nav').hide();
     $.get('assets/js/templates/editProfileTemplate.html')
         .then(function (data) {
 

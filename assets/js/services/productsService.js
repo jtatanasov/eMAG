@@ -139,29 +139,29 @@ var productsService = (function () {
         return brands;
     }
 
-    ProductsList.prototype.productsOfABrand = function(brand){
+    ProductsList.prototype.productsOfABrand = function (brand) {
         return this._productsList.filter(el => el.brand === brand);
     }
 
-    ProductsList.prototype.allProductsOnSale = function(){
+    ProductsList.prototype.allProductsOnSale = function () {
         return this._productsList.filter(el => el.onSale);
     }
 
-    ProductsList.prototype.productsOnSale = function(products){
+    ProductsList.prototype.productsOnSale = function (products) {
         return products.filter(el => el.onSale);
     }
 
-    ProductsList.prototype.numberOfPages = function(productsArray){
+    ProductsList.prototype.numberOfPages = function (productsArray) {
         var productsQuantity = productsArray.length;
         var numberOfPages = Math.ceil(productsQuantity / PRODUCTS_ON_PAGE);
         var pages = [];
-        for(var p = 1; p <= numberOfPages; p++){
+        for (var p = 1; p <= numberOfPages; p++) {
             pages.push([]);
         }
         var count = 1;
         productsArray.forEach((el, index) => {
-            pages[count-1].push(el);
-            if(index === ((PRODUCTS_ON_PAGE * count) - 1)){
+            pages[count - 1].push(el);
+            if (index === ((PRODUCTS_ON_PAGE * count) - 1)) {
                 count++;
             }
         });
@@ -169,7 +169,7 @@ var productsService = (function () {
         return pages;
     }
 
-    ProductsList.prototype.loadProductsOnPage = function(pages, page){
+    ProductsList.prototype.loadProductsOnPage = function (pages, page) {
         return pages[page];
     }
 

@@ -49,17 +49,10 @@ function typesOfProductsPageController() {
             $($("#sale-filter ~ span")[0]).html(`(${productOnSale.length})`);
             //$($("option[value='sale']")[0]).html(`Промоция (${productOnSale.length})`)
             //brands
-<<<<<<< HEAD
         // $($("#manufacturer-filter ~ span")[0]).html(`(${brands.length})`);
         brands.forEach(el => {
             var elBrandProducts = productsService.productsOfABrand(el);
             $("#manufacturer-filter-list").parent().append(`<li>
-=======
-            // $($("#manufacturer-filter ~ span")[0]).html(`(${brands.length})`);
-            brands.forEach(el => {
-                var elBrandProducts = productsList.productsOfABrand(el);
-                $("#manufacturer-filter-list").parent().append(`<li>
->>>>>>> 49c81ab36ae1195a86c1fd9c76c37ea60bded3d6
             <input type="checkbox" name=""> ${el}
                 <span class="number-of-results">
                     (${elBrandProducts.length})
@@ -71,7 +64,6 @@ function typesOfProductsPageController() {
             `)
             })
 
-<<<<<<< HEAD
         //sort by price:
         $("#price-sort-select").on("change", function(){
             var sel = $("#availability-select option:selected").val();
@@ -81,17 +73,6 @@ function typesOfProductsPageController() {
                 productsService.sortHighestPrice(productsType);
             }
         });
-=======
-            //sort by price:
-            $("#price-sort-select").on("change", function () {
-                var sel = $("#availability-select option:selected").val();
-                if (sel = lowest) {
-                    productsList.sortLowestPrice(productsType);
-                } else {
-                    productsList.sortHighestPrice(productsType);
-                }
-            });
->>>>>>> 49c81ab36ae1195a86c1fd9c76c37ea60bded3d6
 
             //load products on page
 

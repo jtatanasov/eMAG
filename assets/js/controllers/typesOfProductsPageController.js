@@ -1,20 +1,53 @@
+function loadProductsOnPage(arr){
+   
+        arr.forEach(el => {
+                var toAppend = `<article class="single-product-container" id="${el.id}">
+            <div class="single-product-nav">
+                <img src="assets/images/icons/gray-heart-icon.png" class="icon" alt="" />
+            </div>
+            <div class="single-product-img-container">
+                <img src="${el.main_url}" class="single-product-image" alt="" />
+            </div>       
+            <a href="#${el.id}" class="single-product-title">${el.name}</a>`
+                if (el.availability) {
+                    toAppend += `<p class="single-product-availability, product-available">в наличност</p>`
+                } else {
+                    toAppend += `<p class="single-product-availability, product-unavailable">изчерпан</p>`
+                }
+
+                var price = Number(el.price);
+                var whole = Math.floor(price);
+                var change = Math.ceil((price - whole) * 100);
+                toAppend += `<p class="single-product-price">${whole}<sup>${change}</sup> лв.</p>
+
+            <button class="single-product-buy-button">
+                <div class="buy-nav-add-to-cart">
+                    <img class="nav-cart-icon" class="icon" src="assets/images/icons/cart-icon.png" alt="" />
+                </div>
+                <span class="button-text" class="buy-nav-txt"> Добави в количката</span>
+            </button>
+            </article>`
+                $("#available-products").append(toAppend);
+                // $(toAppend).insertBefore("#result-pages-nav");
+            });
+}
 
 function typesOfProductsPageController() {
     showAndHideAside();
     ctgsBtn();
     $("#jssor_1").hide();
-    // var cathegory = cathegory;
-    // var sybcathegory = subcathegory;
-    // var type = type;
-    //^как ще ги взимаме / sessionStorage
+
+    var clickedType = localStorage.getItem('product');
+    clickedType = JSON.parse(clickedType);
+    var cathegory = clickedType.cathegory;
+    var subcathegory = clickedType.subcathegory;
+    var type = clickedType.type;
 
     var user = sessionStorage.getItem('loggedUser', loggedUser);
     user = JSON.parse(user);
-    var cathegory = 'Телефони, таблети и лаптопи';
-    var subcathegory = 'Мобилни телефони и аксесоари';
-    var type = 'Мобилни телефони';
 
     var productsType = productsService.getTypesOfProducts(cathegory, subcathegory, type);
+    var currentProductsOnPage = productsType.slice();
     var allTypes = productsService.getTypesInSubcathegory(cathegory, subcathegory);
     var availableProducts = productsService.showAvailable(productsType);
     var productOnSale = productsService.productsOnSale(productsType);
@@ -29,6 +62,7 @@ function typesOfProductsPageController() {
             $('main').html(data);
             $("#cathegory").html(cathegory);
             $("#subcathegory>a").html(subcathegory);
+            $("#type").html(type);
 
             $("#main-container-header>h1").html(`${type}<span>${productsType.length} продукта</span>`);
             
@@ -60,54 +94,24 @@ function typesOfProductsPageController() {
                 </span>
             </input>
              </li>`);
-                $("#distributor-select").append(`
-            <option style="display:none" value="${el.toLowerCase()}">${el} <span>${elBrandProducts.length}</span></option>
-            `)
+            //     $("#distributor-select").append(`
+            // <option value="${el.toLowerCase()}">${el} <span>(${elBrandProducts.length})</span></option>
+            // `)
             })
 
         //sort by price:
         $("#price-sort-select").on("change", function(){
-            var sel = $("#availability-select option:selected").val();
-            if(sel = lowest){
-                productsService.sortLowestPrice(productsType);
-            } else {
-                productsService.sortHighestPrice(productsType);
-            }
+            var sel = $("#price-sort-select option:selected").val();
+            var sortArr = currentProductsOnPage.slice();
+            sortArr = (sel == "lowest") ? productsService.sortLowestPrice(sortArr) : productsService.sortHighestPrice(sortArr);
+            $("#available-products").html("");
+            loadProductsOnPage(sortArr);
         });
 
             //load products on page
+            
             var currentPageProducts = productsService.loadProductsOnPage(availablePages, (currentPage - 1));
-            currentPageProducts.forEach(el => {
-                var toAppend = `<article class="single-product-container" id="${el.id}">
-            <div class="single-product-nav">
-                <img src="assets/images/icons/gray-heart-icon.png" class="icon" alt="" />
-            </div>
-            <div class="single-product-img-container">
-                <img src="${el.main_url}" class="single-product-image" alt="" />
-            </div>       
-            <a href="#${el.id}" class="single-product-title">${el.name}</a>`
-                if (el.availability) {
-                    toAppend += `<p class="single-product-availability, product-available">в наличност</p>`
-                } else {
-                    toAppend += `<p class="single-product-availability, product-unavailable">изчерпан</p>`
-                }
-
-                var price = Number(el.price);
-                var whole = Math.floor(price);
-                var change = Math.ceil((price - whole) * 100);
-                toAppend += `<p class="single-product-price">${whole}<sup>${change}</sup> лв.</p>
-
-            <button class="single-product-buy-button">
-                <div class="buy-nav-add-to-cart">
-                    <img class="nav-cart-icon" class="icon" src="assets/images/icons/cart-icon.png" alt="" />
-                </div>
-                <span class="button-text" class="buy-nav-txt"> Добави в количката</span>
-            </button>
-            </article>`
-
-                $(toAppend).insertBefore("#result-pages-nav");
-            });
-
+            loadProductsOnPage(currentPageProducts);
 
             //adding to cart:
 

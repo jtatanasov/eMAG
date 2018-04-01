@@ -51,7 +51,6 @@ var productsService = (function () {
 
     ProductsList.prototype.getProductsInCathegory = function (cathegory) {
         var toReturn = this._productsList.filter(el => el.cathegory === cathegory);
-        // console.log(toReturn);
         return JSON.parse(JSON.stringify(toReturn));
     }
 
@@ -81,7 +80,6 @@ var productsService = (function () {
     }
 
     ProductsList.prototype.getTypesOfProducts = function (cathegory, subcathegory, type) {
-        console.log(cathegory, subcathegory, type);
         var products = this.getProductsInSubcathegory(cathegory, subcathegory);
         var toReturn = products.filter(el => el.type === type);
         return toReturn;

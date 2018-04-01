@@ -51,14 +51,14 @@ function ctgsBtn() {
     if (page !== '') {
         $(document).on('scroll', function () {
             if ($(window).scrollTop() > 40) {
-                if(!isAsideLoaded) {
-                $("#categories-btn").show('500');
-                isAsideLoaded = true;
-            }
+                if (!isAsideLoaded) {
+                    $("#categories-btn").show('500');
+                    isAsideLoaded = true;
+                }
 
             } else {
-                asideElement.css('top', '8.8em');
-                asideElement.css('left', '2.3em');
+                $('#categories-list').css('top', '10.8em');
+                $('#categories-list').css('left', '0');
                 $("#categories-btn").hide('500');
                 isAsideLoaded = false;
             }
@@ -81,10 +81,7 @@ function userController() {
 
     $('main').html('');
     $('#jssor_1').show();
-    // $.get('assets/js/templates/sliderTemplate.html')
-    // .then(function(data) {
-    //     $('aside').after(data);
-    // });
+
     $('#categories-button').on('click', function (event) {
         event.preventDefault();
     });
@@ -98,6 +95,10 @@ function userController() {
             event.preventDefault();
         });
     }
+    if (page !== '') {
+
+        $('#jssor_1').hide();
+    }
 
     ctgsBtn();
 
@@ -105,8 +106,8 @@ function userController() {
         event.preventDefault();
         if (!isAsideLoaded) {
             isAsideLoaded = true;
-            asideElement.css('top', '6.15em');
-            asideElement.css('left', '0')
+            $('#categories-list').css('top', '7.6em');
+            $('#categories-list').css('left', '-3em')
             asideElement.show('500');
         } else {
             asideElement.hide('500');
@@ -167,7 +168,7 @@ function userController() {
 
             location.replace('#my-favorite-products');
         });
-        $('#my-cart-btn').parent().on('click', function(event) {
+        $('#my-cart-btn').parent().on('click', function (event) {
             event.preventDefault();
 
             location.replace('#my-cart');
@@ -243,7 +244,7 @@ function userController() {
             event.preventDefault();
             location.replace('#login');
         });
-        
+
         myFavsLink.parent().on('mouseleave', function () {
             secondNavExtension.fadeOut('500');
             myFavsLink.css('color', '#fff');
@@ -303,5 +304,5 @@ function userController() {
         });
     });
 
-    
+
 }

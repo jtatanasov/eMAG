@@ -49,17 +49,10 @@ function typesOfProductsPageController() {
             $($("#sale-filter ~ span")[0]).html(`(${productOnSale.length})`);
             //$($("option[value='sale']")[0]).html(`Промоция (${productOnSale.length})`)
             //brands
-<<<<<<< HEAD
         // $($("#manufacturer-filter ~ span")[0]).html(`(${brands.length})`);
         brands.forEach(el => {
             var elBrandProducts = productsService.productsOfABrand(el);
             $("#manufacturer-filter-list").parent().append(`<li>
-=======
-            // $($("#manufacturer-filter ~ span")[0]).html(`(${brands.length})`);
-            brands.forEach(el => {
-                var elBrandProducts = productsList.productsOfABrand(el);
-                $("#manufacturer-filter-list").parent().append(`<li>
->>>>>>> 49c81ab36ae1195a86c1fd9c76c37ea60bded3d6
             <input type="checkbox" name=""> ${el}
                 <span class="number-of-results">
                     (${elBrandProducts.length})
@@ -71,7 +64,6 @@ function typesOfProductsPageController() {
             `)
             })
 
-<<<<<<< HEAD
         //sort by price:
         $("#price-sort-select").on("change", function(){
             var sel = $("#availability-select option:selected").val();
@@ -81,22 +73,11 @@ function typesOfProductsPageController() {
                 productsService.sortHighestPrice(productsType);
             }
         });
-=======
-            //sort by price:
-            $("#price-sort-select").on("change", function () {
-                var sel = $("#availability-select option:selected").val();
-                if (sel = lowest) {
-                    productsList.sortLowestPrice(productsType);
-                } else {
-                    productsList.sortHighestPrice(productsType);
-                }
-            });
->>>>>>> 49c81ab36ae1195a86c1fd9c76c37ea60bded3d6
 
             //load products on page
-
+            console.log(productsType);
             // var currentPageProducts = productsService.loadProductsOnPage(availablePages, currentPage);
-            allTypes.forEach(el => {
+            productsType.forEach(el => {
                 var toAppend = `<article class="single-product-container" id="${el.id}">
             <div class="single-product-nav">
                 <img src="assets/images/icons/gray-heart-icon.png" class="icon" alt="" />
@@ -155,37 +136,37 @@ function typesOfProductsPageController() {
             })
 
             //page navigation:
-            $($($("#pages-info")[0]).children()[0]).html(`${(currentPage - 1) * currentPageProducts.length + 1}-
-        ${currentPage * currentPageProducts.length}`);
+        //     $($($("#pages-info")[0]).children()[0]).html(`${(currentPage - 1) * currentPageProducts.length + 1}-
+        // ${currentPage * currentPageProducts.length}`);
 
             $($($("#pages-info")[0]).children()[1]).html(productsType.length);
 
             //buttons
-            availablePages.forEach((el, index) => {
-                var elToAppend = `<button id="page-${index + 1}">${index + 1}</button>`
-                if ((index + 1) === currentPage) {
-                    elToAppend.addClass("current-page");
-                }
-                $(elToAppend).insertAfter("#back-page");
+            // availablePages.forEach((el, index) => {
+            //     var elToAppend = `<button id="page-${index + 1}">${index + 1}</button>`
+            //     if ((index + 1) === currentPage) {
+            //         elToAppend.addClass("current-page");
+            //     }
+            //     $(elToAppend).insertAfter("#back-page");
 
                 //TODO: логиката на буферния бутон??
                 // if((availablePages.length > 4) && (index )){
                 //     $(`<button disabled id="buffer-button">...</button>`).insertBefore(elToAppend);
                 // }
-            })
+            // })
 
             //disable buttons
-            if (currentPage != 1) {
-                $("#back-page").prop('disabled', false);
-            } else {
-                $("#back-page").prop('disabled', true);
-            }
+            // if (currentPage != 1) {
+            //     $("#back-page").prop('disabled', false);
+            // } else {
+            //     $("#back-page").prop('disabled', true);
+            // }
 
-            if (currentPage === availablePages.length) {
-                $("#forward-page").prop('disabled', true);
-            } else {
-                $("#forward-page").prop('disabled', false);
-            }
+            // if (currentPage === availablePages.length) {
+            //     $("#forward-page").prop('disabled', true);
+            // } else {
+            //     $("#forward-page").prop('disabled', false);
+            // }
 
             //TODO: придвиживане с бутоните за страниците отдолу
 

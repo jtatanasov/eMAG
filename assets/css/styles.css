@@ -333,8 +333,10 @@ aside {
 
 
 #categories-list { 
+    position:fixed;
     float:left;
     font-size: 0.9em;
+    margin-top: -1.1em;
     margin-left: 3%;
     width: 15em;
     padding-top: 0.5em;

@@ -20,6 +20,7 @@ var productsService = (function () {
         var path = "/assets/data/products.json"
         this._productsList = null;
         loadProducts(path).then(function (data) {
+            console.log(data);
             self._productsList = data;
             console.log(self._productsList);
             self.cathegories = [];

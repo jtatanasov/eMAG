@@ -1,3 +1,31 @@
+<<<<<<< HEAD
+=======
+var cathegory = cathegory;
+var sybcathegory = subcathegory;
+var type = type;
+//^как ще ги взимаме / session storage;
+
+var user = sessionStorage.getItem('loggedUser', loggedUser);
+user = JSON.parse(user);
+
+var productsType = productsService.getTypesOfProducts(cathegory, subcathegory, type);
+var allTypes = productsService.getTypesInSubcathegory(cathegory, subcathegory);
+var availableProducts = productsService.showAvailable(productsType);
+var productOnSale = productsService.productsOnSale(productsType);
+var brands = productsService.availableBrands(productsType);
+var currentPage = 1;
+var availablePages = productsService.numberOfPages(productsType);
+
+getTemplate('assets/js/templates/typesOfProductsPage.html')
+    .then(function (data) {
+    
+        //filling the cathegory and subcathegory fields:
+
+        $("#cathegory").html(cathegory);
+        $("#subcathegory>a").html(subcathegory);
+        
+        $("#main-container-header>h1").html(`${type}<span>${productsType.length} продукта</span>`);
+>>>>>>> 76b89252795754d61a03468958129225ed9774d8
 
 function typesOfProductsPageController() {
     // var cathegory = cathegory;

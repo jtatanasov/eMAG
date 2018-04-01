@@ -81,6 +81,7 @@ var productsService = (function () {
     }
 
     ProductsList.prototype.getTypesOfProducts = function (cathegory, subcathegory, type) {
+        console.log(cathegory, subcathegory, type);
         var products = this.getProductsInSubcathegory(cathegory, subcathegory);
         var toReturn = products.filter(el => el.type === type);
         console.log(toReturn);

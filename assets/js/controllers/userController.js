@@ -107,10 +107,16 @@ function userController() {
         if (!isAsideLoaded) {
             isAsideLoaded = true;
             $('#categories-list').css('top', '7.6em');
-            $('#categories-list').css('left', '-3em')
+            $('#categories-list').css('left', '-3em');
+
+            $('#current-subcategory-container').css('top', '6.8em');
+            $('#current-subcategory-container').css('left', '16.1em');
             asideElement.show('500');
         } else {
             asideElement.hide('500');
+            
+            $('#current-subcategory-container').css('top', '9.5em');
+            $('#current-subcategory-container').css('left', '18.7em');
             isAsideLoaded = false;
         }
     });
@@ -303,6 +309,58 @@ function userController() {
             myCartLink.css('color', '#fff');
         });
     });
+
+    $.get('assets/data/categories.json')
+        .then(function (data) {
+
+            var categories = $('#categories-list > li > a');
+            categories.parent().on('mouseenter', function () {
+                $('#jssor_1').hide();
+                $('#current-subcategory-container').html('');
+                $('#current-subcategory-container').show();
+                var currCategoryName = $(this).text().trim()
+                var currCategory = data.filter(c => c.category === currCategoryName);
+                var subCategories = currCategory[0].subcategories;
+                var result = '';
+                subCategories.forEach(subcat => {
+
+                    var tmpSubCategory = $('<div> <h4>' + subcat.subcat + '</h4></div>');
+                    subcat.types.forEach(type => {
+                        var tmpType = $('<a>' + type + '</a>');
+                        tmpSubCategory.append(tmpType);
+                        tmpType.on('click', function() {
+                            var product = {
+                                cathegory: currCategoryName,
+                                subcathegory: subcat.subcat,
+                                type: type
+                            }
+                            localStorage.setItem('product', JSON.stringify(product));
+                        });
+                    })
+
+                    $('#current-subcategory-container').append(tmpSubCategory);
+
+                });
+
+            });
+            $('#current-subcategory-container').on('mouseleave', function () {
+
+                $('#current-subcategory-container').html('');
+                $('#current-subcategory-container').hide();
+                if (page == '')
+                    $('#jssor_1').show();
+            });
+
+            $('aside').on('mouseleave', function () {
+                $('#current-subcategory-container').html('');
+                $('#current-subcategory-container').hide();
+                if (page == '') {
+                    $('#jssor_1').show();
+                }
+            });
+
+
+        });
 
 
 }

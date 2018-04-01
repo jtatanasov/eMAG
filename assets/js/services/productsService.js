@@ -21,6 +21,7 @@ var productsService = (function () {
         this._productsList = null;
         loadProducts(path).then(function (data) {
             self._productsList = data;
+            console.log(self._productsList);
             self.cathegories = [];
             self._productsList.forEach(el => {
                 if (!self.cathegories.some(cath => cath === el.cathegory)) {
@@ -151,10 +152,10 @@ var productsService = (function () {
 
     ProductsList.prototype.numberOfPages = function(productsArray){
         var productsQuantity = productsArray.length;
-        var numberOfPages = productsQuantity / PRODUCTS_ON_PAGE;
+        var numberOfPages = productsQuantity * PRODUCTS_ON_PAGE;
         var pages = new Array(numberOfPages);
         var count = 1;
-        numberOfPages.forEach((el, index) => {
+        productsArray.forEach((el, index) => {
             pages[count-1].push(el);
             if(index === ((PRODUCTS_ON_PAGE * count) - 1)){
                 count++;

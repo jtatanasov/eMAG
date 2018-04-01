@@ -23,6 +23,8 @@ document.addEventListener('DOMContentLoaded', function () {
                 break;
             case 'order':
                 orderController();
+            case 'products':
+                typesOfProductsPageController();
             default:
                 userController();
                 break;

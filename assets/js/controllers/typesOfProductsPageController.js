@@ -1,5 +1,8 @@
 
 function typesOfProductsPageController() {
+    showAndHideAside();
+    ctgsBtn();
+    $("#jssor_1").hide();
     // var cathegory = cathegory;
     // var sybcathegory = subcathegory;
     // var type = type;

@@ -1,5 +1,6 @@
 [
   {
+    "id": "1",
     "name": "Смартфон Apple iPhone X, 256 GB, 4 G, Space Grey",
     "cathegory": "Телефони, таблети и лаптопи",
     "subcathegory": "Мобилни телефони и аксесоари",
@@ -48,6 +49,7 @@
     ]
   },
   {
+    "id":"2",
     "name": "Смартфон Samsung Galaxy J5 (2017), Dual Sim, 16GB, 4G, Black",
     "cathegory": "Телефони, таблети и лаптопи",
     "subcathegory": "Мобилни телефони и аксесоари",
@@ -100,6 +102,7 @@
     ]
   },
   {
+    "id":"3",
     "name": "Nike, Спортни обувки Court Royale, Черен/Бял",
     "cathegory": "Мода",
     "subcathegory": "Жени",

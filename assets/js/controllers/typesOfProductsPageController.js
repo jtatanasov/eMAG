@@ -1,7 +1,7 @@
 var cathegory = cathegory;
 var sybcathegory = subcathegory;
 var type = type;
-//^как ще ги взимаме
+//^как ще ги взимаме / session storage;
 
 var user = sessionStorage.getItem('loggedUser', loggedUser);
 user = JSON.parse(user);

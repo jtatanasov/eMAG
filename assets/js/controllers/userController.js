@@ -109,12 +109,12 @@ function userController() {
             $('#categories-list').css('top', '7.6em');
             $('#categories-list').css('left', '-3em');
 
-            $('#current-subcategory-container').css('top', '6.8em');
+            $('#current-subcategory-container').css('top', '6.2em');
             $('#current-subcategory-container').css('left', '16.1em');
             asideElement.show('500');
         } else {
             asideElement.hide('500');
-            
+
             $('#current-subcategory-container').css('top', '9.5em');
             $('#current-subcategory-container').css('left', '18.7em');
             isAsideLoaded = false;
@@ -328,13 +328,14 @@ function userController() {
                     subcat.types.forEach(type => {
                         var tmpType = $('<a>' + type + '</a>');
                         tmpSubCategory.append(tmpType);
-                        tmpType.on('click', function() {
+                        tmpType.on('click', function () {
                             var product = {
                                 cathegory: currCategoryName,
                                 subcathegory: subcat.subcat,
                                 type: type
                             }
                             localStorage.setItem('product', JSON.stringify(product));
+                            location.replace('#products');
                         });
                     })
 
@@ -347,13 +348,16 @@ function userController() {
 
                 $('#current-subcategory-container').html('');
                 $('#current-subcategory-container').hide();
+                var page = location.hash.slice(1);
                 if (page == '')
+
                     $('#jssor_1').show();
             });
 
             $('aside').on('mouseleave', function () {
                 $('#current-subcategory-container').html('');
                 $('#current-subcategory-container').hide();
+                var page = location.hash.slice(1);
                 if (page == '') {
                     $('#jssor_1').show();
                 }

@@ -44,7 +44,7 @@ getTemplate('assets/js/templates/typesOfProductsPage.html')
             //brands
         // $($("#manufacturer-filter ~ span")[0]).html(`(${brands.length})`);
         brands.forEach(el => {
-            var elBrandProducts = productsList.productsOfABrand(el);
+            var elBrandProducts = productsService.productsOfABrand(el);
             $("#manufacturer-filter-list").parent().append(`<li>
             <input type="checkbox" name=""> ${el}
                 <span class="number-of-results">
@@ -61,9 +61,9 @@ getTemplate('assets/js/templates/typesOfProductsPage.html')
         $("#price-sort-select").on("change", function(){
             var sel = $("#availability-select option:selected").val();
             if(sel = lowest){
-                productsList.sortLowestPrice(productsType);
+                productsService.sortLowestPrice(productsType);
             } else {
-                productsList.sortHighestPrice(productsType);
+                productsService.sortHighestPrice(productsType);
             }
         });
 

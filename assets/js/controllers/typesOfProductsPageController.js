@@ -144,9 +144,20 @@ function typesOfProductsPageController() {
         
         //TODO: придвиживане с бутоните за страниците отдолу
         //TODO: delete filter event listener
-        $(".delete-filter").on("click", function (event) {
-            var filter = event.target.closest("select").id;
-            event.target.closest("li").remove();
+        $($(".delete-filter").parent()[0]).on("click", function (event) {
+            var filterID = $(event.target).prev("select").attr('id');
+            // var filter = event.target.closest("select").id;
+            // console.log(filter);
+            if(filterID == "availability-select"){
+                $("#filters-top-nav-availability").css({"display":"none"});
+                $("#availability-filter-list").parent().children("li").toArray().forEach(el => $(el).children().trigger("click"));
+            } else {
+                $("#filters-top-nav-distributor").css({"display":"none"});
+                $("manufacturer-filter-list").parent().children("li").toArray().forEach(el => $(el).children().trigger("click"));
+            }
+
+            clearProductsOnPage();
+            loadProductsOnPage(currentProductsOnPage);
         })
     }
 
@@ -321,6 +332,21 @@ function typesOfProductsPageController() {
                 let temp = filterProducts(currentProductsOnPage);
                 loadProductsOnPage(temp);
             })
+
+            //sidebar dropdowns animations
+            $("#filters-list>ul>h1").on("click", function(event){
+                if($(this).parent().hasClass("down")){
+                    $(this).parent().removeClass("down");
+                    $(this).parent().addClass("up");
+                    $(this).parent().children("li").slideUp();
+                    $(this).children("img").attr("src", "assets/images/icons/arrow-down.png");
+                } else {
+                    $(this).parent().removeClass("up");
+                    $(this).parent().addClass("down");
+                    $(this).parent().children("li").slideDown();
+                    $(this).children("img").attr("src", "assets/images/icons/arrow-up.png");
+                };
+            })
                 
             //sort by price:
             $("#price-sort-select").on("change", function(){
@@ -330,8 +356,6 @@ function typesOfProductsPageController() {
                 clearProductsOnPage();
                 loadProductsOnPage(sortArr);
             });
-
-
 
             //adding to cart:
             $(".single-product-buy-button").on("click", function (event) {

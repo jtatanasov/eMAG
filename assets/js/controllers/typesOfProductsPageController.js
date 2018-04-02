@@ -15,11 +15,13 @@ function typesOfProductsPageController() {
 
     var productsType = productsService.getTypesOfProducts(cathegory, subcathegory, type);
     var currentProductsOnPage = productsType.slice();
+    var currentPageProducts;
     var allTypes = productsService.getTypesInSubcathegory(cathegory, subcathegory);
 
     var availableProducts = productsService.showAvailable(productsType);
     var productOnSale = productsService.productsOnSale(productsType);
     var brands = productsService.availableBrands(productsType);
+
     var currentPage = 1;
 
     var distributorsFilter = {
@@ -28,13 +30,46 @@ function typesOfProductsPageController() {
         availableFilters: []
     }
 
+    var filtersInUse = {
+        availability: {
+            inUse: false,
+            filter: function(arr){
+                return productsService.showAvailable(arr);
+            }
+        },
+
+        productOnSale: {
+            inUse: false,
+            filter: function(arr){
+                return productsService.productsOnSale(arr)
+            }
+        },
+
+        brands: {
+            inUse: true,
+            filter: function(arr){
+                return productsService.availableBrands(arr)
+            }
+        }
+    }
+
+    var filterProducts = function(arr){
+        var newArr = arr.slice();
+        for(var prop in filtersInUse){
+            if (prop.inUse){
+                newArr = prop.filter(newArr);
+            }
+        }
+        return newArr;
+    }
+
     var clearProductsOnPage = function(){
         $("#available-products").html("");
     }
 
     var loadProductsOnPage = function(arr){
-        var availablePages = productsService.numberOfPages(currentProductsOnPage);
-        var currentPageProducts = productsService.loadProductsOnPage(availablePages, (currentPage - 1));
+        var availablePages = productsService.numberOfPages(arr);
+        currentPageProducts = productsService.loadProductsOnPage(availablePages, (currentPage - 1));
         currentPageProducts.forEach(el => {
                 var toAppend = `<article class="single-product-container" id="${el.id}">
             <div class="single-product-nav">
@@ -63,8 +98,57 @@ function typesOfProductsPageController() {
             </button>
             </article>`
                 $("#available-products").append(toAppend);
-            });
-}
+        });
+        availableProducts = productsService.showAvailable(currentProductsOnPage);
+        productOnSale = productsService.productsOnSale(currentProductsOnPage);
+        brands = productsService.availableBrands(currentProductsOnPage);
+        //filters specifics
+            //availability
+        $($("#availability-filter ~ span")[0]).html(`(${availableProducts.length})`);
+        $($("option[value='available']")[0]).html(`В наличност (${availableProducts.length})`)
+            //sale
+        $($("#sale-filter ~ span")[0]).html(`(${productOnSale.length})`);
+        $($("option[value='sale']")[0]).html(`Промоция (${productOnSale.length})`)
+         //brands
+        $($("#manufacturer-filter ~ span")[0]).html(`(${brands.length})`);
+
+        //page navigation:
+        $($($("#pages-info")[0]).children()[0]).html(`${(currentPage - 1) * currentPageProducts.length + 1}-
+        ${currentPage * currentPageProducts.length}`);
+        $($($("#pages-info")[0]).children()[1]).html(productsType.length);
+        //buttons
+        $("#pages-buttons").html(`<button disabled id="back-page">Назад</button><button id="forward-page" disabled>Напред</button>`)
+        availablePages.forEach((el, index) => {
+            var elToAppend = `<button id="page-${index + 1}">${index + 1}</button>`    
+            $(elToAppend).insertAfter("#back-page");
+            if ((index + 1) == currentPage) {
+                $(`#page-${index + 1}`).addClass("current-page");
+            }
+            // //TODO: логиката на буферния бутон??
+            // if((availablePages.length > 4) && (index )){
+            //     $(`<button disabled id="buffer-button">...</button>`).insertBefore(elToAppend);
+            // }
+        })
+        
+        //disable buttons
+        if (currentPage != 1) {
+            $("#back-page").prop('disabled', false);
+        } else {
+            $("#back-page").prop('disabled', true);
+        }
+        if (currentPage === availablePages.length) {
+            $("#forward-page").prop('disabled', true);
+        } else {
+            $("#forward-page").prop('disabled', false);
+        }
+        
+        //TODO: придвиживане с бутоните за страниците отдолу
+        //TODO: delete filter event listener
+        $(".delete-filter").on("click", function (event) {
+            var filter = event.target.closest("select").id;
+            event.target.closest("li").remove();
+        })
+    }
 
     
     getTemplate('assets/js/templates/typesOfProductsPage.html')
@@ -81,7 +165,7 @@ function typesOfProductsPageController() {
 
             //load products on page
             // var currentPageProducts = productsService.loadProductsOnPage(availablePages, (currentPage - 1));
-            loadProductsOnPage(currentPageProducts);
+            loadProductsOnPage(currentProductsOnPage);
 
             //filling out side-nav:
             $("#side-nav-main-link").html(subcathegory);
@@ -92,15 +176,7 @@ function typesOfProductsPageController() {
                 }
             });
 
-            //filters specifics
-            //availability
-            $($("#availability-filter ~ span")[0]).html(`(${availableProducts.length})`);
-            $($("option[value='available']")[0]).html(`В наличност (${availableProducts.length})`)
-            //sale
-            $($("#sale-filter ~ span")[0]).html(`(${productOnSale.length})`);
-            $($("option[value='sale']")[0]).html(`Промоция (${productOnSale.length})`)
-            //brands
-            $($("#manufacturer-filter ~ span")[0]).html(`(${brands.length})`);
+           
             brands.forEach(el => {
                 var elBrandProducts = productsService.productsOfABrand(el);
                 $("#manufacturer-filter-list").parent().append(`<li id="${el}-li">
@@ -138,7 +214,7 @@ function typesOfProductsPageController() {
                         elBrandProducts.forEach(br => distributorsFilter.filteredProducts.push(br));
                         clearProductsOnPage();
                         currentProductsOnPage = distributorsFilter.filteredProducts.slice();
-                        loadProductsOnPage(distributorsFilter.filteredProducts);
+                        loadProductsOnPage(currentProductsOnPage);
                     } else {
                         distributorsFilter.filtersOn--;
                         if(distributorsFilter.filtersOn <= 0){
@@ -199,13 +275,20 @@ function typesOfProductsPageController() {
                     if($("#sale-filter").is(":checked")){
                         $("#sale-filter").prop('checked', false);
                     }
+                    filtersInUse.availability.inUse = true;
                 } else {
                     $("#filters-top-nav-availability").css({"display": "none"});
                     if(!($('#hr-filters-nav-top').css('display') == 'none') 
-                    && $("#filters-top-nav-distributor".css('display') == 'none')){
+                    && ($("#filters-top-nav-distributor").css('display') == 'none')){
                         $('#hr-filters-nav-top').css({"display": "none"})
                     }
+                    filtersInUse.availability.inUse = false;
                 }
+                // currentProductsOnPage = filterProducts(productsType);
+                clearProductsOnPage();
+                // let temp = productsService.showAvailable(currentProductsOnPage);
+                let temp = filterProducts(currentProductsOnPage);
+                loadProductsOnPage(temp);
             })
 
             $("#sale-filter").parent().on("click", function(event){
@@ -223,13 +306,20 @@ function typesOfProductsPageController() {
                     if($("#availability-filter").is(":checked")){
                         $("#availability-filter").prop('checked', false);
                     }
+                    filtersInUse.productOnSale.inUse = true;
                 } else {
                     $("#filters-top-nav-availability").css({"display": "none"});
                     if(!($('#hr-filters-nav-top').css('display') == 'none') 
-                    && $("#filters-top-nav-distributor".css('display') == 'none')){
+                    && ($("#filters-top-nav-distributor").css('display') == 'none')){
                         $('#hr-filters-nav-top').css({"display": "none"})
                     }
+                    filtersInUse.productOnSale.inUse = false;
                 }
+                // currentProductsOnPage = filterProducts(productsType);
+                clearProductsOnPage();
+                // let temp = productsService.productsOnSale(currentProductsOnPage);
+                let temp = filterProducts(currentProductsOnPage);
+                loadProductsOnPage(temp);
             })
                 
             //sort by price:
@@ -245,14 +335,16 @@ function typesOfProductsPageController() {
 
             //adding to cart:
             $(".single-product-buy-button").on("click", function (event) {
-                event.preventDefault();
-                var productID = event.target.closest("article")[0].id;
-                userService.addToCart(user.id, productID);
-
                 if(sessionStorage.getItem('isLogged')){
-                    userService.addToCart(user.id, product);
+                    var productID = event.target.closest("article").id;
+                    let product = productsService.getProduct(productID);
+                    var currUserCartProducts = user.cart.products;
+                    var tmpCart = new Cart();
+                    currUserCartProducts.forEach(pr => tmpCart.addToCart(pr));
+                    tmpCart.addToCart(product);
+                    userService.updateCart(user.id, tmpCart);
                 } else {
-                    //redirect to login page
+                    location.replace('#login');
                 } 
             })
 
@@ -260,52 +352,12 @@ function typesOfProductsPageController() {
             $(".single-product-nav").on("click", function (event) {
                 event.preventDefault();
                 if (sessionStorage.getItem('isLogged')) {
-                    var productID = event.target.closest("article")[0].id;
-                    userService.addFavourite(user.id, productID);
+                    let productID = event.target.closest("article").id;
+                    let product = productsService.getProduct(productID);
+                    userService.addFavourite(user.id, product);
                 } else {
-                    //redirect to login page
+                    location.replace('#login');
                 }
-            })
-
-            //page navigation:
-            $($($("#pages-info")[0]).children()[0]).html(`${(currentPage - 1) * currentPageProducts.length + 1}-
-        ${currentPage * currentPageProducts.length}`);
-
-            $($($("#pages-info")[0]).children()[1]).html(productsType.length);
-
-            //buttons
-            availablePages.forEach((el, index) => {
-                var elToAppend = `<button id="page-${index + 1}">${index + 1}</button>`    
-                $(elToAppend).insertAfter("#back-page");
-                if ((index + 1) == currentPage) {
-                    $(`#page-${index + 1}`).addClass("current-page");
-                }
-
-                //TODO: логиката на буферния бутон??
-                if((availablePages.length > 4) && (index )){
-                    $(`<button disabled id="buffer-button">...</button>`).insertBefore(elToAppend);
-                }
-            })
-
-            //disable buttons
-            if (currentPage != 1) {
-                $("#back-page").prop('disabled', false);
-            } else {
-                $("#back-page").prop('disabled', true);
-            }
-
-            if (currentPage === availablePages.length) {
-                $("#forward-page").prop('disabled', true);
-            } else {
-                $("#forward-page").prop('disabled', false);
-            }
-
-            //TODO: придвиживане с бутоните за страниците отдолу
-
-            //TODO: delete filter event listener
-            $(".delete-filter").on("click", function (event) {
-                var filter = event.target.closest("select").id;
-                event.target.closest("li").remove();
             })
 
             //

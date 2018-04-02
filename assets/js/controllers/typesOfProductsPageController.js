@@ -4,6 +4,7 @@ function typesOfProductsPageController() {
     $("#jssor_1").hide();
     $('#emag-info-nav').hide();
 
+    $(function(){
     var clickedType = localStorage.getItem('product');
     clickedType = JSON.parse(clickedType);
     var cathegory = clickedType.cathegory;
@@ -78,7 +79,7 @@ function typesOfProductsPageController() {
             <div class="single-product-img-container">
                 <img src="${el.main_url}" class="single-product-image" alt="" />
             </div>       
-            <a href="#${el.id}" class="single-product-title">${el.name}</a>`
+            <a href="" class="single-product-title">${el.name}</a>`
                 if (el.availability) {
                     toAppend += `<p class="single-product-availability, product-available">в наличност</p>`
                 } else {
@@ -87,7 +88,7 @@ function typesOfProductsPageController() {
 
                 var price = Number(el.price);
                 var whole = Math.floor(price);
-                var change = Math.ceil((price - whole) * 100);
+                var change = Math.floor((price - whole) * 100);
                 toAppend += `<p class="single-product-price">${whole}<sup>${change}</sup> лв.</p>
 
             <button class="single-product-buy-button">
@@ -159,6 +160,25 @@ function typesOfProductsPageController() {
             clearProductsOnPage();
             loadProductsOnPage(currentProductsOnPage);
         })
+
+        //products listenrs 
+            //img
+        $(".single-product-image").on("click", function(){
+            let currID = $(this).parent().parent()[0].id;
+            var updateProduct = JSON.parse(localStorage.getItem('product'));
+            updateProduct.id = currID;
+            localStorage.setItem("product", JSON.stringify(updateProduct));
+            location.replace("#product");
+        })
+            //title
+        $(".single-product-title").on("click", function(event){
+            event.preventDefault();
+            let currID = $(this).parent()[0].id;
+            var updateProduct = JSON.parse(localStorage.getItem('product'));
+            updateProduct.id = currID;
+            localStorage.setItem("product", JSON.stringify(updateProduct));
+            location.replace("#product");
+        });
     }
 
     
@@ -187,6 +207,17 @@ function typesOfProductsPageController() {
                 }
             });
 
+            //adding event listener to types
+            $(".side-nav-type-option").on("click", function(){
+                var currType = $(this).html();
+                var updateProduct = JSON.parse(localStorage.getItem('product'));
+                updateProduct.type = currType;
+                localStorage.setItem("product", JSON.stringify(updateProduct));
+                location.reload();
+            });
+
+            //adding event listener to path
+                // TODO: are we doing the subcathegory page? 
            
             brands.forEach(el => {
                 var elBrandProducts = productsService.productsOfABrand(el);
@@ -347,6 +378,17 @@ function typesOfProductsPageController() {
                     $(this).children("img").attr("src", "assets/images/icons/arrow-up.png");
                 };
             })
+
+            //clear all filters button
+            $("#clear-filters-container").on("click", function(){
+                $("input[type='checkbox'").toArray().forEach(el => {
+                    if($(el).is(":checked")){
+                        $(el).trigger("click");
+                    }
+                });
+                clearProductsOnPage();
+                loadProductsOnPage(productsType);
+            });
                 
             //sort by price:
             $("#price-sort-select").on("change", function(){
@@ -389,4 +431,5 @@ function typesOfProductsPageController() {
         .catch(function (error) {
             throw new Error("Error occured " + error)
         });
+    })
 }

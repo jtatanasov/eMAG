@@ -27,6 +27,9 @@ document.addEventListener('DOMContentLoaded', function () {
             case 'products':
                 typesOfProductsPageController();
                 break;
+            case 'product':
+                productPageController();
+                break;
             default:
                 userController();
                 break;

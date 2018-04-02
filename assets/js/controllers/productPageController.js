@@ -1,102 +1,116 @@
-var product = productsService.getProduct(id);
-var user = sessionStorage.getItem('loggedUser', loggedUser);
-user = JSON.parse(user);
+function productPageController() {
+    showAndHideAside();
+    ctgsBtn();
+    $("#jssor_1").hide();
+    $('#emag-info-nav').hide();
+    
+    $(function(){
+        var productData = JSON.parse(localStorage.getItem("product"));
+        var cathegory = productData.cathegory;
+        var subcathegory = productData.subcathegory;
+        var type = productData.type;
+        var productID = productData.id;
+        var product = productsService.getProduct(productID);
+        var user = sessionStorage.getItem('loggedUser', loggedUser);
+        user = JSON.parse(user);
 
-getTemplate('assets/js/templates/productPageTemplate.html')
-    .then(function (data) {
+        getTemplate('assets/js/templates/productPageTemplate.html')
+            .then(function (data) {
 
-        //loading the template
-        var template = Handlebars.compile(data);
-        var html = template(product);
-        $("main").innerHTML(html);
+                //loading the template
+                var template = Handlebars.compile(data);
+                var html = template(product);
+                $("main").html(html);
 
-        var spec = product.specifics;
+                var spec = product.specifics;
 
-        Array.prototype.forEach.call(spec, function (el) {
-            $("tbody").innerHTML += `<tr>
-                    <td>${el.name}</td>
-                    <td>${el.spec}</td>
-                </tr>`
-        })
-
-        //checking availability
-        if (!product.availability) {
-            $("#product-availability").toggleClass("available");
-            $("#product-availability").toggleClass("unavailable");
-            $("#product-availability").innerHTML = "изчерпана наличност";
-        }
-
-        //setting the price
-        var price = Number(product.price);
-        var whole = Math.floor(price);
-        var change = Math.ceil((price - whole) * 100);
-        $("#product-price span #add-to-cart-buy-nav-div").innerHTML = `${whole}<sup>${change}</sup>`;
-        $("#add-to-cart-buy-nav-div>span").innerHTML = `${whole}<sup>${change}</sup>`;
-
-        //sticky nav bars:            
-        var productNavTop = $('#product-nav').offset().top;
-        var buyNavTop = $('#product-user-menu').offset().top;
-
-        $(window).scroll(function () {
-
-            var currentScroll = $(window).scrollTop();
-            var topSecond = $('#first-sticky-div').height();
-
-            //product-nav fixed when scrolling:
-            if ((currentScroll + 63) >= productNavTop) {
-                $("#second-sticky-div").append($("#product-nav"));
-                $("#product-nav>ul").css({
-                    margin: "0"
+                Array.prototype.forEach.call(spec, function (el) {
+                    $("tbody").innerHTML += `<tr>
+                            <td>${el.name}</td>
+                            <td>${el.spec}</td>
+                        </tr>`
                 })
-                $("#second-sticky-div").css({
-                    top: "62.78px"
+
+                //checking availability
+                if (!product.availability) {
+                    $("#product-availability").toggleClass("available");
+                    $("#product-availability").toggleClass("unavailable");
+                    $("#product-availability").innerHTML = "изчерпана наличност";
+                }
+
+                //setting the price
+                var price = Number(product.price);
+                var whole = Math.floor(price);
+                var change = Math.floor((price - whole) * 100);
+                $("#product-price span #add-to-cart-buy-nav-div").innerHTML = `${whole}<sup>${change}</sup>`;
+                $("#add-to-cart-buy-nav-div>span").innerHTML = `${whole}<sup>${change}</sup>`;
+
+                //sticky nav bars:            
+                var productNavTop = $('#product-nav').offset().top;
+                var buyNavTop = $('#product-user-menu').offset().top;
+
+                $(window).scroll(function () {
+
+                    var currentScroll = $(window).scrollTop();
+                    var topSecond = $('#first-sticky-div').height();
+
+                    //product-nav fixed when scrolling:
+                    if ((currentScroll + 63) >= productNavTop) {
+                        $("#second-sticky-div").append($("#product-nav"));
+                        $("#product-nav>ul").css({
+                            margin: "0"
+                        })
+                        $("#second-sticky-div").css({
+                            top: "62.78px"
+                        })
+                    }
+
+                    if ((currentScroll + 63) < productNavTop) {
+                        $("#product-nav-container").append($("#product-nav"));
+                    }
+
+                    //buy-nav pops up when scrolling down: 
+                    if (currentScroll >= buyNavTop) {
+                        $("#first-sticky-div").append($("#buy-nav"));
+                        $("#buy-nav").css({
+                            visibility: "visible"
+                        })
+                    }
+                    if (currentScroll < buyNavTop) {
+                        $("#buy-nav-container").append($("#buy-nav"));
+                        $("#buy-nav").css({
+                            visibility: "hidden"
+                        })
+                    }
+                });
+
+                //adding to cart:
+
+                $("#add-to-cart").click(function(event){
+                    event.preventDefault();
+                    userService.addToCart(user.id, product);
+
+                    ////да има ли проверка? в емга иска да се логват чак след като вече тръгнат да поръчват нещата?
+                    // if(sessionStorage.getItem('isLogged')){
+                    //     userService.addToCart(user.id, product);
+                    // } else {
+                    //     //?? 
+                    // } 
                 })
-            }
 
-            if ((currentScroll + 63) < productNavTop) {
-                $("#product-nav-container").append($("#product-nav"));
-            }
-
-            //buy-nav pops up when scrolling down: 
-            if (currentScroll >= buyNavTop) {
-                $("#first-sticky-div").append($("#buy-nav"));
-                $("#buy-nav").css({
-                    visibility: "visible"
+                //adding to favorites
+                $("#add-to-favorites, #buy-nav-button").click(function(event){
+                    event.preventDefault();
+                    if(sessionStorage.getItem('isLogged')){
+                        userService.addFavourite(user.id, product);
+                    } else {
+                        //redirect to login page
+                    } 
                 })
-            }
-            if (currentScroll < buyNavTop) {
-                $("#buy-nav-container").append($("#buy-nav"));
-                $("#buy-nav").css({
-                    visibility: "hidden"
-                })
-            }
-        });
-
-        //adding to cart:
-
-        $("#add-to-cart").click(function(event){
-            event.preventDefault();
-            userService.addToCart(user.id, product);
-
-            ////да има ли проверка? в емга иска да се логват чак след като вече тръгнат да поръчват нещата?
-            // if(sessionStorage.getItem('isLogged')){
-            //     userService.addToCart(user.id, product);
-            // } else {
-            //     //?? 
-            // } 
-        })
-
-        //adding to favorites
-        $("#add-to-favorites, #buy-nav-button").click(function(event){
-            event.preventDefault();
-            if(sessionStorage.getItem('isLogged')){
-                userService.addFavourite(user.id, product);
-            } else {
-                //redirect to login page
-            } 
-        })
-        //
+                //
+            })
+            .catch(function (error) {
+                throw new Error("Error occured " + error)
+            });
     })
-    .catch(function (error) {
-        throw new Error("Error occured " + error)
-    });
+}

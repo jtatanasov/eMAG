@@ -1,7 +1,7 @@
 <div id="product-page-container">
-    <div id="product-container">
-        <section id="product-header">
-            <ul id="product-path">
+    <div id="product-page-inner-container">
+        <section id="product-page-header">
+            <ul id="product-page-path">
                 <li id="product-cathegory">{{ cathegory }}</li>
                 <li id="product-subcathegory">
                     <a href="">{{ subcathegory }}</a>
@@ -32,16 +32,16 @@
                 <div id="user-buttons">
                     <button id="add-to-cart">
                         <div>
-                            <img id="cart-icon" class="icon" src="assets/images/icons/cart-icon.png" alt="" />
+                            <img id="cart-icon" class="icon-product" src="assets/images/icons/cart-icon.png" alt="" />
                         </div>
-                        <span class="button-text"> Добави в количката</span>
+                        <span class="button-text-product"> Добави в количката</span>
                     </button>
 
                     <button id="add-to-favorites">
                         <span>
-                            <img id="heart-icon" class="icon" src="assets/images/icons/button-heart-icon.png" alt="" />
+                            <img id="heart-icon" class="icon-product" src="assets/images/icons/button-heart-icon.png" alt="" />
                         </span>
-                        <span class="button-text">
+                        <span class="button-text-product">
                             Добави в любими
                             </span>
                     </button>
@@ -64,9 +64,9 @@
     </div>
 
 
-    <section id="details-about-product-container">
+    <div id="details-about-product-container">
         <div id="description-container">
-            <div id="description" class="detailes-about-product">
+            <div id="description-product" class="detailes-about-product">
                 <h1>Описание</h1>
                 <p>{{ description }}</p>
             </div>
@@ -87,7 +87,7 @@
                 </table>
             </div>
         </div>
-    </section>
+    </div>
 
     <!-- todo: add refs to the subcathegory and type pages -->
     <div id="buy-nav-container">
@@ -103,9 +103,9 @@
                         </span>
                     <button class="buy-nav" id="buy-nav-button">
                         <div id="buy-nav-add-to-cart">
-                            <img id="nav-cart-icon" class="icon" src="assets/images/icons/cart-icon.png" alt="" />
+                            <img id="nav-cart-icon" class="icon-product" src="assets/images/icons/cart-icon.png" alt="" />
                         </div>
-                        <span class="button-text" id="buy-nav-txt"> Добави в количката</span>
+                        <span class="button-text-product" id="buy-nav-txt"> Добави в количката</span>
                     </button>
                 </div>
             </div>

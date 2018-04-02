@@ -376,6 +376,7 @@ aside{
     box-shadow: 0px 0px 4px 0px rgba(148, 148, 148, 0.15);
     -moz-box-shadow: 0px 0px 4px 0px rgba(148, 148, 148, 0.15);
     -webkit-box-shadow: 0px 0px 4px 0px rgba(148, 148, 148, 0.15);
+    text-align: center;
 }
 
 .single-product-container:nth-of-type(4){
@@ -424,6 +425,9 @@ aside{
     font-weight: bold;
     cursor: pointer;
     margin-bottom: 3%;
+    max-height: 5em;
+    overflow: hidden;
+    height: 5em;
 }
 
 .single-product-title:hover{
@@ -527,6 +531,10 @@ aside{
 
 #pages-buttons{
     float: right;
+}
+
+#page-1{
+    margin-left: 2%;
 }
 
 #pages-buttons>button{

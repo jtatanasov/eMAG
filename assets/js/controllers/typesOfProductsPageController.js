@@ -1,6 +1,41 @@
-var loadProductsOnPage = function(arr){
-   
-        arr.forEach(el => {
+function typesOfProductsPageController() {
+    showAndHideAside();
+    ctgsBtn();
+    $("#jssor_1").hide();
+    $('#emag-info-nav').hide();
+
+    var clickedType = localStorage.getItem('product');
+    clickedType = JSON.parse(clickedType);
+    var cathegory = clickedType.cathegory;
+    var subcathegory = clickedType.subcathegory;
+    var type = clickedType.type;
+
+    var user = sessionStorage.getItem('loggedUser', loggedUser);
+    user = JSON.parse(user);
+
+    var productsType = productsService.getTypesOfProducts(cathegory, subcathegory, type);
+    var currentProductsOnPage = productsType.slice();
+    var allTypes = productsService.getTypesInSubcathegory(cathegory, subcathegory);
+
+    var availableProducts = productsService.showAvailable(productsType);
+    var productOnSale = productsService.productsOnSale(productsType);
+    var brands = productsService.availableBrands(productsType);
+    var currentPage = 1;
+
+    var distributorsFilter = {
+        filtersOn: 0,
+        filteredProducts: [],
+        availableFilters: []
+    }
+
+    var clearProductsOnPage = function(){
+        $("#available-products").html("");
+    }
+
+    var loadProductsOnPage = function(arr){
+        var availablePages = productsService.numberOfPages(currentProductsOnPage);
+        var currentPageProducts = productsService.loadProductsOnPage(availablePages, (currentPage - 1));
+        currentPageProducts.forEach(el => {
                 var toAppend = `<article class="single-product-container" id="${el.id}">
             <div class="single-product-nav">
                 <img src="assets/images/icons/gray-heart-icon.png" class="icon" alt="" />
@@ -28,33 +63,9 @@ var loadProductsOnPage = function(arr){
             </button>
             </article>`
                 $("#available-products").append(toAppend);
-                // $(toAppend).insertBefore("#result-pages-nav");
             });
 }
 
-function typesOfProductsPageController() {
-    showAndHideAside();
-    ctgsBtn();
-    $("#jssor_1").hide();
-    $('#emag-info-nav').hide();
-
-    var clickedType = localStorage.getItem('product');
-    clickedType = JSON.parse(clickedType);
-    var cathegory = clickedType.cathegory;
-    var subcathegory = clickedType.subcathegory;
-    var type = clickedType.type;
-
-    var user = sessionStorage.getItem('loggedUser', loggedUser);
-    user = JSON.parse(user);
-
-    var productsType = productsService.getTypesOfProducts(cathegory, subcathegory, type);
-    var currentProductsOnPage = productsType.slice();
-    var allTypes = productsService.getTypesInSubcathegory(cathegory, subcathegory);
-    var availableProducts = productsService.showAvailable(productsType);
-    var productOnSale = productsService.productsOnSale(productsType);
-    var brands = productsService.availableBrands(productsType);
-    var currentPage = 1;
-    var availablePages = productsService.numberOfPages(productsType);
     
     getTemplate('assets/js/templates/typesOfProductsPage.html')
         .then(function (data) {
@@ -69,7 +80,7 @@ function typesOfProductsPageController() {
             
 
             //load products on page
-            var currentPageProducts = productsService.loadProductsOnPage(availablePages, (currentPage - 1));
+            // var currentPageProducts = productsService.loadProductsOnPage(availablePages, (currentPage - 1));
             loadProductsOnPage(currentPageProducts);
 
             //filling out side-nav:
@@ -92,35 +103,101 @@ function typesOfProductsPageController() {
             $($("#manufacturer-filter ~ span")[0]).html(`(${brands.length})`);
             brands.forEach(el => {
                 var elBrandProducts = productsService.productsOfABrand(el);
-                $("#manufacturer-filter-list").parent().append(`<li>
-                <input type="checkbox" name=""> ${el}
+                $("#manufacturer-filter-list").parent().append(`<li id="${el}-li">
+                <input type="checkbox" id="${el}" class="${el}"> ${el}
                     <span class="number-of-results">
                         (${elBrandProducts.length})
                     </span>
                 </input>
                 </li>`);
-                    $("#distributor-select").append(`
-                <option value="${el.toLowerCase()}">${el} <span>(${elBrandProducts.length})</span></option>
+                
+                $("#distributor-select").append(`
+                <option value="${el.toLowerCase()}" class="${el}">${el} <span>(${elBrandProducts.length})</span></option>
                 `)
+
+                var forListening = $(`#${el}-li`);
+                var checkbox = $(`#${el}`);
+                forListening.on("click", function(event){ 
+                        if(!(event.target.id == el)){
+                            checkbox.trigger("click");
+                        }   
+                    });
+                $(checkbox).on("change", function(){
+                    var isChecked = $(checkbox).is(":checked");
+                    if(isChecked){
+                        $("#filters-top-nav-distributor").css({"display": "inline-block"});
+                        if(($('#hr-filters-nav-top').css('display') == 'none')){
+                            $("#hr-filters-nav-top").css({"display": "inline-block"})
+                        }
+                        $($(`option[value='${el.toLowerCase()}']`)[0]).prop("selected", true);
+                        distributorsFilter.filtersOn++;
+                        distributorsFilter.availableFilters.push({
+                            brandName: el,
+                            brandProducts: elBrandProducts
+                        })
+                        elBrandProducts.forEach(br => distributorsFilter.filteredProducts.push(br));
+                        clearProductsOnPage();
+                        currentProductsOnPage = distributorsFilter.filteredProducts.slice();
+                        loadProductsOnPage(distributorsFilter.filteredProducts);
+                    } else {
+                        distributorsFilter.filtersOn--;
+                        if(distributorsFilter.filtersOn <= 0){
+                            $("#filters-top-nav-distributor").css({"display": "hidden"});
+                            if($("#filters-top-nav-availability").css({"display":"hidden"})){
+                                ($('#hr-filters-nav-top').css('display') == 'none');
+                            }
+                            distributorsFilter.availableFilters = [];
+                            distributorsFilter.filteredProducts = [];
+
+                            currentProductsOnPage = productsType.slice();
+                            clearProductsOnPage();
+                            loadProductsOnPage(currentProductsOnPage);
+                        } else {
+                            var delIndex = distributorsFilter.availableFilters.findIndex(element => element.brandName == el);
+                            if(delIndex >= 0){
+                                distributorsFilter.availableFilters.splice(delIndex, 1);
+                            }
+
+                            distributorsFilter.filteredProducts = [];
+                            distributorsFilter.availableFilters.forEach(brand => {
+                                brand.brandProducts.forEach(brandProduct => distributorsFilter.filteredProducts.push(brandProduct));
+                            });
+                            currentProductsOnPage = distributorsFilter.filteredProducts.slice();
+                            clearProductsOnPage();
+                            loadProductsOnPage(currentProductsOnPage);
+                        }                   
+                    }
+
+                    if(distributorsFilter.filtersOn > 1){
+                        var multipleFilters = $(`<option value="basic" id="basic-distributors-filter" selected disabled>${distributorsFilter.filtersOn} филтри</option>`)
+                        // $(multipleFilters).before($($("#distributor-select")[0][0]));
+                        $("#distributor-select").prepend(multipleFilters);
+                    } else {
+                        if($("#basic-distributors-filter").length > 0){
+                            $("#basic-distributors-filter").remove();
+                        }
+                    }
                 })
+            })
 
 
             //sidebar filters listener
                 //availability filter
 
-                $("#availability-filter").parent().on("click", function(event){
-                    if(!(event.target.id == "availability-filter")){
-                        $("#availability-filter").trigger("click")
-                    }
-                })
-
+            $("#availability-filter").parent().on("click", function(event){
+                 if(!(event.target.id == "availability-filter")){
+                    $("#availability-filter").trigger("click")
+                }
+            })               
             $("#availability-filter").on("change", function(event){
-                // event.preventDefault();
-                // $("#availability-filter").trigger("click");
                 if($("#availability-filter").is(":checked")){
                     $("#filters-top-nav-availability").css({"display": "inline-block"});
                     if(($('#hr-filters-nav-top').css('display') == 'none')){
                         $("#hr-filters-nav-top").css({"display": "inline-block"})
+                    }
+                    $($("option[value='available']")[0]).prop("selected", true);
+                    if($("#sale-filter").is(":checked")){
+                        $("#sale-filter").prop('checked', false);
                     }
                 } else {
                     $("#filters-top-nav-availability").css({"display": "none"});
@@ -133,15 +210,18 @@ function typesOfProductsPageController() {
 
             $("#sale-filter").parent().on("click", function(event){
                 if(!(event.target.id == "sale-filter")){
-                    $("#sale-filter").trigger("click")
+                    $("#sale-filter").trigger("click");
                 }
             })
-
             $("#sale-filter").on("change", function(event){
                 if($("#sale-filter").is(":checked")){
                     $("#filters-top-nav-availability").css({"display": "inline-block"});
                     if(($('#hr-filters-nav-top').css('display') == 'none')){
-                        $("#hr-filters-nav-top").css({"display": "inline-block"})
+                        $("#hr-filters-nav-top").css({"display": "inline-block"});             
+                    }
+                    $($("option[value='sale']")[0]).prop("selected", true);
+                    if($("#availability-filter").is(":checked")){
+                        $("#availability-filter").prop('checked', false);
                     }
                 } else {
                     $("#filters-top-nav-availability").css({"display": "none"});
@@ -157,7 +237,7 @@ function typesOfProductsPageController() {
                 var sel = $("#price-sort-select option:selected").val();
                 var sortArr = currentProductsOnPage.slice();
                 sortArr = (sel == "lowest") ? productsService.sortLowestPrice(sortArr) : productsService.sortHighestPrice(sortArr);
-                $("#available-products").html("");
+                clearProductsOnPage();
                 loadProductsOnPage(sortArr);
             });
 

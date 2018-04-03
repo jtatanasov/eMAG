@@ -249,11 +249,13 @@ header {
 }
 
 .products-names {
+    vertical-align: middle;
     width:32%;
     margin: 0.5em;
     margin-left: 0;
 }
 .product-prices {
+    vertical-align: middle;
     margin-left:1em;
     box-sizing: border-box;
     font-weight: bold;

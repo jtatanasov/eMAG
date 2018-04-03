@@ -22,6 +22,13 @@ function orderController() {
             $('#cash-payment').on('change', function () {
                 $(this).attr('checked', 'checked');
             });
+
+            if($('#order-delivery-price').html() == '0 лв.') {
+                $('#order-delivery-price').html('БЕЗПЛАТНА');
+                $('#order-delivery-price').css('color', 'green');
+                $('#order-delivery-price').css('font-weight', 'bold');
+            }
+
             $('#finish-order-btn').on('click', function (event) {
                 event.preventDefault();
 

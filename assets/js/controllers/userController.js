@@ -65,7 +65,8 @@ function ctgsBtn() {
             $('#second-nav').show('500');
             if (page == '') {
                 asideElement.show('500');
-            }
+                $('#categories-list').show('500');
+            } 
             isAsideLoaded = false;
         }
     });
@@ -128,6 +129,7 @@ function userController() {
     $('#categories-button').on('click', function (event) {
         event.preventDefault();
     });
+
 
     var isAsideLoaded = false;
     var page = location.hash.slice(1);

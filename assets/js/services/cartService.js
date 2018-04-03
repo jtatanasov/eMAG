@@ -34,9 +34,9 @@ var Cart = (function(event) {
     Cart.prototype.calculateProdutsPrice = function () {
         var price = 0;
         this.productsPrice = this.products.reduce(function (price, product) {
-            return price + product.price;
+            return (price + (+product.price));
         }, 0);
-        return this.productsPrice;
+        return (Number(this.productsPrice.toFixed(2)));
     }
 
     Cart.prototype.calculateDeliveryPrice = function () {
@@ -54,7 +54,9 @@ var Cart = (function(event) {
         } else {
             this.totalPrice = this.productsPrice + this.deliveryPrice;
         }
-        return this.totalPrice;
+        
+        console.log(this.totalPrice);
+        return (Number(this.totalPrice.toFixed(2)));
     }
     return Cart;
 })();

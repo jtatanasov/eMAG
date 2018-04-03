@@ -8,9 +8,10 @@ function showAndHideAside() {
     var page = location.hash.slice(1);
     if (page != '') {
         asideElement.fadeOut('1000');
-        $('#categories').click(function (event) {
+        $('#categories').on('click', function (event) {
             event.preventDefault();
 
+            $('#categories-list').show();
             $('#categories-list').css('top', '10.9em');
             $('#categories-list').css('left', '0');
 
@@ -24,9 +25,11 @@ function showAndHideAside() {
             }
         });
     } else {
-        $('#categories').click(function (event) {
+        asideElement.fadeIn('1000');
+        $('#categories-list').show();
+        $('#categories').on('click', function (event) {
             event.preventDefault();
-        });
+        })
     }
 }
 function navigateLoginAndRegister(isRegister) {
@@ -74,9 +77,10 @@ function ctgsBtn() {
             $('#categories-btn').hide('500');
             if (page !== '') {
                 asideElement.hide('100');
-            }
-            if (page == '')
+            } 
+            if (page == '') {
                 $('#categories-list').fadeIn('100');
+            }
         }
     });
 }
@@ -164,7 +168,8 @@ function userController() {
     });
 
     ctgsBtn();
-
+    asideElement.show();
+    $('#categories-list').show();
     myAccLink.on('click', function (event) {
         event.preventDefault();
         var logged = JSON.parse(sessionStorage.getItem('isLogged'));

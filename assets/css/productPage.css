@@ -2,11 +2,11 @@ main{
     font-family: 'Open Sans', sans-serif;
     margin: 0;
     margin-top: 10%;
-    text-align: left;
 }
 
 #product-page-container{
     background-color: rgb(233,235,238);
+    text-align: left;
 }
 
 #product-page-inner-container{

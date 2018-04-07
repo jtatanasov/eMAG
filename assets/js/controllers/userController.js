@@ -415,5 +415,13 @@ function userController() {
 
         });
 
+        $('.footer-links').on('click', function(event) {
+            event.preventDefault();
 
+        });
+        $('#footer-my-acc-link').on('click', function(event) {
+            event.preventDefault();
+
+            location.replace('#edit-profile');
+        });
 }

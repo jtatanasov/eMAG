@@ -123,6 +123,10 @@ var productsService = (function () {
         return this._productsList.find(pr => pr.id == productId);
     }
 
+    ProductsList.prototype.searchProducts = function(name) {
+        var product = this._productsList.find(pr => (pr.name.toLowerCase() == name.toLowerCase() || pr.name.toLowerCase().includes(name.toLowerCase())));
+        return product;
+    }
     ProductsList.prototype.showAvailable = function (products) {
         return products.filter(el => el.availability);
     }

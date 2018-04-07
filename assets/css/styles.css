@@ -938,3 +938,7 @@ footer > ul > li {
     color: #413b3b;
     text-decoration: underline;
 }
+
+#products-list option {
+    margin-bottom: 1em;
+}

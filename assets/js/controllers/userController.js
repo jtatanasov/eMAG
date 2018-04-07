@@ -1,5 +1,3 @@
-$(userController);
-
 var isNameAppended = false;
 
 function showAndHideAside() {
@@ -77,7 +75,7 @@ function ctgsBtn() {
             $('#categories-btn').hide('500');
             if (page !== '') {
                 asideElement.hide('100');
-            } 
+            }
             if (page == '') {
                 $('#categories-list').fadeIn('100');
             }
@@ -123,6 +121,43 @@ function emagInfoNav() {
     })
 }
 
+function searchInput() {
+    const ENTER_KEY_CODE = 13;
+    var page = location.hash.slice(1);
+
+    getTemplate('assets/js/templates/dataListTemplate.html')
+        .then(function (template) {
+            $.get('assets/data/products.json')
+                .then(function (products) {
+                    var source = Handlebars.compile(template);
+                    var html = $(source({ products: products }));
+
+                    $('#products-list').html(html);
+
+                    $('#search').on('keypress', function (event) {
+                        if (event.keyCode === ENTER_KEY_CODE) {
+                            var searched = $(this).val();
+
+                            var searchResult = productsService.searchProducts(searched);
+                            if(searchResult) {
+                                var product = {
+                                    id: searchResult.id,
+                                    cathegory: searchResult.cathegory,
+                                    subcathegory: searchResult.subcathegory,
+                                    type: searchResult.type
+                                }
+                                localStorage.setItem('product', JSON.stringify(product));
+                                if(page != 'product')
+                                    location.replace('#product');
+                                else {
+                                    location.reload();
+                                }
+                            } 
+                        }
+                    });
+                });
+        });
+}
 
 function userController() {
     var templatePath = '';
@@ -138,6 +173,7 @@ function userController() {
     $('#emag-info-nav').show();
     emagInfoNav();
     showAndHideAside();
+    searchInput();
     var isAsideLoaded = false;
     var page = location.hash.slice(1);
 
@@ -415,13 +451,13 @@ function userController() {
 
         });
 
-        $('.footer-links').on('click', function(event) {
-            event.preventDefault();
+    $('.footer-links').on('click', function (event) {
+        event.preventDefault();
 
-        });
-        $('#footer-my-acc-link').on('click', function(event) {
-            event.preventDefault();
+    });
+    $('#footer-my-acc-link').on('click', function (event) {
+        event.preventDefault();
 
-            location.replace('#edit-profile');
-        });
+        location.replace('#edit-profile');
+    });
 }

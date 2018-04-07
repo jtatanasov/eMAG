@@ -1,6 +1,7 @@
 function myFavoriteProductsController() {
     showAndHideAside();
     ctgsBtn();
+    searchInput();
     $('#jssor_1').hide();
     $('#emag-info-nav').hide();
     

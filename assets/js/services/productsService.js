@@ -119,6 +119,10 @@ var productsService = (function () {
         })
     }
 
+    ProductsList.prototype.getProductById = function(productId) {
+        return this._productsList.find(pr => pr.id == productId);
+    }
+
     ProductsList.prototype.showAvailable = function (products) {
         return products.filter(el => el.availability);
     }

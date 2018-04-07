@@ -69,7 +69,37 @@ function myCartController() {
                 var currOrder = new Order(user.cart.products);
                 userService.addOrderInProcess(user.id, currOrder);
                 location.replace('#order');
-            })
+            });
+
+            $('.cart-product-name').on('click', function(event) {
+                event.preventDefault();
+
+                var productId = ($(this).closest('tr[cart-product-id]').attr('cart-product-id'));
+                var clickedProduct = productsService.getProductById(productId);
+                var product = {
+                    id : productId,
+                    cathegory : clickedProduct.cathegory,
+                    subcathegory : clickedProduct.subcathegory,
+                    type : clickedProduct.subcathegory
+                }
+                localStorage.setItem('product', JSON.stringify(product));
+                location.replace('#product');
+            });
+
+            $('.cart-product-img').on('click', function(event) {
+                event.preventDefault();
+                
+                var productId = ($(this).closest('tr[cart-product-id]').attr('cart-product-id'));
+                var clickedProduct = productsService.getProductById(productId);
+                var product = {
+                    id : productId,
+                    cathegory : clickedProduct.cathegory,
+                    subcathegory : clickedProduct.subcathegory,
+                    type : clickedProduct.subcathegory
+                }
+                localStorage.setItem('product', JSON.stringify(product));
+                location.replace('#product');                
+            });
         });
 }
 

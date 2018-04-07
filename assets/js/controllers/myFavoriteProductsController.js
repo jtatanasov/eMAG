@@ -9,7 +9,7 @@ function myFavoriteProductsController() {
 
             var user = JSON.parse(sessionStorage.getItem('loggedUser'));
             var template = Handlebars.compile(data);
-            var html = template(user);
+            var html = $(template(user));
             var userName = user.fullname;
 
             $('main').html(html);
@@ -73,6 +73,36 @@ function myFavoriteProductsController() {
                 userService.deleteFavorite(user.id, productId);
 
                 row.fadeOut(500);
+            });
+
+            $('.fav-name').on('click', function(event) {
+                event.preventDefault();
+
+                var productId = ($(this).closest('tr[fav-product-id]').attr('fav-product-id'));
+                var clickedProduct = productsService.getProductById(productId);
+                var product = {
+                    id : productId,
+                    cathegory : clickedProduct.cathegory,
+                    subcathegory : clickedProduct.subcathegory,
+                    type : clickedProduct.subcathegory
+                }
+                localStorage.setItem('product', JSON.stringify(product));
+                location.replace('#product');
+            });
+
+            $('.fav-product-img').on('click', function(event) {
+                event.preventDefault();
+
+                var productId = ($(this).closest('tr[fav-product-id]').attr('fav-product-id'));
+                var clickedProduct = productsService.getProductById(productId);
+                var product = {
+                    id : productId,
+                    cathegory : clickedProduct.cathegory,
+                    subcathegory : clickedProduct.subcathegory,
+                    type : clickedProduct.subcathegory
+                }
+                localStorage.setItem('product', JSON.stringify(product));
+                location.replace('#product');
             });
 
 

@@ -174,7 +174,7 @@ var userService = (function () {
     //?? instaceof
     UserStorage.prototype.addFavourite = function (id, product) {
         var user = this.getUserById(id);
-
+        console.log(user);
         var containProduct = user.favoriteProducts.some((pr) => pr.name === product.name);
 
         if (!containProduct) {

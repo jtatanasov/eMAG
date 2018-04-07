@@ -55,7 +55,6 @@ var Cart = (function(event) {
             this.totalPrice = this.productsPrice + this.deliveryPrice;
         }
         
-        console.log(this.totalPrice);
         return (Number(this.totalPrice.toFixed(2)));
     }
     return Cart;

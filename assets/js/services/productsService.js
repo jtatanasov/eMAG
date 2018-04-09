@@ -127,37 +127,38 @@ var productsService = (function () {
         var product = this._productsList.find(pr => (pr.name.toLowerCase() == name.toLowerCase() || pr.name.toLowerCase().includes(name.toLowerCase())));
         return product;
     }
-    ProductsList.prototype.showAvailable = function (products) {
-        return products.filter(el => el.availability);
-    }
 
-    ProductsList.prototype.filterByBrand = function (products, brand) {
-        var currentProducts = products.slice();
-        return currentProducts.filter(el => el.brand === brand);
-    }
+    // ProductsList.prototype.showAvailable = function (products) {
+    //     return products.filter(el => el.availability);
+    // }
 
-    ProductsList.prototype.availableBrands = function (products) {
-        var brands = [];
-        products.forEach(el => {
-            if (!brands.some(brand => brand === el.brand)) {
-                brands.push(el.brand);
-            }
-        });
+    // ProductsList.prototype.filterByBrand = function (products, brand) {
+    //     var currentProducts = products.slice();
+    //     return currentProducts.filter(el => el.brand === brand);
+    // }
 
-        return brands;
-    }
+    // ProductsList.prototype.availableBrands = function (products) {
+    //     var brands = [];
+    //     products.forEach(el => {
+    //         if (!brands.some(brand => brand === el.brand)) {
+    //             brands.push(el.brand);
+    //         }
+    //     });
+
+    //     return brands;
+    // }
 
     ProductsList.prototype.productsOfABrand = function (brand) {
         return this._productsList.filter(el => el.brand === brand);
     }
 
-    ProductsList.prototype.allProductsOnSale = function () {
-        return this._productsList.filter(el => el.onSale);
-    }
+    // ProductsList.prototype.allProductsOnSale = function () {
+    //     return this._productsList.filter(el => el.onSale);
+    // }
 
-    ProductsList.prototype.productsOnSale = function (products) {
-        return products.filter(el => el.onSale);
-    }
+    // ProductsList.prototype.productsOnSale = function (products) {
+    //     return products.filter(el => el.onSale);
+    // }
 
     ProductsList.prototype.numberOfPages = function (productsArray) {
         var productsQuantity = productsArray.length;
@@ -173,7 +174,6 @@ var productsService = (function () {
                 count++;
             }
         });
-
         return pages;
     }
 

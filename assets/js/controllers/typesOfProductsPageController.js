@@ -16,152 +16,251 @@ function typesOfProductsPageController() {
     user = JSON.parse(user);
 
     var productsType = productsService.getTypesOfProducts(cathegory, subcathegory, type);
-    var currentProductsOnPage = productsType.slice();
+    var currentAvailableProducts = productsType.slice();
     var currentPageProducts;
     var allTypes = productsService.getTypesInSubcathegory(cathegory, subcathegory);
 
-    var availableProducts = productsService.showAvailable(productsType);
-    var productOnSale = productsService.productsOnSale(productsType);
-    var brands = productsService.availableBrands(productsType);
+    var availableProducts = filtersService.findFilter("showAvailable").pass(productsType);
+    var productsOnSale = filtersService.findFilter("productsOnSale").pass(productsType);
+    var brands = filtersService.findFilter("availableBrands").pass(productsType);
 
     var currentPage = 1;
-
-    var distributorsFilter = {
-        filtersOn: 0,
-        filteredProducts: [],
-        availableFilters: []
-    }
-
-    var filtersInUse = {
-        availability: {
-            inUse: false,
-            filter: function(arr){
-                return productsService.showAvailable(arr);
-            }
-        },
-
-        productOnSale: {
-            inUse: false,
-            filter: function(arr){
-                return productsService.productsOnSale(arr)
-            }
-        },
-
-        brands: {
-            inUse: true,
-            filter: function(arr){
-                return productsService.availableBrands(arr)
-            }
-        }
-    }
-
-    var filterProducts = function(arr){
-        var newArr = arr.slice();
-        for(var prop in filtersInUse){
-            if (prop.inUse){
-                newArr = prop.filter(newArr);
-            }
-        }
-        return newArr;
-    }
+    var availablePages;
 
     var clearProductsOnPage = function(){
         $("#available-products").html("");
     }
 
-    var loadProductsOnPage = function(arr){
-        var availablePages = productsService.numberOfPages(arr);
-        currentPageProducts = productsService.loadProductsOnPage(availablePages, (currentPage - 1));
-        currentPageProducts.forEach(el => {
-                var toAppend = `<article class="single-product-container" id="${el.id}">
-            <div class="single-product-nav">
-                <img src="assets/images/icons/gray-heart-icon.png" class="icon" alt="" />
-            </div>
-            <div class="single-product-img-container">
-                <img src="${el.main_url}" class="single-product-image" alt="" />
-            </div>       
-            <a href="" class="single-product-title">${el.name}</a>`
-                if (el.availability) {
-                    toAppend += `<p class="single-product-availability, product-available">в наличност</p>`
+    var clearBrands = function(){
+        $("#manufacturer-filter-ul").html("");
+    }
+
+    var updateBrands = function(arr){
+        let brandsCurr;
+        if(filtersService.distributorsFilter.activeFilters <= 0){
+            brandsCurr = filtersService.findFilter("availableBrands").pass(arr);
+            console.log("brandcurr = " + brandsCurr);
+            currentAvailableProducts = filtersService.filterArray(currentPageProducts);
+        } else {
+            brandsCurr = filtersService.distributorsFilter.availableFilters;
+            let toFilterBrands = [];
+            filtersService.distributorsFilter.availableFilters.forEach(el => {
+                var temp = filtersService.findFilter("filterByBrand")
+                    .pass(currentAvailableProducts, el.brandName);
+                temp.forEach(el => {
+                toFilterBrands.push(el)});
+            });
+            currentAvailableProducts = toFilterBrands.slice();
+        }
+
+        console.log(currentAvailableProducts);
+        console.log(brandsCurr);
+
+        
+
+        $("#manufacturer-filter-ul").append(`<h1 id="manufacturer-filter-list">
+            <span class="filter-title">Производител</span>
+            <img src="assets/images/icons/arrow-up.png" class="icon filter-arrow" alt="">
+        </h1>`)
+        brandsCurr.forEach(el => {
+            var elBrandProducts = filtersService.findFilter("filterByBrand").pass(currentAvailableProducts, el);
+            console.log(elBrandProducts);
+            $("#manufacturer-filter-ul").append(`<li id="${el}-li">
+            <input type="checkbox" id="${el}" class="${el}"> ${el}
+                <span class="number-of-results">
+                    (${elBrandProducts.length})
+                </span>
+            </input>
+            </li>`);
+            
+            $("#distributor-select").append(`
+            <option value="${el.toLowerCase()}" class="${el}">${el} <span>(${elBrandProducts.length})</span></option>
+            `)
+
+            var forListening = $(`#${el}-li`);
+            var checkbox = $(`#${el}`);
+
+            forListening.on("click", function(event){ 
+                if(!(event.target.id == el)){
+                    checkbox.trigger("click");
+                }   
+            });
+
+            $(checkbox).on("change", function(){
+                var isChecked = $(checkbox).is(":checked");
+
+                if(isChecked){
+                    $("#filters-top-nav-distributor").css({"display": "inline-block"});
+                    if($('#hr-filters-nav-top').css({'display':'none'})){
+                        $("#hr-filters-nav-top").css({"display": "inline-block"})
+                    }
+                    $($(`option[value='${el.toLowerCase()}']`)[0]).prop("selected", true);
+                    
+                    filtersService.distributorsFilter.activeFilters++;
+                    filtersService.distributorsFilter.availableFilters.push({
+                        brandName: el,
+                        brandProducts: elBrandProducts
+                    });
+
+                    let toFilterBrands = [];
+                    filtersService.distributorsFilter.availableFilters.forEach(el => {
+                        var temp = filtersService.findFilter("filterByBrand")
+                        .pass(currentAvailableProducts, el.brandName);
+                        temp.forEach(el => {
+                            toFilterBrands.push(el)});
+                    });
+
+                    currentAvailableProducts = toFilterBrands.slice();
+                    // clearProductsOnPage();
+                    // loadProductsOnPage(currentAvailableProducts);
                 } else {
-                    toAppend += `<p class="single-product-availability, product-unavailable">изчерпан</p>`
+                    filtersService.distributorsFilter.activeFilters--;
+                    if(filtersService.distributorsFilter.activeFilters <= 0){
+                        $("#filters-top-nav-distributor").css({"display": "none"});
+                        if($("#filters-top-nav-availability").css({"display":"none"})){
+                            ($('#hr-filters-nav-top').css({'display': 'none'}));
+                        }
+
+                        filtersService.distributorsFilter.availableFilters = [];
+                        filtersService.distributorsFilter.filteredProducts = [];
+
+                        currentAvailableProducts = filtersService.filterArray(productsType);
+                        // clearProductsOnPage();
+                        // loadProductsOnPage(currentAvailableProducts);
+                    } else {
+                        var delIndex = filtersService.distributorsFilter.availableFilters.findIndex(element => element.brandName == el);
+                        if(delIndex >= 0){
+                            filtersService.distributorsFilter.availableFilters.splice(delIndex, 1);
+                        }
+
+                        let toFilterBrands = [];
+                        filtersService.distributorsFilter.availableFilters.forEach(el => {
+                            var temp = filtersService.findFilter("filterByBrand")
+                            .pass(currentAvailableProducts, el.brandName);
+                            temp.forEach(el => {
+                                toFilterBrands.push(el)});
+                        });
+
+                        currentAvailableProducts = toFilterBrands.slice();
+                        // clearProductsOnPage();
+                        // loadProductsOnPage(currentAvailableProducts);
+                    }                   
                 }
 
-                var price = Number(el.price);
-                var whole = Math.floor(price);
-                var change = Math.floor((price - whole) * 100);
-                toAppend += `<p class="single-product-price">${whole}<sup>${change}</sup> лв.</p>
+                if(filtersService.distributorsFilter.activeFilters > 1){
+                    var multipleFilters = $(`<option value="basic" id="basic-distributors-filter" selected disabled>${filtersService.distributorsFilter.activeFilters} филтри</option>`)
+                    // $(multipleFilters).before($($("#distributor-select")[0][0]));
+                    $("#distributor-select").prepend(multipleFilters);
+                } else {
+                    if($("#basic-distributors-filter").length > 0){
+                        $("#basic-distributors-filter").remove();
+                    }
+                }
+            })
+        })
+    }
 
-            <button class="single-product-buy-button">
-                <div class="buy-nav-add-to-cart">
-                    <img class="nav-cart-icon" class="icon" src="assets/images/icons/cart-icon.png" alt="" />
+    var loadProductsOnPage = function(arr){
+        availablePages = productsService.numberOfPages(arr);
+        if(filtersService.activeFilters <= 0){
+            currentPageProducts = productsType.slice();
+        }
+        currentPageProducts = productsService.loadProductsOnPage(availablePages, (currentPage - 1));
+        clearBrands();
+        updateBrands();
+        if(currentPageProducts != undefined){
+            currentPageProducts.forEach(el => {
+                var toAppend = `<article class="single-product-container" id="${el.id}">
+                <div class="single-product-nav">
+                    <img src="assets/images/icons/gray-heart-icon.png" class="icon" alt="" />
                 </div>
-                <span class="button-text" class="buy-nav-txt"> Добави в количката</span>
-            </button>
-            </article>`
-                $("#available-products").append(toAppend);
-        });
-        availableProducts = productsService.showAvailable(currentProductsOnPage);
-        productOnSale = productsService.productsOnSale(currentProductsOnPage);
-        brands = productsService.availableBrands(currentProductsOnPage);
-        //filters specifics
-            //availability
-        $($("#availability-filter ~ span")[0]).html(`(${availableProducts.length})`);
-        $($("option[value='available']")[0]).html(`В наличност (${availableProducts.length})`)
-            //sale
-        $($("#sale-filter ~ span")[0]).html(`(${productOnSale.length})`);
-        $($("option[value='sale']")[0]).html(`Промоция (${productOnSale.length})`)
-         //brands
-        $($("#manufacturer-filter ~ span")[0]).html(`(${brands.length})`);
+                <div class="single-product-img-container">
+                    <img src="${el.main_url}" class="single-product-image" alt="" />
+                </div>       
+                <a href="" class="single-product-title">${el.name}</a>`
+                    if (el.availability) {
+                        toAppend += `<p class="single-product-availability, product-available">в наличност</p>`
+                    } else {
+                        toAppend += `<p class="single-product-availability, product-unavailable">изчерпан</p>`
+                    }
 
-        //page navigation:
-        $($($("#pages-info")[0]).children()[0]).html(`${(currentPage - 1) * currentPageProducts.length + 1}-
-        ${currentPage * currentPageProducts.length}`);
-        $($($("#pages-info")[0]).children()[1]).html(productsType.length);
-        //buttons
-        $("#pages-buttons").html(`<button disabled id="back-page">Назад</button><button id="forward-page" disabled>Напред</button>`)
-        availablePages.forEach((el, index) => {
-            var elToAppend = `<button id="page-${index + 1}">${index + 1}</button>`    
-            $(elToAppend).insertAfter("#back-page");
-            if ((index + 1) == currentPage) {
-                $(`#page-${index + 1}`).addClass("current-page");
-            }
-            // //TODO: логиката на буферния бутон??
-            // if((availablePages.length > 4) && (index )){
-            //     $(`<button disabled id="buffer-button">...</button>`).insertBefore(elToAppend);
-            // }
-        })
-        
-        //disable buttons
-        if (currentPage != 1) {
-            $("#back-page").prop('disabled', false);
-        } else {
-            $("#back-page").prop('disabled', true);
-        }
-        if (currentPage === availablePages.length) {
-            $("#forward-page").prop('disabled', true);
-        } else {
-            $("#forward-page").prop('disabled', false);
-        }
-        
-        //TODO: придвиживане с бутоните за страниците отдолу
-        //TODO: delete filter event listener
-        $($(".delete-filter").parent()[0]).on("click", function (event) {
-            var filterID = $(event.target).prev("select").attr('id');
-            // var filter = event.target.closest("select").id;
-            // console.log(filter);
-            if(filterID == "availability-select"){
-                $("#filters-top-nav-availability").css({"display":"none"});
-                $("#availability-filter-list").parent().children("li").toArray().forEach(el => $(el).children().trigger("click"));
+                    var price = Number(el.price);
+                    var whole = Math.floor(price);
+                    var change = Math.floor((price - whole) * 100);
+                    toAppend += `<p class="single-product-price">${whole}<sup>${change}</sup> лв.</p>
+
+                <button class="single-product-buy-button">
+                    <div class="buy-nav-add-to-cart">
+                        <img class="nav-cart-icon" class="icon" src="assets/images/icons/cart-icon.png" alt="" />
+                    </div>
+                    <span class="button-text" class="buy-nav-txt"> Добави в количката</span>
+                </button>
+                </article>`
+                    $("#available-products").append(toAppend);
+            });
+
+            var availableProducts = filtersService.findFilter("showAvailable").pass(currentAvailableProducts);
+            var productsOnSale = filtersService.findFilter("productsOnSale").pass(currentAvailableProducts);
+            var brands = filtersService.findFilter("availableBrands").pass(currentAvailableProducts);
+            //filters specifics
+                //availability
+            $($("#availability-filter ~ span")[0]).html(`(${availableProducts.length})`);
+            $($("option[value='available']")[0]).html(`В наличност (${availableProducts.length})`)
+                //sale
+            $($("#sale-filter ~ span")[0]).html(`(${productsOnSale.length})`);
+            $($("option[value='sale']")[0]).html(`Промоция (${productsOnSale.length})`)
+            //brands
+            $($("#manufacturer-filter ~ span")[0]).html(`(${brands.length})`);
+
+             //page navigation:
+            $($($("#pages-info")[0]).children()[0]).html(`${(currentPage - 1) * currentPageProducts.length + 1}-
+            ${currentPage * currentPageProducts.length}`);
+            $($($("#pages-info")[0]).children()[1]).html(productsType.length);
+            //buttons
+            $("#pages-buttons").html(`<button disabled id="back-page">Назад</button><button id="forward-page" disabled>Напред</button>`)
+            availablePages.forEach((el, index) => {
+                var elToAppend = `<button id="page-${index + 1}">${index + 1}</button>`    
+                $(elToAppend).insertAfter("#back-page");
+                if ((index + 1) == currentPage) {
+                    $(`#page-${index + 1}`).addClass("current-page");
+                }
+                // //TODO: логиката на буферния бутон??
+                // if((availablePages.length > 4) && (index )){
+                //     $(`<button disabled id="buffer-button">...</button>`).insertBefore(elToAppend);
+                // }
+            })
+
+            //disable buttons
+            if (currentPage != 1) {
+                $("#back-page").prop('disabled', false);
             } else {
-                $("#filters-top-nav-distributor").css({"display":"none"});
-                $("manufacturer-filter-list").parent().children("li").toArray().forEach(el => $(el).children().trigger("click"));
+                $("#back-page").prop('disabled', true);
             }
+            if (currentPage === availablePages.length) {
+                $("#forward-page").prop('disabled', true);
+            } else {
+                $("#forward-page").prop('disabled', false);
+            }
+            
+            //TODO: придвиживане с бутоните за страниците отдолу
+            //TODO: delete filter event listener
+            $($(".delete-filter").parent()[0]).on("click", function (event) {
+                var filterID = $(event.target).prev("select").attr('id');
+                // var filter = event.target.closest("select").id;
+                // console.log(filter);
+                if(filterID == "availability-select"){
+                    $("#filters-top-nav-availability").css({"display":"none"});
+                    $("#availability-filter-list").parent().children("li").toArray().forEach(el => $(el).children().trigger("click"));
+                } else {
+                    $("#filters-top-nav-distributor").css({"display":"none"});
+                    $("manufacturer-filter-list").parent().children("li").toArray().forEach(el => $(el).children().trigger("click"));
+                }
 
-            clearProductsOnPage();
-            loadProductsOnPage(currentProductsOnPage);
-        })
-
+                clearProductsOnPage();
+                loadProductsOnPage(currentAvailableProducts);
+            });
+        }
+        
         //products listenrs 
             //img
         $(".single-product-image").on("click", function(){
@@ -182,7 +281,7 @@ function typesOfProductsPageController() {
         });
     }
 
-    
+
     getTemplate('assets/js/templates/typesOfProductsPage.html')
         .then(function (data) {
 
@@ -196,8 +295,7 @@ function typesOfProductsPageController() {
             
 
             //load products on page
-            // var currentPageProducts = productsService.loadProductsOnPage(availablePages, (currentPage - 1));
-            loadProductsOnPage(currentProductsOnPage);
+            loadProductsOnPage(currentAvailableProducts);
 
             //filling out side-nav:
             $("#side-nav-main-link").html(subcathegory);
@@ -217,98 +315,30 @@ function typesOfProductsPageController() {
                 location.reload();
             });
 
-            //adding event listener to path
-                // TODO: are we doing the subcathegory page? 
-           
-            brands.forEach(el => {
-                var elBrandProducts = productsService.productsOfABrand(el);
-                $("#manufacturer-filter-list").parent().append(`<li id="${el}-li">
-                <input type="checkbox" id="${el}" class="${el}"> ${el}
-                    <span class="number-of-results">
-                        (${elBrandProducts.length})
-                    </span>
-                </input>
-                </li>`);
-                
-                $("#distributor-select").append(`
-                <option value="${el.toLowerCase()}" class="${el}">${el} <span>(${elBrandProducts.length})</span></option>
-                `)
+            //adding event listener to brands        
+            
 
-                var forListening = $(`#${el}-li`);
-                var checkbox = $(`#${el}`);
-                forListening.on("click", function(event){ 
-                        if(!(event.target.id == el)){
-                            checkbox.trigger("click");
-                        }   
-                    });
-                $(checkbox).on("change", function(){
-                    var isChecked = $(checkbox).is(":checked");
-                    if(isChecked){
-                        $("#filters-top-nav-distributor").css({"display": "inline-block"});
-                        if(($('#hr-filters-nav-top').css('display') == 'none')){
-                            $("#hr-filters-nav-top").css({"display": "inline-block"})
-                        }
-                        $($(`option[value='${el.toLowerCase()}']`)[0]).prop("selected", true);
-                        distributorsFilter.filtersOn++;
-                        distributorsFilter.availableFilters.push({
-                            brandName: el,
-                            brandProducts: elBrandProducts
-                        })
-                        elBrandProducts.forEach(br => distributorsFilter.filteredProducts.push(br));
-                        clearProductsOnPage();
-                        currentProductsOnPage = distributorsFilter.filteredProducts.slice();
-                        loadProductsOnPage(currentProductsOnPage);
-                    } else {
-                        distributorsFilter.filtersOn--;
-                        if(distributorsFilter.filtersOn <= 0){
-                            $("#filters-top-nav-distributor").css({"display": "hidden"});
-                            if($("#filters-top-nav-availability").css({"display":"hidden"})){
-                                ($('#hr-filters-nav-top').css('display') == 'none');
-                            }
-                            distributorsFilter.availableFilters = [];
-                            distributorsFilter.filteredProducts = [];
-
-                            currentProductsOnPage = productsType.slice();
-                            clearProductsOnPage();
-                            loadProductsOnPage(currentProductsOnPage);
-                        } else {
-                            var delIndex = distributorsFilter.availableFilters.findIndex(element => element.brandName == el);
-                            if(delIndex >= 0){
-                                distributorsFilter.availableFilters.splice(delIndex, 1);
-                            }
-
-                            distributorsFilter.filteredProducts = [];
-                            distributorsFilter.availableFilters.forEach(brand => {
-                                brand.brandProducts.forEach(brandProduct => distributorsFilter.filteredProducts.push(brandProduct));
-                            });
-                            currentProductsOnPage = distributorsFilter.filteredProducts.slice();
-                            clearProductsOnPage();
-                            loadProductsOnPage(currentProductsOnPage);
-                        }                   
-                    }
-
-                    if(distributorsFilter.filtersOn > 1){
-                        var multipleFilters = $(`<option value="basic" id="basic-distributors-filter" selected disabled>${distributorsFilter.filtersOn} филтри</option>`)
-                        // $(multipleFilters).before($($("#distributor-select")[0][0]));
-                        $("#distributor-select").prepend(multipleFilters);
-                    } else {
-                        if($("#basic-distributors-filter").length > 0){
-                            $("#basic-distributors-filter").remove();
-                        }
-                    }
-                })
-            })
-
-
-            //sidebar filters listener
+            //sidebar filters listener && top nav
                 //availability filter
 
+            $("#availability-select").on("change", function(event){
+                var value = $(this).val();
+                if(value === "available"){
+                    $("#availability-filter").trigger("click");
+                };
+
+                if(value === "sale"){
+                    $("#sale-filter").trigger("click");
+                }
+            })
             $("#availability-filter").parent().on("click", function(event){
                  if(!(event.target.id == "availability-filter")){
                     $("#availability-filter").trigger("click")
                 }
-            })               
+            });
+            
             $("#availability-filter").on("change", function(event){
+                var filterName = $(this).parent().attr("class").split(",")[0];
                 if($("#availability-filter").is(":checked")){
                     $("#filters-top-nav-availability").css({"display": "inline-block"});
                     if(($('#hr-filters-nav-top').css('display') == 'none')){
@@ -318,19 +348,20 @@ function typesOfProductsPageController() {
                     if($("#sale-filter").is(":checked")){
                         $("#sale-filter").prop('checked', false);
                     }
-                    filtersInUse.availability.inUse = true;
+                    filtersService.activateFilter(filterName);
+                    filtersService.deactivateFilter("productsOnSale");
                 } else {
                     $("#filters-top-nav-availability").css({"display": "none"});
                     if(!($('#hr-filters-nav-top').css('display') == 'none') 
                     && ($("#filters-top-nav-distributor").css('display') == 'none')){
                         $('#hr-filters-nav-top').css({"display": "none"})
                     }
-                    filtersInUse.availability.inUse = false;
+                    filtersService.deactivateFilter(filterName);
                 }
-                // currentProductsOnPage = filterProducts(productsType);
+                // currentAvailableProducts = filterProducts(productsType);
                 clearProductsOnPage();
-                // let temp = productsService.showAvailable(currentProductsOnPage);
-                let temp = filterProducts(currentProductsOnPage);
+                // let temp = productsService.showAvailable(currentAvailableProducts);    
+                let temp = filtersService.filterArray(currentAvailableProducts);
                 loadProductsOnPage(temp);
             })
 
@@ -338,8 +369,10 @@ function typesOfProductsPageController() {
                 if(!(event.target.id == "sale-filter")){
                     $("#sale-filter").trigger("click");
                 }
-            })
+            });
+
             $("#sale-filter").on("change", function(event){
+                var filterName = $(this).parent().attr("class").split(",")[0];
                 if($("#sale-filter").is(":checked")){
                     $("#filters-top-nav-availability").css({"display": "inline-block"});
                     if(($('#hr-filters-nav-top').css('display') == 'none')){
@@ -349,19 +382,20 @@ function typesOfProductsPageController() {
                     if($("#availability-filter").is(":checked")){
                         $("#availability-filter").prop('checked', false);
                     }
-                    filtersInUse.productOnSale.inUse = true;
+                    filtersService.activateFilter(filterName);
+                    filtersService.deactivateFilter("showAvailable");
                 } else {
                     $("#filters-top-nav-availability").css({"display": "none"});
                     if(!($('#hr-filters-nav-top').css('display') == 'none') 
                     && ($("#filters-top-nav-distributor").css('display') == 'none')){
                         $('#hr-filters-nav-top').css({"display": "none"})
                     }
-                    filtersInUse.productOnSale.inUse = false;
+                    filtersService.deactivateFilter(filterName);
                 }
-                // currentProductsOnPage = filterProducts(productsType);
+                // currentAvailableProducts = filterProducts(productsType);
                 clearProductsOnPage();
-                // let temp = productsService.productsOnSale(currentProductsOnPage);
-                let temp = filterProducts(currentProductsOnPage);
+                // let temp = productsService.productsOnSale(currentAvailableProducts);
+                let temp = filtersService.filterArray(currentAvailableProducts);
                 loadProductsOnPage(temp);
             })
 
@@ -394,7 +428,7 @@ function typesOfProductsPageController() {
             //sort by price:
             $("#price-sort-select").on("change", function(){
                 var sel = $("#price-sort-select option:selected").val();
-                var sortArr = currentProductsOnPage.slice();
+                var sortArr = currentAvailableProducts.slice();
                 sortArr = (sel == "lowest") ? productsService.sortLowestPrice(sortArr) : productsService.sortHighestPrice(sortArr);
                 clearProductsOnPage();
                 loadProductsOnPage(sortArr);

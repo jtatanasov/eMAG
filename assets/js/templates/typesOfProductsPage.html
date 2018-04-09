@@ -34,14 +34,14 @@
                                 <span class="filter-title">Наличност</span>
                                 <img src="assets/images/icons/arrow-up.png" class="icon filter-arrow" alt=""/>
                             </h1>
-                            <li>
+                            <li class="showAvailable, filter">
                                 <input type="checkbox" name="availability" id="availability-filter"> В наличност
                                     <span class="number-of-results">
                                         <!-- (1237) -->
                                     </span>
                                 </input>
                             </li>
-                            <li>
+                            <li class="productsOnSale, filter">
                                 <input type="checkbox" name="availability" id="sale-filter"> Промоции
                                     <span class="number-of-results">
                                         <!-- (459) -->
@@ -50,7 +50,7 @@
                             </li>
                         </ul>
     
-                        <ul class="down">
+                        <ul class="down" id="manufacturer-filter-ul">
                             <h1 id="manufacturer-filter-list">
                                 <span class="filter-title">Производител</span>
                                 <img src="assets/images/icons/arrow-up.png" class="icon filter-arrow" alt=""/>
@@ -83,8 +83,8 @@
                                     <h1 class="filters-result-title">наличност:</h1>
                                     <div class="select-container-div">
                                         <select name="availability" id="availability-select">
-                                            <option value="available"></option>
-                                            <option value="sale"></option>
+                                            <option value="available" class="showAvailable, filter"></option>
+                                            <option value="sale" class="productsOnSale, filter"></option>
                                         </select>
                                         <span>
                                             <img src="assets/images/icons/clear-filters-icon.png" class="icon, delete-filter" alt=""/>

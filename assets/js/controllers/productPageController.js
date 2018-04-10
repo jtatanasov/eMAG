@@ -47,6 +47,7 @@ function productPageController() {
                 var change = Math.floor((price - whole) * 100);
                 $("#product-price span #add-to-cart-buy-nav-div").innerHTML = `${whole}<sup>${change}</sup>`;
                 $("#add-to-cart-buy-nav-div>span").innerHTML = `${whole}<sup>${change}</sup>`;
+                $("#product-price>span").html(`${whole}<sup>${change}</sup>`);
 
                 //sticky nav bars:            
                 var productNavTop = $('#product-nav').offset().top;

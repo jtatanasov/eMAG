@@ -405,6 +405,8 @@ function typesOfProductsPageController() {
             $(".single-product-nav").on("click", function (event) {
                 event = event.originalEvent;
                 event.preventDefault();
+                clearTimeout(removePopup);
+                
                 if (sessionStorage.getItem('isLogged')) {
                     let productID = event.target.closest("article").id;
                     let product = productsService.getProduct(productID);

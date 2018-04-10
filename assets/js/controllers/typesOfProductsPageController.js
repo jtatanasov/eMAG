@@ -33,6 +33,10 @@ function typesOfProductsPageController() {
 
     var loadProductsOnPage = function(arr){
         currentAvailableProducts = filtersService.filterArray(productsType);
+        var curr = filtersService.getAllAvailableBrandsProducts();
+        if(curr.length > 0){
+            currentAvailableProducts = curr;
+        }
         availablePages = productsService.numberOfPages(currentAvailableProducts);
         if(filtersService.activeFilters <= 0){
             currentPageProducts = productsType.slice();
@@ -40,9 +44,19 @@ function typesOfProductsPageController() {
         currentPageProducts = productsService.loadProductsOnPage(availablePages, (currentPage - 1));
         if(currentPageProducts != undefined){
             currentPageProducts.forEach(el => {
+                var src;
+                var classTwo;
+                if(!userService.getFavoriteProductById(user.id, el.id)){
+                    src = "assets/images/icons/gray-heart-icon.png"
+                    classTwo = "not-fave"
+                } else {
+                    src = "assets/images/icons/red-heart-icon.png"
+                    classTwo = "fave"                    
+                }
+
                 var toAppend = `<article class="single-product-container" id="${el.id}">
                 <div class="single-product-nav">
-                    <img src="assets/images/icons/gray-heart-icon.png" class="icon" alt="" />
+                    <img src="${src}" class="icon ${classTwo}" alt="" />
                 </div>
                 <div class="single-product-img-container">
                     <img src="${el.main_url}" class="single-product-image" alt="" />
@@ -227,6 +241,7 @@ function typesOfProductsPageController() {
             $(`#manufacturer-filter-ul>li>input[type=checkbox]`).on("change", function(event){
                 var event = event.originalEvent;
                 var brandName = event.target.id;
+                console.log(brandName)
                 if($(event.target).is(":checked")){
                     $("#filters-top-nav-distributor").css({"display": "inline-block"});
                     if($('#hr-filters-nav-top').css({'display':'none'})){
@@ -237,20 +252,18 @@ function typesOfProductsPageController() {
                     filtersService.addAvailableBrand(brandName);
                     var currentAvailableProducts = filtersService.getAllAvailableBrandsProducts();
                     clearProductsOnPage();
-                    loadProductsOnPage(currentAvailableProducts);
+                    loadProductsOnPage();
                 } else {
                     filtersService.removeAvailableBrand(brandName);
                     console.log(filtersService.brandsFilter.activeBrands)
-                    var currentAvailableProducts = filtersService.getAllAvailableBrandsProducts();
                     if(filtersService.brandsFilter.activeFilters <= 0){
                         $("#filters-top-nav-distributor").css({"display": "none"});
                         if($("#filters-top-nav-availability").css({"display":"none"})){
                             ($('#hr-filters-nav-top').css({'display': 'none'}));
                         }
-                        currentAvailableProducts = filtersService.filterArray(productsType);
                     }
                     clearProductsOnPage();
-                    loadProductsOnPage(currentAvailableProducts);
+                    loadProductsOnPage();
                 }
             })
 
@@ -390,11 +403,55 @@ function typesOfProductsPageController() {
 
             //adding to favorites
             $(".single-product-nav").on("click", function (event) {
+                event = event.originalEvent;
                 event.preventDefault();
                 if (sessionStorage.getItem('isLogged')) {
                     let productID = event.target.closest("article").id;
                     let product = productsService.getProduct(productID);
-                    userService.addFavourite(user.id, product);
+
+                    if($(event.target).is(".not-fave")){
+                        userService.addFavourite(user.id, product);
+
+                        $(event.target).removeClass("not-fave");
+                        $(event.target).addClass("fave");
+                        $(event.target).attr("src", "assets/images/icons/red-heart-icon.png");
+
+                        // animation popup
+                        $("#fave-activity-heart-icon").attr("src", "assets/images/icons/red-heart-icon.png");
+                        $("#fave-activity-text").html("Продуктът беше добавен в списъка с любими.");
+
+                        // $("#fave-activity").animate({
+                        //     $(this).show("slide", { direction: "left" }, 1000)
+                        // })
+
+                    } else {
+                        userService.deleteFavorite(user.id, product.id);
+
+                        $(event.target).removeClass("fave");
+                        $(event.target).addClass("not-fave");
+                        $(event.target).attr("src", "assets/images/icons/gray-heart-icon.png");
+
+                        //animation popup
+                        $("#fave-activity-heart-icon").attr("src", "assets/images/icons/button-heart-icon.png");
+                        $("#fave-activity-text").html("Продуктът беше премахнат от списъка с любими.");
+
+                    }
+                    //animation popup:
+
+                    var hidePopup = function(){
+                        $("#fave-activity").animate({
+                            marginLeft: parseInt($("#fave-activity").css('marginLeft'),10) == 0 ? $("#fave-activity").outerWidth() : 0
+                        }); 
+                    }
+
+                    hidePopup();
+                    var removePopup = setTimeout(hidePopup, 2000);
+
+                    $("#fave-activity-hide").on("click", function(){
+                        clearTimeout(removePopup);
+                        $("#fave-activity").hide();
+                    });
+                    
                 } else {
                     location.replace('#login');
                 }

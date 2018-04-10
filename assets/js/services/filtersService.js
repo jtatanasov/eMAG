@@ -84,6 +84,7 @@ var filtersService = (function(){
 
     FilterService.prototype.getAllAvailableBrandsProducts = function(){
         var toReturn = [];
+        console.log(this.brandsFilter.availableBrands);
         this.brandsFilter.availableBrands.forEach(br => br.brandProducts.forEach(pr => toReturn.push(pr)));
         return toReturn;
     }

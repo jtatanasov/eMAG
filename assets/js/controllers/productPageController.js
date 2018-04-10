@@ -24,13 +24,15 @@ function productPageController() {
                 $("main").html(html);
 
                 var spec = product.specifics;
-
-                Array.prototype.forEach.call(spec, function (el) {
-                    $("tbody").innerHTML += `<tr>
-                            <td>${el.name}</td>
-                            <td>${el.spec}</td>
-                        </tr>`
-                })
+                
+                html = $("tbody").html();
+                spec.forEach(el => {
+                    html += `<tr>
+                        <td>${el.name}</td>
+                        <td>${el.spec}</td>
+                    </tr>`                    
+                });
+                $("tbody").html(html);
 
                 //checking availability
                 if (!product.availability) {
@@ -71,19 +73,34 @@ function productPageController() {
                     }
 
                     //buy-nav pops up when scrolling down: 
-                    if (currentScroll >= buyNavTop) {
-                        $("#first-sticky-div").append($("#buy-nav"));
-                        $("#buy-nav").css({
-                            visibility: "visible"
-                        })
-                    }
-                    if (currentScroll < buyNavTop) {
-                        $("#buy-nav-container").append($("#buy-nav"));
-                        $("#buy-nav").css({
-                            visibility: "hidden"
-                        })
-                    }
+                    // if (currentScroll >= buyNavTop) {
+                    //     $("#first-sticky-div").append($("#buy-nav"));
+                    //     $("#buy-nav").css({
+                    //         visibility: "visible"
+                    //     })
+                    // }
+                    // if (currentScroll < buyNavTop) {
+                    //     $("#buy-nav-container").append($("#buy-nav"));
+                    //     $("#buy-nav").css({
+                    //         visibility: "hidden"
+                    //     })
+                    // }
                 });
+
+                //product description and specs listeners
+                $($("#product-description-ref").parent()[0]).on("click", function(){
+                    var offset = $("#description-product").offset();
+                    $('html, body').animate({
+                        scrollTop: offset.top - 105,
+                    });
+                });
+
+                $($("#product-specs-ref").parent()[0]).on("click", function(){
+                    var offset = $("#specifics-container").offset();
+                    $('html, body').animate({
+                        scrollTop: offset.top - 120,
+                    });
+                })
 
                 //adding to cart:
 

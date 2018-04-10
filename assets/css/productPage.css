@@ -211,7 +211,7 @@ main{
     padding: 0.2em 0;
 }
 
-.details{
+.details-product{
     display: inline-block;
     /* margin-left: 5%; */
     cursor: pointer;
@@ -219,15 +219,15 @@ main{
     border-radius: 5px;
 }
 
-.details>a{
+.details-product>a{
     all:unset;
 }
 
-.details>a:hover{
+.details-product>a:hover{
     all:unset;
 }
 
-.details:hover{
+.details-product:hover{
     background-color: rgb(51,126,198);
 }
 
@@ -312,7 +312,7 @@ main{
     width: 34%;
     color: rgb(151, 155, 155);
 }
-
+/* 
 
 #buy-nav{
     background-color: white;
@@ -321,14 +321,14 @@ main{
     left: 0;
     width: 100%;
 }
-
+/*  */
 #buy-nav-div{
     width: 90%;
     margin: auto;
     padding-top: 0.4em;
-}
+} */
 
-.buy-nav{
+/* .buy-nav{
     display: inline-block;
 }
 
@@ -382,7 +382,7 @@ main{
     padding-bottom: 0.6em;
     padding-top: 0.6em;
     font-size: 1.3em;
-}
+} */
 
 button{
     cursor: pointer;
@@ -397,7 +397,7 @@ button{
 
 #sticky-navs{
     position: fixed;
-    top: 0;
+    top: 3%;
     left: 0;
     width: 100%;
 }

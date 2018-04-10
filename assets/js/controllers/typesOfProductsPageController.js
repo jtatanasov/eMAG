@@ -31,143 +31,13 @@ function typesOfProductsPageController() {
         $("#available-products").html("");
     }
 
-    var clearBrands = function(){
-        $("#manufacturer-filter-ul").html("");
-    }
-
-    var updateBrands = function(arr){
-        let brandsCurr;
-        if(filtersService.distributorsFilter.activeFilters <= 0){
-            brandsCurr = filtersService.findFilter("availableBrands").pass(arr);
-            console.log("brandcurr = " + brandsCurr);
-            currentAvailableProducts = filtersService.filterArray(currentPageProducts);
-        } else {
-            brandsCurr = filtersService.distributorsFilter.availableFilters;
-            let toFilterBrands = [];
-            filtersService.distributorsFilter.availableFilters.forEach(el => {
-                var temp = filtersService.findFilter("filterByBrand")
-                    .pass(currentAvailableProducts, el.brandName);
-                temp.forEach(el => {
-                toFilterBrands.push(el)});
-            });
-            currentAvailableProducts = toFilterBrands.slice();
-        }
-
-        console.log(currentAvailableProducts);
-        console.log(brandsCurr);
-
-        
-
-        $("#manufacturer-filter-ul").append(`<h1 id="manufacturer-filter-list">
-            <span class="filter-title">Производител</span>
-            <img src="assets/images/icons/arrow-up.png" class="icon filter-arrow" alt="">
-        </h1>`)
-        brandsCurr.forEach(el => {
-            var elBrandProducts = filtersService.findFilter("filterByBrand").pass(currentAvailableProducts, el);
-            console.log(elBrandProducts);
-            $("#manufacturer-filter-ul").append(`<li id="${el}-li">
-            <input type="checkbox" id="${el}" class="${el}"> ${el}
-                <span class="number-of-results">
-                    (${elBrandProducts.length})
-                </span>
-            </input>
-            </li>`);
-            
-            $("#distributor-select").append(`
-            <option value="${el.toLowerCase()}" class="${el}">${el} <span>(${elBrandProducts.length})</span></option>
-            `)
-
-            var forListening = $(`#${el}-li`);
-            var checkbox = $(`#${el}`);
-
-            forListening.on("click", function(event){ 
-                if(!(event.target.id == el)){
-                    checkbox.trigger("click");
-                }   
-            });
-
-            $(checkbox).on("change", function(){
-                var isChecked = $(checkbox).is(":checked");
-
-                if(isChecked){
-                    $("#filters-top-nav-distributor").css({"display": "inline-block"});
-                    if($('#hr-filters-nav-top').css({'display':'none'})){
-                        $("#hr-filters-nav-top").css({"display": "inline-block"})
-                    }
-                    $($(`option[value='${el.toLowerCase()}']`)[0]).prop("selected", true);
-                    
-                    filtersService.distributorsFilter.activeFilters++;
-                    filtersService.distributorsFilter.availableFilters.push({
-                        brandName: el,
-                        brandProducts: elBrandProducts
-                    });
-
-                    let toFilterBrands = [];
-                    filtersService.distributorsFilter.availableFilters.forEach(el => {
-                        var temp = filtersService.findFilter("filterByBrand")
-                        .pass(currentAvailableProducts, el.brandName);
-                        temp.forEach(el => {
-                            toFilterBrands.push(el)});
-                    });
-
-                    currentAvailableProducts = toFilterBrands.slice();
-                    // clearProductsOnPage();
-                    // loadProductsOnPage(currentAvailableProducts);
-                } else {
-                    filtersService.distributorsFilter.activeFilters--;
-                    if(filtersService.distributorsFilter.activeFilters <= 0){
-                        $("#filters-top-nav-distributor").css({"display": "none"});
-                        if($("#filters-top-nav-availability").css({"display":"none"})){
-                            ($('#hr-filters-nav-top').css({'display': 'none'}));
-                        }
-
-                        filtersService.distributorsFilter.availableFilters = [];
-                        filtersService.distributorsFilter.filteredProducts = [];
-
-                        currentAvailableProducts = filtersService.filterArray(productsType);
-                        // clearProductsOnPage();
-                        // loadProductsOnPage(currentAvailableProducts);
-                    } else {
-                        var delIndex = filtersService.distributorsFilter.availableFilters.findIndex(element => element.brandName == el);
-                        if(delIndex >= 0){
-                            filtersService.distributorsFilter.availableFilters.splice(delIndex, 1);
-                        }
-
-                        let toFilterBrands = [];
-                        filtersService.distributorsFilter.availableFilters.forEach(el => {
-                            var temp = filtersService.findFilter("filterByBrand")
-                            .pass(currentAvailableProducts, el.brandName);
-                            temp.forEach(el => {
-                                toFilterBrands.push(el)});
-                        });
-
-                        currentAvailableProducts = toFilterBrands.slice();
-                        // clearProductsOnPage();
-                        // loadProductsOnPage(currentAvailableProducts);
-                    }                   
-                }
-
-                if(filtersService.distributorsFilter.activeFilters > 1){
-                    var multipleFilters = $(`<option value="basic" id="basic-distributors-filter" selected disabled>${filtersService.distributorsFilter.activeFilters} филтри</option>`)
-                    // $(multipleFilters).before($($("#distributor-select")[0][0]));
-                    $("#distributor-select").prepend(multipleFilters);
-                } else {
-                    if($("#basic-distributors-filter").length > 0){
-                        $("#basic-distributors-filter").remove();
-                    }
-                }
-            })
-        })
-    }
-
     var loadProductsOnPage = function(arr){
-        availablePages = productsService.numberOfPages(arr);
+        currentAvailableProducts = filtersService.filterArray(productsType);
+        availablePages = productsService.numberOfPages(currentAvailableProducts);
         if(filtersService.activeFilters <= 0){
             currentPageProducts = productsType.slice();
         }
         currentPageProducts = productsService.loadProductsOnPage(availablePages, (currentPage - 1));
-        clearBrands();
-        updateBrands();
         if(currentPageProducts != undefined){
             currentPageProducts.forEach(el => {
                 var toAppend = `<article class="single-product-container" id="${el.id}">
@@ -198,10 +68,19 @@ function typesOfProductsPageController() {
                 </article>`
                     $("#available-products").append(toAppend);
             });
-
+            
+            
             var availableProducts = filtersService.findFilter("showAvailable").pass(currentAvailableProducts);
             var productsOnSale = filtersService.findFilter("productsOnSale").pass(currentAvailableProducts);
             var brands = filtersService.findFilter("availableBrands").pass(currentAvailableProducts);
+
+            //add brands side:
+            filtersService.clearAllBrands();
+            brands.forEach(el => {
+                filtersService.addABrand(currentAvailableProducts, el);
+            })
+            console.log(filtersService.brandsFilter.allBrands); //всички възможни марки 
+
             //filters specifics
                 //availability
             $($("#availability-filter ~ span")[0]).html(`(${availableProducts.length})`);
@@ -315,8 +194,68 @@ function typesOfProductsPageController() {
                 location.reload();
             });
 
-            //adding event listener to brands        
+            //adding brands        
+            //BRANDS BEGINING ++++++++++++++++++++
+
+            // var forListening = $(`#manufacturer-filter-list>li`);
+            // var checkbox = $(`#manufacturer-filter-list>li>input[type=checkbox]`);
             
+            filtersService.brandsFilter.allBrands.forEach(el => {
+                $("#manufacturer-filter-ul").append(`<li id="${el.brandName}-li">
+                <input type="checkbox" id="${el.brandName}" class="${el.brandName}"> ${el.brandName}
+                    <span class="number-of-results">
+                        (${el.brandProducts.length})
+                    </span>
+                </input>
+                </li>`);
+                
+                $("#distributor-select").append(`
+                <option value="${el.brandName.toLowerCase()}" class="${el.brandName}">${el.brandName} <span>(${el.brandProducts.length})</span></option>
+                `)
+            })
+
+
+
+            $(`#manufacturer-filter-ul>li`).on("click", function(event){
+                var event = event.originalEvent;
+                if(!($(event.target).is("input"))){
+                    var id = event.target.id.slice(0, -3);
+                    $(`#${id}`).trigger("click");
+                }
+            });
+
+            $(`#manufacturer-filter-ul>li>input[type=checkbox]`).on("change", function(event){
+                var event = event.originalEvent;
+                var brandName = event.target.id;
+                if($(event.target).is(":checked")){
+                    $("#filters-top-nav-distributor").css({"display": "inline-block"});
+                    if($('#hr-filters-nav-top').css({'display':'none'})){
+                        $("#hr-filters-nav-top").css({"display": "inline-block"})
+                    }
+                    $($(`option[value='${brandName.toLowerCase()}']`)[0]).prop("selected", true);
+
+                    filtersService.addAvailableBrand(brandName);
+                    var currentAvailableProducts = filtersService.getAllAvailableBrandsProducts();
+                    clearProductsOnPage();
+                    loadProductsOnPage(currentAvailableProducts);
+                } else {
+                    filtersService.removeAvailableBrand(brandName);
+                    console.log(filtersService.brandsFilter.activeBrands)
+                    var currentAvailableProducts = filtersService.getAllAvailableBrandsProducts();
+                    if(filtersService.brandsFilter.activeFilters <= 0){
+                        $("#filters-top-nav-distributor").css({"display": "none"});
+                        if($("#filters-top-nav-availability").css({"display":"none"})){
+                            ($('#hr-filters-nav-top').css({'display': 'none'}));
+                        }
+                        currentAvailableProducts = filtersService.filterArray(productsType);
+                    }
+                    clearProductsOnPage();
+                    loadProductsOnPage(currentAvailableProducts);
+                }
+            })
+
+
+            // BRANDS END ++++++++++++++++++++++++++++++++
 
             //sidebar filters listener && top nav
                 //availability filter

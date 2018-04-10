@@ -5,10 +5,10 @@ var filtersService = (function(){
     function FilterService(){
         this.activeFilters = [];
         this.allFilters = [];
-        this.distributorsFilter = {
-            activeFilters: 0,
-            filteredProducts: [],
-            availableFilters: []
+        this.brandsFilter = {
+            activeBrands: 0,
+            availableBrands: [],
+            allBrands: []
         }
     }
 
@@ -16,6 +16,11 @@ var filtersService = (function(){
         this.name = name;
         this.pass = func;
         this.id = Filter.nextID++;
+    }
+
+    function Brand(name, arr){
+        this.brandName = name;
+        this.brandProducts = arr; 
     }
 
     FilterService.prototype.createFilter = function(name, func){
@@ -57,42 +62,39 @@ var filtersService = (function(){
         });
         return filteredArr;
     }
+    
+    FilterService.prototype.addABrand = function(products, name){
+        var arr = products.filter(el => el.brand === name);
+        this.brandsFilter.allBrands.push(new Brand(name, arr));
+    }
+
+    FilterService.prototype.addAvailableBrand = function(name){
+        var toPush = this.brandsFilter.allBrands.find(el => el.brandName === name);
+        this.brandsFilter.availableBrands.push(toPush);
+        this.brandsFilter.activeBrands++;
+    }
+
+    FilterService.prototype.removeAvailableBrand = function(name){
+        var index = this.brandsFilter.availableBrands.findIndex(el => el.brandName === name);
+        if(index >= 0){
+            this.brandsFilter.availableBrands.splice(index, 1);
+            this.brandsFilter.activeBrands--;
+        }
+    }
+
+    FilterService.prototype.getAllAvailableBrandsProducts = function(){
+        var toReturn = [];
+        this.brandsFilter.availableBrands.forEach(br => br.brandProducts.forEach(pr => toReturn.push(pr)));
+        return toReturn;
+    }
+
+    FilterService.prototype.clearAllBrands = function(){
+        this.brandsFilter.allBrands = [];
+        // this.brandsFilter.availableBrands = [];
+        // this.activeBrands = 0;
+    }
 
     var toReturn = new FilterService();
-
-    // toReturn.createFilter("sortLowestPrice", function(products){
-    //     var currentProducts = products.slice();
-    //     return currentProducts.sort((a, b) => {
-    //         var p1 = Number(a.price);
-    //         var p2 = Number(b.price);
-    //         if (p1 > p2) {
-    //             return 1;
-    //         }
-    //         if (p1 < p2) {
-    //             return -1;
-    //         }
-    //         if (p1 == p2) {
-    //             return 0;
-    //         }
-    //     })
-    // });
-    
-    // toReturn.createFilter("sortHighestPrice", function(products){
-    //     var currentProducts = products.slice();
-    //     return currentProducts.sort((a, b) => {
-    //         var p1 = Number(a.price);
-    //         var p2 = Number(b.price);
-    //         if (p1 < p2) {
-    //             return 1;
-    //         }
-    //         if (p1 > p2) {
-    //             return -1;
-    //         }
-    //         if (p1 == p2) {
-    //             return 0;
-    //         }
-    //     })
-    // });
 
     toReturn.createFilter("showAvailable", function(products){
         return products.filter(el => el.availability);
@@ -121,6 +123,8 @@ var filtersService = (function(){
     toReturn.createFilter("productsOnSale", function (products) {
         return products.filter(el => el.onSale);
     });
+
+    
 
     return toReturn;
 })();

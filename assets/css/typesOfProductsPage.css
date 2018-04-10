@@ -605,3 +605,98 @@ aside{
     margin-top: 2%;
     cursor: pointer;
 }
+
+#buy-popup{
+    display: none;
+    border: 1px solid rgb(218, 218, 218);
+    z-index: 101;
+    padding: 0.5em 1em;
+    box-sizing: border-box;
+    width: 60%;
+    position: fixed;
+    top: 20%;
+    left: 20%;
+    background-color: white;
+    border-radius: 4px;  
+    box-shadow: 0px 0px 5px 0px rgba(148, 148, 148, 0.15);
+    -moz-box-shadow: 0px 0px 5px 0px rgba(148, 148, 148, 0.15);
+    -webkit-box-shadow: 0px 0px 5px 0px rgba(148, 148, 148, 0.15);
+    /* margin-left: 100%; */
+
+}
+
+#buy-popup>hr{
+    width: 100%;
+    padding-top: 2%;
+}
+
+#buy-popup-header{
+    display: block;
+    margin-top: 2%;
+}
+
+#buy-popup-product-container{
+    display: inline-block;
+    width: 100%;
+    margin-bottom: 3%;
+}
+
+#buy-popup-h1{
+    all:unset;
+    font-size: 1.2em;
+    float:left;
+}
+
+#buy-popup-img{
+    box-sizing: border-box;
+    width: 2%;
+    float:right;
+    cursor: pointer;
+    /* padding-right: 1em;
+    padding-bottom: 0.6em; */
+}
+
+#buy-popup-left-side{
+    display: inline-block;
+    box-sizing: border-box;
+    width: 65%;
+    float: left;
+}
+
+#buy-popup-right-side{
+    display: inline-block;
+    box-sizing: border-box;
+    width: 35%;
+    float: right;
+    margin-top: 2%;
+}
+
+#buy-popup-product-img{
+    display: inline-block;
+    width: 10%;
+}
+
+#buy-popup-product-title{
+    display: inline-block;
+    font-size: 1em;
+}
+
+#buy-popup-product-price{
+    display: inline-block;
+    color: red;
+    margin-right: 2%;
+}
+
+#buy-popup-cart-btn{
+    all:unset;
+    display: inline-block;
+    background-color: rgb(0,94,184);
+    color: white;
+    padding: 0.5em 1em;
+    border-radius: 3px;
+    cursor: pointer;
+}
+
+#buy-popup-cart-btn:hover{
+    background-color: rgb(0,68,133);
+}

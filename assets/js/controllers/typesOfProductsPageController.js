@@ -80,7 +80,8 @@ function typesOfProductsPageController() {
                     <span class="button-text" class="buy-nav-txt"> Добави в количката</span>
                 </button>
                 </article>`
-                    $("#available-products").append(toAppend);
+                
+                $("#available-products").append(toAppend);
             });
             
             
@@ -396,6 +397,34 @@ function typesOfProductsPageController() {
                     currUserCartProducts.forEach(pr => tmpCart.addToCart(pr));
                     tmpCart.addToCart(product);
                     userService.updateCart(user.id, tmpCart);
+
+                    var price = Number(product.price);
+                    var whole = Math.floor(price);
+                    var change = Math.floor((price - whole) * 100);
+
+                    toAppend = `<div id="buy-popup-left-side">
+                        <img id="buy-popup-product-img" src="${product.main_url}" alt="">
+                        <h3 id="buy-popup-product-title">${product.name}</h3>
+                    </div>    
+                    <div id="buy-popup-right-side">
+                        <p id="buy-popup-product-price">${whole}<sup>${change}</sup> лв.</p>
+                        <button id="buy-popup-cart-btn">виж количката</button>
+                    </div>`
+
+                    $("#buy-popup-product-container").append(toAppend);
+                    $("#buy-popup").show();
+
+                    $("#buy-popup-img").on("click", function(ev){
+                        $("#buy-popup-product-container").html("");
+                         $("#buy-popup").hide();
+                    });
+
+                    $("#buy-popup-cart-btn").on("click", function(ev){
+                        ev = ev.originalEvent;
+                        ev.preventDefault();
+                        location.replace("#my-cart");
+                    })
+
                 } else {
                     location.replace('#login');
                 } 
@@ -447,7 +476,7 @@ function typesOfProductsPageController() {
                     }
 
                     hidePopup();
-                    var removePopup = setTimeout(hidePopup, 2000);
+                    var removePopup = setTimeout(hidePopup, 1300);
 
                     $("#fave-activity-hide").on("click", function(){
                         clearTimeout(removePopup);

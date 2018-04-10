@@ -369,8 +369,9 @@ aside{
     display: inline-block;
     float: left;
     background-color: white;
-    width: 24.47%;
+    width: 24%;
     margin-right: 0.7%;
+    margin-top: 0.7%;
     border-radius: 5px;
     padding: 0.8em 0.8em;
     box-shadow: 0px 0px 4px 0px rgba(148, 148, 148, 0.15);

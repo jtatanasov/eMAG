@@ -490,8 +490,8 @@ function typesOfProductsPageController() {
 
             //
         })
-        .catch(function (error) {
-            throw new Error("Error occured " + error)
-        });
+        // .catch(function (error) {
+        //     throw new Error("Error occured " + error)
+        // });
     })
 }

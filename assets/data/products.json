@@ -1,137 +1,1529 @@
 [
-  {
-    "id": "1",
-    "name": "Смартфон Apple iPhone X, 256 GB, 4 G, Space Grey",
-    "cathegory": "Телефони, таблети и лаптопи",
-    "subcathegory": "Мобилни телефони и аксесоари",
-    "type": "Мобилни телефони",
-    "quantity": "100",
-    "availability": true,
-    "main_url": "https://s11emagst.akamaized.net/products/8892/8891494/images/res_d7d63673fac35dac5f93604c4a7bd059_full.jpg",
-    "gallery": [
-      "https://s11emagst.akamaized.net/products/8892/8891492/images/res_205b4d3c6d3bef241f2a440c7788919c_full.jpg",
-      "https://s11emagst.akamaized.net/products/8892/8891492/images/res_9bd81e41619bb8f52f2dad3c6c32e71d_450x450_btpm.jpg"
-    ],
-    "brand": "Apple",
-    "price": "2598.99",
-    "salePrice": "",
-    "onSale": false,
-    "description": "Винаги сме искали да създадем iPhone, който целият да е екран. С който изживяването да те погълне изцяло. И който да е толкова интелигентен, че да реагира на докосване, на глас и дори – на поглед. С iPhone X осъществихме тази идея. Кажи \"здравей\" на бъдещето.",
-    "specifics": [
-      {
-        "name": "iPhone",
-        "spec": "iPhoneX"
-      },
-      {
-        "name": "Тип телефон",
-        "spec": "Smartphone"
-      },
-      {
-        "name": "Цвят",
-        "spec": "Сив"
-      },
-      {
-        "name": "Операционна система",
-        "spec": "iOS 11"
-      },
-      {
-        "name": "Вид SIM карта",
-        "spec": "nanoSIM"
-      },
-      {
-        "name": "Вътрешна памет",
-        "spec": "250 GB"
-      },
-      {
-        "name": "RAM памет",
-        "spec": "3 GB"
-      }
-    ]
-  },
-  {
-    "id":"2",
-    "name": "Смартфон Samsung Galaxy J5 (2017), Dual Sim, 16GB, 4G, Black",
-    "cathegory": "Телефони, таблети и лаптопи",
-    "subcathegory": "Мобилни телефони и аксесоари",
-    "type": "Мобилни телефони",
-    "quantity": "80",
-    "availability": true,
-    "main_url": "https://s11emagst.akamaized.net/products/7955/7954789/images/res_394a075bd973c02ea7c56cf606faec63_450x450_i83j.jpg",
-    "gallery": [
-      "https://s11emagst.akamaized.net/products/7955/7954789/images/res_0ee2aa052bc82dcb422d060ec4aeaf8d_450x450_ihbc.jpg",
-      "https://s11emagst.akamaized.net/products/7955/7954789/images/res_a80777278fec7e8ede198affd4dff50e_450x450_h1vm.jpg"
-    ],
-    "brand": "Samsung",
-    "price": "359.99",
-    "salePrice": "",
-    "onSale": false,
-    "description": "Когато стилът допълва функционалността. Проектиран с най-голямо внимание към детайлите, новият Samsung Galaxy J5 има зашеметяващ метален корпус без никакво изпъкване на камерата за превъзходен захват и 2.5D стъкло, предпазващо 5,2-инчовия му HD дисплей за допълнителна издръжливост.",
-    "specifics": [
-      {
-        "name": "Тип телефон",
-        "spec": "Smartphone"
-      },
-      {
-        "name": "Sim слотове",
-        "spec": "Dual SIM"
-      },
-      {
-        "name": "Touchscreen",
-        "spec": "Да"
-      },
-      {
-        "name": "Модел процесор",
-        "spec": "Octa Core"
-      },
-      {
-        "name": "Цвят",
-        "spec": "Черен"
-      },
-      {
-        "name": "Операционна систма",
-        "spec": "Android"
-      },
-      {
-        "name": "Вътрешна памет",
-        "spec": "16 GB"
-      },
-      {
-        "name": "RAM памет",
-        "spec": "2 GB"
-      }
-    ]
-  },
-  {
-    "id":"3",
-    "name": "Nike, Спортни обувки Court Royale, Черен/Бял",
-    "cathegory": "Мода",
-    "subcathegory": "Жени",
-    "type": "Дамски обувки",
-    "quantity": "60",
-    "availability": true,
-    "main_url": "https://s11emagst.akamaized.net/products/5100/5099541/images/res_201a7319dd0a31baf58dd2051fa8bced_450x450_n26m.jpg?v2",
-    "gallery": [
-      "https://s11emagst.akamaized.net/products/6377/6376109/images/res_9524b92f6db2883d201d105b1ef09d39_450x450_m936.jpg?v2",
-      "https://s11emagst.akamaized.net/products/6377/6376109/images/res_52d1259cd458e4a658e446b7be8eba55_450x450_oni9.jpg?v2"
-    ],
-    "brand": "Nike",
-    "price": "84.90",
-    "salePrice": "122.90",
-    "onSale": true,
-    "description": "",
-    "specifics": [
-      {
-        "name": "Размер",
-        "spec": "5.5 USD"
-      },
-      {
-        "name": "Цвят",
-        "spec": "Черен/Бял"
-      },
-      {
-        "name": "Състав",
-        "spec": "Кожа"
-      }
-    ]
-  }
+    {
+        "id": "1",
+        "name": "Смартфон Apple iPhone X, 256 GB, 4 G, Space Grey",
+        "cathegory": "Телефони, таблети и лаптопи",
+        "subcathegory": "Мобилни телефони и аксесоари",
+        "type": "Мобилни телефони",
+        "quantity": "100",
+        "availability": true,
+        "main_url": "https://s11emagst.akamaized.net/products/8892/8891494/images/res_d7d63673fac35dac5f93604c4a7bd059_full.jpg",
+        "gallery": [
+            "https://s11emagst.akamaized.net/products/8892/8891492/images/res_205b4d3c6d3bef241f2a440c7788919c_full.jpg",
+            "https://s11emagst.akamaized.net/products/8892/8891492/images/res_9bd81e41619bb8f52f2dad3c6c32e71d_450x450_btpm.jpg"
+        ],
+        "brand": "Apple",
+        "price": "2598.99",
+        "salePrice": "",
+        "onSale": false,
+        "description": "Винаги сме искали да създадем iPhone, който целият да е екран. С който изживяването да те погълне изцяло. И който да е толкова интелигентен, че да реагира на докосване, на глас и дори – на поглед. С iPhone X осъществихме тази идея. Кажи \"здравей\" на бъдещето.",
+        "specifics": [
+            {
+                "name": "iPhone",
+                "spec": "iPhoneX"
+            },
+            {
+                "name": "Тип телефон",
+                "spec": "Smartphone"
+            },
+            {
+                "name": "Цвят",
+                "spec": "Сив"
+            },
+            {
+                "name": "Операционна система",
+                "spec": "iOS 11"
+            },
+            {
+                "name": "Вид SIM карта",
+                "spec": "nanoSIM"
+            },
+            {
+                "name": "Вътрешна памет",
+                "spec": "250 GB"
+            },
+            {
+                "name": "RAM памет",
+                "spec": "3 GB"
+            }
+        ]
+    },
+    {
+        "id": "2",
+        "name": "Смартфон Samsung Galaxy J5 (2017), Dual Sim, 16GB, 4G, Black",
+        "cathegory": "Телефони, таблети и лаптопи",
+        "subcathegory": "Мобилни телефони и аксесоари",
+        "type": "Мобилни телефони",
+        "quantity": "80",
+        "availability": true,
+        "main_url": "https://s11emagst.akamaized.net/products/7955/7954789/images/res_394a075bd973c02ea7c56cf606faec63_450x450_i83j.jpg",
+        "gallery": [
+            "https://s11emagst.akamaized.net/products/7955/7954789/images/res_0ee2aa052bc82dcb422d060ec4aeaf8d_450x450_ihbc.jpg",
+            "https://s11emagst.akamaized.net/products/7955/7954789/images/res_a80777278fec7e8ede198affd4dff50e_450x450_h1vm.jpg"
+        ],
+        "brand": "Samsung",
+        "price": "359.99",
+        "salePrice": "",
+        "onSale": false,
+        "description": "Когато стилът допълва функционалността. Проектиран с най-голямо внимание към детайлите, новият Samsung Galaxy J5 има зашеметяващ метален корпус без никакво изпъкване на камерата за превъзходен захват и 2.5D стъкло, предпазващо 5,2-инчовия му HD дисплей за допълнителна издръжливост.",
+        "specifics": [
+            {
+                "name": "Тип телефон",
+                "spec": "Smartphone"
+            },
+            {
+                "name": "Sim слотове",
+                "spec": "Dual SIM"
+            },
+            {
+                "name": "Touchscreen",
+                "spec": "Да"
+            },
+            {
+                "name": "Модел процесор",
+                "spec": "Octa Core"
+            },
+            {
+                "name": "Цвят",
+                "spec": "Черен"
+            },
+            {
+                "name": "Операционна систма",
+                "spec": "Android"
+            },
+            {
+                "name": "Вътрешна памет",
+                "spec": "16 GB"
+            },
+            {
+                "name": "RAM памет",
+                "spec": "2 GB"
+            }
+        ]
+    },
+    {
+        "id": "3",
+        "name": "Nike, Спортни обувки Court Royale, Черен/Бял",
+        "cathegory": "Мода",
+        "subcathegory": "Жени",
+        "type": "Дамски обувки",
+        "quantity": "60",
+        "availability": true,
+        "main_url": "https://s11emagst.akamaized.net/products/5100/5099541/images/res_201a7319dd0a31baf58dd2051fa8bced_450x450_n26m.jpg?v2",
+        "gallery": [
+            "https://s11emagst.akamaized.net/products/6377/6376109/images/res_9524b92f6db2883d201d105b1ef09d39_450x450_m936.jpg?v2",
+            "https://s11emagst.akamaized.net/products/6377/6376109/images/res_52d1259cd458e4a658e446b7be8eba55_450x450_oni9.jpg?v2"
+        ],
+        "brand": "Nike",
+        "price": "84.90",
+        "salePrice": "122.90",
+        "onSale": true,
+        "description": "",
+        "specifics": [
+            {
+                "name": "Размер",
+                "spec": "5.5 USD"
+            },
+            {
+                "name": "Цвят",
+                "spec": "Черен/Бял"
+            },
+            {
+                "name": "Състав",
+                "spec": "Кожа"
+            }
+        ]
+    },
+    {
+        "id": "4",
+        "name": "Смартфон Apple iPhone 8, 64 GB, 4 G, Space Grey",
+        "cathegory": "Телефони, таблети и лаптопи",
+        "subcathegory": "Мобилни телефони и аксесоари",
+        "type": "Мобилни телефони",
+        "quantity": "50",
+        "availability": true,
+        "main_url": "https://s11emagst.akamaized.net/products/8892/8891494/images/res_d7d63673fac35dac5f93604c4a7bd059_full.jpg",
+        "brand": "Apple",
+        "price": "1476.99",
+        "salePrice": "",
+        "onSale": false,
+        "description": "Ново поколение iPhone. iPhone 8 представя изцяло нов стъклен корпус. Най‑популярната камера в света (сега още по-добра). Най‑мощния и умен смартфон чип в историята. Лесно безжично зареждане. И добавена реалност с невиждани до момента възможности. iPhone 8. Ново поколение iPhone. Излят от стъкло iPhone. Стъклен корпус Най-издръжливото стъкло в смартфон досега – и отпред, и отзад. ",
+        "specifics": [
+            {
+                "name": "iPhone",
+                "spec": "iPhone 8"
+            },
+            {
+                "name": "Тип телефон",
+                "spec": "Smartphone"
+            },
+            {
+                "name": "Цвят",
+                "spec": "Сив"
+            },
+            {
+                "name": "Операционна система",
+                "spec": "iOS 11"
+            },
+            {
+                "name": "Вид SIM карта",
+                "spec": "nanoSIM"
+            },
+            {
+                "name": "Вътрешна памет",
+                "spec": "64 GB"
+            },
+            {
+                "name": "RAM памет",
+                "spec": "2 GB"
+            }
+        ]
+    },
+    {
+        "id": "5",
+        "name": "Мобилен телефон Nokia 3310 (2017), Dual SIM, Dark Blue",
+        "cathegory": "Телефони, таблети и лаптопи",
+        "subcathegory": "Мобилни телефони и аксесоари",
+        "type": "Мобилни телефони",
+        "quantity": "20",
+        "availability": true,
+        "main_url": "https://s11emagst.akamaized.net/products/6022/6021774/images/res_f7eb764947d09b3a9971d9421f2efe27_450x450_pkg1.jpg",
+        "brand": "Nokia",
+        "price": "109.99",
+        "salePrice": "88.98",
+        "onSale": true,
+        "description": "Новата Nokia 3310 завладява с емблематичния силует на оригинала и го реимитира за 2017 г. Потребителският интерфейс, създаден по поръчка, придава нов стил на класиката, докато 2.4-инчовият поляризиран и извит дисплей, прави по-добра четливост на слънчевата светлина.",
+        "specifics": [
+            {
+                "name": "Sim слотове",
+                "spec": "Dual Sim"
+            },
+            {
+                "name": "Тип телефон",
+                "spec": "Класически"
+            },
+            {
+                "name": "Цвят",
+                "spec": "Син"
+            },
+            {
+                "name": "Операционна система",
+                "spec": "iOS 11"
+            },
+            {
+                "name": "Вид SIM карта",
+                "spec": "Micro SIM"
+            },
+            {
+                "name": "Вътрешна памет",
+                "spec": "16 MB"
+            }
+        ]
+    },
+    {
+        "id": "6",
+        "name": "Смартфон Lenovo VIBE K5, Dual Sim, 16GB, 4G, Gold",
+        "cathegory": "Телефони, таблети и лаптопи",
+        "subcathegory": "Мобилни телефони и аксесоари",
+        "type": "Мобилни телефони",
+        "quantity": "80",
+        "availability": true,
+        "main_url": "https://s11emagst.akamaized.net/products/4954/4953170/images/res_6dcf73d7a19c26799df035e0f8d8decb_450x450_jl02.jpg",
+        "brand": "Lenovo",
+        "price": "177.99",
+        "salePrice": "",
+        "onSale": false,
+        "description": "Смартфонът Lenovo K5 е снабден с двойни високоговорители и с революционното Dolby Atmos® аудио, което ви гарантира богат и завладяващ звук, където и да сте. Музиката, видеоклиповете, игрите и дори видео чатовете ще бъдат обогатени от звука, който ви обгръща от всички страни.",
+        "specifics": [
+            {
+                "name": "Sim слотове",
+                "spec": "Dual Sim"
+            },
+            {
+                "name": "Тип телефон",
+                "spec": "Smartphone"
+            },
+            {
+                "name": "Цвят",
+                "spec": "Син"
+            },
+            {
+                "name": "Операционна система",
+                "spec": "Android v5.1 (Lollipop)"
+            },
+            {
+                "name": "Вид SIM карта",
+                "spec": "MicroSIM"
+            },
+            {
+                "name": "Вътрешна памет",
+                "spec": "16 GB"
+            },
+            {
+                "name": "RAM памет",
+                "spec": "2 GB"
+            }
+        ]
+    },
+    {
+        "id": "7",
+        "name": "Смартфон Samsung Galaxy S8, 64GB, 4G, Midnight Black",
+        "cathegory": "Телефони, таблети и лаптопи",
+        "subcathegory": "Мобилни телефони и аксесоари",
+        "type": "Мобилни телефони",
+        "quantity": "100",
+        "availability": true,
+        "main_url": "https://s11emagst.akamaized.net/products/8224/8223281/images/res_d3d6de0d20c173972204e4cd35decb55_450x450_h92g.jpg",
+        "brand": "Samsung",
+        "price": "1108.99",
+        "salePrice": "",
+        "onSale": false,
+        "description": "Открийте впечатляващите възможности на Galaxy S8, даващи началото на нов начин за опознаване на света. Камера Камера, създадена за всеки момент Улови живота в мига с камерите на Galaxy S8 и S8+. 12-мегапикселовата задна камера и 8-мегапикселовата предна камера са толкова точни и бързи, че няма да пропуснеш нито един момент, било то през деня или през нощта.",
+        "specifics": [
+            {
+                "name": "Тип телефон",
+                "spec": "Smartphone"
+            },
+            {
+                "name": "Sim слотове",
+                "spec": "Single Sim"
+            },
+            {
+                "name": "Цвят",
+                "spec": "Черен"
+            },
+            {
+                "name": "Операционна система",
+                "spec": "Android"
+            },
+            {
+                "name": "Вид SIM карта",
+                "spec": "Nano SIM"
+            },
+            {
+                "name": "Вътрешна памет",
+                "spec": "64 GB"
+            },
+            {
+                "name": "RAM памет",
+                "spec": "4 GB"
+            }
+        ]
+    },
+    {
+        "id": "8",
+        "name": "Смартфон Samsung Galaxy J3 (2016), Dual SIM, 8 GB, 4G, Black",
+        "cathegory": "Телефони, таблети и лаптопи",
+        "subcathegory": "Мобилни телефони и аксесоари",
+        "type": "Мобилни телефони",
+        "quantity": "100",
+        "availability": true,
+        "main_url": "https://s11emagst.akamaized.net/products/3279/3278661/images/res_60c412d32d874afd961304f712db1fb6_450x450_kd3r.jpg",
+        "brand": "Samsung",
+        "price": "214.99",
+        "salePrice": "",
+        "onSale": false,
+        "description": "Новият Galaxy J представя лицев панел с обновен дизайн, който изглежда страхотно и извежда зрителното изживяване на ново ниво. С по-тънкото си, 4,56-милиметрово скосяване изцяло в черен цвят рамката ви предоставя завладяващо широкоекранно зрително изживяване.",
+        "specifics": [
+            {
+                "name": "Тип телефон",
+                "spec": "Smartphone"
+            },
+            {
+                "name": "Sim слотове",
+                "spec": "Dual Sim"
+            },
+            {
+                "name": "Цвят",
+                "spec": "Черен"
+            },
+            {
+                "name": "Операционна система",
+                "spec": "Android v5.1 (Lollipop)"
+            },
+            {
+                "name": "Вид SIM карта",
+                "spec": "Micro SIM"
+            },
+            {
+                "name": "Вътрешна памет",
+                "spec": "8 GB"
+            },
+            {
+                "name": "RAM памет",
+                "spec": "1.5 GB"
+            }
+        ]
+    },
+    {
+        "id": "9",
+        "name": "Смартфон Huawei Y5II, Dual Sim, 8GB, 4G, White",
+        "cathegory": "Телефони, таблети и лаптопи",
+        "subcathegory": "Мобилни телефони и аксесоари",
+        "type": "Мобилни телефони",
+        "quantity": "50",
+        "availability": true,
+        "main_url": "https://s11emagst.akamaized.net/products/3697/3696224/images/res_fdd845bcced68b86e4f995fecf18ea69_450x450_68md.jpg",
+        "brand": "Huawei",
+        "price": "187.99",
+        "salePrice": "",
+        "onSale": false,
+        "description": "Жалко е, когато ярките детайли не остават запечатани на снимките заради оскъдна осветеност. Двойната светкавица на Huawei Y5II се представя изключително добре в слабо осветени условия. 8 мегапикселовата камера и F2.0 блендата правят снимки, които създават усещане за професионални. Автоматичната цветова корекция създадена за портретна фотография заедно с 2 мегапикселовата предна камера правят възможни за притежателите на този модел едни от най-добрите селфи кадри. Направи портретни снимки, които се открояват и сияят!",
+        "specifics": [
+            {
+                "name": "Тип телефон",
+                "spec": "Smartphone"
+            },
+            {
+                "name": "Sim слотове",
+                "spec": "Dual Sim"
+            },
+            {
+                "name": "Цвят",
+                "spec": "Бял"
+            },
+            {
+                "name": "Операционна система",
+                "spec": "Android v5.1 (Lollipop)"
+            },
+            {
+                "name": "Вид SIM карта",
+                "spec": "Micro SIM"
+            },
+            {
+                "name": "Вътрешна памет",
+                "spec": "8 GB"
+            },
+            {
+                "name": "RAM памет",
+                "spec": "1 GB"
+            }
+        ]
+    },
+    {
+        "id": "10",
+        "name": "Мобилен телефон Nokia 216, Dual Sim, Black",
+        "cathegory": "Телефони, таблети и лаптопи",
+        "subcathegory": "Мобилни телефони и аксесоари",
+        "type": "Мобилни телефони",
+        "quantity": "50",
+        "availability": true,
+        "main_url": "https://s11emagst.akamaized.net/products/4713/4712539/images/res_04c929620b3087b5ac6b3015eb6e19a2_450x450_uf5d.jpg",
+        "brand": "Nokia",
+        "price": "62.99",
+        "salePrice": "",
+        "onSale": false,
+        "description": "Nokia 216",
+        "specifics": [
+            {
+                "name": "Тип телефон",
+                "spec": "Класически"
+            },
+            {
+                "name": "Sim слотове",
+                "spec": "Dual Sim"
+            },
+            {
+                "name": "Цвят",
+                "spec": "Черен"
+            },
+            {
+                "name": "Вид SIM карта",
+                "spec": "Micro SIM"
+            },
+            {
+                "name": "Вътрешна памет",
+                "spec": "16 MB"
+            },
+            {
+                "name": "Тип слот памет",
+                "spec": "MicroSD (до 32 GB)"
+            }
+        ]
+    },
+    {
+        "id": "11",
+        "name": "Смартфон Huawei P10 Lite, Dual Sim, 32GB, 4G, Black",
+        "cathegory": "Телефони, таблети и лаптопи",
+        "subcathegory": "Мобилни телефони и аксесоари",
+        "type": "Мобилни телефони",
+        "quantity": "100",
+        "availability": true,
+        "main_url": "https://s11emagst.akamaized.net/products/5422/5421280/images/res_5ddd8b9f5611f5bc45c63171ff652435_450x450_vhm5.jpg",
+        "brand": "Huawei",
+        "price": "448.99",
+        "salePrice": "",
+        "onSale": false,
+        "description": "Huawei P10 Lite, Dual Sim",
+        "specifics": [
+            {
+                "name": "Тип телефон",
+                "spec": "Smartphone"
+            },
+            {
+                "name": "Sim слотове",
+                "spec": "Dual Sim"
+            },
+            {
+                "name": "Цвят",
+                "spec": "Черен"
+            },
+            {
+                "name": "Операционна система",
+                "spec": "Android 7.0 Nougat"
+            },
+            {
+                "name": "Вид SIM карта",
+                "spec": "Nano SIM"
+            },
+            {
+                "name": "Вътрешна памет",
+                "spec": "32 GB"
+            },
+            {
+                "name": "RAM памет",
+                "spec": "3 GB"
+            }
+        ]
+    },
+    {
+        "id": "12",
+        "name": "Смартфон Apple iPhone 6s, 32GB, Space Grey",
+        "cathegory": "Телефони, таблети и лаптопи",
+        "subcathegory": "Мобилни телефони и аксесоари",
+        "type": "Мобилни телефони",
+        "quantity": "100",
+        "availability": true,
+        "main_url": "https://s11emagst.akamaized.net/products/2043/2042034/images/res_49ff331b8025b7c7b95188a2b5cff86b_450x450_7ntt.jpg",
+        "brand": "Apple",
+        "price": "998.99",
+        "salePrice": "",
+        "onSale": false,
+        "description": "Насладете се на iPhone 6s и изживяването с всички нови характеристики и функции. С едно докосване 3D Touch, предлага възможност за повече забавление. Live Photos припомня незабравимите моменти по нов, по-реалистичен начин. И това е само началото.",
+        "specifics": [
+            {
+                "name": "Тип телефон",
+                "spec": "Smartphone"
+            },
+            {
+                "name": "Sim слотове",
+                "spec": "Single Sim"
+            },
+            {
+                "name": "Цвят",
+                "spec": "Сив"
+            },
+            {
+                "name": "Операционна система",
+                "spec": "IOS 9"
+            },
+            {
+                "name": "Вид SIM карта",
+                "spec": "Nano SIM"
+            },
+            {
+                "name": "Вътрешна памет",
+                "spec": "32 GB"
+            },
+            {
+                "name": "RAM памет",
+                "spec": "2 GB"
+            }
+        ]
+    },
+    {
+        "id": "13",
+        "name": "Смартфон Apple iPhone 7 Plus, 128GB, Red",
+        "cathegory": "Телефони, таблети и лаптопи",
+        "subcathegory": "Мобилни телефони и аксесоари",
+        "type": "Мобилни телефони",
+        "quantity": "100",
+        "availability": true,
+        "main_url": "https://s11emagst.akamaized.net/products/5508/5507130/images/res_d9d09e7e464b6c57469d9f34094366ed_450x450_cilv.jpg",
+        "brand": "Apple",
+        "price": "1758.99",
+        "salePrice": "1549.99",
+        "onSale": true,
+        "description": "iPhone 7 подобрява съществено iPhone извижяването, предлагайки нови модерни системи на камерите. Най-добрата производителност и автономия на батерията до момента, предлагана от iPhone. Впечатляващи стерео говорители. ",
+        "specifics": [
+            {
+                "name": "Тип телефон",
+                "spec": "Smartphone"
+            },
+            {
+                "name": "Sim слотове",
+                "spec": "Single Sim"
+            },
+            {
+                "name": "Цвят",
+                "spec": "Червен"
+            },
+            {
+                "name": "Операционна система",
+                "spec": "IOS 10"
+            },
+            {
+                "name": "Вид SIM карта",
+                "spec": "Nano SIM"
+            },
+            {
+                "name": "Вътрешна памет",
+                "spec": "128 GB"
+            },
+            {
+                "name": "RAM памет",
+                "spec": "4 GB"
+            }
+        ]
+    },
+    {
+        "id": "14",
+        "name": "Смартфон Apple iPhone SE, 32GB, 4G, Space Gray",
+        "cathegory": "Телефони, таблети и лаптопи",
+        "subcathegory": "Мобилни телефони и аксесоари",
+        "type": "Мобилни телефони",
+        "quantity": "100",
+        "availability": true,
+        "main_url": "https://s11emagst.akamaized.net/products/3287/3286975/images/res_8dff7592c29e7d95ef58fa4442d7ed22_450x450_m7b4.jpg",
+        "brand": "Apple",
+        "price": "605.99",
+        "salePrice": "",
+        "onSale": false,
+        "description": "iPhone SE е най-мощният 4-инчов телефон създаван досега. Телефонът разполага с най-новият чип A9. Камера от 12 мегапиксела за снимки с високо качество и видео запис с резолюция 4К. С помощта на функцията. Live Photos, имате възможност да съживите спомените. Смартфонът iPhone SE е малък, но ще ви впечатляви със завидни качества",
+        "specifics": [
+            {
+                "name": "Тип телефон",
+                "spec": "Smartphone"
+            },
+            {
+                "name": "Sim слотове",
+                "spec": "Single Sim"
+            },
+            {
+                "name": "Цвят",
+                "spec": "Space Gray"
+            },
+            {
+                "name": "Операционна система",
+                "spec": "IOS 9"
+            },
+            {
+                "name": "Вид SIM карта",
+                "spec": "Nano SIM"
+            },
+            {
+                "name": "Вътрешна памет",
+                "spec": "32 GB"
+            },
+            {
+                "name": "RAM памет",
+                "spec": "2 GB"
+            }
+        ]
+    },
+    {
+        "id": "15",
+        "name": "Смартфон Samsung Galaxy A5 (2017), 32GB, 4G, Blue",
+        "cathegory": "Телефони, таблети и лаптопи",
+        "subcathegory": "Мобилни телефони и аксесоари",
+        "type": "Мобилни телефони",
+        "quantity": "100",
+        "availability": true,
+        "main_url": "https://s11emagst.akamaized.net/products/4924/4923430/images/res_b8b3cda0d2a25f574048b29271911f90_450x450_5oda.jpg",
+        "brand": "Samsung",
+        "price": "549.99",
+        "salePrice": "",
+        "onSale": false,
+        "description": "Елегантност в най-чиста форма. Създадени в стила на минимализма за максимално удоволствие, изключително здравият заден 3D Glass панел и съвършеният 5.2” дисплей се сливат по перфектен начин за да получиш удивително хармоничен дизайн.",
+        "specifics": [
+            {
+                "name": "Тип телефон",
+                "spec": "Smartphone"
+            },
+            {
+                "name": "Sim слотове",
+                "spec": "Single Sim"
+            },
+            {
+                "name": "Цвят",
+                "spec": "Син"
+            },
+            {
+                "name": "Операционна система",
+                "spec": "Android"
+            },
+            {
+                "name": "Вид SIM карта",
+                "spec": "Nano SIM"
+            },
+            {
+                "name": "Вътрешна памет",
+                "spec": "32 GB"
+            },
+            {
+                "name": "RAM памет",
+                "spec": "3 GB"
+            }
+        ]
+    },
+    {
+        "id": "16",
+        "name": "Смартфон Samsung Galaxy S7 Edge, 32GB, 4G, Silver",
+        "cathegory": "Телефони, таблети и лаптопи",
+        "subcathegory": "Мобилни телефони и аксесоари",
+        "type": "Мобилни телефони",
+        "quantity": "100",
+        "availability": true,
+        "main_url": "https://s11emagst.akamaized.net/products/3542/3541627/images/res_56f75d95a30f2331f95fa5619138c233_450x450_spf9.jpg",
+        "brand": "Samsung",
+        "price": "981.90",
+        "salePrice": "",
+        "onSale": false,
+        "description": "Напълно променяме начина, по който да споделяте преживявания и спомени. Правим го като преодоляваме границите на възможностите на телефона. Galaxy S7 Ние постигнахме значителен прогрес, като прескачахме бариери и предприемахме дръзки стъпки. Следяхме вашите мнения. И обединихме формата с функциите. Ние въведохме непознати за смартфоните функции, без които скоро няма да можете да живеете. Galaxy S7 и S7 edge. Дизайн С дизайна на Galaxy S7 и S7 edge не са правени никакви компромиси. Резултатът е несравнимо удобство при използване, обединяващо модерни функции в опростен дизайн",
+        "specifics": [
+            {
+                "name": "Тип телефон",
+                "spec": "Smartphone"
+            },
+            {
+                "name": "Sim слотове",
+                "spec": "Single Sim"
+            },
+            {
+                "name": "Цвят",
+                "spec": "Сив"
+            },
+            {
+                "name": "Операционна система",
+                "spec": "Android"
+            },
+            {
+                "name": "Вид SIM карта",
+                "spec": "Nano SIM"
+            },
+            {
+                "name": "Вътрешна памет",
+                "spec": "32 GB"
+            },
+            {
+                "name": "RAM памет",
+                "spec": "4 GB"
+            },
+            {
+                "name": "Тип слот памет",
+                "spec": "MicroSD (до 256 GB)"
+            }
+        ]
+    },
+    {
+        "id": "17",
+        "name": "Смартфон Samsung Galaxy J1 Mini Prime, Dual Sim, 8GB, Gold",
+        "cathegory": "Телефони, таблети и лаптопи",
+        "subcathegory": "Мобилни телефони и аксесоари",
+        "type": "Мобилни телефони",
+        "quantity": "100",
+        "availability": true,
+        "main_url": "https://s11emagst.akamaized.net/products/3453/3452349/images/res_f797a2784920f48920dafb549b22cca9_450x450_igqp.jpg",
+        "brand": "Samsung",
+        "price": "149.90",
+        "salePrice": "",
+        "onSale": false,
+        "description": "Samsung Galaxy J1 Mini Prime, Dual Sim",
+        "specifics": [
+            {
+                "name": "Тип телефон",
+                "spec": "Smartphone"
+            },
+            {
+                "name": "Sim слотове",
+                "spec": "Dual Sim"
+            },
+            {
+                "name": "Цвят",
+                "spec": "Златист"
+            },
+            {
+                "name": "Операционна система",
+                "spec": "Android v6.0 (Marshmallow)"
+            },
+            {
+                "name": "Вид SIM карта",
+                "spec": "MicroSIM"
+            },
+            {
+                "name": "Вътрешна памет",
+                "spec": "8 GB"
+            },
+            {
+                "name": "RAM памет",
+                "spec": "1 GB"
+            },
+            {
+                "name": "Тип слот памет",
+                "spec": "MicroSD (до 128 GB)"
+            }
+        ]
+    },
+    {
+        "id": "18",
+        "name": "Смартфон Nokia 3, Dual SIM, 16GB, Matte Black",
+        "cathegory": "Телефони, таблети и лаптопи",
+        "subcathegory": "Мобилни телефони и аксесоари",
+        "type": "Мобилни телефони",
+        "quantity": "100",
+        "availability": true,
+        "main_url": "https://s11emagst.akamaized.net/products/5788/5787189/images/res_ea9779be51179f4fb479ccec278dd09d_450x450_dvmn.jpg",
+        "brand": "Nokia",
+        "price": "198.99",
+        "salePrice": "",
+        "onSale": false,
+        "description": "Превъзходен дизайн, внимателно проектиран Nokia 3 идва с класически дизайнерски отличителни белези: красиво изработена и изваяна поликарбонатна облицовка, алуминиева рамка с твърдо усещане, внимателно завършени детайли и оптимизирана производителност за ежедневна употреба. Целенасочена технология, качествени материали Избрахме технологиите и материалите, за да радваме всекидневно. Изработеният 5-инчов дисплей с Corning® Gorilla® Glass и прецизно изработената изцяло алуминиева рамка осигуряват защита там, където е нужно. ",
+        "specifics": [
+            {
+                "name": "Тип телефон",
+                "spec": "Smartphone"
+            },
+            {
+                "name": "Sim слотове",
+                "spec": "Dual Sim"
+            },
+            {
+                "name": "Цвят",
+                "spec": "Черен"
+            },
+            {
+                "name": "Операционна система",
+                "spec": "Android 7.0 Nougat"
+            },
+            {
+                "name": "Вид SIM карта",
+                "spec": "nanoSIM"
+            },
+            {
+                "name": "Вътрешна памет",
+                "spec": "16 GB"
+            },
+            {
+                "name": "RAM памет",
+                "spec": "2 GB"
+            },
+            {
+                "name": "Тип слот памет",
+                "spec": "MicroSD"
+            }
+        ]
+    },
+    {
+        "id": "19",
+        "name": "Смартфон Nokia 8, Dual SIM, 64GB, Tempered Blue",
+        "cathegory": "Телефони, таблети и лаптопи",
+        "subcathegory": "Мобилни телефони и аксесоари",
+        "type": "Мобилни телефони",
+        "quantity": "100",
+        "availability": true,
+        "main_url": "https://s11emagst.akamaized.net/products/8798/8797609/images/res_8e4499bd45ff38f5b557ce2d311d30d7_450x450_srqv.jpg",
+        "brand": "Nokia",
+        "price": "798.99",
+        "salePrice": "",
+        "onSale": false,
+        "description": "Споделете двете страни на историята. Бъдете по-малко Selfie. Бъдете повече #Bothie. Използвайте предната и задна камери едновременно с режим Dual-Sight. Стрийминг към Facebook Live™ и YouTube Live с едно докосване Записвайте 4K с аудио система Nokia OZO 360° пространствен звук Android Nougat 7.1.1 OS чиста, сигурна и актуална Създаден с майсторство Nokia 8 преминава строг машинен процес от 40 етапа, анодиране и шлифоване, за да е сигурно че специфичния дизайн пасва идеално с полирания алуминиев корпус. Nokia 8 пасва идеално в дланта. ",
+        "specifics": [
+            {
+                "name": "Тип телефон",
+                "spec": "Smartphone"
+            },
+            {
+                "name": "Sim слотове",
+                "spec": "Dual Sim"
+            },
+            {
+                "name": "Цвят",
+                "spec": "Tempered Blue"
+            },
+            {
+                "name": "Операционна система",
+                "spec": "Android 7.0 Nougat"
+            },
+            {
+                "name": "Вид SIM карта",
+                "spec": "nanoSIM"
+            },
+            {
+                "name": "Вътрешна памет",
+                "spec": "64 GB"
+            },
+            {
+                "name": "RAM памет",
+                "spec": "4 GB"
+            },
+            {
+                "name": "Тип слот памет",
+                "spec": "MicroSD (до 256 GB)"
+            }
+        ]
+    },
+    {
+        "id": "20",
+        "name": "Мобилен телефон Nokia 105 (2017), Dual SIM, Black",
+        "cathegory": "Телефони, таблети и лаптопи",
+        "subcathegory": "Мобилни телефони и аксесоари",
+        "type": "Мобилни телефони",
+        "quantity": "100",
+        "availability": true,
+        "main_url": "https://s11emagst.akamaized.net/products/8419/8418565/images/res_6d585adeb541f6d09d285f8079de3a92_450x450_5kbk.jpg",
+        "brand": "Nokia",
+        "price": "38.99",
+        "salePrice": "",
+        "onSale": false,
+        "description": "Nokia 105 (2017) Dual Sim Ви дава усещането за солиден и качествен телефон, пасващ идеално във вашата ръка, с клавиатура с отделени клавиши за по-лесно писане и набиране. Батерия, предлагаща до 15ч. време за разговори или месец в режим на готовност, поликарбонатен корпус, който запазва цвета си, дори когато се надраска, вграденото фенерче и класическата игра 'Snake', Nokia 105 се превръща във ваш неизменен спътник.",
+        "specifics": [
+            {
+                "name": "Тип телефон",
+                "spec": "Класически"
+            },
+            {
+                "name": "Sim слотове",
+                "spec": "Single Sim"
+            },
+            {
+                "name": "Цвят",
+                "spec": "Черен"
+            },
+            {
+                "name": "Вид SIM карта",
+                "spec": "Mini SIM"
+            },
+            {
+                "name": "Вътрешна памет",
+                "spec": "4 MB"
+            },
+            {
+                "name": "RAM памет",
+                "spec": "4 MB"
+            },
+            {
+                "name": "Тип слот памет",
+                "spec": "Не"
+            }
+        ]
+    },
+    {
+        "id": "21",
+        "name": "Смартфон Lenovo A7010, Dual SIM, 32GB, 4G, Black",
+        "cathegory": "Телефони, таблети и лаптопи",
+        "subcathegory": "Мобилни телефони и аксесоари",
+        "type": "Мобилни телефони",
+        "quantity": "70",
+        "availability": true,
+        "main_url": "https://s11emagst.akamaized.net/products/2392/2391889/images/res_eb9b4c49a8bf48ac88f5eac094400881_450x450_3jc.jpg",
+        "brand": "Lenovo",
+        "price": "549.99",
+        "salePrice": "469.99",
+        "onSale": true,
+        "description": "Lenovo A7010, Dual SIM",
+        "specifics": [
+            {
+                "name": "Sim слотове",
+                "spec": "Dual Sim"
+            },
+            {
+                "name": "Тип телефон",
+                "spec": "Smartphone"
+            },
+            {
+                "name": "Цвят",
+                "spec": "Черен"
+            },
+            {
+                "name": "Операционна система",
+                "spec": "Android v5.1 (Lollipop)"
+            },
+            {
+                "name": "Вид SIM карта",
+                "spec": "MicroSIM"
+            },
+            {
+                "name": "Вътрешна памет",
+                "spec": "32 GB"
+            },
+            {
+                "name": "RAM памет",
+                "spec": "2 GB"
+            }
+        ]
+    },
+    {
+        "id": "22",
+        "name": "Смартфон Lenovo S1 Lite, Dual SIM, 16GB, 4G, White",
+        "cathegory": "Телефони, таблети и лаптопи",
+        "subcathegory": "Мобилни телефони и аксесоари",
+        "type": "Мобилни телефони",
+        "quantity": "70",
+        "availability": false,
+        "main_url": "https://s11emagst.akamaized.net/products/3472/3471054/images/res_158829ffc771bb76e920b37cbb968493_450x450_eeu5.jpg",
+        "brand": "Lenovo",
+        "price": "268.80",
+        "salePrice": "",
+        "onSale": false,
+        "description": "Смартфонът Lenovo Vibe S1 Lite ви превръща в център на внимание, дори на тъмно. Неговата 8 MP предна камера с BSI сензор за слаба светлина, вградената селфи светкавица и обективът от 5 части за нулево изкривяване заснемат превъзходни селфита на тъмно и при слаба светлина. Освен това смартфонът притежава 13 MP задна камера с автофокус (PDAF) и двойна LED CCT задна светкавица. Ергономичен дизайн, комфортно усещане Vibe S1 Lite е наслада за окото. Ергономично проектираният заоблен заден панел дава на S1 Lite елегантен външен вид и функционалност, отличаващи го сред останалите. А с тегло едва 129 грама, този стилен смартфон приляга удобно в ръката ви и се усеща като перце в джоба ви",
+        "specifics": [
+            {
+                "name": "Sim слотове",
+                "spec": "Dual Sim"
+            },
+            {
+                "name": "Тип телефон",
+                "spec": "Smartphone"
+            },
+            {
+                "name": "Цвят",
+                "spec": "Бял"
+            },
+            {
+                "name": "Операционна система",
+                "spec": "Android v5.1 (Lollipop)"
+            },
+            {
+                "name": "Вид SIM карта",
+                "spec": "1 x Micro SIM, 1 x Nano SIM"
+            },
+            {
+                "name": "Вътрешна памет",
+                "spec": "16 GB"
+            },
+            {
+                "name": "RAM памет",
+                "spec": "2 GB"
+            }
+        ]
+    },
+    {
+        "id": "23",
+        "name": "Смартфон Huawei Y5II, Dual Sim, 8GB, 4G, White",
+        "cathegory": "Телефони, таблети и лаптопи",
+        "subcathegory": "Мобилни телефони и аксесоари",
+        "type": "Мобилни телефони",
+        "quantity": "100",
+        "availability": true,
+        "main_url": "https://s11emagst.akamaized.net/products/3697/3696224/images/res_fdd845bcced68b86e4f995fecf18ea69_450x450_68md.jpg",
+        "brand": "Huawei",
+        "price": "187.99",
+        "salePrice": "",
+        "onSale": false,
+        "description": "Жалко е, когато ярките детайли не остават запечатани на снимките заради оскъдна осветеност. Двойната светкавица на Huawei Y5II се представя изключително добре в слабо осветени условия. 8 мегапикселовата камера и F2.0 блендата правят снимки, които създават усещане за професионални. Автоматичната цветова корекция създадена за портретна фотография заедно с 2 мегапикселовата предна камера правят възможни за притежателите на този модел едни от най-добрите селфи кадри. Направи портретни снимки, които се открояват и сияят! ",
+        "specifics": [
+            {
+                "name": "Тип телефон",
+                "spec": "Smartphone"
+            },
+            {
+                "name": "Sim слотове",
+                "spec": "Dual Sim"
+            },
+            {
+                "name": "Цвят",
+                "spec": "Бял"
+            },
+            {
+                "name": "Операционна система",
+                "spec": "Android v5.1 (Lollipop)"
+            },
+            {
+                "name": "Вид SIM карта",
+                "spec": "Micro SIM"
+            },
+            {
+                "name": "Вътрешна памет",
+                "spec": "8 GB"
+            },
+            {
+                "name": "RAM памет",
+                "spec": "1 GB"
+            }
+        ]
+    },
+    {
+        "id": "24",
+        "name": "Смартфон Huawei Mate 9, Dual Sim, 64GB, 4G, Champagne Gold",
+        "cathegory": "Телефони, таблети и лаптопи",
+        "subcathegory": "Мобилни телефони и аксесоари",
+        "type": "Мобилни телефони",
+        "quantity": "100",
+        "availability": true,
+        "main_url": "https://s11emagst.akamaized.net/products/5317/5316340/images/res_935bb20344ab46b3d2d41d49f5cf32b8_450x450_pm6c.jpg",
+        "brand": "Huawei",
+        "price": "1098.99",
+        "salePrice": "",
+        "onSale": false,
+        "description": "Вече не е нужно да намаляваш темпото, благодарение на новия процесор Kirin 960 и интелигентния самообучаващ се алгоритъм. Huawei Mate 9 е създаден да бъде бърз в продължение на целия си жизнен цикъл с новаторски принцип на взаимодействие между хардуер и софтуер.",
+        "specifics": [
+            {
+                "name": "Тип телефон",
+                "spec": "Smartphone"
+            },
+            {
+                "name": "Sim слотове",
+                "spec": "Dual Sim"
+            },
+            {
+                "name": "Цвят",
+                "spec": "Златист"
+            },
+            {
+                "name": "Операционна система",
+                "spec": "Android V7.0 (Nougat)"
+            },
+            {
+                "name": "Вид SIM карта",
+                "spec": "Nano SIM"
+            },
+            {
+                "name": "Вътрешна памет",
+                "spec": "64 GB"
+            },
+            {
+                "name": "RAM памет",
+                "spec": "4 GB"
+            }
+        ]
+    },
+    {
+        "id": "25",
+        "name": "Смартфон Huawei Nova Young, 16GB, 4G, Grey",
+        "cathegory": "Телефони, таблети и лаптопи",
+        "subcathegory": "Мобилни телефони и аксесоари",
+        "type": "Мобилни телефони",
+        "quantity": "100",
+        "availability": true,
+        "main_url": "https://s11emagst.akamaized.net/products/14121/14120735/images/res_0eebe6fe020011a8ef619274ade17ef7_450x450_uuqc.jpg",
+        "brand": "Huawei",
+        "price": "258.99",
+        "salePrice": "",
+        "onSale": false,
+        "description": "Смартфон Huawei Nova Young, 16GB, 4G, Grey",
+        "specifics": [
+            {
+                "name": "Тип телефон",
+                "spec": "Smartphone"
+            },
+            {
+                "name": "Sim слотове",
+                "spec": "Single Sim"
+            },
+            {
+                "name": "Цвят",
+                "spec": "Сив"
+            },
+            {
+                "name": "Операционна система",
+                "spec": "Android 6.0"
+            },
+            {
+                "name": "Вид SIM карта",
+                "spec": "Micro SIM"
+            },
+            {
+                "name": "Вътрешна памет",
+                "spec": "16 GB"
+            },
+            {
+                "name": "RAM памет",
+                "spec": "2 GB"
+            }
+        ]
+    },
+    {
+        "id": "26",
+        "name": "V30 Plus Dual Sim 128GB LTE 4G Black 4GB RAM",
+        "cathegory": "Телефони, таблети и лаптопи",
+        "subcathegory": "Мобилни телефони и аксесоари",
+        "type": "Мобилни телефони",
+        "quantity": "100",
+        "availability": true,
+        "main_url": "https://s11emagst.akamaized.net/products/10692/10691420/images/res_8afd5c2c10322a0f65b61d284e3639f5_450x450_b2cf.jpg",
+        "brand": "LG",
+        "price": "1749.99",
+        "salePrice": "",
+        "onSale": false,
+        "description": "Този продукт произхожда от официални и упълномощени дистрибутори и отговаря на европейския регламент. Доставя се в оригиналната опаковка с инструкции на английски / френски / немски / италиански / испански, с безплатен адаптер за европейската щепсела и стандартна гаранция от 24 месеца, включена и гарантирана от Service Return. Кутията за пакети и устройството може да има инструкции и приложения както на английски, така и на китайски език, както и на модела, който е международна версия. Телефонът може да се използва във всяка мобилна мрежа от Германия / Англия / Испания / Франция / Италия, а също и в останалата част на света, тъй като никога не е бил обект на кодиране",
+        "specifics": [
+            {
+                "name": "Тип телефон",
+                "spec": "Smartphone"
+            },
+            {
+                "name": "Sim слотове",
+                "spec": "Dual Sim"
+            },
+            {
+                "name": "Цвят",
+                "spec": "Черен"
+            },
+            {
+                "name": "Операционна система",
+                "spec": "Android 7.1.2 (Nougat)"
+            },
+            {
+                "name": "Вид SIM карта",
+                "spec": "Nano SIM"
+            },
+            {
+                "name": "Вътрешна памет",
+                "spec": "128 GB"
+            },
+            {
+                "name": "RAM памет",
+                "spec": "4 GB"
+            },
+            {
+                "name": "Тип слот памет",
+                "spec": "microSD, up to 256 GB (uses SIM 2 slot) - dual-SIM model"
+            }
+        ]
+    },
+    {
+        "id": "27",
+        "name": "Защитен калъф Ringke Slim за iPhone 7, Черен + защитно фолио за дисплей Ringke",
+        "cathegory": "Телефони, таблети и лаптопи",
+        "subcathegory": "Мобилни телефони и аксесоари",
+        "type": "Калъфи за мобилни телефони",
+        "quantity": "50",
+        "availability": true,
+        "main_url": "https://s11emagst.akamaized.net/products/8803/8802065/images/res_6dad9c7d8e49f240e7de6704ebad20e6_450x450_ghk.jpg",
+        "brand": "Apple",
+        "price": "16.83",
+        "salePrice": "",
+        "onSale": false,
+        "description": "Защитният калъф Ringke за iPhone 7 със защита против удари и сертифициран с военен стандарт MIL-STD 810G - 516.6, елегантен, изключително тънък и устойчив, изработен от поликарбонат, с минималистичен външен вид. Покрива изцяло четирите страни. Първокласно качество, продукт изработен в Южна Корея в съответствие с най-високите технологични стандарти.",
+        "specifics": [
+            {
+                "name": "Тип",
+                "spec": "Протектор"
+            },
+            {
+                "name": "Съвместим бранд",
+                "spec": "Apple"
+            },
+            {
+                "name": "Съвместими модели",
+                "spec": "iPhone 7"
+            },
+            {
+                "name": "Материал",
+                "spec": "Поликарбонат"
+            },
+            {
+                "name": "Цвят",
+                "spec": "Черен"
+            }
+        ]
+    },
+    {
+        "id": "28",
+        "name": "Протектор Apple за iPhone 6s, Кожа, Черен",
+        "cathegory": "Телефони, таблети и лаптопи",
+        "subcathegory": "Мобилни телефони и аксесоари",
+        "type": "Калъфи за мобилни телефони",
+        "quantity": "50",
+        "availability": true,
+        "main_url": "https://s11emagst.akamaized.net/products/2206/2205913/images/res_a8bfd8a40b85213d2e74a8ab279b6ed3_450x450_ff4r.jpg",
+        "brand": "Apple",
+        "price": "94.99",
+        "salePrice": "",
+        "onSale": false,
+        "description": "Протектор Apple за iPhone 6s, Кожа",
+        "specifics": [
+            {
+                "name": "Тип",
+                "spec": "Протектор"
+            },
+            {
+                "name": "Съвместим бранд",
+                "spec": "Apple"
+            },
+            {
+                "name": "Съвместими модели",
+                "spec": "iPhone 6s"
+            },
+            {
+                "name": "Материал",
+                "spec": "Естествена кожа"
+            },
+            {
+                "name": "Цвят",
+                "spec": "Черен"
+            }
+        ]
+    },
+    {
+        "id": "29",
+        "name": "Защитен калъф Kingxbar Deluxe Swarovski Wish за iPhone X, Rose Gold",
+        "cathegory": "Телефони, таблети и лаптопи",
+        "subcathegory": "Мобилни телефони и аксесоари",
+        "type": "Калъфи за мобилни телефони",
+        "quantity": "50",
+        "availability": true,
+        "main_url": "https://s11emagst.akamaized.net/products/14327/14326219/images/res_47f36ce019f68070cabf79fdbbd1a803_450x450_u72u.jpg",
+        "brand": "Apple",
+        "price": "29.99",
+        "salePrice": "",
+        "onSale": false,
+        "description": "High quality plastic material with exquisite non-conductive plating process, makes the case an elegant look. Charming pattern decorated with authorized Swarovski crystals show off aesthetic charm. With transparent clear design, it fully reveals the original beauty of your beloved phone.",
+        "specifics": [
+            {
+                "name": "Тип",
+                "spec": "Протектор"
+            },
+            {
+                "name": "Съвместим бранд",
+                "spec": "Apple"
+            },
+            {
+                "name": "Съвместими модели",
+                "spec": "iPhone X"
+            },
+            {
+                "name": "Материал",
+                "spec": "Поликарбонат"
+            },
+            {
+                "name": "Цвят",
+                "spec": "Розов"
+            }
+        ]
+    },
+    {
+        "id": "30",
+        "name": "Калъф за телефон BELKIN View, За iPhone SE/5/5S, Зелен",
+        "cathegory": "Телефони, таблети и лаптопи",
+        "subcathegory": "Мобилни телефони и аксесоари",
+        "type": "Калъфи за мобилни телефони",
+        "quantity": "50",
+        "availability": true,
+        "main_url": "https://s11emagst.akamaized.net/products/8950/8949337/images/res_f0851c3cfc12db7a8094f993797fd060_450x450_n2og.jpg",
+        "brand": "Apple",
+        "price": "19.95",
+        "salePrice": "",
+        "onSale": false,
+        "description": "Добавете цветно настроение към Вашия iPhone SE/5/5S. Цветнатa рамка, комбинирана с прозрачен пластмасов гръб, осигуряват надеждна защита на телефона.",
+        "specifics": [
+            {
+                "name": "Тип",
+                "spec": "Протектор"
+            },
+            {
+                "name": "Съвместим бранд",
+                "spec": "Apple"
+            },
+            {
+                "name": "Съвместими модели",
+                "spec": "iPhone SE, iPhone 5, iPhone 5S"
+            },
+            {
+                "name": "Материал",
+                "spec": "Пластмаса"
+            },
+            {
+                "name": "Цвят",
+                "spec": "Зелен"
+            }
+        ]
+    },
+    {
+        "id": "31",
+        "name": "Калъф Samsung Clear View Cover за Galaxy A5 A510, Black",
+        "cathegory": "Телефони, таблети и лаптопи",
+        "subcathegory": "Мобилни телефони и аксесоари",
+        "type": "Калъфи за мобилни телефони",
+        "quantity": "50",
+        "availability": true,
+        "main_url": "https://s11emagst.akamaized.net/products/2903/2902718/images/res_ab18395467dfd7502c382e29743bfc00_450x450_3fin.jpg",
+        "brand": "Samsung",
+        "price": "68.99",
+        "salePrice": "",
+        "onSale": false,
+        "description": "Калъф Samsung Clear View Cover за Galaxy A5 A510, Black",
+        "specifics": [
+            {
+                "name": "Тип",
+                "spec": "Flip cover"
+            },
+            {
+                "name": "Съвместим бранд",
+                "spec": "Samsung"
+            },
+            {
+                "name": "Съвместими модели",
+                "spec": "Galaxy A5 (2016)"
+            },
+            {
+                "name": "Материал",
+                "spec": "Пластмаса"
+            },
+            {
+                "name": "Цвят",
+                "spec": "Черен"
+            }
+        ]
+    },
+    {
+        "id": "32",
+        "name": "Калъф Samsung Galaxy S8 LED View Cover, EF-NG950, Black",
+        "cathegory": "Телефони, таблети и лаптопи",
+        "subcathegory": "Мобилни телефони и аксесоари",
+        "type": "Калъфи за мобилни телефони",
+        "quantity": "50",
+        "availability": true,
+        "main_url": "https://s11emagst.akamaized.net/products/5595/5594068/images/res_41b8be0bbd89798c4a3a95225d6bd1d8_450x450_vqln.jpg",
+        "brand": "Samsung",
+        "price": "74.99",
+        "salePrice": "",
+        "onSale": false,
+        "description": "LED светлините предоставят важна информация и ти позволяват да контролираш телефона си без да отваряш калъфа.Изключваш аларми или отговаряш и отхвърляш повиквания с едно плъзване. А с избор измежду 54 специални икони ще знаеш какво да направиш с един поглед. Насладете се на висококачествен дизайн, удобство и максимална защита. Помага ви да извлечете максимума от вашия телефон. Изработен от първокласни материали, специално за Galaxy S8 Samsung EF-NG950P LED View Cover е официален калъф за Galaxy S8 специално проектиран за модела. ",
+        "specifics": [
+            {
+                "name": "Тип",
+                "spec": "Flip cover"
+            },
+            {
+                "name": "Съвместим бранд",
+                "spec": "Samsung"
+            },
+            {
+                "name": "Съвместими модели",
+                "spec": "Galaxy S8"
+            },
+            {
+                "name": "Функции",
+                "spec": "LED View"
+            },
+            {
+                "name": "Материал",
+                "spec": "Естествена кожа"
+            },
+            {
+                "name": "Цвят",
+                "spec": "Черен"
+            }
+        ]
+    },
+    {
+        "id": "33",
+        "name": "Калъф Samsung Flip Wallet за Galaxy J5, Черен",
+        "cathegory": "Телефони, таблети и лаптопи",
+        "subcathegory": "Мобилни телефони и аксесоари",
+        "type": "Калъфи за мобилни телефони",
+        "quantity": "50",
+        "availability": true,
+        "main_url": "https://s11emagst.akamaized.net/products/2416/2415191/images/res_7c436bcc42b0b0712dc17d3d4ec46d96_450x450_s8d6.jpg",
+        "brand": "Samsung",
+        "price": "24.99",
+        "salePrice": "",
+        "onSale": false,
+        "description": "Калъф Samsung Flip Wallet за Galaxy J5, Черен",
+        "specifics": [
+            {
+                "name": "Тип",
+                "spec": "Flip cover"
+            },
+            {
+                "name": "Съвместим бранд",
+                "spec": "Samsung"
+            },
+            {
+                "name": "Съвместими модели",
+                "spec": "Galaxy J5"
+            },
+            {
+                "name": "Функции",
+                "spec": "Джоб за карта"
+            },
+            {
+                "name": "Материал",
+                "spec": "Пластмаса"
+            },
+            {
+                "name": "Цвят",
+                "spec": "Черен"
+            }
+        ]
+    },
+    {
+        "id": "34",
+        "name": "Силиконов калъф Carbon за Huawei P10 Lite, Черен",
+        "cathegory": "Телефони, таблети и лаптопи",
+        "subcathegory": "Мобилни телефони и аксесоари",
+        "type": "Калъфи за мобилни телефони",
+        "quantity": "50",
+        "availability": true,
+        "main_url": "https://s11emagst.akamaized.net/products/9771/9770841/images/res_25fa28b78f3ba6f3c113cda84553fbda_450x450_kgui.jpg",
+        "brand": "Huawei",
+        "price": "9.99",
+        "salePrice": "",
+        "onSale": false,
+        "description": "Силиконов калъф с карбоново покритие, осигуряващи на телефона Ви максимална защита! Помага да защитите телефона си от удари, драскотини, прахови частици! Съдържа необходимите перфорации за вход, камера, говорител, странични бутони! Напасва 100% на модела !",
+        "specifics": [
+            {
+                "name": "Тип",
+                "spec": "Протектор"
+            },
+            {
+                "name": "Съвместим бранд",
+                "spec": "Huawei"
+            },
+            {
+                "name": "Съвместими модели",
+                "spec": "P10 Lite"
+            },
+            {
+                "name": "Функции",
+                "spec": "Устойчивост на удари"
+            },
+            {
+                "name": "Материал",
+                "spec": "Силикон"
+            },
+            {
+                "name": "Цвят",
+                "spec": "Черен"
+            }
+        ]
+    },
+    {
+        "id": "35",
+        "name": "Мек гръб MBX за Huawei Ascend Y5 II, Многоцветен с дракон",
+        "cathegory": "Телефони, таблети и лаптопи",
+        "subcathegory": "Мобилни телефони и аксесоари",
+        "type": "Калъфи за мобилни телефони",
+        "quantity": "50",
+        "availability": true,
+        "main_url": "https://s11emagst.akamaized.net/products/4738/4737728/images/res_d0fa6894aa7799c46c0ccfdc5e72c62f_450x450_ioqv.jpg",
+        "brand": "Huawei",
+        "price": "16.90",
+        "salePrice": "",
+        "onSale": false,
+        "description": "Калъфите MBX са уникални със своите оригинални дизайни и качество на печата от най-висок клас. 100% гаранция за издръжливост на цветовете",
+        "specifics": [
+            {
+                "name": "Тип",
+                "spec": "Протектор"
+            },
+            {
+                "name": "Съвместим бранд",
+                "spec": "Huawei"
+            },
+            {
+                "name": "Съвместими модели",
+                "spec": "Ascend Y5 II"
+            },
+            {
+                "name": "Материал",
+                "spec": "Силикон, Полиуретан"
+            },
+            {
+                "name": "Цвят",
+                "spec": "Черен/Син"
+            }
+        ]
+    }
 ]

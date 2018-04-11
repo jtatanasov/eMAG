@@ -1525,5 +1525,1210 @@
                 "spec": "Черен/Син"
             }
         ]
+    },
+    {
+        "id": "36",
+        "name": "Apple iPad 9.7', 32GB, Wi-Fi, Silver",
+        "cathegory": "Телефони, таблети и лаптопи",
+        "subcathegory": "Таблети и аксесоари",
+        "type": "Таблети",
+        "quantity": "50",
+        "availability": true,
+        "main_url": "https://s11emagst.akamaized.net/products/5483/5482320/images/res_2134c34f6eb7d3fc4a680f8447f90aa9_450x450_djbp.jpg",
+        "brand": "Apple",
+        "price": "698.99",
+        "salePrice": "",
+        "onSale": false,
+        "description": "iPad Изтънчено забавление. Учи, играй, сърфирай и твори. iPad ти дава невероятен дисплей, продуктивност и приложения да правиш онова, което обичаш. Навсякъде. Лесно. И магично. Брилянтен дисплей. Брилянтен размер.Изумителен Retina дисплей.",
+        "specifics": [
+            {
+                "name": "Модел процесор",
+                "spec": "A9"
+            },
+            {
+                "name": "Брой ядра",
+                "spec": "2"
+            },
+            {
+                "name": "Честота",
+                "spec": "1.84 GHz"
+            },
+            {
+                "name": "Капацитет памет",
+                "spec": "2 GB"
+            },
+            {
+                "name": "Капацитет съхранение",
+                "spec": "32 GB"
+            }
+        ]
+    },
+    {
+        "id": "37",
+        "name": "Apple iPad mini 4, Wi-Fi, 128GB, Space Gray",
+        "cathegory": "Телефони, таблети и лаптопи",
+        "subcathegory": "Таблети и аксесоари",
+        "type": "Таблети",
+        "quantity": "50",
+        "availability": true,
+        "main_url": "https://s11emagst.akamaized.net/products/2084/2083855/images/res_e30e3242b906faee2f005fa5f7068a13_450x450_81in.jpg",
+        "brand": "Apple",
+        "price": "948.99",
+        "salePrice": "",
+        "onSale": false,
+        "description": "Две страхотни камери. С вграден iPad. iSight камерата в iPad mini 4 е с усъвършенствана оптика, подобрен сензор и Apple процесор за обработка на сигнала. Разполага и с удобни функции като панорама, time-lapse видео, бавен каданс, burst и таймер режими. Предната FaceTime HD камера също е преработена — с подобрен сензор и по-големи пиксели — за по-добри снимки при слабо осветление. Крайният резултат? Всичките ти снимки, видеa, видеоразговори и селфита изглеждат невероятно живи. Невъзмутимо лек. Възмутително тънък. iPad mini 4 съчетава всичко, което обичаш в iPad, в удивително елегантен и компактен корпус. Така че можеш да се наслаждаваш на FaceTime с приятели и да вършиш работата си — когато и където пожелаеш. В силата му няма нищо mini.",
+        "specifics": [
+            {
+                "name": "Модел процесор",
+                "spec": "A8"
+            },
+            {
+                "name": "Брой ядра",
+                "spec": "2"
+            },
+            {
+                "name": "Честота",
+                "spec": "1.1 GHz"
+            },
+            {
+                "name": "Капацитет памет",
+                "spec": "2 GB"
+            },
+            {
+                "name": "Капацитет съхранение",
+                "spec": "128 GB"
+            }
+        ]
+    },
+    {
+        "id": "38",
+        "name": "Apple iPad Pro 9.7', 128GB, Wi-Fi, Silver",
+        "cathegory": "Телефони, таблети и лаптопи",
+        "subcathegory": "Таблети и аксесоари",
+        "type": "Таблети",
+        "quantity": "50",
+        "availability": true,
+        "main_url": "https://s11emagst.akamaized.net/products/3290/3289887/images/res_45cc59d4e211cd119b87431936bcd399_450x450_7kr2.jpg",
+        "brand": "Apple",
+        "price": "1598.99",
+        "salePrice": "",
+        "onSale": false,
+        "description": "Вече в два размера iPad Pro е нещо повече от просто следващото поколение iPad — една безкомпромисна визия за компютърните технологии в модерния свят. Той слага на върха на пръстите изумителна мощ, изпреварваща повечето лаптопи. И превръща дори трудните задачи в естествени жестове — като докосване, плъзване, или писане с молив. Без значение дали ще избереш 12,9 или новия 9,7-инчов модел — iPad Pro е по-способен, версатилен и леснопреносим от всичко, предлагано досега. С една дума — супер.",
+        "specifics": [
+            {
+                "name": "Модел процесор",
+                "spec": "A9X"
+            },
+            {
+                "name": "Брой ядра",
+                "spec": "2"
+            },
+            {
+                "name": "Честота",
+                "spec": "2 GHz"
+            },
+            {
+                "name": "Капацитет памет",
+                "spec": "2 GB"
+            },
+            {
+                "name": "Капацитет съхранение",
+                "spec": "128 GB"
+            }
+        ]
+    },
+    {
+        "id": "39",
+        "name": "Apple iPad Pro 12.9', Cellular, 256GB, 4G, Space Grey",
+        "cathegory": "Телефони, таблети и лаптопи",
+        "subcathegory": "Таблети и аксесоари",
+        "type": "Таблети",
+        "quantity": "50",
+        "availability": true,
+        "main_url": "https://s11emagst.akamaized.net/products/3290/3289868/images/res_5b5b6b6858f13ae4ed64980d7ca97574_450x450_8jon.jpg",
+        "brand": "Apple",
+        "price": "2799.99",
+        "salePrice": "",
+        "onSale": false,
+        "description": "Вече в два размера iPad Pro е нещо повече от просто следващото поколение iPad — една безкомпромисна визия за компютърните технологии в модерния свят. Той слага на върха на пръстите изумителна мощ, изпреварваща повечето лаптопи. И превръща дори трудните задачи в естествени жестове — като докосване, плъзване, или писане с молив. Без значение дали ще избереш 12,9 или новия 9,7-инчов модел — iPad Pro е по-способен, версатилен и леснопреносим от всичко, предлагано досега. С една дума — супер.",
+        "specifics": [
+            {
+                "name": "Модел процесор",
+                "spec": "A10X"
+            },
+            {
+                "name": "Брой ядра",
+                "spec": "4"
+            },
+            {
+                "name": "Честота",
+                "spec": "2.3 GHz"
+            },
+            {
+                "name": "Капацитет памет",
+                "spec": "4 GB"
+            },
+            {
+                "name": "Капацитет съхранение",
+                "spec": "256 GB"
+            }
+        ]
+    },
+    {
+        "id": "40",
+        "name": "Таблет Lenovo Tab3 7 Voice, Черен с 4G модул с процесор 4x Cortex-A7 (1.0 GHz), 7.0', 1 GB DDR2, 8 GB, Android 6.0 Marshmallow, Wi-Fi, 4G, Черен",
+        "cathegory": "Телефони, таблети и лаптопи",
+        "subcathegory": "Таблети и аксесоари",
+        "type": "Таблети",
+        "quantity": "50",
+        "availability": true,
+        "main_url": "https://s11emagst.akamaized.net/products/4602/4601470/images/res_13979fcb3dab354b3c3b8444a34902ed_450x450_9hhp.jpg",
+        "brand": "Lenovo",
+        "price": "166.80",
+        "salePrice": "",
+        "onSale": false,
+        "description": "Дисплей: 7.0' (1024x600) IPS тъчскрийн, Безжични комуникации: Wi-Fi Hotspot, 4G модул, Bluetooth 4.0, GPS, Wi-Fi 802.11 b/g/n",
+        "specifics": [
+            {
+                "name": "Модел процесор",
+                "spec": "Cortex-A7"
+            },
+            {
+                "name": "Брой ядра",
+                "spec": "4"
+            },
+            {
+                "name": "Честота",
+                "spec": "1 GHz"
+            },
+            {
+                "name": "Капацитет памет",
+                "spec": "1 GB"
+            },
+            {
+                "name": "Капацитет съхранение",
+                "spec": "8 GB"
+            },
+            {
+                "name": "Тип слот памет",
+                "spec": "MicroSD (до 32GB)"
+            }
+        ]
+    },
+    {
+        "id": "41",
+        "name": "Таблет Lenovo ThinkPad 10, Черен с 3G модул с процесор Intel Atom Z3795 (1.59/2.39GHz), 10.1', 4 GB LPDDR3, 128 GB eMMC, Windows 8.1 Professional, Wi-Fi, 3G, Черен",
+        "cathegory": "Телефони, таблети и лаптопи",
+        "subcathegory": "Таблети и аксесоари",
+        "type": "Таблети",
+        "quantity": "50",
+        "availability": true,
+        "main_url": "https://s11emagst.akamaized.net/products/1040/1039625/images/res_31ff62a95df8aa297e2580798716fcf8_450x450_9r77.jpg",
+        "brand": "Lenovo",
+        "price": "1262.99",
+        "salePrice": "",
+        "onSale": false,
+        "description": "Дисплей: 10.1' (1920x1200) IPS тъчскрийн, Безжични комуникации: 3G модул, Bluetooth 4.0, Wi-Fi 802.11 b/g/n",
+        "specifics": [
+            {
+                "name": "Модел процесор",
+                "spec": "Atom Z3795"
+            },
+            {
+                "name": "Брой ядра",
+                "spec": "4"
+            },
+            {
+                "name": "Честота",
+                "spec": "1.59 GHz"
+            },
+            {
+                "name": "Капацитет памет",
+                "spec": "4 GB"
+            },
+            {
+                "name": "Капацитет съхранение",
+                "spec": "128 GB"
+            },
+            {
+                "name": "Тип слот памет",
+                "spec": "MicroSD"
+            }
+        ]
+    },
+    {
+        "id": "42",
+        "name": "Таблет Lenovo Tab 4 8 Plus, черен с процесор 8x Cortex-A53 (2.0 GHz), 8.0', 3 GB, 16 GB, Android 7.0 Nougat, Wi-Fi, 4G, Черен",
+        "cathegory": "Телефони, таблети и лаптопи",
+        "subcathegory": "Таблети и аксесоари",
+        "type": "Таблети",
+        "quantity": "50",
+        "availability": true,
+        "main_url": "https://s11emagst.akamaized.net/products/9575/9574314/images/res_4b771553b07a07caae711078b113f968_450x450_84ba.jpg",
+        "brand": "Lenovo",
+        "price": "533.99",
+        "salePrice": "",
+        "onSale": false,
+        "description": "Дисплей: 8.0' (1920x1200) IPS тъчскрийн, Безжични комуникации: Wi-Fi Hotspot, Wi-Fi 802.11 a/b/g/n/ac, Bluetooth 4.2, GPS, A-GPS, 4G модул, Wi-Fi Direct",
+        "specifics": [
+            {
+                "name": "Модел процесор",
+                "spec": "Snapdragon 625 MSM8953"
+            },
+            {
+                "name": "Брой ядра",
+                "spec": "8"
+            },
+            {
+                "name": "Честота",
+                "spec": "2 GHz"
+            },
+            {
+                "name": "Капацитет памет",
+                "spec": "3 GB"
+            },
+            {
+                "name": "Капацитет съхранение",
+                "spec": "16 GB"
+            },
+            {
+                "name": "Тип слот памет",
+                "spec": "MicroSD (до 128GB)"
+            }
+        ]
+    },
+    {
+        "id": "43",
+        "name": "Таблет Samsung Tab S2 VE T713, 8.0', Octa-Core 1.8 GHz, 3GB RAM, 32GB, White",
+        "cathegory": "Телефони, таблети и лаптопи",
+        "subcathegory": "Таблети и аксесоари",
+        "type": "Таблети",
+        "quantity": "50",
+        "availability": true,
+        "main_url": "https://s11emagst.akamaized.net/products/3935/3934618/images/res_3af7d3475205365b3d413b03d4efa546_450x450_3dd6.jpg",
+        "brand": "Samsung",
+        "price": "589.99",
+        "salePrice": "",
+        "onSale": false,
+        "description": "Насладете се на по-голяма универсалност от всякога с Galaxy Tab S2. Използвайте това забележително тънко и изключително леко устройство, за да носите със себе си своите електронни книги, снимки, видеоклипове и работни файлове, където и да отивате",
+        "specifics": [
+            {
+                "name": "Модел процесор",
+                "spec": "Snapdragon™ 652"
+            },
+            {
+                "name": "Брой ядра",
+                "spec": "8"
+            },
+            {
+                "name": "Честота",
+                "spec": "1.8 GHz; 1.4GHz"
+            },
+            {
+                "name": "Капацитет памет",
+                "spec": "3 GB"
+            },
+            {
+                "name": "Капацитет съхранение",
+                "spec": "32 GB"
+            },
+            {
+                "name": "Тип слот памет",
+                "spec": "MicroSD (до 128GB)"
+            }
+        ]
+    },
+    {
+        "id": "44",
+        "name": "Таблет Samsung T820 Galaxy Tab S3 9.7', 32GB, Wi-Fi, Silver",
+        "cathegory": "Телефони, таблети и лаптопи",
+        "subcathegory": "Таблети и аксесоари",
+        "type": "Таблети",
+        "quantity": "50",
+        "availability": true,
+        "main_url": "https://s11emagst.akamaized.net/products/5767/5766647/images/res_ad8a04c2ab9fcf97e7c6a2ce8c233171_450x450_ut26.jpg",
+        "brand": "Samsung",
+        "price": "1942.56",
+        "salePrice": "",
+        "onSale": false,
+        "description": "Android 7.0 (Nougat) Дисплей: 9.7' QXGA Super AMOLED Писалка S Pen Процесор: 4-ядрен Snapdragon 820, 4 GB RAM Основна камера: 13 MP, f/1.9, 27mm, autofocus, LED flash Предна камера: 5 MP, f/2.2, 23mm, 1080p Памет: 32 GB и слот за microSD карта до 256 GB Батерия: 6000 mAh Samsung T820 Galaxy Tab S3 9.7' - Изцяло нов стъклен дизайн! За първи път можете да се наслаждавате на елегантността на смартфон и всички предимства на таблет. Лъскавият гръб на Galaxy Tab S3 му придава първокласен вид и чувство на луксозност в ръцете ви.",
+        "specifics": [
+            {
+                "name": "Модел процесор",
+                "spec": "Adreno 530"
+            },
+            {
+                "name": "Брой ядра",
+                "spec": "4"
+            },
+            {
+                "name": "Честота",
+                "spec": "2.15 GHz; 1.6GHz"
+            },
+            {
+                "name": "Капацитет памет",
+                "spec": "4 GB"
+            },
+            {
+                "name": "Капацитет съхранение",
+                "spec": "32 GB"
+            },
+            {
+                "name": "Тип слот памет",
+                "spec": "MicroSD (до 256GB)"
+            }
+        ]
+    },
+    {
+        "id": "45",
+        "name": "Таблет Samsung SM-T585 Galaxy Tab A, бял с процесор 8x Cortex-A53 (1.6 GHz), 10.1', 2 GB LPDDR3, 32 GB, Android 6.0 Marshmallow, Wi-Fi, 4G, Бял",
+        "cathegory": "Телефони, таблети и лаптопи",
+        "subcathegory": "Таблети и аксесоари",
+        "type": "Таблети",
+        "quantity": "50",
+        "availability": true,
+        "main_url": "https://s11emagst.akamaized.net/products/3935/3934068/images/res_cd22dc6c9bae04b0c452c84dbc9e1ce6_450x450_tilk.jpg",
+        "brand": "Samsung",
+        "price": "625.99",
+        "salePrice": "",
+        "onSale": false,
+        "description": "Дисплей: 10.1' (1920x1200) PLS тъчскрийн, Безжични комуникации: Wi-Fi 802.11 a/b/g/n/ac, GPS - GLONASS, ANT+, Bluetooth 4.2, 4G модул, Wi-Fi Direct",
+        "specifics": [
+            {
+                "name": "Модел процесор",
+                "spec": "Cortex A53"
+            },
+            {
+                "name": "Брой ядра",
+                "spec": "8"
+            },
+            {
+                "name": "Честота",
+                "spec": "1.6GHz"
+            },
+            {
+                "name": "Капацитет памет",
+                "spec": "2 GB"
+            },
+            {
+                "name": "Капацитет съхранение",
+                "spec": "16 GB"
+            },
+            {
+                "name": "Тип слот памет",
+                "spec": "MicroSD (до 256GB)"
+            }
+        ]
+    },
+    {
+        "id": "46",
+        "name": "Защитен калъф Apple Smart Cover за iPad Pro 10.5', Кожен, Black",
+        "cathegory": "Телефони, таблети и лаптопи",
+        "subcathegory": "Таблети и аксесоари",
+        "type": "Калъфи за таблети",
+        "quantity": "50",
+        "availability": true,
+        "main_url": "https://s11emagst.akamaized.net/products/7965/7964463/images/res_5f737f303e11abb73cc6914cade0a9c6_450x450_oak9.jpg",
+        "brand": "Apple",
+        "price": "163.99",
+        "salePrice": "",
+        "onSale": false,
+        "description": "Защитен калъф Apple Smart Cover за iPad Pro 10.5', Кожен, Black",
+        "specifics": [
+            {
+                "name": "Цвят",
+                "spec": "Черен"
+            },
+            {
+                "name": "Тип аксесоар",
+                "spec": "Smart Cover"
+            },
+            {
+                "name": "Съвместимост",
+                "spec": "Apple iPad Pro"
+            }
+        ]
+    },
+    {
+        "id": "47",
+        "name": "Калъф-поставка BELKIN Glam Tab Cover за Apple iPad Mini",
+        "cathegory": "Телефони, таблети и лаптопи",
+        "subcathegory": "Таблети и аксесоари",
+        "type": "Калъфи за таблети",
+        "quantity": "50",
+        "availability": false,
+        "main_url": "https://s11emagst.akamaized.net/products/8163/8162974/images/res_463ebee78d690dadae0a477e9216533d_450x450_7dp5.jpg",
+        "brand": "Apple",
+        "price": "163.99",
+        "salePrice": "",
+        "onSale": false,
+        "description": "Модерен и стилен калъф/стойка за iPad Mini с грабващ окото дизайн. Екстериор от бяла изкуствена кожа, комбинирана с лъскави елементи.",
+        "specifics": [
+            {
+                "name": "Цвят",
+                "spec": "Бял"
+            },
+            {
+                "name": "Тип аксесоар",
+                "spec": "Стойка; Book Cover"
+            },
+            {
+                "name": "Съвместимост",
+                "spec": "Apple iPad mini; Apple iPad mini 3; Apple Ipad mini 2"
+            }
+        ]
+    },
+    {
+        "id": "48",
+        "name": "Калъф Bugatti за iPad mini, Черен",
+        "cathegory": "Телефони, таблети и лаптопи",
+        "subcathegory": "Таблети и аксесоари",
+        "type": "Калъфи за таблети",
+        "quantity": "50",
+        "availability": true,
+        "main_url": "https://s11emagst.akamaized.net/products/2238/2237184/images/res_56320eefdac834e03c8abb5350cb6f00_450x450_d93f.jpg",
+        "brand": "Apple",
+        "price": "50.99",
+        "salePrice": "",
+        "onSale": false,
+        "description": "Калъф Bugatti за iPad mini, Черен",
+        "specifics": [
+            {
+                "name": "Цвят",
+                "spec": "Черен"
+            },
+            {
+                "name": "Тип аксесоар",
+                "spec": "Book Cover"
+            },
+            {
+                "name": "Съвместимост",
+                "spec": "Apple iPad mini"
+            }
+        ]
+    },
+    {
+        "id": "49",
+        "name": "Калъф-поставка Cellular Line Folio Samsung T210 Galaxy Tab 3, Черен",
+        "cathegory": "Телефони, таблети и лаптопи",
+        "subcathegory": "Таблети и аксесоари",
+        "type": "Калъфи за таблети",
+        "quantity": "50",
+        "availability": true,
+        "main_url": "https://s11emagst.akamaized.net/products/579/578971/images/res_c17c50b962351ec771e9e82009cc661f_450x450_el3d.jpg",
+        "brand": "Samsung",
+        "price": "29.99",
+        "salePrice": "",
+        "onSale": false,
+        "description": "Калъф-поставка Cellular Line Folio Samsung T210 Galaxy Tab 3, Черен",
+        "specifics": [
+            {
+                "name": "Цвят",
+                "spec": "Черен"
+            },
+            {
+                "name": "Тип аксесоар",
+                "spec": "Стойка; Flip cover"
+            },
+            {
+                "name": "Съвместимост",
+                "spec": "Samsung Galaxy Tab 3, 7 inch"
+            }
+        ]
+    },
+    {
+        "id": "50",
+        "name": "Калъф-поставка Cellular Line Visiongtab3p3200bk за Samsung Galaxy Tab3 P3200, Черен",
+        "cathegory": "Телефони, таблети и лаптопи",
+        "subcathegory": "Таблети и аксесоари",
+        "type": "Калъфи за таблети",
+        "quantity": "50",
+        "availability": true,
+        "main_url": "https://s11emagst.akamaized.net/products/420/419979/images/res_51ee5b29bb253142f930c67925b6c4b6_450x450_4ss3.jpg",
+        "brand": "Samsung",
+        "price": "29.99",
+        "salePrice": "",
+        "onSale": false,
+        "description": "Калъф-поставка Cellular Line Visiongtab3p3200bk за Samsung Galaxy Tab3 P3200, Черен",
+        "specifics": [
+            {
+                "name": "Цвят",
+                "spec": "Черен"
+            },
+            {
+                "name": "Тип аксесоар",
+                "spec": "Стойка; Flip cover"
+            },
+            {
+                "name": "Съвместимост",
+                "spec": "Samsung Galaxy Tab 3, 7 inch"
+            }
+        ]
+    },
+    {
+        "id": "51",
+        "name": "Калъф за таблет HI-TECH 10.1 инча TAC1028",
+        "cathegory": "Телефони, таблети и лаптопи",
+        "subcathegory": "Таблети и аксесоари",
+        "type": "Калъфи за таблети",
+        "quantity": "50",
+        "availability": true,
+        "main_url": "https://s11emagst.akamaized.net/products/2405/2404599/images/res_fdaa9ec134042caa4cd0d771a7fe92e1_450x450_bodh.jpg",
+        "brand": "HiTech",
+        "price": "29.99",
+        "salePrice": "",
+        "onSale": false,
+        "description": "С възможност за поставяне в изправено положение. За използване със 10.1 инчови таблети. Изработени от изкуствена кожа и висококачествени материали.",
+        "specifics": [
+            {
+                "name": "Цвят",
+                "spec": "Черен"
+            },
+            {
+                "name": "Съвместимост",
+                "spec": "Универсален"
+            }
+        ]
+    },
+    {
+        "id": "52",
+        "name": "Лаптоп Apple MacBook Pro 13 c процесор Intel® Dual Core™ i5 2.30GHz, 13.3'",
+        "cathegory": "Телефони, таблети и лаптопи",
+        "subcathegory": "Лаптопи и аксесоари",
+        "type": "Лаптопи",
+        "quantity": "100",
+        "availability": true,
+        "main_url": "https://s11emagst.akamaized.net/products/4587/4586098/images/res_ebc0bb4f520898ab462edef58de251cb_450x450_roln.jpg",
+        "brand": "Apple",
+        "price": "2869.99",
+        "salePrice": "",
+        "onSale": false,
+        "description": "Лаптоп Apple MacBook Pro 13 По-бърз и мощен отвсякога, и все пак забележително тънък и лек. Разполага с най-яркия и цветен дисплей в Mac лаптоп досега. И включва Touch Bar – вградена в клавиатурата стъклена Multi-Touch лента, която осигурява мигновен достъп до желаните инструменти. MacBook Pro е изграден върху революционни идеи. И е готов да реализира твоите",
+        "specifics": [
+            {
+                "name": "Производител процесор",
+                "spec": "Intel®"
+            },
+            {
+                "name": "Тип процесор",
+                "spec": "i5"
+            },
+            {
+                "name": "Брой ядра",
+                "spec": "2"
+            },
+            {
+                "name": "Честота",
+                "spec": "2.3 GHz"
+            },
+            {
+                "name": "Капацитет памет",
+                "spec": "8 GB"
+            },
+            {
+                "name": "Капацитет съхранение",
+                "spec": "128 GB"
+            },
+            {
+                "name": "Видео карта",
+                "spec": "Вградена Intel"
+            }
+
+        ]
+    },
+    {
+        "id": "53",
+        "name": "Лаптоп Apple MacBook 12 с процесор Intel® Dual Core™ i5 1.30GHz, 12'",
+        "cathegory": "Телефони, таблети и лаптопи",
+        "subcathegory": "Лаптопи и аксесоари",
+        "type": "Лаптопи",
+        "quantity": "100",
+        "availability": true,
+        "main_url": "https://s11emagst.akamaized.net/products/3445/3444918/images/res_0313f57c4c21740837c4fe80eb9406d1_450x450_p6vg.jpg",
+        "brand": "Apple",
+        "price": "3499.99",
+        "salePrice": "",
+        "onSale": false,
+        "description": "Лаптоп Apple MacBook 12 с процесор Intel® Dual Core™ i5",
+        "specifics": [
+            {
+                "name": "Производител процесор",
+                "spec": "Intel®"
+            },
+            {
+                "name": "Тип процесор",
+                "spec": "i5"
+            },
+            {
+                "name": "Брой ядра",
+                "spec": "2"
+            },
+            {
+                "name": "Честота",
+                "spec": "3.2 GHz"
+            },
+            {
+                "name": "Капацитет памет",
+                "spec": "8 GB"
+            },
+            {
+                "name": "Капацитет съхранение",
+                "spec": "512 GB"
+            },
+            {
+                "name": "Видео карта",
+                "spec": "Вградена Intel"
+            }
+
+        ]
+    },
+    {
+        "id": "54",
+        "name": "Лаптоп Apple MacBook Air 13 c процесор Intel® Dual Core™ i5 1.80GHz, 13.3'",
+        "cathegory": "Телефони, таблети и лаптопи",
+        "subcathegory": "Лаптопи и аксесоари",
+        "type": "Лаптопи",
+        "quantity": "100",
+        "availability": true,
+        "main_url": "https://s11emagst.akamaized.net/products/3445/3444889/images/res_49e87252f4e6ede1b47eadc2aee9010b_450x450_5efn.jpg",
+        "brand": "Apple",
+        "price": "1979.99",
+        "salePrice": "",
+        "onSale": false,
+        "description": "Не спира докато не спреш и ти. 11-инчовият MacBook Air вече издържа до 9 часа между зарежданията, а 13-инчовият – невероятните 12 часа. Така работиш без кабели – от сутрешното кафе чак до вечерта. Когато дойде време за почивка, получаваш до 10 часа време за iTunes филми на 11-инчовия модел и до 12 часа на 13-инчовия. А с до 30-дневния стендбай режим можеш да го изоставиш за седмици и да продължиш откъдето си спрял. Тънък. Лек. Мощен. Готов. Петото поколение Intel Core i5 и i7 процесори с Intel HD Graphics 6000 са готови за всякакви задачи",
+        "specifics": [
+            {
+                "name": "Производител процесор",
+                "spec": "Intel®"
+            },
+            {
+                "name": "Тип процесор",
+                "spec": "i5"
+            },
+            {
+                "name": "Брой ядра",
+                "spec": "2"
+            },
+            {
+                "name": "Честота",
+                "spec": "2.9 GHz"
+            },
+            {
+                "name": "Капацитет памет",
+                "spec": "8 GB"
+            },
+            {
+                "name": "Капацитет съхранение",
+                "spec": "128 GB"
+            },
+            {
+                "name": "Видео карта",
+                "spec": "Вградена Intel"
+            }
+        ]
+    },
+    {
+        "id": "55",
+        "name": "Лаптоп Lenovo Legion Y920 с Intel® Core™ i7-7820HK 2.90 GHz up to 3.90 GHz",
+        "cathegory": "Телефони, таблети и лаптопи",
+        "subcathegory": "Лаптопи и аксесоари",
+        "type": "Лаптопи",
+        "quantity": "100",
+        "availability": true,
+        "main_url": "https://s11emagst.akamaized.net/products/8501/8500142/images/res_619acdbd6323e90eb4b49d8e206fba1c_450x450_1573.jpg",
+        "brand": "Lenovo",
+        "price": "5555.55",
+        "salePrice": "",
+        "onSale": false,
+        "description": "Лаптоп Lenovo Legion Y920 с Intel® Core™ i7-7820HK 2.90 GHz up to 3.90 GHz",
+        "specifics": [
+            {
+                "name": "Производител процесор",
+                "spec": "Intel®"
+            },
+            {
+                "name": "Тип процесор",
+                "spec": "i7"
+            },
+            {
+                "name": "Брой ядра",
+                "spec": "4"
+            },
+            {
+                "name": "Честота",
+                "spec": "2.9 GHz до 3.9 Ghz"
+            },
+            {
+                "name": "Капацитет памет",
+                "spec": "16 GB"
+            },
+            {
+                "name": "Капацитет съхранение",
+                "spec": "2 TB, 500GB"
+            },
+            {
+                "name": "Видео карта",
+                "spec": "nVidia GeForce GTX1070 8192MB"
+            }
+        ]
+    },
+    {
+        "id": "56",
+        "name": "Лаптоп Lenovo IdeaPad 320 with Quad Core Intel Core i5-8250U до 3.40GHz",
+        "cathegory": "Телефони, таблети и лаптопи",
+        "subcathegory": "Лаптопи и аксесоари",
+        "type": "Лаптопи",
+        "quantity": "100",
+        "availability": true,
+        "main_url": "https://s11emagst.akamaized.net/products/8233/8232869/images/res_9eec18be22b1c3863ff1515b6670e6ac_450x450_rog.jpg",
+        "brand": "Lenovo",
+        "price": "1099.99",
+        "salePrice": "",
+        "onSale": false,
+        "description": "Lenovo IdeaPad 320 with Quad Core Intel Core i5-8250U до 3.40GHz",
+        "specifics": [
+            {
+                "name": "Производител процесор",
+                "spec": "Intel®"
+            },
+            {
+                "name": "Тип процесор",
+                "spec": "i5"
+            },
+            {
+                "name": "Брой ядра",
+                "spec": "4"
+            },
+            {
+                "name": "Честота",
+                "spec": "1.6 GHz до 3.4 Ghz"
+            },
+            {
+                "name": "Капацитет памет",
+                "spec": "8 GB"
+            },
+            {
+                "name": "Капацитет съхранение",
+                "spec": "1 TB"
+            },
+            {
+                "name": "Видео карта",
+                "spec": "nVidia MX150 2048MB"
+            }
+        ]
+    },
+    {
+        "id": "57",
+        "name": "Лаптоп 2 in 1 Lenovo YOGA 300-11IBR с процесор Intel® Celeron® N3060 1.60 GHz",
+        "cathegory": "Телефони, таблети и лаптопи",
+        "subcathegory": "Лаптопи и аксесоари",
+        "type": "Лаптопи",
+        "quantity": "100",
+        "availability": true,
+        "main_url": "https://s11emagst.akamaized.net/products/6030/6029480/images/res_d025d73d8572aa54646ab35bd70aad81_450x450_1p2b.jpg",
+        "brand": "Lenovo",
+        "price": "699.99",
+        "salePrice": "",
+        "onSale": false,
+        "description": "Lenovo IdeaPad Yoga 300 ДОСТЪПЕН. ПРЕНОСИМ. АДАПТИВЕН",
+        "specifics": [
+            {
+                "name": "Производител процесор",
+                "spec": "Intel®"
+            },
+            {
+                "name": "Тип процесор",
+                "spec": "Celeron"
+            },
+            {
+                "name": "Брой ядра",
+                "spec": "4"
+            },
+            {
+                "name": "Честота",
+                "spec": "1.6 GHz до 2.5 Ghz"
+            },
+            {
+                "name": "Капацитет памет",
+                "spec": "4 GB"
+            },
+            {
+                "name": "Капацитет съхранение",
+                "spec": "500 GB"
+            },
+            {
+                "name": "Видео карта",
+                "spec": "Вградена Intel"
+            }
+        ]
+    },
+    {
+        "id": "58",
+        "name": "Лаптоп Lenovo IdeaPad 320-15IAP с процесор Intel Celeron N3350, 1.10 до 2.40GHz",
+        "cathegory": "Телефони, таблети и лаптопи",
+        "subcathegory": "Лаптопи и аксесоари",
+        "type": "Лаптопи",
+        "quantity": "100",
+        "availability": true,
+        "main_url": "https://s11emagst.akamaized.net/products/9252/9251953/images/res_70992f17a947385158be59ca5904e864_450x450_kvhq.jpg",
+        "brand": "Lenovo",
+        "price": "499.99",
+        "salePrice": "",
+        "onSale": false,
+        "description": "Lenovo IdeaPad 320-15IAP с процесор Intel Celeron N3350",
+        "specifics": [
+            {
+                "name": "Производител процесор",
+                "spec": "Intel®"
+            },
+            {
+                "name": "Тип процесор",
+                "spec": "Celeron"
+            },
+            {
+                "name": "Брой ядра",
+                "spec": "2"
+            },
+            {
+                "name": "Честота",
+                "spec": "1.1 GHz до 2.4 Ghz"
+            },
+            {
+                "name": "Капацитет памет",
+                "spec": "4 GB"
+            },
+            {
+                "name": "Капацитет съхранение",
+                "spec": "1 TB"
+            },
+            {
+                "name": "Видео карта",
+                "spec": "Вградена Intel"
+            }
+        ]
+    },
+    {
+        "id": "59",
+        "name": "Лаптоп Gaming ASUS ROG GL553VE-FY022",
+        "cathegory": "Телефони, таблети и лаптопи",
+        "subcathegory": "Лаптопи и аксесоари",
+        "type": "Лаптопи",
+        "quantity": "100",
+        "availability": true,
+        "main_url": "https://s11emagst.akamaized.net/products/5369/5368444/images/res_11f25ad7503d300b3b36e7c466aecc1f_450x450_m4tk.jpg",
+        "brand": "Asus",
+        "price": "2059.99",
+        "salePrice": "",
+        "onSale": false,
+        "description": "Перфектен за всяка игра и съдържание ROG Strix GL 553 дава възможност да се потопите във всяка игра, благодарение на процесора Intel® Core™ i7 от седмо поколение и външната видео карта NVIDIA® GeForce GTX 1050 ROG Strix GL553 е създаден специално за игри и творческа дейност. Време е да се насладите на игрите и приложенията както никога преди!",
+        "specifics": [
+            {
+                "name": "Производител процесор",
+                "spec": "Intel®"
+            },
+            {
+                "name": "Тип процесор",
+                "spec": "i7"
+            },
+            {
+                "name": "Брой ядра",
+                "spec": "2"
+            },
+            {
+                "name": "Честота",
+                "spec": "2.8 GHz до 3.8 Ghz"
+            },
+            {
+                "name": "Капацитет памет",
+                "spec": "8 GB"
+            },
+            {
+                "name": "Капацитет съхранение",
+                "spec": "1 TB"
+            },
+            {
+                "name": "Видео карта",
+                "spec": "nVidia GeForce GTX1050Ti 4096MB"
+            }
+        ]
+    },
+    {
+        "id": "60",
+        "name": "Лаптоп ASUS A542UR-DM189 с процесор Intel® Core™ i5-7200U 2.50 GHz",
+        "cathegory": "Телефони, таблети и лаптопи",
+        "subcathegory": "Лаптопи и аксесоари",
+        "type": "Лаптопи",
+        "quantity": "100",
+        "availability": true,
+        "main_url": "https://s11emagst.akamaized.net/products/8833/8832783/images/res_0a2baa8aa1d276318a0bea07467f29f6_450x450_ktop.jpg",
+        "brand": "Asus",
+        "price": "1269.99",
+        "salePrice": "",
+        "onSale": false,
+        "description": "Стилен дизайн, висококачествена производителност ASUS VivoBook 15 е перфектната комбинация от стил и качество. Процесор Intel Core i5 / i7, до 16 GB RAM и опционална NVIDIA GeForce 940MX графика, VivoBook разполага с дизайн с двойно съхранение, който комбинира бързите скорости за предаване на данни SSD с големите възможности на HDD. Идеалният лаптоп за изпълнение на ежедневните задачи и развлечения. Ярки цветове, невероятно покритие Стилният ASUS VivoBook 15 се предлага с високо гланцирано покритие.",
+        "specifics": [
+            {
+                "name": "Производител процесор",
+                "spec": "Intel®"
+            },
+            {
+                "name": "Тип процесор",
+                "spec": "i5"
+            },
+            {
+                "name": "Брой ядра",
+                "spec": "2"
+            },
+            {
+                "name": "Честота",
+                "spec": "2.5 GHz до 3.1 Ghz"
+            },
+            {
+                "name": "Капацитет памет",
+                "spec": "4 GB"
+            },
+            {
+                "name": "Капацитет съхранение",
+                "spec": "1 TB"
+            },
+            {
+                "name": "Видео карта",
+                "spec": "nVidia GeForce 930MX 2048MB"
+            }
+        ]
+    },
+    {
+        "id": "61",
+        "name": "Лаптоп Asus ROG G501JW (G501JW-FI482T)",
+        "cathegory": "Телефони, таблети и лаптопи",
+        "subcathegory": "Лаптопи и аксесоари",
+        "type": "Лаптопи",
+        "quantity": "100",
+        "availability": true,
+        "main_url": "https://s11emagst.akamaized.net/products/3025/3024541/images/res_d29bb8c75e4d43b6de2746f027b492b4_450x450_t5qm.jpg",
+        "brand": "Asus",
+        "price": "2544.99",
+        "salePrice": "",
+        "onSale": false,
+        "description": "Gaming",
+        "specifics": [
+            {
+                "name": "Производител процесор",
+                "spec": "Intel®"
+            },
+            {
+                "name": "Тип процесор",
+                "spec": "i7"
+            },
+            {
+                "name": "Брой ядра",
+                "spec": "4"
+            },
+            {
+                "name": "Честота",
+                "spec": "2.6 GHz до 3.6 Ghz"
+            },
+            {
+                "name": "Капацитет памет",
+                "spec": "12 GB"
+            },
+            {
+                "name": "Капацитет съхранение",
+                "spec": "256 GB (SSD)"
+            },
+            {
+                "name": "Видео карта",
+                "spec": "nVidia GeForce 960M 4096MB"
+            }
+        ]
+    },
+    {
+        "id": "62",
+        "name": "Лаптоп Dell Alienware 17 R4",
+        "cathegory": "Телефони, таблети и лаптопи",
+        "subcathegory": "Лаптопи и аксесоари",
+        "type": "Лаптопи",
+        "quantity": "100",
+        "availability": true,
+        "main_url": "https://s11emagst.akamaized.net/products/5772/5771032/images/res_1b131e92aed6abaa4410676825fdc50a_450x450_i20g.jpg",
+        "brand": "Dell",
+        "price": "7615.99",
+        "salePrice": "",
+        "onSale": false,
+        "description": "Дисплей: 17.3'' (43.94 cm) UltraHD IPS Anti-Glare 3840x2160 матов; Тегло (кг): 4.36 kg Цвят: Black",
+        "specifics": [
+            {
+                "name": "Производител процесор",
+                "spec": "Intel®"
+            },
+            {
+                "name": "Тип процесор",
+                "spec": "i7"
+            },
+            {
+                "name": "Брой ядра",
+                "spec": "4"
+            },
+            {
+                "name": "Честота",
+                "spec": "2.9 GHz до 3.9 Ghz"
+            },
+            {
+                "name": "Капацитет памет",
+                "spec": "32 GB"
+            },
+            {
+                "name": "Капацитет съхранение",
+                "spec": "1 TB"
+            },
+            {
+                "name": "Видео карта",
+                "spec": "nVidia GeForce GTX1070 8192MB"
+            }
+        ]
+    },
+    {
+        "id": "63",
+        "name": "Лаптоп Dell Alienware 17 R4",
+        "cathegory": "Телефони, таблети и лаптопи",
+        "subcathegory": "Лаптопи и аксесоари",
+        "type": "Лаптопи",
+        "quantity": "100",
+        "availability": true,
+        "main_url": "https://s11emagst.akamaized.net/products/5772/5771032/images/res_1b131e92aed6abaa4410676825fdc50a_450x450_i20g.jpg",
+        "brand": "Dell",
+        "price": "7615.99",
+        "salePrice": "",
+        "onSale": false,
+        "description": "Дисплей: 17.3'' (43.94 cm) UltraHD IPS Anti-Glare 3840x2160 матов; Тегло (кг): 4.36 kg Цвят: Black",
+        "specifics": [
+            {
+                "name": "Производител процесор",
+                "spec": "Intel®"
+            },
+            {
+                "name": "Тип процесор",
+                "spec": "i7"
+            },
+            {
+                "name": "Брой ядра",
+                "spec": "4"
+            },
+            {
+                "name": "Честота",
+                "spec": "2.9 GHz до 3.9 Ghz"
+            },
+            {
+                "name": "Капацитет памет",
+                "spec": "32 GB"
+            },
+            {
+                "name": "Капацитет съхранение",
+                "spec": "1 TB"
+            },
+            {
+                "name": "Видео карта",
+                "spec": "nVidia GeForce GTX1070 8192MB"
+            }
+        ]
+    },
+    {
+        "id": "64",
+        "name": "Раница за лаптоп Lenovo 15.6' B3050, Черен",
+        "cathegory": "Телефони, таблети и лаптопи",
+        "subcathegory": "Лаптопи и аксесоари",
+        "type": "Чанти за лаптопи",
+        "quantity": "100",
+        "availability": true,
+        "main_url": "https://s11emagst.akamaized.net/products/6493/6492795/images/res_f9dd512917dc50d5e1fd6e3ae3591f4c_450x450_840m.jpg",
+        "brand": "Lenovo",
+        "price": "31.99",
+        "salePrice": "",
+        "onSale": false,
+        "description": "Раница за 15.6 инчови преносими модели. Произведена от лек полиестер, който защитава лаптопа от надрасквания, замърсявания и всякакви метеорологични условия. Разполага с допълнителни джобове за аскесоари и лични вещи. Цветът е черен с оранжеви елементи.",
+        "specifics": [
+            {
+                "name": "Тип",
+                "spec": "Раница"
+            },
+            {
+                "name": "Материал",
+                "spec": "Полиестер"
+            },
+            {
+                "name": "Максимална съвместимост",
+                "spec": "15.6 inch"
+            },
+            {
+                "name": "Цвят",
+                "spec": "Черен"
+            }
+        ]
+    },
+    {
+        "id": "65",
+        "name": "Чанта за лаптоп Asus Nereus, 16', Черна",
+        "cathegory": "Телефони, таблети и лаптопи",
+        "subcathegory": "Лаптопи и аксесоари",
+        "type": "Чанти за лаптопи",
+        "quantity": "100",
+        "availability": true,
+        "main_url": "https://s11emagst.akamaized.net/products/69/68269/images/img292807_02052013093733_0_450x450_ie9r.jpg",
+        "brand": "Asus",
+        "price": "23.99",
+        "salePrice": "",
+        "onSale": false,
+        "description": "Чантата е изработена от водоустойчиви материали и предпазва лаптопа ви от потенциални инциденти.",
+        "specifics": [
+            {
+                "name": "Тип",
+                "spec": "Ръчна чанта"
+            },
+            {
+                "name": "Материал",
+                "spec": "Полиестер"
+            },
+            {
+                "name": "Максимална съвместимост",
+                "spec": "16 inch"
+            },
+            {
+                "name": "Цвят",
+                "spec": "Черен"
+            }
+        ]
+    },
+    {
+        "id": "66",
+        "name": "Чанта за лаптоп HAMA Santorin 101561, 15.6', Черен",
+        "cathegory": "Телефони, таблети и лаптопи",
+        "subcathegory": "Лаптопи и аксесоари",
+        "type": "Чанти за лаптопи",
+        "quantity": "100",
+        "availability": true,
+        "main_url": "https://s11emagst.akamaized.net/products/9691/9690883/images/res_620dad8a23e7ed3449c5e61b10251266_450x450_ddgo.jpg",
+        "brand": "HAMA",
+        "price": "45.99",
+        "salePrice": "",
+        "onSale": false,
+        "description": "Стилна чанта за преносими компютри",
+        "specifics": [
+            {
+                "name": "Тип",
+                "spec": "Ръчна чанта"
+            },
+            {
+                "name": "Материал",
+                "spec": "Изкуствена кожа"
+            },
+            {
+                "name": "Максимална съвместимост",
+                "spec": "15.6 inch"
+            },
+            {
+                "name": "Цвят",
+                "spec": "Черен"
+            }
+        ]
     }
 ]

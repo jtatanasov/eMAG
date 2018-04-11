@@ -2,6 +2,11 @@ document.addEventListener('DOMContentLoaded', function () {
     function router() {
         var page = location.hash.slice(1);
 
+        if (!JSON.parse(sessionStorage.getItem('isLogged')) && page != '' && page != 'login' && page != 'register') {
+            location.replace('#login');
+            return;
+        }
+        
         switch (page) {
             case 'login':
                 loginAndRegisterController();

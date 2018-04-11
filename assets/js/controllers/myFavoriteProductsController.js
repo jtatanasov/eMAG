@@ -85,7 +85,7 @@ function myFavoriteProductsController() {
                     id : productId,
                     cathegory : clickedProduct.cathegory,
                     subcathegory : clickedProduct.subcathegory,
-                    type : clickedProduct.subcathegory
+                    type : clickedProduct.type
                 }
                 localStorage.setItem('product', JSON.stringify(product));
                 location.replace('#product');
@@ -100,7 +100,7 @@ function myFavoriteProductsController() {
                     id : productId,
                     cathegory : clickedProduct.cathegory,
                     subcathegory : clickedProduct.subcathegory,
-                    type : clickedProduct.subcathegory
+                    type : clickedProduct.type
                 }
                 localStorage.setItem('product', JSON.stringify(product));
                 location.replace('#product');

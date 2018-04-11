@@ -26,6 +26,7 @@ function typesOfProductsPageController() {
 
     var currentPage = 1;
     var availablePages;
+    var sortPrice = null;
 
     var clearProductsOnPage = function(){
         $("#available-products").html("");
@@ -41,10 +42,17 @@ function typesOfProductsPageController() {
         if(filtersService.activeFilters <= 0){
             currentPageProducts = productsType.slice();
         }
-        console.log("current page: " + currentPage)
+
+        if(sortPrice){
+            currentAvailableProducts = (sortPrice == "lowest") ? productsService.sortLowestPrice(currentAvailableProducts) : productsService.sortHighestPrice(currentAvailableProducts);
+        }
+
         currentPageProducts = productsService.loadProductsOnPage(availablePages, (currentPage - 1));
-        console.log("current page products: " + currentPageProducts);
         if(currentPageProducts != undefined){
+            if(sortPrice){
+                currentPageProducts = (sortPrice == "lowest") ? productsService.sortLowestPrice(currentPageProducts) : productsService.sortHighestPrice(currentPageProducts);
+            }
+            
             currentPageProducts.forEach(el => {
                 var src;
                 var classTwo;
@@ -420,10 +428,9 @@ function typesOfProductsPageController() {
             $("#price-sort-select").on("change", function(){
                 currentPage = 1;
                 var sel = $("#price-sort-select option:selected").val();
-                var sortArr = currentAvailableProducts.slice();
-                sortArr = (sel == "lowest") ? productsService.sortLowestPrice(sortArr) : productsService.sortHighestPrice(sortArr);
+                sortPrice = sel;
                 clearProductsOnPage();
-                loadProductsOnPage(sortArr);
+                loadProductsOnPage();
             });
 
             //adding to cart:

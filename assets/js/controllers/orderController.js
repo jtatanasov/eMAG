@@ -41,7 +41,9 @@ function orderController() {
                     errSpan.css('margin-left', '30em');
                     $('#finish-order').after(errSpan);
                     
-                    errSpan.fadeOut("slow");
+                    setTimeout(function() {
+                        errSpan.fadeOut();
+                    }, 2000);
                 } else {
                     var order = user.processingOrder;
                     userService.removeOrderInProcess(user.id, order);

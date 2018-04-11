@@ -4679,5 +4679,905 @@
                 "spec": "1"
             }
         ]
+    },
+    {
+        "id": "125",
+        "name": "Хладилник фризер Gorenje RK6191AX",
+        "cathegory": "Големи електроуреди",
+        "subcathegory": "Хладилна техника",
+        "type": "Хладилници с фризер",
+        "quantity": "100",
+        "availability": true,
+        "main_url": "https://s11emagst.akamaized.net/products/10764/10763268/images/res_bd491ab17f1537e7591fe41d10b9744a_450x450_ss0h.jpg",
+        "brand": "Gorenje",
+        "price": "739.99",
+        "salePrice": "",
+        "onSale": false,
+        "description": "Енергиен клас: A+ Размери (ШхВхД): 60 × 185 × 64 см Отваряне на вратата: Смяна на посоката на отваряне на вратата Врата: Истински Инокс с TouchFree покритие Цвят: Сив металик Slot-in: възможност за разполагане в ниша 60 см Тип климат: N, ST, T 1 компресор Бруто/нето обем: 326 / 326 л Капацитет на хладилната част: бруто/нето: 229 / 229 л Капацитет на фризерната част: бруто/нето: 97 / 97 л Обем на замразяване: 4.5 кг/24ч Време на съхранение при спиране на тока: 30 ч ",
+        "specifics": [
+            {
+                "name": "Енергиен клас",
+                "spec": "A+"
+            },
+            {
+                "name": "Ниво на шум",
+                "spec": "40 dB'"
+            },
+            {
+                "name": "Цвят",
+                "spec": "Сив металик"
+            },
+            {
+                "name": "Нетен обем хладилник",
+                "spec": "229 l"
+            }
+        ]
+    },
+    {
+        "id": "126",
+        "name": "Хладилник с фризер Gorenje RK611PW4",
+        "cathegory": "Големи електроуреди",
+        "subcathegory": "Хладилна техника",
+        "type": "Хладилници с фризер",
+        "quantity": "100",
+        "availability": true,
+        "main_url": "https://s11emagst.akamaized.net/products/13864/13863043/images/res_c7baf0d13d26e6809708d024a719439f_450x450_bqk4.jpg",
+        "brand": "Gorenje",
+        "price": "599.99",
+        "salePrice": "",
+        "onSale": false,
+        "description": "Енергиен клас: A+; Размери (ШхВхД): 60 × 185 × 64 см; Отваряне на вратата: Смяна на посоката на отваряне на вратата; Врата: Метална врата",
+        "specifics": [
+            {
+                "name": "Енергиен клас",
+                "spec": "A+"
+            },
+            {
+                "name": "Ниво на шум",
+                "spec": "40 dB'"
+            },
+            {
+                "name": "Цвят",
+                "spec": "Бял"
+            },
+            {
+                "name": "Нетен обем хладилник",
+                "spec": "326 l"
+            }
+        ]
+    },
+    {
+        "id": "127",
+        "name": "Хладилник с фризер Beko RCSA400K20DW",
+        "cathegory": "Големи електроуреди",
+        "subcathegory": "Хладилна техника",
+        "type": "Хладилници с фризер",
+        "quantity": "100",
+        "availability": true,
+        "main_url": "https://s11emagst.akamaized.net/products/3744/3743215/images/res_4cbada3e99391d0e8e7da3b72c2a9cd3_450x450_5q07.jpg",
+        "brand": "Beko",
+        "price": "774.99",
+        "salePrice": "",
+        "onSale": false,
+        "description": "Active Fresh Blue Light Благодарение на технологията Active Fresh Blue Light на Веко процесът на фотосинтеза продължава и в хладилника, което удължава срока за съхранение на пресните плодове и зеленчуци, запазвайки естествения им вкус и хранителни елементи. Активна защита на уплътняването Уплътненията на вратата обикновено се почистват трудно и представляват подходяща среда за натрупване на бактерии. С помощта на антибактериалната добавка към уплътненията на вратата тези области остават хигиенични и уплътнението служи като цялостна антибактериална защита. Buzzer Сигнализира при неправилно затваряне на вратата. Енергиен клас A+ Хладилните уреди с енергиен клас A+ изразходват с до 24% по-малко електроенергия в сравнение с подобните уреди енергиен клас А. ",
+        "specifics": [
+            {
+                "name": "Енергиен клас",
+                "spec": "A+"
+            },
+            {
+                "name": "Ниво на шум",
+                "spec": "40 dB'"
+            },
+            {
+                "name": "Цвят",
+                "spec": "Бял"
+            },
+            {
+                "name": "Нетен обем хладилник",
+                "spec": "377 l"
+            }
+        ]
+    },
+    {
+        "id": "128",
+        "name": "Хладилник с фризер Beko RCNA400K20DZP",
+        "cathegory": "Големи електроуреди",
+        "subcathegory": "Хладилна техника",
+        "type": "Хладилници с фризер",
+        "quantity": "100",
+        "availability": true,
+        "main_url": "https://s11emagst.akamaized.net/products/4153/4152895/images/res_7afff14fb94ab93beed291d5714f667c_450x450_1np2.jpg",
+        "brand": "Beko",
+        "price": "1039.99",
+        "salePrice": "",
+        "onSale": false,
+        "description": "Намалява увяхването на зеленчуци и билки. Отделението EverFresh+ е проектирано, за да запази максимално дълго свежестта на билки и зеленчуци. Регулира нивото на влажност, чрез проектираните отвори за въздушни течения, което значително намалява ефекта на увяхване. До 3 пъти по-дълго съхранение, отколкото в нормални хладилници. ",
+        "specifics": [
+            {
+                "name": "Енергиен клас",
+                "spec": "A+"
+            },
+            {
+                "name": "Ниво на шум",
+                "spec": "43 dB'"
+            },
+            {
+                "name": "Цвят",
+                "spec": "Черен"
+            },
+            {
+                "name": "Нетен обем хладилник",
+                "spec": "351 l"
+            }
+        ]
+    },
+    {
+        "id": "129",
+        "name": "Фризер Heinner HFF-160NHA+",
+        "cathegory": "Големи електроуреди",
+        "subcathegory": "Хладилна техника",
+        "type": "Фризери",
+        "quantity": "100",
+        "availability": true,
+        "main_url": "https://s11emagst.akamaized.net/products/6332/6331589/images/res_26a95e96fc7d9b95497779398c9ed399_450x450_v8j8.jpg",
+        "brand": "Heinner",
+        "price": "464.99",
+        "salePrice": "",
+        "onSale": false,
+        "description": "Heinner HFF-160NHA+",
+        "specifics": [
+            {
+                "name": "Енергиен клас",
+                "spec": "A+"
+            },
+            {
+                "name": "Ниво на шум",
+                "spec": "42 dB'"
+            },
+            {
+                "name": "Цвят",
+                "spec": "Бял"
+            },
+            {
+                "name": "Нетен обем фризер",
+                "spec": "163 l"
+            }
+        ]
+    },
+    {
+        "id": "130",
+        "name": "Фризер Star-Light FRM-227SSNF",
+        "cathegory": "Големи електроуреди",
+        "subcathegory": "Хладилна техника",
+        "type": "Фризери",
+        "quantity": "100",
+        "availability": true,
+        "main_url": "https://s11emagst.akamaized.net/products/8355/8354023/images/res_b647b0f79baaaf9ea513f998486ccf3e_450x450_mhnd.jpg",
+        "brand": "Star-Light",
+        "price": "899.99",
+        "salePrice": "",
+        "onSale": false,
+        "description": "Heinner HFF-160NHA+",
+        "specifics": [
+            {
+                "name": "Енергиен клас",
+                "spec": "A+"
+            },
+            {
+                "name": "Ниво на шум",
+                "spec": "42 dB'"
+            },
+            {
+                "name": "Цвят",
+                "spec": "Сребрист"
+            },
+            {
+                "name": "Нетен обем фризер",
+                "spec": "227 l"
+            }
+        ]
+    },
+    {
+        "id": "131",
+        "name": "Пералня с вертикално зареждане Whirlpool TDLR 70210",
+        "cathegory": "Големи електроуреди",
+        "subcathegory": "Перални и сушилни",
+        "type": "Перални",
+        "quantity": "100",
+        "availability": true,
+        "main_url": "https://s11emagst.akamaized.net/products/3451/3450291/images/res_b623b3f6782446a1223f328d21178fb6_450x450_9q5s.jpg",
+        "brand": "Whirlpool",
+        "price": "649.99",
+        "salePrice": "",
+        "onSale": false,
+        "description": "Интуитивният LCD екран с изискан дизайн ще направи ползването на пералнята още по-лесно и удобно. Въртящият се програматор за избор на функция също е интуитивен и приятен на допир. Дигиталният дисплей е лесен за разчитане и прави настройката на програмите лесна и бърза спрямо вашите дрехи. Смарт пералня машина, подходяща за всякакъв тип пране. Какво осигурява технологията 6th Sense: • Отлични резултати при пране • Улеснено използване • Значително пестене на ресурси Технологията Sixth Sense гарантира перфектни резултати и качествено изпиране за всякакви материи. ",
+        "specifics": [
+            {
+                "name": "Енергиен клас",
+                "spec": "A+++"
+            },
+            {
+                "name": "Ниво на шум",
+                "spec": "60 dB'"
+            },
+            {
+                "name": "Цвят",
+                "spec": "Бял"
+            },
+            {
+                "name": "Капацитет на зареждане",
+                "spec": "7кг"
+            }
+        ]
+    },
+    {
+        "id": "132",
+        "name": "Пералня Whirlpool AWO/C61000",
+        "cathegory": "Големи електроуреди",
+        "subcathegory": "Перални и сушилни",
+        "type": "Перални",
+        "quantity": "100",
+        "availability": true,
+        "main_url": "https://s11emagst.akamaized.net/products/62/61249/images/res_a2fcb92f11592b077bcfa989d969d820_450x450_1955.jpg",
+        "brand": "Whirlpool",
+        "price": "479.99",
+        "salePrice": "",
+        "onSale": false,
+        "description": "Усъвършенстваните перални машини от новата гама свободностоящи уреди на Whirlpool предлага ненадмината грижа към тъканите, запазвайки естественоното им качество и цветове за по-дълго време, като същевременно минимизират разхода на ресурси. Ние постигнахме всичко това разработвайки нови технологични и дизайнерски решения. Технологията 6-th Sense представлява група от сензори, които следят всички компоненти от процеса на изпиране и оптимизират разходите на ток, вода и време до 30% в сравнение с пералня без технология 6-th Sense.",
+        "specifics": [
+            {
+                "name": "Енергиен клас",
+                "spec": "A++"
+            },
+            {
+                "name": "Ниво на шум",
+                "spec": "65 dB'"
+            },
+            {
+                "name": "Цвят",
+                "spec": "Бял"
+            },
+            {
+                "name": "Капацитет на зареждане",
+                "spec": "6кг"
+            }
+        ]
+    },
+    {
+        "id": "133",
+        "name": "Пералня Whirlpool FDLR 70220 S",
+        "cathegory": "Големи електроуреди",
+        "subcathegory": "Перални и сушилни",
+        "type": "Перални",
+        "quantity": "100",
+        "availability": true,
+        "main_url": "https://s11emagst.akamaized.net/products/3451/3450295/images/res_29fa97c6f5f201e4a6daf5bc734fbfbf_450x450_3tqk.jpg",
+        "brand": "Whirlpool",
+        "price": "869.99",
+        "salePrice": "",
+        "onSale": false,
+        "description": "Whirlpool FDLR 70220 S",
+        "specifics": [
+            {
+                "name": "Енергиен клас",
+                "spec": "A+++"
+            },
+            {
+                "name": "Ниво на шум",
+                "spec": "65 dB'"
+            },
+            {
+                "name": "Цвят",
+                "spec": "Сребрист"
+            },
+            {
+                "name": "Капацитет на зареждане",
+                "spec": "7кг"
+            }
+        ]
+    },
+    {
+        "id": "134",
+        "name": "Електрическа готварска печка Hansa FCCW69209",
+        "cathegory": "Големи електроуреди",
+        "subcathegory": "Готварски печки и микровълнови",
+        "type": "Готварски печки",
+        "quantity": "100",
+        "availability": true,
+        "main_url": "https://s11emagst.akamaized.net/products/412/411539/images/res_8566daf7640b3d347d81b5f945f3b240_450x450_i218.jpg",
+        "brand": "Hansa",
+        "price": "519.99",
+        "salePrice": "",
+        "onSale": false,
+        "description": "Hansa FCCW69209",
+        "specifics": [
+            {
+                "name": "Брой нагревателни зони",
+                "spec": "4"
+            },
+            {
+                "name": "Мощност голям нагревател",
+                "spec": "2.3 kW"
+            },
+            {
+                "name": "Мощност малък нагревател",
+                "spec": "1.2 kW"
+            },
+            {
+                "name": "Мощност основен нагревател",
+                "spec": "1.8 kW"
+            }
+        ]
+    },
+    {
+        "id": "135",
+        "name": "Електрическа готварска печка Hansa FCCX59129",
+        "cathegory": "Големи електроуреди",
+        "subcathegory": "Готварски печки и микровълнови",
+        "type": "Готварски печки",
+        "quantity": "100",
+        "availability": true,
+        "main_url": "https://s11emagst.akamaized.net/products/620/619440/images/res_c315f437859d574d7f631246ab4f0527_450x450_5i41.jpg",
+        "brand": "Hansa",
+        "price": "609.99",
+        "salePrice": "",
+        "onSale": false,
+        "description": "Hansa FCCX59129",
+        "specifics": [
+            {
+                "name": "Брой нагревателни зони",
+                "spec": "4"
+            },
+            {
+                "name": "Мощност голям нагревател",
+                "spec": "2 kW"
+            },
+            {
+                "name": "Мощност малък нагревател",
+                "spec": "1.2 kW"
+            },
+            {
+                "name": "Мощност основен нагревател",
+                "spec": "1.7 kW"
+            }
+        ]
+    },
+    {
+        "id": "136",
+        "name": "Готварска печка Diplomat M21",
+        "cathegory": "Големи електроуреди",
+        "subcathegory": "Готварски печки и микровълнови",
+        "type": "Готварски печки",
+        "quantity": "100",
+        "availability": true,
+        "main_url": "https://s11emagst.akamaized.net/products/4884/4883192/images/res_5583b5658c819ba8e98989c84d2d84cd_450x450_qqgq.jpg",
+        "brand": "Diplomat",
+        "price": "229.99",
+        "salePrice": "",
+        "onSale": false,
+        "description": "Готварска печка за вкусни резултати! Пестите време и място в кухнята. Стилна Класически бяла и компактна , тя е необходим помощник в кухнята. Изчистеният дизайн я прави подходяща и за най-изтънчения интериор. Фурна 24-литровата й фурна е достатъчна, за да зарадвате с вкусни ястия цялото семейство. Удобна за работа, благодарение на степенното отваряне на фурната. Спестете време, приготвяйки няколко ястия едновременно. Осветление за повече удобство. С нея готвенето ще е забавно, а хапването – вкусно. Котлоните са два - електрически, единият е бързонагряващ. ",
+        "specifics": [
+            {
+                "name": "Брой нагревателни зони",
+                "spec": "2"
+            },
+            {
+                "name": "Мощност голям нагревател",
+                "spec": "2 kW бързонагряващ"
+            },
+            {
+                "name": "Мощност малък нагревател",
+                "spec": "1 kW"
+            }
+        ]
+    },
+    {
+        "id": "137",
+        "name": "Готварска печка Diplomat DPL-504",
+        "cathegory": "Големи електроуреди",
+        "subcathegory": "Готварски печки и микровълнови",
+        "type": "Готварски печки",
+        "quantity": "100",
+        "availability": true,
+        "main_url": "https://s11emagst.akamaized.net/products/9718/9717241/images/res_78f6dc940f7e54e0132d125d6772af5d_450x450_d1u4.jpg",
+        "brand": "Diplomat",
+        "price": "329.99",
+        "salePrice": "",
+        "onSale": false,
+        "description": "Готварска печка, която се грижи за вкусната ви храна. Стандартните размери и изчистен дизайн я правят точния избор за мястото, отредено за нея. Създайте си допълнителен комфорт в кухнята. Обем Цели 53 литра обем. Може да сготвите, каквото пожелаете. 4 ел. котлони Печката е с ел. котлони- изборът как да готвите е ваш. Гответе няколко ястия едновременно за по-голямо удобство. Окомплектована с тава, решетка. Фурна с 3 функции. Създайте си удобство в кухнята, гответе няколко ястия едновременно. Усетете качеството с тази печка на Diplomat, с нея се готви вкусно.",
+        "specifics": [
+            {
+                "name": "Брой нагревателни зони",
+                "spec": "4 електрически котлона"
+            },
+            {
+                "name": "Голям котлон",
+                "spec": "2 х Ø180mm котлон"
+            },
+            {
+                "name": "Малък котлон",
+                "spec": "2 x Ф145mm"
+            }
+        ]
+    },
+    {
+        "id": "138",
+        "name": "Микровълнова фурна Daewoo KOR-6S2BR",
+        "cathegory": "Големи електроуреди",
+        "subcathegory": "Готварски печки и микровълнови",
+        "type": "Микровълнови фурни",
+        "quantity": "100",
+        "availability": true,
+        "main_url": "https://s11emagst.akamaized.net/products/4933/4932284/images/res_5d656d5ddd88b7c5d6486704ac79abc0_450x450_i6t4.jpg",
+        "brand": "Daewoo",
+        "price": "153.99",
+        "salePrice": "",
+        "onSale": false,
+        "description": "Daewoo KOR-6S2BR",
+        "specifics": [
+            {
+                "name": "Капацитет (л)",
+                "spec": "20"
+            },
+            {
+                "name": "Мощност фурна (W)",
+                "spec": "800"
+            },
+            {
+                "name": "Контролен панел",
+                "spec": "дигитален"
+            }
+        ]
+    },
+    {
+        "id": "139",
+        "name": "Микровълнова фурна Daewoo KOR-6S20K",
+        "cathegory": "Големи електроуреди",
+        "subcathegory": "Готварски печки и микровълнови",
+        "type": "Микровълнови фурни",
+        "quantity": "100",
+        "availability": true,
+        "main_url": "https://s11emagst.akamaized.net/products/4441/4440297/images/res_2fd06ae2a558e6c756f1d9e0f8284d30_450x450_k51j.jpg",
+        "brand": "Daewoo",
+        "price": "139.99",
+        "salePrice": "",
+        "onSale": false,
+        "description": "Daewoo KOR-6S20K",
+        "specifics": [
+            {
+                "name": "Капацитет (л)",
+                "spec": "20"
+            },
+            {
+                "name": "Мощност фурна (W)",
+                "spec": "700"
+            },
+            {
+                "name": "Контролен панел",
+                "spec": "Механичен"
+            }
+        ]
+    },
+    {
+        "id": "140",
+        "name": "Микровълнова фурна Daewoo Retro KOR-6LBRB",
+        "cathegory": "Големи електроуреди",
+        "subcathegory": "Готварски печки и микровълнови",
+        "type": "Микровълнови фурни",
+        "quantity": "100",
+        "availability": true,
+        "main_url": "https://s11emagst.akamaized.net/products/2082/2081853/images/res_d03abcb77f4bc1d623749023c120c26c_450x450_8auq.jpg",
+        "brand": "Daewoo",
+        "price": "199.99",
+        "salePrice": "",
+        "onSale": false,
+        "description": "Daewoo KOR-6LBRB",
+        "specifics": [
+            {
+                "name": "Капацитет (л)",
+                "spec": "20"
+            },
+            {
+                "name": "Мощност фурна (W)",
+                "spec": "800"
+            },
+            {
+                "name": "Контролен панел",
+                "spec": "Електронен"
+            }
+        ]
+    },
+    {
+        "id": "141",
+        "name": "Микровълнова Sharp R760S",
+        "cathegory": "Големи електроуреди",
+        "subcathegory": "Готварски печки и микровълнови",
+        "type": "Микровълнови фурни",
+        "quantity": "100",
+        "availability": true,
+        "main_url": "https://s11emagst.akamaized.net/products/8924/8923527/images/res_5f60c7a1c4787f64fc861da46e0583b5_450x450_ajs0.jpg",
+        "brand": "Sharp",
+        "price": "254.99",
+        "salePrice": "",
+        "onSale": false,
+        "description": "Sharp R760S",
+        "specifics": [
+            {
+                "name": "Капацитет (л)",
+                "spec": "23"
+            },
+            {
+                "name": "Мощност фурна (W)",
+                "spec": "900"
+            },
+            {
+                "name": "Контролен панел",
+                "spec": "дигитален"
+            }
+        ]
+    },
+    {
+        "id": "142",
+        "name": "Инверторен Климатик DAIKIN FVXM25F",
+        "cathegory": "Големи електроуреди",
+        "subcathegory": "Бойлери, Климатици & Уреди за отопление",
+        "type": "Климатици",
+        "quantity": "100",
+        "availability": true,
+        "main_url": "https://s11emagst.akamaized.net/products/8971/8970352/images/res_e74cab24343d30d57c3d0907ef3aa9bd_450x450_et96.jpg",
+        "brand": "Daikin",
+        "price": "2150.99",
+        "salePrice": "2080.99",
+        "onSale": true,
+        "description": "Подов модел на Японският концерн.Отлични характеристики и високо качество на изработка. Компактни размери,седмичен таймер,филтър за фотокаталитично пречистване на въздуха от титанов апатит,двупосочен изходящ поток и супер ниски нива на шум. ",
+        "specifics": [
+            {
+                "name": "Модел",
+                "spec": "Стандартен"
+            },
+            {
+                "name": "Минимална температура при охлаждане (-°C)",
+                "spec": "-15"
+            },
+            {
+                "name": "Максимална температура при охлаждане (°+C)",
+                "spec": "46"
+            },
+            {
+                "name": "Минимална температура при отопление (-°C)",
+                "spec": "-15"
+            },
+            {
+                "name": "Максимална температура при отопление (°+C)",
+                "spec": "24"
+            }
+        ]
+    },
+    {
+        "id": "143",
+        "name": "Климатик Daikin Comfort FTX25J3/RX25K",
+        "cathegory": "Големи електроуреди",
+        "subcathegory": "Бойлери, Климатици & Уреди за отопление",
+        "type": "Климатици",
+        "quantity": "100",
+        "availability": true,
+        "main_url": "https://s11emagst.akamaized.net/products/14371/14370711/images/res_460f26df2ba71f44446f57062d03be4e_450x450_apb4.jpg",
+        "brand": "Daikin",
+        "price": "1049.99",
+        "salePrice": "",
+        "onSale": false,
+        "description": "Daikin Comfort FTX25J3/RX25K",
+        "specifics": [
+            {
+                "name": "Модел",
+                "spec": "Стандартен"
+            },
+            {
+                "name": "Минимална температура при охлаждане (-°C)",
+                "spec": "5"
+            },
+            {
+                "name": "Максимална температура при охлаждане (°+C)",
+                "spec": "30"
+            },
+            {
+                "name": "Минимална температура при отопление (-°C)",
+                "spec": "15"
+            },
+            {
+                "name": "Максимална температура при отопление (°+C)",
+                "spec": "30"
+            }
+        ]
+    },
+    {
+        "id": "144",
+        "name": "Климатик Daikin FTXB50C/RXB50C",
+        "cathegory": "Големи електроуреди",
+        "subcathegory": "Бойлери, Климатици & Уреди за отопление",
+        "type": "Климатици",
+        "quantity": "100",
+        "availability": true,
+        "main_url": "https://s11emagst.akamaized.net/products/14164/14163793/images/res_62fceec21ed818f434e12213a55bd23b_450x450_9kfu.jpg",
+        "brand": "Daikin",
+        "price": "1449.99",
+        "salePrice": "",
+        "onSale": false,
+        "description": "Daikin FTXB50C/RXB50C",
+        "specifics": [
+            {
+                "name": "Модел",
+                "spec": "Стандартен"
+            },
+            {
+                "name": "Енергийна ефективност при охлаждане",
+                "spec": "A+"
+            },
+            {
+                "name": "Ниво на шум",
+                "spec": "32 dB"
+            }
+        ]
+    },
+    {
+        "id": "145",
+        "name": "Инверторен климатик MIDEA MSMAAU-09HRDN1 / MOBA03-09HFN1 BLANC 2016",
+        "cathegory": "Големи електроуреди",
+        "subcathegory": "Бойлери, Климатици & Уреди за отопление",
+        "type": "Климатици",
+        "quantity": "100",
+        "availability": true,
+        "main_url": "https://s11emagst.akamaized.net/products/3539/3538729/images/res_cdddc6362727b556a670fd89b3940e85_450x450_4tau.jpg",
+        "brand": "Midea",
+        "price": "729.99",
+        "salePrice": "",
+        "onSale": false,
+        "description": "Подходящ за помещения до 15 кв.м. в режим на охлаждане и до 13 кв.м. в режим на отопление. Принадлежи към енергиен клас А++/А+, което е свързано с икономична работа при по-нисък разход на енергия",
+        "specifics": [
+            {
+                "name": "Модел",
+                "spec": "Стандартен"
+            },
+            {
+                "name": "Енергийна ефективност при охлаждане",
+                "spec": "A++"
+            },
+            {
+                "name": "Енергийна ефективност при отопление",
+                "spec": "A+"
+            },
+            {
+                "name": "Ниво на шум",
+                "spec": "28 dB"
+            }
+        ]
+    },
+    {
+        "id": "146",
+        "name": "Сплит инверторен климатик Midea MS12FU-12HRDN1",
+        "cathegory": "Големи електроуреди",
+        "subcathegory": "Бойлери, Климатици & Уреди за отопление",
+        "type": "Климатици",
+        "quantity": "100",
+        "availability": true,
+        "main_url": "https://s11emagst.akamaized.net/products/3884/3883788/images/res_dcd7c29380ee6978e19d8c577adb3564_450x450_hp3m.jpg",
+        "brand": "Midea",
+        "price": "857.99",
+        "salePrice": "",
+        "onSale": false,
+        "description": "Midea MS12FU-12HRDN1",
+        "specifics": [
+            {
+                "name": "Модел",
+                "spec": "Стандартен"
+            },
+            {
+                "name": "Енергийна ефективност при охлаждане",
+                "spec": "A++"
+            },
+            {
+                "name": "Енергийна ефективност при отопление",
+                "spec": "A+"
+            },
+            {
+                "name": "Ниво на шум",
+                "spec": "53 dB"
+            }
+        ]
+    },
+    {
+        "id": "147",
+        "name": "Електрически бойлер Tesy BiLight GCV1204420B11TSR",
+        "cathegory": "Големи електроуреди",
+        "subcathegory": "Бойлери, Климатици & Уреди за отопление",
+        "type": "Бойлери",
+        "quantity": "100",
+        "availability": true,
+        "main_url": "https://s11emagst.akamaized.net/products/484/483316/images/res_fe910ca631cd2dbd529ab225becfb5bb_450x450_de95.jpg",
+        "brand": "Tesy",
+        "price": "279.99",
+        "salePrice": "",
+        "onSale": false,
+        "description": "Новият дизайн на струйника, изработен от неръждаема стомана, забавя бързото смесване на водата и създава уникалния PISTON EFFECT, осигуряващ до 15% повече топла вода. Технологията е в процес на патент",
+        "specifics": [
+            {
+                "name": "Обем",
+                "spec": "120л"
+            },
+            {
+                "name": "Налягане(Mpa)",
+                "spec": "0.8"
+            },
+            {
+                "name": "Номинална мощност(W)",
+                "spec": "2000"
+            },
+            {
+                "name": "Енергиен клас",
+                "spec": "C"
+            }
+        ]
+    },
+    {
+        "id": "148",
+        "name": "Обемен бойлер Tesy GCV 80 47 30 C21 TSR",
+        "cathegory": "Големи електроуреди",
+        "subcathegory": "Бойлери, Климатици & Уреди за отопление",
+        "type": "Бойлери",
+        "quantity": "100",
+        "availability": true,
+        "main_url": "https://s11emagst.akamaized.net/products/4028/4027051/images/res_3a4526bc5b0e36a46ccac27c94e8e8eb_450x450_ipp5.jpg",
+        "brand": "Tesy",
+        "price": "240.99",
+        "salePrice": "",
+        "onSale": false,
+        "description": "Прецизна технология INSUTECH Plus за равномерно разпределяне на изолацията, с висока плътност и дебелина от 32 мм. Тя е базирана на щадяща околната среда PU формула без CFC и HCFC PISTON ефект - PISTON ефект, осигуряващ до 15% повече топла вода. Управлява смесването на топлата и студената вода. Прекъснат термомост - До 16% по-ниски енергийни загуби, постигнати в резултат на премахване на термовръзката между водосъдържателя и монтажната планка. ",
+        "specifics": [
+            {
+                "name": "Обем",
+                "spec": "80л"
+            },
+            {
+                "name": "Номинална мощност(W)",
+                "spec": "3000"
+            },
+            {
+                "name": "Енергиен клас",
+                "spec": "C"
+            }
+        ]
+    },
+    {
+        "id": "149",
+        "name": "Електрически бойлер със серпентина Tesy BiLight GCV9S 1504420 B11 TSRP",
+        "cathegory": "Големи електроуреди",
+        "subcathegory": "Бойлери, Климатици & Уреди за отопление",
+        "type": "Бойлери",
+        "quantity": "100",
+        "availability": true,
+        "main_url": "https://s11emagst.akamaized.net/products/1038/1037727/images/res_ecb1a50c8b288a808c7843ad00154084_450x450_bkm0.jpg",
+        "brand": "Tesy",
+        "price": "429.99",
+        "salePrice": "",
+        "onSale": false,
+        "description": "Tesy BiLight GCV9S 1504420 B11 TSRP",
+        "specifics": [
+            {
+                "name": "Обем",
+                "spec": "150л"
+            },
+            {
+                "name": "Налягане(Mpa)",
+                "spec": "0.8"
+            },
+            {
+                "name": "Номинална мощност(W)",
+                "spec": "2000"
+            },
+            {
+                "name": "Енергиен клас",
+                "spec": "D"
+            }
+        ]
+    },
+    {
+        "id": "150",
+        "name": "Електрически бойлер Tesy Compact GCU1515L52RC",
+        "cathegory": "Големи електроуреди",
+        "subcathegory": "Бойлери, Климатици & Уреди за отопление",
+        "type": "Бойлери",
+        "quantity": "100",
+        "availability": true,
+        "main_url": "https://s11emagst.akamaized.net/products/9012/9011433/images/res_cdc6076ac56afa455a9d243214df5289_450x450_b1uj.jpg",
+        "brand": "Tesy",
+        "price": "134.99",
+        "salePrice": "",
+        "onSale": false,
+        "description": "Tesy Compact GCU1515L52RC",
+        "specifics": [
+            {
+                "name": "Обем",
+                "spec": "15л"
+            },
+            {
+                "name": "Налягане(Mpa)",
+                "spec": "0.8"
+            },
+            {
+                "name": "Номинална мощност(W)",
+                "spec": "1500"
+            },
+            {
+                "name": "Енергиен клас",
+                "spec": "D"
+            }
+        ]
+    },
+    {
+        "id": "151",
+        "name": "Проточен газов бойлер Bosch Therm 4000 O",
+        "cathegory": "Големи електроуреди",
+        "subcathegory": "Бойлери, Климатици & Уреди за отопление",
+        "type": "Бойлери",
+        "quantity": "100",
+        "availability": true,
+        "main_url": "https://s11emagst.akamaized.net/products/9385/9384463/images/res_ac53d460ab7ca9c03a201d6aa51913f9_450x450_9v0n.jpg",
+        "brand": "Bosch",
+        "price": "449.99",
+        "salePrice": "",
+        "onSale": false,
+        "description": "Този бойлер е оборудван с пиезо система за запалване.Горелка за природен газ/LPG. Топлообменникът няма калаено/оловно покритие.",
+        "specifics": [
+            {
+                "name": "Обем",
+                "spec": "11л"
+            },
+            {
+                "name": "Налягане(Mpa)",
+                "spec": "12"
+            },
+            {
+                "name": "Номинална мощност(W)",
+                "spec": "19.2"
+            },
+            {
+                "name": "Енергиен клас",
+                "spec": "D"
+            }
+        ]
+    },
+    {
+        "id": "152",
+        "name": "Електрически бойлер Bosch Tronic 1000 T ES 100 5",
+        "cathegory": "Големи електроуреди",
+        "subcathegory": "Бойлери, Климатици & Уреди за отопление",
+        "type": "Бойлери",
+        "quantity": "100",
+        "availability": true,
+        "main_url": "https://s11emagst.akamaized.net/products/4050/4049505/images/res_8a2df93b56bd27b98d4611a5d7fd6a0d_450x450_ia9i.jpg",
+        "brand": "Bosch",
+        "price": "239.99",
+        "salePrice": "",
+        "onSale": false,
+        "description": "100 л, диаметър 46 см, вертикален с фиксирана температура.",
+        "specifics": [
+            {
+                "name": "Обем",
+                "spec": "100л"
+            },
+            {
+                "name": "Налягане(Mpa)",
+                "spec": "0.8"
+            },
+            {
+                "name": "Номинална мощност(W)",
+                "spec": "2000"
+            },
+            {
+                "name": "Енергиен клас",
+                "spec": "D"
+            }
+        ]
     }
 ]

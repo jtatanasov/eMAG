@@ -9,7 +9,7 @@ document.addEventListener('DOMContentLoaded', function () {
             location.replace('#login');
             return;
         }
-        console.log(page);
+        
         switch (page) {
             case 'login':
                 loginAndRegisterController();

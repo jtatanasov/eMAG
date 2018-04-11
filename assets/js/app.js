@@ -5,6 +5,11 @@ document.addEventListener('DOMContentLoaded', function () {
             page = "products";
         };
 
+        if (!JSON.parse(sessionStorage.getItem('isLogged')) && page != '' && page != 'login' && page != 'register') {
+            location.replace('#login');
+            return;
+        }
+        
         switch (page) {
             case 'login':
                 loginAndRegisterController();

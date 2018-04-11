@@ -107,6 +107,12 @@ function productPageController() {
 
                 $("#add-to-cart").click(function(event){
                     event.preventDefault();
+
+                    var currUserCartProducts = user.cart.products;
+                    var tmpCart = new Cart();
+                    currUserCartProducts.forEach(pr => tmpCart.addToCart(pr));
+                    tmpCart.addToCart(product);
+                    userService.updateCart(user.id, tmpCart);
                     userService.addToCart(user.id, product);
 
                     ////да има ли проверка? в емга иска да се логват чак след като вече тръгнат да поръчват нещата?

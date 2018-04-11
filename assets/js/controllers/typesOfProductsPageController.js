@@ -389,6 +389,7 @@ function typesOfProductsPageController() {
 
             //adding to cart:
             $(".single-product-buy-button").on("click", function (event) {
+                event.preventDefault();
                 if(sessionStorage.getItem('isLogged')){
                     var productID = event.target.closest("article").id;
                     let product = productsService.getProduct(productID);

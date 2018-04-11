@@ -28,12 +28,23 @@ function typesOfProductsPageController() {
         var availablePages;
         var sortPrice = null;
 
+        var brands = filtersService.findFilter("availableBrands").pass(productsType);
+
+        // add brands side:
+        filtersService.clearAllBrands();
+        brands.forEach(el => {
+            console.log("206 - el => " + el)
+            filtersService.addABrand(productsType, el);
+        })
+
+
         var clearProductsOnPage = function () {
             $("#available-products").html("");
         }
 
         var loadProductsOnPage = function (arr) {
-            currentAvailableProducts = filtersService.filterArray(productsType);
+            // currentAvailableProducts = filtersService.filterArray(productsType);
+            currentAvailableProducts = filtersService.findFilter("ultimateFilter").pass(productsType);
             var curr = filtersService.getAllAvailableBrandsProducts();
             if (curr.length > 0) {
                 currentAvailableProducts = curr;
@@ -65,13 +76,13 @@ function typesOfProductsPageController() {
                     }
 
                     var toAppend = `<article class="single-product-container" id="${el.id}">
-                <div class="single-product-nav">
-                    <img src="${src}" class="icon ${classTwo}" alt="" />
-                </div>
-                <div class="single-product-img-container">
-                    <img src="${el.main_url}" class="single-product-image" alt="" />
-                </div>       
-                <a href="" class="single-product-title">${el.name}</a>`
+                        <div class="single-product-nav">
+                            <img src="${src}" class="icon ${classTwo}" alt="" />
+                        </div>
+                        <div class="single-product-img-container">
+                            <img src="${el.main_url}" class="single-product-image" alt="" />
+                        </div>       
+                    <a href="" class="single-product-title">${el.name}</a>`
                     if (el.availability) {
                         toAppend += `<p class="single-product-availability, product-available">в наличност</p>`
                     } else {
@@ -168,13 +179,13 @@ function typesOfProductsPageController() {
                         var change = Math.floor((price - whole) * 100);
 
                         toAppend = `<div id="buy-popup-left-side">
-                        <img id="buy-popup-product-img" src="${product.main_url}" alt="">
-                        <h3 id="buy-popup-product-title">${product.name}</h3>
-                    </div>    
-                    <div id="buy-popup-right-side">
-                        <p id="buy-popup-product-price">${whole}<sup>${change}</sup> лв.</p>
-                        <button id="buy-popup-cart-btn">виж количката</button>
-                    </div>`
+                            <img id="buy-popup-product-img" src="${product.main_url}" alt="">
+                            <h3 id="buy-popup-product-title">${product.name}</h3>
+                        </div>    
+                        <div id="buy-popup-right-side">
+                            <p id="buy-popup-product-price">${whole}<sup>${change}</sup> лв.</p>
+                            <button id="buy-popup-cart-btn">виж количката</button>
+                        </div>`
 
                         $("#buy-popup-product-container").append(toAppend);
                         $("#buy-popup").show();
@@ -200,11 +211,23 @@ function typesOfProductsPageController() {
                 var brands = filtersService.findFilter("availableBrands").pass(currentAvailableProducts);
 
                 //add brands side:
-                filtersService.clearAllBrands();
-                brands.forEach(el => {
-                    filtersService.addABrand(currentAvailableProducts, el);
-                })
-                console.log(filtersService.brandsFilter.allBrands); //всички възможни марки 
+                // filtersService.clearAllBrands();
+                // brands.forEach(el => {
+                //     console.log("206 - el => " + el)
+                //     filtersService.addABrand(currentAvailableProducts, el);
+                // })
+
+                // var brandsToLoop = filtersService.brandsFilter.allBrands;
+                // $("#manufacturer-filter-ul>li").each(function(){
+                //     var elId = (this.id).slice(0, -3);
+                //     var thisId = this.id;
+                //     if(brandsToLoop.findIndex(el => el.brandName == elId) >= 0){
+                //         var availableCurrBrand = filtersService.findFilter("filterByBrand").pass(currentAvailableProducts, elId);
+                //         $(`#${thisId}>span`).html(`(${availableCurrBrand.length})`);
+                //     } else {
+                //         $(`#${thisId}>span`).html(`(${0})`);
+                //     }
+                // });
 
                 //filters specifics
                 //availability
@@ -359,12 +382,12 @@ function typesOfProductsPageController() {
 
                 filtersService.brandsFilter.allBrands.forEach(el => {
                     $("#manufacturer-filter-ul").append(`<li id="${el.brandName}-li">
-                <input type="checkbox" id="${el.brandName}" class="${el.brandName}"> ${el.brandName}
-                    <span class="number-of-results">
-                        (${el.brandProducts.length})
-                    </span>
-                </input>
-                </li>`);
+                        <input type="checkbox" id="${el.brandName}" class="${el.brandName}"> ${el.brandName}
+                            <span class="number-of-results">
+                                (${el.brandProducts.length})
+                            </span>
+                        </input>
+                    </li>`);
 
                     $("#distributor-select").append(`
                 <option value="${el.brandName.toLowerCase()}" class="${el.brandName}">${el.brandName} <span>(${el.brandProducts.length})</span></option>
@@ -385,7 +408,6 @@ function typesOfProductsPageController() {
                     var event = event.originalEvent;
                     var brandName = event.target.id;
                     currentPage = 1;
-                    console.log(brandName)
                     if ($(event.target).is(":checked")) {
                         $("#filters-top-nav-distributor").css({ "display": "inline-block" });
                         if ($('#hr-filters-nav-top').css({ 'display': 'none' })) {
@@ -394,14 +416,13 @@ function typesOfProductsPageController() {
                         $($(`option[value='${brandName.toLowerCase()}']`)[0]).prop("selected", true);
 
                         filtersService.addAvailableBrand(brandName);
-                        var currentAvailableProducts = filtersService.getAllAvailableBrandsProducts();
+                        var currentAvailableProducts = filtersService.brandsFilter.getAllAvailableBrandsProducts;
                         clearProductsOnPage();
                         loadProductsOnPage();
                     } else {
                         filtersService.removeAvailableBrand(brandName);
-                        console.log(filtersService.brandsFilter.activeBrands)
                         if (filtersService.brandsFilter.activeFilters <= 0) {
-                            $("#filters-top-nav-distributor").css({ "display": "none" });
+                            $("#filters-top-nav-distributor").css({ 'display': 'none' })
                             if ($("#filters-top-nav-availability").css({ "display": "none" })) {
                                 ($('#hr-filters-nav-top').css({ 'display': 'none' }));
                             }
@@ -410,6 +431,19 @@ function typesOfProductsPageController() {
                         loadProductsOnPage();
                     }
                 })
+
+                // $('#manufacturer-filter-ul>li').on("change", function(event){
+                //     var active = 0;
+                //     $('#manufacturer-filter-ul>li>input[type=checkbox]').each(function(){
+                //         if($(this).is(":checked")){
+                //             active++;
+                //         }
+                //     })
+                //     console.log(active);
+                //     if(active <= 0){
+                //         console.log("whoops")
+                //     }
+                // });
 
 
                 // BRANDS END ++++++++++++++++++++++++++++++++

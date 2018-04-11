@@ -59,6 +59,7 @@ var filtersService = (function(){
         var filteredArr = arr;
         this.activeFilters.forEach(el => {
             filteredArr = el.pass(filteredArr);
+            console.log(filteredArr);
         });
         return filteredArr;
     }
@@ -70,6 +71,8 @@ var filtersService = (function(){
 
     FilterService.prototype.addAvailableBrand = function(name){
         var toPush = this.brandsFilter.allBrands.find(el => el.brandName === name);
+        console.log(this.brandsFilter.allBrands);
+        console.log(toPush);
         this.brandsFilter.availableBrands.push(toPush);
         this.brandsFilter.activeBrands++;
     }
@@ -84,7 +87,6 @@ var filtersService = (function(){
 
     FilterService.prototype.getAllAvailableBrandsProducts = function(){
         var toReturn = [];
-        console.log(this.brandsFilter.availableBrands);
         this.brandsFilter.availableBrands.forEach(br => br.brandProducts.forEach(pr => toReturn.push(pr)));
         return toReturn;
     }
@@ -125,7 +127,18 @@ var filtersService = (function(){
         return products.filter(el => el.onSale);
     });
 
-    
+    toReturn.createFilter("ultimateFilter", function(arr){
+
+        if(toReturn.brandsFilter.activeBrands > 0){
+            tempArr = []
+            toReturn.brandsFilter.availableBrands.forEach(br => {
+                tempArr.concat(arr.filter(el => el.brand === br.brandName));
+            });
+            return toReturn.filterArray(tempArr);
+        } else {
+            return toReturn.filterArray(arr);
+        }
+    })
 
     return toReturn;
 })();

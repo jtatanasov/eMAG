@@ -133,6 +133,22 @@ function typesOfProductsPageController() {
                     loadProductsOnPage();
                 });
 
+                $("#back-page").unbind().click(function(event){
+                    event = event.originalEvent;
+                    event.preventDefault();
+                    currentPage -= 1;
+                    clearProductsOnPage();
+                    loadProductsOnPage();
+                });
+
+                $("#forward-page").unbind().click(function(event){
+                    event = event.originalEvent;
+                    event.preventDefault();
+                    currentPage += 1;
+                    clearProductsOnPage();
+                    loadProductsOnPage();
+                });
+
                 // //TODO: логиката на буферния бутон??
                 // if((availablePages.length > 4) && (index )){
                 //     $(`<button disabled id="buffer-button">...</button>`).insertBefore(elToAppend);
@@ -145,7 +161,7 @@ function typesOfProductsPageController() {
             } else {
                 $("#back-page").prop('disabled', true);
             }
-            if (currentPage === availablePages.length) {
+            if (currentPage == availablePages.length) {
                 $("#forward-page").prop('disabled', true);
             } else {
                 $("#forward-page").prop('disabled', false);
@@ -515,7 +531,7 @@ function typesOfProductsPageController() {
             //
         })
         .catch(function (error) {
-            throw new Error("Error occured " + error)
+            throw new Error("Error occured " + error);
         });
     })
 }

@@ -1,6 +1,9 @@
 document.addEventListener('DOMContentLoaded', function () {
     function router() {
         var page = location.hash.slice(1);
+        if(page.search("products") >= 0){
+            page = "products";
+        };
 
         switch (page) {
             case 'login':

@@ -16,6 +16,7 @@ function typesOfProductsPageController() {
     user = JSON.parse(user);
 
     var productsType = productsService.getTypesOfProducts(cathegory, subcathegory, type);
+    console.log(productsType)
     var currentAvailableProducts = productsType.slice();
     var currentPageProducts;
     var allTypes = productsService.getTypesInSubcathegory(cathegory, subcathegory);
@@ -206,7 +207,9 @@ function typesOfProductsPageController() {
                 var updateProduct = JSON.parse(localStorage.getItem('product'));
                 updateProduct.type = currType;
                 localStorage.setItem("product", JSON.stringify(updateProduct));
-                location.reload();
+                console.log(updateProduct);
+                // window.location.reload(true);
+                location.replace(`#products/${currType}`);
             });
 
             //adding brands        

@@ -267,7 +267,9 @@ main{
 /* #specifics-container{
     background-color: rgb(233,235,238);
 } */
-
+#specifics {
+    padding-bottom: 0.2em;
+}
 #specifics>table{
     margin-top: 4%;
     border-spacing:0;

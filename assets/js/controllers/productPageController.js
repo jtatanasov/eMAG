@@ -49,6 +49,20 @@ function productPageController() {
                 $("#add-to-cart-buy-nav-div>span").innerHTML = `${whole}<sup>${change}</sup>`;
                 $("#product-price>span").html(`${whole}<sup>${change}</sup>`);
 
+                //path ev listener
+                $("#product-type").on("click", function(event){
+                    event = event.originalEvent;
+                    event.preventDefault();
+                    var productStorage = {
+                        id: productID,
+                        cathegory: cathegory,
+                        subcathegory: subcathegory,
+                        type: type
+                    }
+                    localStorage.setItem('product', JSON.stringify(productStorage));
+                    location.replace('#products');
+                })
+
                 //sticky nav bars:            
                 var productNavTop = $('#product-nav').offset().top;
                 var buyNavTop = $('#product-user-menu').offset().top;

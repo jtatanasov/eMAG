@@ -1,8 +1,8 @@
-var filtersService = (function(){
+var filtersService = (function () {
 
     Filter.nextID = 1;
 
-    function FilterService(){
+    function FilterService() {
         this.activeFilters = [];
         this.allFilters = [];
         this.brandsFilter = {
@@ -12,84 +12,84 @@ var filtersService = (function(){
         }
     }
 
-    function Filter(name, func){
+    function Filter(name, func) {
         this.name = name;
         this.pass = func;
         this.id = Filter.nextID++;
     }
 
-    function Brand(name, arr){
+    function Brand(name, arr) {
         this.brandName = name;
-        this.brandProducts = arr; 
+        this.brandProducts = arr;
     }
 
-    FilterService.prototype.createFilter = function(name, func){
+    FilterService.prototype.createFilter = function (name, func) {
         this.allFilters.push(new Filter(name, func));
     }
 
-    FilterService.prototype.findFilter = function(name){
+    FilterService.prototype.findFilter = function (name) {
         return this.allFilters.find(el => el.name === name);
     }
 
-    FilterService.prototype.findFilterIndex = function(name){
+    FilterService.prototype.findFilterIndex = function (name) {
         return this.allFilters.findIndex(el => el.name === name);
     }
 
-    FilterService.prototype.findActiveFilter = function(name){
+    FilterService.prototype.findActiveFilter = function (name) {
         return this.activeFilters.findIndex(el => el.name == name);
     }
 
-    FilterService.prototype.activateFilter = function(name){
+    FilterService.prototype.activateFilter = function (name) {
         var index = this.findFilterIndex(name);
-        if(this.activeFilters.findIndex(el => el.name === name) < 0){
+        if (this.activeFilters.findIndex(el => el.name === name) < 0) {
             var toPush = this.allFilters[index]
-            this.activeFilters.push(toPush);            
+            this.activeFilters.push(toPush);
         } else {
             console.log("already active")
         }
     }
 
-    FilterService.prototype.deactivateFilter = function(name){
+    FilterService.prototype.deactivateFilter = function (name) {
         var index = this.findActiveFilter(name);
-        if(index >= 0){
-            this.activeFilters = this.activeFilters.splice(index, 1);
+        if (index >= 0) {
+            this.activeFilters = [];
         }
     }
 
-    FilterService.prototype.filterArray = function(arr){
+    FilterService.prototype.filterArray = function (arr) {
         var filteredArr = arr;
         this.activeFilters.forEach(el => {
             filteredArr = el.pass(filteredArr);
         });
         return filteredArr;
     }
-    
-    FilterService.prototype.addABrand = function(products, name){
+
+    FilterService.prototype.addABrand = function (products, name) {
         var arr = products.filter(el => el.brand === name);
         this.brandsFilter.allBrands.push(new Brand(name, arr));
     }
 
-    FilterService.prototype.addAvailableBrand = function(name){
+    FilterService.prototype.addAvailableBrand = function (name) {
         var toPush = this.brandsFilter.allBrands.find(el => el.brandName === name);
         this.brandsFilter.availableBrands.push(toPush);
         this.brandsFilter.activeBrands++;
     }
 
-    FilterService.prototype.removeAvailableBrand = function(name){
+    FilterService.prototype.removeAvailableBrand = function (name) {
         var index = this.brandsFilter.availableBrands.findIndex(el => el.brandName === name);
-        if(index >= 0){
+        if (index >= 0) {
             this.brandsFilter.availableBrands.splice(index, 1);
             this.brandsFilter.activeBrands--;
         }
     }
 
-    FilterService.prototype.getAllAvailableBrandsProducts = function(){
+    FilterService.prototype.getAllAvailableBrandsProducts = function () {
         var toReturn = [];
         this.brandsFilter.availableBrands.forEach(br => br.brandProducts.forEach(pr => toReturn.push(pr)));
         return toReturn;
     }
 
-    FilterService.prototype.clearAllBrands = function(){
+    FilterService.prototype.clearAllBrands = function () {
         this.brandsFilter.allBrands = [];
         // this.brandsFilter.availableBrands = [];
         // this.activeBrands = 0;
@@ -97,10 +97,10 @@ var filtersService = (function(){
 
     var toReturn = new FilterService();
 
-    toReturn.createFilter("showAvailable", function(products){
+    toReturn.createFilter("showAvailable", function (products) {
         return products.filter(el => el.availability);
     })
-    
+
     toReturn.createFilter("availableBrands", function (products) {
         var brands = [];
         products.forEach(el => {
@@ -125,13 +125,13 @@ var filtersService = (function(){
         return products.filter(el => el.onSale);
     });
 
-    toReturn.createFilter("ultimateFilter", function(arr){
-
-        if(toReturn.brandsFilter.activeBrands > 0){
-            tempArr = []
+    toReturn.createFilter("ultimateFilter", function (arr) {
+        if (toReturn.brandsFilter.activeBrands > 0) {
+            tempArr = new Array();
             toReturn.brandsFilter.availableBrands.forEach(br => {
-                tempArr.concat(arr.filter(el => el.brand === br.brandName));
+                tempArr = tempArr.concat(arr.filter(el => el.brand === br.brandName));
             });
+            console.log(toReturn.filterArray(tempArr));
             return toReturn.filterArray(tempArr);
         } else {
             return toReturn.filterArray(arr);

@@ -1,162 +1,162 @@
 <div id="outer-container-products">
-                    
+
     <div id="header-products">
-                <ul id="path">
-                    <li id="cathegory"></li>
-                    <li id="subcathegory"></li>
-                    <li id="type"></li>
-                </ul>
+        <ul id="path">
+            <li id="cathegory"></li>
+            <li id="subcathegory"></li>
+            <li id="type"></li>
+        </ul>
     </div>
 
     <div id="inner-container-products">
-            <aside id="side-navigation">
-    
-                <div id="side-nav-types-container">
-                    <a id="side-nav-main-link" href=""></a>
-                    <ul id="side-nav-types-list">
-                    </ul>
+        <aside id="side-navigation">
+
+            <div id="side-nav-types-container">
+                <a id="side-nav-main-link" href=""></a>
+                <ul id="side-nav-types-list">
+                </ul>
+            </div>
+
+            <div id="filter-container">
+                <div id="clear-filters-container">
+                    <span>Изчисти филтрите</span>
+                    <span id="clear-filters-x">
+                        <img src="/assets/images/icons/clear-filters-icon.png" class="icon" alt="" />
+                    </span>
                 </div>
-    
-                <div id="filter-container">
-                    <div id="clear-filters-container">
-                        <span>Изчисти филтрите</span>
-                        <span id="clear-filters-x">
-                            <img src="/assets/images/icons/clear-filters-icon.png" class="icon" alt=""/>
-                        </span>
-                    </div>
-    
-                    <ul id="filters-list">
-    
-                        <ul class="down">
-                            <h1 id="availability-filter-list">
-                                <span class="filter-title">Наличност</span>
-                                <img src="assets/images/icons/arrow-up.png" class="icon filter-arrow" alt=""/>
-                            </h1>
-                            <li class="showAvailable filter">
-                                <input type="checkbox" name="availability" id="availability-filter"> В наличност
-                                    <span class="number-of-results">
-                                        <!-- (1237) -->
-                                    </span>
-                                </input>
-                            </li>
-                            <li class="productsOnSale filter">
-                                <input type="checkbox" name="availability" id="sale-filter"> Промоции
-                                    <span class="number-of-results">
-                                        <!-- (459) -->
-                                    </span>
-                                </input>
-                            </li>
-                        </ul>
-    
-                        <ul class="down" id="manufacturer-filter-ul">
-                            <h1 id="manufacturer-filter-list">
-                                <span class="filter-title">Производител</span>
-                                <img src="assets/images/icons/arrow-up.png" class="icon filter-arrow" alt=""/>
-                            </h1>
-                            <!-- <li>
+
+                <ul id="filters-list">
+
+                    <ul class="down">
+                        <h1 id="availability-filter-list">
+                            <span class="filter-title">Наличност</span>
+                            <img src="assets/images/icons/arrow-up.png" class="icon filter-arrow" alt="" />
+                        </h1>
+                        <li class="showAvailable filter">
+                            <input type="checkbox" name="availability" id="availability-filter"> В наличност
+                            <span class="number-of-results">
+                                <!-- (1237) -->
+                            </span>
+                            </input>
+                        </li>
+                        <li class="productsOnSale filter">
+                            <input type="checkbox" name="availability" id="sale-filter"> Промоции
+                            <span class="number-of-results">
+                                <!-- (459) -->
+                            </span>
+                            </input>
+                        </li>
+                    </ul>
+
+                    <ul class="down" id="manufacturer-filter-ul">
+                        <h1 id="manufacturer-filter-list">
+                            <span class="filter-title">Производител</span>
+                            <img src="assets/images/icons/arrow-up.png" class="icon filter-arrow" alt="" />
+                        </h1>
+                        <!-- <li>
                                 <input type="checkbox" name=""> Samsung
                                     <span class="number-of-results">
                                         (1237)
                                     </span>
                                 </input>
                             </li> -->
-                        </ul>
-                    </ul>                        
-                
-                </div>
-            </aside>
-    
-            <div id="main-content-outer-container"> 
-                <div id="main-content-container">
-                    <div id="main-container-nav">
-                        <div id="main-container-header">
-                            <h1></h1>
-                            <!-- <h1>Мобилни телефони <span>1237 продукта</span></h1>    -->
-                            <hr />
-                        </div>
-    
-                        <div id="selected-filters">
-                            <ul>
-                                <li style="display:none" id="filters-top-nav-availability">
-                                    <h1 class="filters-result-title">наличност:</h1>
-                                    <div class="select-container-div">
-                                        <select name="availability" id="availability-select">
-                                            <option value="available" class="showAvailable, filter"></option>
-                                            <option value="sale" class="productsOnSale, filter"></option>
-                                        </select>
-                                        <span>
-                                            <img src="assets/images/icons/clear-filters-icon.png" class="icon, delete-filter" alt=""/>
-                                        </span>
-                                    </div>
-                                </li>
-    
-                                <li style="display:none" id="filters-top-nav-distributor">
-                                    <h1 class="filters-result-title">производител:</h1>
-                                    <div class="select-container-div">
-                                            <select name="distributor" id="distributor-select">
-                                            </select>
-                                            <span>
-                                                <img src="assets/images/icons/clear-filters-icon.png" class="icon, delete-filter" alt=""/>
-                                            </span>
-                                    </div>
-                                </li>
-                            </ul>
-                            <hr style="display:none" id="hr-filters-nav-top" />
-    
-                            <div id="sort-by-price">
-                                <span>Подреди по:</span>
-                                <select name="price-sort" id="price-sort-select">
-                                        <option selected disabled value=""></option>
-                                        <option value="lowest">Цена възх.</option>
-                                        <option value="highest">Цена низх.</option>
-                                </select>
-                            </div>
-                        </div>    
-                    </div>
-    
-                    <section id="available-products"> 
-                    </section>
+                    </ul>
+                </ul>
 
-                    <div id="end-nav-products-container">
-                        <div id="result-pages-nav">
-                            <div id="pages-info">
-                                <span></span>
-                                от
-                                <span></span>
-                                продукта
-                            </div>
-    
-                            <div id="pages-buttons">
-                                <button disabled id="back-page">Назад</button>
-                                <!-- <button class="current-page" id="page-1">1</button>
+            </div>
+        </aside>
+
+        <div id="main-content-outer-container">
+            <div id="main-content-container">
+                <div id="main-container-nav">
+                    <div id="main-container-header">
+                        <h1></h1>
+                        <!-- <h1>Мобилни телефони <span>1237 продукта</span></h1>    -->
+                        <hr />
+                    </div>
+
+                    <div id="selected-filters">
+                        <ul>
+                            <li style="display:none" id="filters-top-nav-availability">
+                                <h1 class="filters-result-title">наличност:</h1>
+                                <div class="select-container-div">
+                                    <select name="availability" id="availability-select">
+                                        <option value="available" class="showAvailable, filter"></option>
+                                        <option value="sale" class="productsOnSale, filter"></option>
+                                    </select>
+                                    <span>
+                                        <img src="assets/images/icons/clear-filters-icon.png" class="icon, delete-filter" alt="" />
+                                    </span>
+                                </div>
+                            </li>
+
+                            <li style="display:none" id="filters-top-nav-distributor">
+                                <h1 class="filters-result-title">производител:</h1>
+                                <div class="select-container-div">
+                                    <select name="distributor" id="distributor-select">
+                                    </select>
+                                    <span>
+                                        <img src="assets/images/icons/clear-filters-icon.png" class="icon, delete-filter" alt="" />
+                                    </span>
+                                </div>
+                            </li>
+                        </ul>
+                        <hr style="display:none" id="hr-filters-nav-top" />
+
+                        <div id="sort-by-price">
+                            <span>Подреди по:</span>
+                            <select name="price-sort" id="price-sort-select">
+                                <option selected disabled value=""></option>
+                                <option value="lowest">Цена възх.</option>
+                                <option value="highest">Цена низх.</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+
+                <section id="available-products">
+                </section>
+
+                <div id="end-nav-products-container">
+                    <div id="result-pages-nav">
+                        <div id="pages-info">
+                            <span></span>
+                            от
+                            <span></span>
+                            продукта
+                        </div>
+
+                        <div id="pages-buttons">
+                            <button disabled id="back-page">Назад</button>
+                            <!-- <button class="current-page" id="page-1">1</button>
                                 <button id="page-2">2</button>
                                 <button disabled id="buffer-button">...</button>
                                 <button id="page-last">6</button> -->
-                                <button id="forward-page">Напред</button>
-                            </div>
+                            <button id="forward-page">Напред</button>
                         </div>
                     </div>
-    
-                </div>
-                <div id="fave-activity">
-                    <div id="fave-activity-inner-content">
-                        <img id="fave-activity-heart-icon" src="" alt="">
-                        <p id="fave-activity-text"></p>
-                        <img id="fave-activity-hide" src="assets/images/icons/clear-filters-icon-gray.png" alt="">
-                    </div>
                 </div>
 
-                <div id="buy-popup">
-                   <div id="buy-popup-header">
-                        <p id="buy-popup-h1">Продуктът е добавен в количката</p>
-                        <img id="buy-popup-img" src="assets/images/icons/clear-filters-icon-gray.png" alt="">
-                   </div>
-                   <br/>
-                   <hr/>
-                   <div id="buy-popup-product-container">
-
-                   </div>
+            </div>
+            <div id="fave-activity">
+                <div id="fave-activity-inner-content">
+                    <img id="fave-activity-heart-icon" src="" alt="">
+                    <p id="fave-activity-text"></p>
+                    <img id="fave-activity-hide" src="assets/images/icons/clear-filters-icon-gray.png" alt="">
                 </div>
             </div>
+
+            <div id="buy-popup">
+                <div id="buy-popup-header">
+                    <p id="buy-popup-h1">Продуктът е добавен в количката</p>
+                    <img id="buy-popup-img" src="assets/images/icons/clear-filters-icon-gray.png" alt="">
+                </div>
+                <br/>
+                <hr/>
+                <div id="buy-popup-product-container">
+
+                </div>
+            </div>
+        </div>
     </div>
 </div>

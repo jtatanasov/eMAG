@@ -2133,7 +2133,6 @@
                 "name": "Видео карта",
                 "spec": "Вградена Intel"
             }
-
         ]
     },
     {
@@ -2179,7 +2178,6 @@
                 "name": "Видео карта",
                 "spec": "Вградена Intel"
             }
-
         ]
     },
     {
@@ -2974,6 +2972,1104 @@
             {
                 "name": "Цвят",
                 "spec": "Черен"
+            }
+        ]
+    },
+    {
+        "id": "73",
+        "name": "Процесор Intel® Core™ i5-4460, 3.2GHz",
+        "cathegory": "Компютри & периферия",
+        "subcathegory": "PC компоненти",
+        "type": "Процесори",
+        "quantity": "100",
+        "availability": true,
+        "main_url": "https://s11emagst.akamaized.net/products/638/637495/images/res_148476249f6b91c7da7644967cda7a60_450x450_2i17.jpg",
+        "brand": "Intel",
+        "price": "370.65",
+        "salePrice": "",
+        "onSale": false,
+        "description": "Intel® Core™ i5-4460, 3.2GHz",
+        "specifics": [
+            {
+                "name": "Cache памет",
+                "spec": "6144"
+            },
+            {
+                "name": "Честота процесор (MHz)",
+                "spec": "3200 MHz"
+            },
+            {
+                "name": "Turbo Boost до",
+                "spec": "3400 MHz"
+            },
+            {
+                "name": "Data width (bits)",
+                "spec": "64"
+            },
+            {
+                "name": "Брой ядра",
+                "spec": "4"
+            }
+        ]
+    },
+    {
+        "id": "74",
+        "name": "Процесор Intel Xeon Silver 4116 (2.10GHz)",
+        "cathegory": "Компютри & периферия",
+        "subcathegory": "PC компоненти",
+        "type": "Процесори",
+        "quantity": "100",
+        "availability": true,
+        "main_url": "https://s11emagst.akamaized.net/products/13762/13761262/images/res_a34affbe130a11e33239edee156286ce_450x450_8qq8.jpg",
+        "brand": "Intel",
+        "price": "2181.99",
+        "salePrice": "",
+        "onSale": false,
+        "description": "Сокет: LGA3647; Работна честота: 2.10 GHz; Turbo Boost до: 3.00 GHz; Физически ядра: 12; Логически ядра: 24; Кеш памет: L3: 16MB",
+        "specifics": [
+            {
+                "name": "Cache памет",
+                "spec": "16384"
+            },
+            {
+                "name": "Честота процесор (MHz)",
+                "spec": "2100 MHz"
+            },
+            {
+                "name": "Turbo Boost до",
+                "spec": "3000 MHz"
+            },
+            {
+                "name": "Data width (bits)",
+                "spec": "64"
+            },
+            {
+                "name": "Брой ядра",
+                "spec": "12"
+            }
+        ]
+    },
+    {
+        "id": "75",
+        "name": "Процесор Intel Core i7-7800X",
+        "cathegory": "Компютри & периферия",
+        "subcathegory": "PC компоненти",
+        "type": "Процесори",
+        "quantity": "100",
+        "availability": true,
+        "main_url": "https://s11emagst.akamaized.net/products/8311/8310951/images/res_54958aaa13fb17e9ffe1613203683165_450x450_s1bl.jpg",
+        "brand": "Intel",
+        "price": "733.99",
+        "salePrice": "",
+        "onSale": false,
+        "description": "Процесор Intel Core i7-7800X, 3.5GHz, 8.25MB, 140W, LGA2066",
+        "specifics": [
+            {
+                "name": "Cache памет",
+                "spec": "8 MB"
+            },
+            {
+                "name": "Честота процесор (MHz)",
+                "spec": "3500 MHz"
+            },
+            {
+                "name": "Data width (bits)",
+                "spec": "64"
+            },
+            {
+                "name": "Брой ядра",
+                "spec": "6"
+            }
+        ]
+    },
+    {
+        "id": "76",
+        "name": "Процесор AMD Ryzen Threadripper 1900x",
+        "cathegory": "Компютри & периферия",
+        "subcathegory": "PC компоненти",
+        "type": "Процесори",
+        "quantity": "100",
+        "availability": true,
+        "main_url": "https://s11emagst.akamaized.net/products/8370/8369788/images/res_fe1415fcee56b8d623eecd539cb2bee0_450x450_p12o.jpg",
+        "brand": "AMD",
+        "price": "1164.99",
+        "salePrice": "",
+        "onSale": false,
+        "description": "AMD Ryzen Threadripper 1900x",
+        "specifics": [
+            {
+                "name": "Cache памет",
+                "spec": "16 MB"
+            },
+            {
+                "name": "Честота процесор (MHz)",
+                "spec": "3800 MHz"
+            },
+            {
+                "name": "Turbo Boost до",
+                "spec": "4000 MHz"
+            },
+            {
+                "name": "Data width (bits)",
+                "spec": "32 / 64"
+            },
+            {
+                "name": "Брой ядра",
+                "spec": "8"
+            }
+        ]
+    },
+    {
+        "id": "77",
+        "name": "Процесор AMD Ryzen 5 1600X",
+        "cathegory": "Компютри & периферия",
+        "subcathegory": "PC компоненти",
+        "type": "Процесори",
+        "quantity": "100",
+        "availability": true,
+        "main_url": "https://s11emagst.akamaized.net/products/5414/5413420/images/res_db5cb2d4cba9c1c0062c74aa9670963c_450x450_f4h7.jpg",
+        "brand": "AMD",
+        "price": "414.99",
+        "salePrice": "",
+        "onSale": false,
+        "description": "Бърза и тиха работа на процесора използвайки мрежа от умни сензори. Адаптивен контрол за оптимизиране на енергопотреблението. Минимално енергопотребление за по-малко топлина и шум.",
+        "specifics": [
+            {
+                "name": "Cache памет",
+                "spec": "16 MB"
+            },
+            {
+                "name": "Честота процесор (MHz)",
+                "spec": "3600 MHz"
+            },
+            {
+                "name": "Turbo Boost до",
+                "spec": "4000 MHz"
+            },
+            {
+                "name": "Data width (bits)",
+                "spec": "32 / 64"
+            },
+            {
+                "name": "Брой ядра",
+                "spec": "6"
+            }
+        ]
+    },
+    {
+        "id": "78",
+        "name": "Видео карта ASUS GeForce® GTX 1070 STRIX",
+        "cathegory": "Компютри & периферия",
+        "subcathegory": "PC компоненти",
+        "type": "Видео карти",
+        "quantity": "100",
+        "availability": true,
+        "main_url": "https://s11emagst.akamaized.net/products/3863/3862152/images/res_d95f57e54eb010d9efa6579dd196fc6e_450x450_9fnp.jpg",
+        "brand": "ASUS",
+        "price": "1413.99",
+        "salePrice": "",
+        "onSale": false,
+        "description": "ASUS GeForce® GTX 1070",
+        "specifics": [
+            {
+                "name": "Сhipset",
+                "spec": "NVIDIA"
+            },
+            {
+                "name": "Серия",
+                "spec": "NVIDIA GeForce GTX 1000"
+            },
+            {
+                "name": "Памет",
+                "spec": "8 GB"
+            },
+            {
+                "name": "Тип памет",
+                "spec": "GDDR5"
+            }
+        ]
+    },
+    {
+        "id": "79",
+        "name": "Видео карта ASUS GeForce GTX 1060 Dual OC",
+        "cathegory": "Компютри & периферия",
+        "subcathegory": "PC компоненти",
+        "type": "Видео карти",
+        "quantity": "100",
+        "availability": true,
+        "main_url": "https://s11emagst.akamaized.net/products/3936/3935057/images/res_e207ce90b488bd2906eb21e9a337a6b7_450x450_a9nd.jpg",
+        "brand": "ASUS",
+        "price": "919.99",
+        "salePrice": "",
+        "onSale": false,
+        "description": "ASUS GeForce GTX 1060 Dual OC",
+        "specifics": [
+            {
+                "name": "Сhipset",
+                "spec": "NVIDIA"
+            },
+            {
+                "name": "Серия",
+                "spec": "NVIDIA GeForce GTX 1000"
+            },
+            {
+                "name": "Памет",
+                "spec": "6 GB"
+            },
+            {
+                "name": "Тип памет",
+                "spec": "GDDR5"
+            }
+        ]
+    },
+    {
+        "id": "80",
+        "name": "Видео карта ASUS Phoenix Radeon RX 550",
+        "cathegory": "Компютри & периферия",
+        "subcathegory": "PC компоненти",
+        "type": "Видео карти",
+        "quantity": "100",
+        "availability": true,
+        "main_url": "https://s11emagst.akamaized.net/products/14082/14081526/images/res_59599e3e18116a14af1ebc5572bdd72c_450x450_q1jg.jpg",
+        "brand": "ASUS",
+        "price": "324.99",
+        "salePrice": "",
+        "onSale": false,
+        "description": "ASUS Phoenix Radeon RX 550 4GB GDDR5 128 bit",
+        "specifics": [
+            {
+                "name": "Сhipset",
+                "spec": "AMD"
+            },
+            {
+                "name": "Памет",
+                "spec": "4 GB"
+            },
+            {
+                "name": "Тип памет",
+                "spec": "GDDR5"
+            }
+        ]
+    },
+    {
+        "id": "81",
+        "name": "Видео карта GIGABYTE GeForce® GTX 1060 G1 Gaming",
+        "cathegory": "Компютри & периферия",
+        "subcathegory": "PC компоненти",
+        "type": "Видео карти",
+        "quantity": "100",
+        "availability": true,
+        "main_url": "https://s11emagst.akamaized.net/products/3936/3935886/images/res_07929eb2bc050699317653b63c23c673_450x450_784.jpg",
+        "brand": "ASUS",
+        "price": "949.99",
+        "salePrice": "",
+        "onSale": false,
+        "description": "GIGABYTE GeForce® GTX 1060 G1 Gaming",
+        "specifics": [
+            {
+                "name": "Сhipset",
+                "spec": "NVIDIA"
+            },
+            {
+                "name": "Серия",
+                "spec": "NVIDIA GeForce GTX 1000"
+            },
+            {
+                "name": "Памет",
+                "spec": "6 GB"
+            },
+            {
+                "name": "Тип памет",
+                "spec": "GDDR5"
+            }
+        ]
+    },
+    {
+        "id": "82",
+        "name": "Видео карта GIGABYTE GeForce® GTX 1070 G1 Gaming",
+        "cathegory": "Компютри & периферия",
+        "subcathegory": "PC компоненти",
+        "type": "Видео карти",
+        "quantity": "100",
+        "availability": true,
+        "main_url": "https://s11emagst.akamaized.net/products/3683/3682990/images/res_f75bd6b7ae7c0bae651b6734f25e88b9_450x450_s14s.png",
+        "brand": "ASUS",
+        "price": "1279.99",
+        "salePrice": "",
+        "onSale": false,
+        "description": "GIGABYTE GeForce® GTX 1070 G1 Gaming",
+        "specifics": [
+            {
+                "name": "Сhipset",
+                "spec": "NVIDIA"
+            },
+            {
+                "name": "Серия",
+                "spec": "NVIDIA GeForce GTX 1000"
+            },
+            {
+                "name": "Памет",
+                "spec": "8 GB"
+            },
+            {
+                "name": "Тип памет",
+                "spec": "GDDR5"
+            }
+        ]
+    },
+    {
+        "id": "83",
+        "name": "Хард диск Toshiba 2TB",
+        "cathegory": "Компютри & периферия",
+        "subcathegory": "PC компоненти",
+        "type": "Хард Дискове",
+        "quantity": "100",
+        "availability": true,
+        "main_url": "https://s11emagst.akamaized.net/products/40/39496/images/res_dd6e7827682ca91ff13367d26cb37e08_450x450_qu8h.jpg",
+        "brand": "Toshiba",
+        "price": "131.99",
+        "salePrice": "",
+        "onSale": false,
+        "description": "Toshiba 2TB",
+        "specifics": [
+            {
+                "name": "Капацитет",
+                "spec": "2TB"
+            },
+            {
+                "name": "Скорост",
+                "spec": "7200 оборота/минута"
+            },
+            {
+                "name": "Буфер",
+                "spec": "64 MB"
+            },
+            {
+                "name": "Интерфейс",
+                "spec": "SATA 3"
+            }
+        ]
+    },
+    {
+        "id": "84",
+        "name": "Хард диск 3ТB Toshiba DT01ACA300",
+        "cathegory": "Компютри & периферия",
+        "subcathegory": "PC компоненти",
+        "type": "Хард Дискове",
+        "quantity": "100",
+        "availability": true,
+        "main_url": "https://s11emagst.akamaized.net/products/1469/1468503/images/res_8b62ee92f584492644880c9bad0636f9_450x450_5obq.jpg",
+        "brand": "Toshiba",
+        "price": "170.99",
+        "salePrice": "",
+        "onSale": false,
+        "description": "Предназначение: За настолен компютър; Тип: HDD, вътрешен",
+        "specifics": [
+            {
+                "name": "Капацитет",
+                "spec": "3 TB"
+            },
+            {
+                "name": "Скорост",
+                "spec": "7200 оборота/минута"
+            },
+            {
+                "name": "Интерфейс",
+                "spec": "SATA 3"
+            }
+        ]
+    },
+    {
+        "id": "85",
+        "name": "Хард диск 6TB Toshiba N300 HDWN160UZSVA",
+        "cathegory": "Компютри & периферия",
+        "subcathegory": "PC компоненти",
+        "type": "Хард Дискове",
+        "quantity": "100",
+        "availability": true,
+        "main_url": "https://s11emagst.akamaized.net/products/8032/8031974/images/res_784d7c82c89c5056a26a0fc30d3dc749_450x450_jnf7.jpg",
+        "brand": "Toshiba",
+        "price": "462.99",
+        "salePrice": "",
+        "onSale": false,
+        "description": "Предназначение: За настолен компютър, За сървър, За NAS устройство",
+        "specifics": [
+            {
+                "name": "Капацитет",
+                "spec": "6 TB"
+            },
+            {
+                "name": "Скорост",
+                "spec": "7200 оборота/минута"
+            },
+            {
+                "name": "Буфер",
+                "spec": "128 MB"
+            },
+            {
+                "name": "Интерфейс",
+                "spec": "SATA 3"
+            }
+        ]
+    },
+    {
+        "id": "86",
+        "name": "HDD Seagate Ironwolf 10 TB",
+        "cathegory": "Компютри & периферия",
+        "subcathegory": "PC компоненти",
+        "type": "Хард Дискове",
+        "quantity": "100",
+        "availability": true,
+        "main_url": "https://s11emagst.akamaized.net/products/4434/4433224/images/res_866f2a20272f717856c428b4983fd115_450x450_5f90.jpg",
+        "brand": "Seagate",
+        "price": "1059.99",
+        "salePrice": "",
+        "onSale": false,
+        "description": "HDD Seagate Ironwolf 10 TB",
+        "specifics": [
+            {
+                "name": "Капацитет",
+                "spec": "10 TB"
+            },
+            {
+                "name": "Скорост",
+                "spec": "7200 оборота/минута"
+            },
+            {
+                "name": "Буфер",
+                "spec": "256 MB"
+            },
+            {
+                "name": "Интерфейс",
+                "spec": "SATA 3"
+            }
+        ]
+    },
+    {
+        "id": "87",
+        "name": "HDD Seagate BarraCuda® 2TB",
+        "cathegory": "Компютри & периферия",
+        "subcathegory": "PC компоненти",
+        "type": "Хард Дискове",
+        "quantity": "100",
+        "availability": true,
+        "main_url": "https://s11emagst.akamaized.net/products/4426/4425223/images/res_37a6edafc3e0081ea376bea8e974ab4c_450x450_vgmd.png",
+        "brand": "Seagate",
+        "price": "132.99",
+        "salePrice": "",
+        "onSale": false,
+        "description": "HDD Seagate BarraCuda® 2TB",
+        "specifics": [
+            {
+                "name": "Капацитет",
+                "spec": "2 TB"
+            },
+            {
+                "name": "Скорост",
+                "spec": "7200 оборота/минута"
+            },
+            {
+                "name": "Буфер",
+                "spec": "64 MB"
+            },
+            {
+                "name": "Интерфейс",
+                "spec": "SATA 3"
+            }
+        ]
+    },
+    {
+        "id": "88",
+        "name": "HDD Seagate Ironwolf 8TB",
+        "cathegory": "Компютри & периферия",
+        "subcathegory": "PC компоненти",
+        "type": "Хард Дискове",
+        "quantity": "100",
+        "availability": true,
+        "main_url": "https://s11emagst.akamaized.net/products/4434/4433224/images/res_866f2a20272f717856c428b4983fd115_450x450_5f90.jpg",
+        "brand": "Seagate",
+        "price": "505.99",
+        "salePrice": "",
+        "onSale": false,
+        "description": "HDD Seagate Ironwolf 8TB",
+        "specifics": [
+            {
+                "name": "Капацитет",
+                "spec": "8 TB"
+            },
+            {
+                "name": "Скорост",
+                "spec": "7200 оборота/минута"
+            },
+            {
+                "name": "Буфер",
+                "spec": "256 MB"
+            },
+            {
+                "name": "Интерфейс",
+                "spec": "SATA 3"
+            }
+        ]
+    },
+    {
+        "id": "89",
+        "name": "Геймърска механична клавиатура Logitech G910 Orion Spectrum",
+        "cathegory": "Компютри & периферия",
+        "subcathegory": "Периферия",
+        "type": "Клавиатури",
+        "quantity": "100",
+        "availability": true,
+        "main_url": "https://s11emagst.akamaized.net/products/8312/8311027/images/res_1279c677a28330b2421c3adf7166c2a8_450x450_uiku.jpg",
+        "brand": "Logitech",
+        "price": "369.99",
+        "salePrice": "",
+        "onSale": false,
+        "description": "Геймърска механична клавиатура Logitech G910 Orion Spectrum, RGB, Romer-G суичове",
+        "specifics": [
+            {
+                "name": "Тип",
+                "spec": "Геймърска"
+            },
+            {
+                "name": "Технология",
+                "spec": "Кабел"
+            },
+            {
+                "name": "Размери (Д x В x Ш мм)",
+                "spec": "505 x 244 x 35 mm"
+            }
+        ]
+    },
+    {
+        "id": "90",
+        "name": "Безжична клавиатура Logitech Craft",
+        "cathegory": "Компютри & периферия",
+        "subcathegory": "Периферия",
+        "type": "Клавиатури",
+        "quantity": "100",
+        "availability": true,
+        "main_url": "https://s11emagst.akamaized.net/products/9759/9758748/images/res_7a0a8f2827799d059d3c79299516237c_450x450_lst6.jpg",
+        "brand": "Logitech",
+        "price": "449.99",
+        "salePrice": "",
+        "onSale": false,
+        "description": "Logitech Craft",
+        "specifics": [
+            {
+                "name": "Тип",
+                "spec": "Стандарт"
+            },
+            {
+                "name": "Технология",
+                "spec": "Безжична"
+            },
+            {
+                "name": "Други",
+                "spec": "Обхват до 10м; Многофункционален потенциометър"
+            }
+        ]
+    },
+    {
+        "id": "91",
+        "name": "Клавиатура Logitech K120 Business",
+        "cathegory": "Компютри & периферия",
+        "subcathegory": "Периферия",
+        "type": "Клавиатури",
+        "quantity": "100",
+        "availability": true,
+        "main_url": "https://s11emagst.akamaized.net/products/2/1698/images/res_4e9dafb21adbb8aa0a021e45fbbd250b_450x450_p2f2.jpg",
+        "brand": "Logitech",
+        "price": "18.99",
+        "salePrice": "",
+        "onSale": false,
+        "description": "Logitech K120 Business",
+        "specifics": [
+            {
+                "name": "Тип",
+                "spec": "Стандарт"
+            },
+            {
+                "name": "Технология",
+                "spec": "Кабел"
+            },
+            {
+                "name": "Други",
+                "spec": "Дължина кабел 1.5м; Водоустойчив; Тихи бутони"
+            }
+        ]
+    },
+    {
+        "id": "92",
+        "name": "Стандартна клавиатура HAMA К210",
+        "cathegory": "Компютри & периферия",
+        "subcathegory": "Периферия",
+        "type": "Клавиатури",
+        "quantity": "100",
+        "availability": true,
+        "main_url": "https://s11emagst.akamaized.net/products/3311/3310646/images/res_458b3f666ad8a49843c9bb524d48c980_450x450_2g76.jpg",
+        "brand": "HAMA",
+        "price": "18.99",
+        "salePrice": "",
+        "onSale": false,
+        "description": "Цвят: бял; Регулиране на наклона на клавиатурата",
+        "specifics": [
+            {
+                "name": "Тип",
+                "spec": "Стандарт"
+            },
+            {
+                "name": "Технология",
+                "spec": "Кабел"
+            }
+        ]
+    },
+    {
+        "id": "93",
+        "name": "Клавиатура Hama uRage Lethality",
+        "cathegory": "Компютри & периферия",
+        "subcathegory": "Периферия",
+        "type": "Клавиатури",
+        "quantity": "100",
+        "availability": true,
+        "main_url": "https://s11emagst.akamaized.net/products/559/558399/images/res_80ab19d5fc478e434479c855ff4c5ac3_450x450_iufr.jpg",
+        "brand": "HAMA",
+        "price": "19.99",
+        "salePrice": "",
+        "onSale": false,
+        "description": "Някои играчи твърдят, че те не се нуждаят от специална геймърска клавиатура. Може би все още не са играли игра, която изисква такава или не са играли на достатъчно високо ниво. Какво отличава стандартната клавиатура от геймърската? Нашата клавиатура е Hama uRage Lethality.",
+        "specifics": [
+            {
+                "name": "Тип",
+                "spec": "Gaming"
+            },
+            {
+                "name": "Технология",
+                "spec": "Кабел"
+            },
+            {
+                "name": "Размери (Д x В x Ш мм)",
+                "spec": "476 x 193 x 29 mm"
+            },
+            {
+                "name": "Други",
+                "spec": "Анти-бляскав"
+            }
+        ]
+    },
+    {
+        "id": "94",
+        "name": "Клавиатура A4tech G300",
+        "cathegory": "Компютри & периферия",
+        "subcathegory": "Периферия",
+        "type": "Клавиатури",
+        "quantity": "100",
+        "availability": true,
+        "main_url": "https://s11emagst.akamaized.net/products/29/28139/images/img142143_04082010113408_450x450_ivdv.jpg",
+        "brand": "A4Tech",
+        "price": "21.99",
+        "salePrice": "",
+        "onSale": false,
+        "description": "A4tech G300",
+        "specifics": [
+            {
+                "name": "Тип",
+                "spec": "Gaming"
+            },
+            {
+                "name": "Технология",
+                "spec": "Кабел"
+            },
+            {
+                "name": "Други",
+                "spec": "Водоустойчив; Бутони гравирани лазерно"
+            }
+        ]
+    },
+    {
+        "id": "95",
+        "name": "Клавиатура A4 G100",
+        "cathegory": "Компютри & периферия",
+        "subcathegory": "Периферия",
+        "type": "Клавиатури",
+        "quantity": "100",
+        "availability": true,
+        "main_url": "https://s11emagst.akamaized.net/products/3991/3990239/images/res_45d4264dbeea79cc0057ce2a7ee01249_450x450_g9q9.jpg",
+        "brand": "A4Tech",
+        "price": "13.99",
+        "salePrice": "",
+        "onSale": false,
+        "description": "A4 G100",
+        "specifics": [
+            {
+                "name": "Тип",
+                "spec": "Стандарт"
+            },
+            {
+                "name": "Технология",
+                "spec": "Кабел"
+            }
+        ]
+    },
+    {
+        "id": "96",
+        "name": "Безжична мишка Logitech G602",
+        "cathegory": "Компютри & периферия",
+        "subcathegory": "Периферия",
+        "type": "Мишки",
+        "quantity": "100",
+        "availability": true,
+        "main_url": "https://s11emagst.akamaized.net/products/653/652864/images/res_4445d881a02178acb82d7fbfd165fcd6_450x450_eovs.jpg",
+        "brand": "Logitech",
+        "price": "125.99",
+        "salePrice": "",
+        "onSale": false,
+        "description": "Безжична мишка Logitech G602, 2500 DPI Тази мишка дава нов прочит на безжичните гейм закони! Тя притежава живот на батерията от 250 часа! Изключителна точност на сензора с технология Delta Zero; издръжливост - 20 милиона кликвания; G602 предлага автентични преживявания по време на игра. Logitech Gaming Software позволява персонализирането на 11 програмируеми бутона. Материалите, от които е изработена мишката подобряват както комфорта, така и контрола на играча по време на дългите сесии игри. Ако изберете режим Endurance удължава живота на батерията до впечатляващите 1440 часа.",
+        "specifics": [
+            {
+                "name": "Тип",
+                "spec": "Стандарт"
+            },
+            {
+                "name": "Технология",
+                "spec": "Безжична"
+            },
+            {
+                "name": "Резолюция(dpi)",
+                "spec": "2500"
+            },
+            {
+                "name": "Цвят",
+                "spec": "Черен/сребрист"
+            }
+        ]
+    },
+    {
+        "id": "97",
+        "name": "Мишка Wireless Logitech M335",
+        "cathegory": "Компютри & периферия",
+        "subcathegory": "Периферия",
+        "type": "Мишки",
+        "quantity": "100",
+        "availability": true,
+        "main_url": "https://s11emagst.akamaized.net/products/2161/2160152/images/res_77491af027e3277511cf2848fc740687_450x450_q0jm.jpg",
+        "brand": "Logitech",
+        "price": "64.99",
+        "salePrice": "",
+        "onSale": false,
+        "description": "Logitech M335",
+        "specifics": [
+            {
+                "name": "Тип",
+                "spec": "Стандарт"
+            },
+            {
+                "name": "Технология",
+                "spec": "Безжична"
+            },
+            {
+                "name": "Резолюция(dpi)",
+                "spec": "1000"
+            },
+            {
+                "name": "Цвят",
+                "spec": "Син"
+            }
+        ]
+    },
+    {
+        "id": "98",
+        "name": "Оптична мишка Logitech B100",
+        "cathegory": "Компютри & периферия",
+        "subcathegory": "Периферия",
+        "type": "Мишки",
+        "quantity": "100",
+        "availability": true,
+        "main_url": "https://s11emagst.akamaized.net/products/474/473837/images/res_d1b48c65bbe1046296af2d6c0f4bc5bb_450x450_pi0r.jpg",
+        "brand": "Logitech",
+        "price": "13.99",
+        "salePrice": "",
+        "onSale": false,
+        "description": "Logitech B100",
+        "specifics": [
+            {
+                "name": "Тип",
+                "spec": "Стандарт"
+            },
+            {
+                "name": "Технология",
+                "spec": "Кабел"
+            },
+            {
+                "name": "Резолюция(dpi)",
+                "spec": "800"
+            },
+            {
+                "name": "Цвят",
+                "spec": "Черен"
+            }
+        ]
+    },
+    {
+        "id": "99",
+        "name": "Mишка A4Tech N-250X-2",
+        "cathegory": "Компютри & периферия",
+        "subcathegory": "Периферия",
+        "type": "Мишки",
+        "quantity": "100",
+        "availability": true,
+        "main_url": "https://s11emagst.akamaized.net/products/53/52318/images/img282870_12032013113150_0_450x450_qhdk.jpg",
+        "brand": "A4Tech",
+        "price": "10.99",
+        "salePrice": "",
+        "onSale": false,
+        "description": "A4Tech N-250X-2",
+        "specifics": [
+            {
+                "name": "Тип",
+                "spec": "Стандарт"
+            },
+            {
+                "name": "Технология",
+                "spec": "Кабел"
+            },
+            {
+                "name": "Резолюция(dpi)",
+                "spec": "800/1000/1600"
+            },
+            {
+                "name": "Цвят",
+                "spec": "Черен/червен"
+            }
+        ]
+    },
+    {
+        "id": "100",
+        "name": "Оптична мишка A4tech Bloody V3MA Gaming",
+        "cathegory": "Компютри & периферия",
+        "subcathegory": "Периферия",
+        "type": "Мишки",
+        "quantity": "100",
+        "availability": true,
+        "main_url": "https://s11emagst.akamaized.net/products/503/502262/images/res_d789531b9000c8a2195cb4812636c622_450x450_rit3.jpg",
+        "brand": "A4Tech",
+        "price": "47.99",
+        "salePrice": "",
+        "onSale": false,
+        "description": "A4tech Bloody V3MA Gaming",
+        "specifics": [
+            {
+                "name": "Тип",
+                "spec": "Gaming"
+            },
+            {
+                "name": "Технология",
+                "spec": "Кабел"
+            },
+            {
+                "name": "Резолюция(dpi)",
+                "spec": "3200"
+            },
+            {
+                "name": "Цвят",
+                "spec": "Черен"
+            }
+        ]
+    },
+    {
+        "id": "101",
+        "name": "Мишка gaming Razer Deathadder Elite",
+        "cathegory": "Компютри & периферия",
+        "subcathegory": "Периферия",
+        "type": "Мишки",
+        "quantity": "100",
+        "availability": true,
+        "main_url": "https://s11emagst.akamaized.net/products/4882/4881546/images/res_c8dfc816a94905a96f99d99225af5106_450x450_mmqp.jpg",
+        "brand": "Razer",
+        "price": "124.99",
+        "salePrice": "",
+        "onSale": false,
+        "description": "Оборудван с 16000 DPI оптичен сензор, Razer DeathAdder Elite ви предлага абсолютната полза. Гарантира победа с висока прецизност и скорост.",
+        "specifics": [
+            {
+                "name": "Тип",
+                "spec": "Gaming"
+            },
+            {
+                "name": "Технология",
+                "spec": "Кабел"
+            },
+            {
+                "name": "Резолюция(dpi)",
+                "spec": "16000"
+            },
+            {
+                "name": "Цвят",
+                "spec": "Черен"
+            }
+        ]
+    },
+    {
+        "id": "102",
+        "name": "Мишка Gaming Razer Basilisk",
+        "cathegory": "Компютри & периферия",
+        "subcathegory": "Периферия",
+        "type": "Мишки",
+        "quantity": "100",
+        "availability": true,
+        "main_url": "https://s11emagst.akamaized.net/products/10757/10756959/images/res_3357f29b8473d3eb6c8a74effb82b9dd_450x450_md8v.jpg",
+        "brand": "Razer",
+        "price": "98.99",
+        "salePrice": "",
+        "onSale": false,
+        "description": "Razer Basilisk",
+        "specifics": [
+            {
+                "name": "Тип",
+                "spec": "Gaming"
+            },
+            {
+                "name": "Технология",
+                "spec": "Кабел"
+            },
+            {
+                "name": "Резолюция(dpi)",
+                "spec": "16000"
+            },
+            {
+                "name": "Цвят",
+                "spec": "Черен"
+            }
+        ]
+    },
+    {
+        "id": "103",
+        "name": "Слушалки с микрофон Plantronics GameCom 388",
+        "cathegory": "Компютри & периферия",
+        "subcathegory": "Периферия",
+        "type": "Слушалки",
+        "quantity": "100",
+        "availability": true,
+        "main_url": "https://s11emagst.akamaized.net/products/868/867859/images/res_72c88a14f5b5a5571a156484c098d559_450x450_n2vd.jpg",
+        "brand": "Plantronics",
+        "price": "67.99",
+        "salePrice": "",
+        "onSale": false,
+        "description": "Последен модел геймърски слушалки от Plantronics. GameCom 388 ще Ви потопят в невероятно гейм изживяване, благодарение на балансиран звук с дълбоки баси и комфортни плюшени наушници. Шумоизолиращ микрофон. Gamecom 388 са издържливи и удобни - отличен избор за дълги игрови сесии. Контроли за звука и заглушаване на микрофона.",
+        "specifics": [
+            {
+                "name": "Тип",
+                "spec": "Gaming"
+            },
+            {
+                "name": "Технология",
+                "spec": "Кабел"
+            },
+            {
+                "name": "Честота (Hz)",
+                "spec": "20Hz - 20kHz"
+            },
+            {
+                "name": "Дължина кабел (м)",
+                "spec": "2"
+            }
+        ]
+    },
+    {
+        "id": "104",
+        "name": "Слушалки Plantronics Audio 326",
+        "cathegory": "Компютри & периферия",
+        "subcathegory": "Периферия",
+        "type": "Слушалки",
+        "quantity": "100",
+        "availability": true,
+        "main_url": "https://s11emagst.akamaized.net/products/11/10652/images/img114927_22052009121452_450x450_48ul.jpg",
+        "brand": "Plantronics",
+        "price": "29.99",
+        "salePrice": "",
+        "onSale": false,
+        "description": "Plantronics Audio 326",
+        "specifics": [
+            {
+                "name": "Тип",
+                "spec": "Call center"
+            },
+            {
+                "name": "Технология",
+                "spec": "Кабел"
+            },
+            {
+                "name": "Честота (Hz)",
+                "spec": "20Hz - 20kHz"
+            },
+            {
+                "name": "Дължина кабел (м)",
+                "spec": "2.4"
+            }
+        ]
+    },
+    {
+        "id": "105",
+        "name": "Слушалки Gaming Logitech G233 Prodigy",
+        "cathegory": "Компютри & периферия",
+        "subcathegory": "Периферия",
+        "type": "Слушалки",
+        "quantity": "100",
+        "availability": true,
+        "main_url": "https://s11emagst.akamaized.net/products/8175/8174360/images/res_1ec77c5a68226324db9809496d84865a_450x450_65dj.jpg",
+        "brand": "Logitech",
+        "price": "139.99",
+        "salePrice": "",
+        "onSale": false,
+        "description": "Logitech G233 Prodigy",
+        "specifics": [
+            {
+                "name": "Тип",
+                "spec": "Gaming"
+            },
+            {
+                "name": "Технология",
+                "spec": "Кабел"
+            },
+            {
+                "name": "Честота (Hz)",
+                "spec": "20Hz - 20kHz"
+            },
+            {
+                "name": "Дължина кабел (м)",
+                "spec": "2"
+            }
+        ]
+    },
+    {
+        "id": "106",
+        "name": "Слушалки с микрофон Logitech H111",
+        "cathegory": "Компютри & периферия",
+        "subcathegory": "Периферия",
+        "type": "Слушалки",
+        "quantity": "100",
+        "availability": true,
+        "main_url": "https://s11emagst.akamaized.net/products/2154/2153801/images/res_c5efee38674536f212306e0fe9f9f0dd_450x450_nedf.jpg",
+        "brand": "Logitech",
+        "price": "31.99",
+        "salePrice": "",
+        "onSale": false,
+        "description": "Logitech H111",
+        "specifics": [
+            {
+                "name": "Тип",
+                "spec": "Call center"
+            },
+            {
+                "name": "Технология",
+                "spec": "Кабел"
+            },
+            {
+                "name": "Честота (Hz)",
+                "spec": "20Hz - 20kHz"
+            },
+            {
+                "name": "Дължина кабел (м)",
+                "spec": "1.8"
             }
         ]
     }

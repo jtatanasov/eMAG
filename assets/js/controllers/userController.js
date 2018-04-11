@@ -139,7 +139,7 @@ function searchInput() {
                             var searched = $(this).val();
 
                             var searchResult = productsService.searchProducts(searched);
-                            if(searchResult) {
+                            if (searchResult) {
                                 var product = {
                                     id: searchResult.id,
                                     cathegory: searchResult.cathegory,
@@ -147,12 +147,12 @@ function searchInput() {
                                     type: searchResult.type
                                 }
                                 localStorage.setItem('product', JSON.stringify(product));
-                                if(page != 'product')
+                                if (page != 'product')
                                     location.replace('#product');
                                 else {
                                     location.reload();
                                 }
-                            } 
+                            }
                         }
                     });
                 });
@@ -394,7 +394,7 @@ function userController() {
             myCartLink.css('color', '#fff');
         });
     });
-
+    var clicks = 0;
     $.get('assets/data/categories.json')
         .then(function (data) {
 
@@ -414,13 +414,16 @@ function userController() {
                         var tmpType = $('<a>' + type + '</a>');
                         tmpSubCategory.append(tmpType);
                         tmpType.on('click', function () {
+
+                            clicks++;
                             var product = {
                                 cathegory: currCategoryName,
                                 subcathegory: subcat.subcat,
                                 type: type
                             }
+                            console.log(type);
                             localStorage.setItem('product', JSON.stringify(product));
-                            location.replace('#products');
+                            location.replace('#products/' + type);
                         });
                     })
 

@@ -33,7 +33,6 @@ function typesOfProductsPageController() {
         // add brands side:
         filtersService.clearAllBrands();
         brands.forEach(el => {
-            console.log("206 - el => " + el)
             filtersService.addABrand(productsType, el);
         })
 
@@ -45,7 +44,9 @@ function typesOfProductsPageController() {
         var loadProductsOnPage = function (arr) {
             // currentAvailableProducts = filtersService.filterArray(productsType);
             currentAvailableProducts = filtersService.findFilter("ultimateFilter").pass(productsType);
+
             var curr = filtersService.getAllAvailableBrandsProducts();
+            console.log(curr.length);
             if (curr.length > 0) {
                 currentAvailableProducts = curr;
             }
@@ -54,6 +55,7 @@ function typesOfProductsPageController() {
                 currentPageProducts = productsType.slice();
             }
 
+            console.log(currentAvailableProducts);
             if (sortPrice) {
                 currentAvailableProducts = (sortPrice == "lowest") ? productsService.sortLowestPrice(currentAvailableProducts) : productsService.sortHighestPrice(currentAvailableProducts);
             }
@@ -469,7 +471,7 @@ function typesOfProductsPageController() {
 
                 $("#availability-filter").on("change", function (event) {
                     currentPage = 1;
-                    var filterName = $(this).parent().attr("class").split(",")[0];
+                    var filterName = $(this).parent().attr("class").split(" ")[0];
                     if ($("#availability-filter").is(":checked")) {
                         $("#filters-top-nav-availability").css({ "display": "inline-block" });
                         if (($('#hr-filters-nav-top').css('display') == 'none')) {
@@ -480,7 +482,9 @@ function typesOfProductsPageController() {
                             $("#sale-filter").prop('checked', false);
                         }
                         filtersService.activateFilter(filterName);
-                        filtersService.deactivateFilter("productsOnSale");
+                        if(filtersService.findActiveFilter("productsOnSale") >= 0){
+                            filtersService.deactivateFilter("productsOnSale");
+                        }
                     } else {
                         $("#filters-top-nav-availability").css({ "display": "none" });
                         if (!($('#hr-filters-nav-top').css('display') == 'none')
@@ -489,11 +493,10 @@ function typesOfProductsPageController() {
                         }
                         filtersService.deactivateFilter(filterName);
                     }
-                    // currentAvailableProducts = filterProducts(productsType);
+
                     clearProductsOnPage();
-                    // let temp = productsService.showAvailable(currentAvailableProducts);    
-                    let temp = filtersService.filterArray(currentAvailableProducts);
-                    loadProductsOnPage(temp);
+                    currentAvailableProducts = filtersService.filterArray(currentAvailableProducts);
+                    loadProductsOnPage();
                 })
 
                 $("#sale-filter").parent().on("click", function (event) {
@@ -504,7 +507,7 @@ function typesOfProductsPageController() {
 
                 $("#sale-filter").on("change", function (event) {
                     currentPage = 1;
-                    var filterName = $(this).parent().attr("class").split(",")[0];
+                    var filterName = $(this).parent().attr("class").split(" ")[0];
                     if ($("#sale-filter").is(":checked")) {
                         $("#filters-top-nav-availability").css({ "display": "inline-block" });
                         if (($('#hr-filters-nav-top').css('display') == 'none')) {
@@ -524,11 +527,9 @@ function typesOfProductsPageController() {
                         }
                         filtersService.deactivateFilter(filterName);
                     }
-                    // currentAvailableProducts = filterProducts(productsType);
                     clearProductsOnPage();
-                    // let temp = productsService.productsOnSale(currentAvailableProducts);
-                    let temp = filtersService.filterArray(currentAvailableProducts);
-                    loadProductsOnPage(temp);
+                    currentAvailableProducts = filtersService.filterArray(currentAvailableProducts);
+                    loadProductsOnPage();
                 })
 
                 //sidebar dropdowns animations
@@ -549,14 +550,35 @@ function typesOfProductsPageController() {
                 //clear all filters button
                 $("#clear-filters-container").on("click", function () {
                     currentPage = 1;
-                    $("input[type='checkbox'").toArray().forEach(el => {
-                        if ($(el).is(":checked")) {
-                            $(el).trigger("click");
-                        }
-                    });
+                    $("input[type='checkbox'").prop("checked", false);
+                    filtersService.activeFilters = [];
+                    filtersService.brandsFilter.activeBrands = 0;
+                    filtersService.brandsFilter.availableBrands = []; 
+                    $("#filters-top-nav-availability").hide();
+                    $("#filters-top-nav-distributor").hide();   
+                    $("#hr-filters-nav-top").hide();                    
                     clearProductsOnPage();
-                    loadProductsOnPage(productsType);
-                });
+                    loadProductsOnPage();
+                    });
+                    
+
+                //nav selects
+                $(".select-container-div>span").on("click", function(event){
+                    event = event.originalEvent;
+                    event.preventDefault();
+                    $(this).closest("li").css({"display":"none"});
+                    var keyName = ($($(this).parent().children("select")).attr("name"));
+                    if(keyName == "availability"){
+                        $($("#availability-filter-list").parent()).children("li").children("input[type=checkbox]").prop("checked", false);
+                        filtersService.activeFilters = [];
+                    } else {
+                        $($("#manufacturer-filter-list").parent()).children("li").children("input[type=checkbox]").prop("checked", false);
+                        filtersService.brandsFilter.activeBrands = 0;
+                        filtersService.brandsFilter.availableBrands = [];                        
+                    }
+                    clearProductsOnPage();
+                    loadProductsOnPage();
+                })
 
                 //sort by price:
                 $("#price-sort-select").on("change", function () {

@@ -36,22 +36,23 @@ var filtersService = (function(){
     }
 
     FilterService.prototype.findActiveFilter = function(name){
-        return this.activeFilters.findIndex(el => el.name === name);
+        return this.activeFilters.findIndex(el => el.name == name);
     }
 
     FilterService.prototype.activateFilter = function(name){
         var index = this.findFilterIndex(name);
-        if(this.activeFilters.findIndex(el => el.name === name) >= 0){
-        } else {
+        if(this.activeFilters.findIndex(el => el.name === name) < 0){
             var toPush = this.allFilters[index]
-            this.activeFilters.push(toPush);
+            this.activeFilters.push(toPush);            
+        } else {
+            console.log("already active")
         }
     }
 
     FilterService.prototype.deactivateFilter = function(name){
         var index = this.findActiveFilter(name);
         if(index >= 0){
-            this.activeFilters.splice(index, 1);
+            this.activeFilters = this.activeFilters.splice(index, 1);
         }
     }
 
@@ -59,7 +60,6 @@ var filtersService = (function(){
         var filteredArr = arr;
         this.activeFilters.forEach(el => {
             filteredArr = el.pass(filteredArr);
-            console.log(filteredArr);
         });
         return filteredArr;
     }
@@ -71,8 +71,6 @@ var filtersService = (function(){
 
     FilterService.prototype.addAvailableBrand = function(name){
         var toPush = this.brandsFilter.allBrands.find(el => el.brandName === name);
-        console.log(this.brandsFilter.allBrands);
-        console.log(toPush);
         this.brandsFilter.availableBrands.push(toPush);
         this.brandsFilter.activeBrands++;
     }

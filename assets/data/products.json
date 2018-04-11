@@ -5579,5 +5579,1008 @@
                 "spec": "D"
             }
         ]
+    },
+    {
+        "id": "153",
+        "name": "Прахосмукачка без торба Philips PowerPro Compact FC9331/09",
+        "cathegory": "Малки електроуреди",
+        "subcathegory": "Прахосмукачки и ютии",
+        "type": "Прахосмукачки",
+        "quantity": "100",
+        "availability": true,
+        "main_url": "https://s11emagst.akamaized.net/products/5606/5605722/images/res_672c4722f340a76b3ae811fdb0c92e97_450x450_61tt.jpg",
+        "brand": "Philips",
+        "price": "197.99",
+        "salePrice": "",
+        "onSale": false,
+        "description": "По-добро събиране на прах с PowerCyclone 5 • Клас на енергийна ефективност A",
+        "specifics": [
+            {
+                "name": "Тип почистване",
+                "spec": "Сухо"
+            },
+            {
+                "name": "Захранване",
+                "spec": "Мрежово"
+            },
+            {
+                "name": "Енергиен клас",
+                "spec": "Клас A"
+            },
+            {
+                "name": "Цвят",
+                "spec": "Черен"
+            },
+            {
+                "name": "Капацитет",
+                "spec": "1.5 l"
+            },
+            {
+                "name": "Мощност",
+                "spec": "650 W"
+            },
+            {
+                "name": "Ниво на шум",
+                "spec": "79 dB"
+            }
+        ]
+    },
+    {
+        "id": "154",
+        "name": "Прахосмукачка Stick 2 в 1 Philips PowerPro Duo FC6162/02",
+        "cathegory": "Малки електроуреди",
+        "subcathegory": "Прахосмукачки и ютии",
+        "type": "Прахосмукачки",
+        "quantity": "100",
+        "availability": true,
+        "main_url": "https://s11emagst.akamaized.net/products/664/663033/images/res_6f3118d2be1a848047c0dbfa66db6c09_450x450_a8r9.jpg",
+        "brand": "Philips",
+        "price": "255.99",
+        "salePrice": "",
+        "onSale": false,
+        "description": "Технологията PowerCyclone ви осигурява най-доброто почистване с един замах благодарение на високоефективните стъпки: 1) Въздухът навлиза бързо в PowerCyclone през правия и гладък входен отвор за въздух. 2) Извитата тръба за въздух бързо ускорява въздуха в циклонната камера за отделяне на праха от въздуха.",
+        "specifics": [
+            {
+                "name": "Тип почистване",
+                "spec": "Сухо"
+            },
+            {
+                "name": "Захранване",
+                "spec": "Акумулаторно"
+            },
+            {
+                "name": "Енергиен клас",
+                "spec": "Клас A"
+            },
+            {
+                "name": "Цвят",
+                "spec": "Candy Red"
+            },
+            {
+                "name": "Капацитет",
+                "spec": "0.6 l"
+            },
+            {
+                "name": "Издръжливост на батерията (мин)",
+                "spec": "20"
+            },
+            {
+                "name": "Ниво на шум",
+                "spec": "80 dB"
+            }
+        ]
+    },
+    {
+        "id": "155",
+        "name": "Прахосмукачка Philips FC9532/09",
+        "cathegory": "Малки електроуреди",
+        "subcathegory": "Прахосмукачки и ютии",
+        "type": "Прахосмукачки",
+        "quantity": "100",
+        "availability": true,
+        "main_url": "https://s11emagst.akamaized.net/products/13297/13296020/images/res_7a990a498b063f717ed1c72a80f83736_450x450_q3qu.jpg",
+        "brand": "Philips",
+        "price": "299.99",
+        "salePrice": "",
+        "onSale": false,
+        "description": "Philips FC9532/09",
+        "specifics": [
+            {
+                "name": "Тип почистване",
+                "spec": "Сухо"
+            },
+            {
+                "name": "Захранване",
+                "spec": "Мрежово"
+            },
+            {
+                "name": "Енергиен клас",
+                "spec": "Клас A"
+            },
+            {
+                "name": "Цвят",
+                "spec": "Червен"
+            },
+            {
+                "name": "Капацитет",
+                "spec": "1.7 l"
+            },
+            {
+                "name": "Мощност",
+                "spec": "750 W"
+            },
+            {
+                "name": "Ниво на шум",
+                "spec": "78 dB"
+            }
+        ]
+    },
+    {
+        "id": "156",
+        "name": "Прахосмукачка с торба Rowenta Silence Force 4A RO6455",
+        "cathegory": "Малки електроуреди",
+        "subcathegory": "Прахосмукачки и ютии",
+        "type": "Прахосмукачки",
+        "quantity": "100",
+        "availability": true,
+        "main_url": "https://s11emagst.akamaized.net/products/2372/2371355/images/res_06e90147fe6bc1b85d7d5c112f3d4371_450x450_vibr.jpg",
+        "brand": "Rowenta",
+        "price": "449.99",
+        "salePrice": "",
+        "onSale": false,
+        "description": "Rowenta Silence Force 4A осигурява оптимални резултати за всички видове повърхности като килими, черги и твърди подови настилки. Прахосмукачката Silence Force™ има 3 нива на филтрация, осигуряващи свеж и чист въздух за перфектна чистота. Особено препоръчителна за хора, страдащи от алергии, новата торбичка Hygiene+ има 4 слоя с различна плътност, които задържат близо 99.99% от частиците с диаметър от 0.3 микрометра*. Прахосмукачките сега са оборудвани с мотори с ниска мощност, намаляващи консумацията на енергия с до 60% в сравнение с предишното поколение уреди. ",
+        "specifics": [
+            {
+                "name": "Тип почистване",
+                "spec": "Сухо"
+            },
+            {
+                "name": "Захранване",
+                "spec": "Мрежово"
+            },
+            {
+                "name": "Енергиен клас",
+                "spec": "Клас A"
+            },
+            {
+                "name": "Цвят",
+                "spec": "Черен"
+            },
+            {
+                "name": "Капацитет",
+                "spec": "4.5 l"
+            },
+            {
+                "name": "Мощност",
+                "spec": "750 W"
+            },
+            {
+                "name": "Ниво на шум",
+                "spec": "66 dB"
+            }
+        ]
+    },
+    {
+        "id": "157",
+        "name": "Прахосмукачка без торба Rowenta Compact Power 3A RO3724",
+        "cathegory": "Малки електроуреди",
+        "subcathegory": "Прахосмукачки и ютии",
+        "type": "Прахосмукачки",
+        "quantity": "100",
+        "availability": true,
+        "main_url": "https://s11emagst.akamaized.net/products/3301/3300010/images/res_c08f7bbecb3e8060ce5c0de94f6950c7_450x450_154t.jpg",
+        "brand": "Rowenta",
+        "price": "179.99",
+        "salePrice": "",
+        "onSale": false,
+        "description": "Филтър от пяна поставен в предната част на двигателя. Филтърът е разположен преди изхода за въздух, за да улови дори най-малките прахови частици, изпуснати във въздуха. Лесно почистване на контейнера за прах: само на 4 стъпки! Фълтърът от пяна е лесен за достъп и почистване за дълготрайна производителност!",
+        "specifics": [
+            {
+                "name": "Тип почистване",
+                "spec": "Сухо"
+            },
+            {
+                "name": "Захранване",
+                "spec": "Мрежово"
+            },
+            {
+                "name": "Енергиен клас",
+                "spec": "Клас A"
+            },
+            {
+                "name": "Цвят",
+                "spec": "Oранжев"
+            },
+            {
+                "name": "Капацитет",
+                "spec": "1.5 l"
+            },
+            {
+                "name": "Мощност",
+                "spec": "750 W"
+            },
+            {
+                "name": "Ниво на шум",
+                "spec": "79 dB"
+            }
+        ]
+    },
+    {
+        "id": "158",
+        "name": "Прахосмукачка с торба Rowenta RO6486EA Silence Force 4A Full Care",
+        "cathegory": "Малки електроуреди",
+        "subcathegory": "Прахосмукачки и ютии",
+        "type": "Прахосмукачки",
+        "quantity": "100",
+        "availability": true,
+        "main_url": "https://s11emagst.akamaized.net/products/5142/5141728/images/res_a4d2dce8ee1cbda1428188c629ffa1fd_450x450_1t67.jpg",
+        "brand": "Rowenta",
+        "price": "619.99",
+        "salePrice": "",
+        "onSale": false,
+        "description": "Rowenta RO6486EA Silence Force 4A Full Care",
+        "specifics": [
+            {
+                "name": "Тип почистване",
+                "spec": "Сухо"
+            },
+            {
+                "name": "Захранване",
+                "spec": "Мрежово"
+            },
+            {
+                "name": "Енергиен клас",
+                "spec": "Клас A"
+            },
+            {
+                "name": "Цвят",
+                "spec": "Сив"
+            },
+            {
+                "name": "Мощност",
+                "spec": "750 W"
+            },
+            {
+                "name": "Ниво на шум",
+                "spec": "63 dB"
+            }
+        ]
+    },
+    {
+        "id": "159",
+        "name": "Ютия Tefal Easygliss FV3912E0",
+        "cathegory": "Малки електроуреди",
+        "subcathegory": "Прахосмукачки и ютии",
+        "type": "Ютии",
+        "quantity": "100",
+        "availability": true,
+        "main_url": "https://s11emagst.akamaized.net/products/5142/5141744/images/res_c5aa799b8ad7fb26024f795c01afc4dc_450x450_3nok.jpg",
+        "brand": "Tefal",
+        "price": "69.99",
+        "salePrice": "",
+        "onSale": false,
+        "description": "Изключителна плоча Durilium Технологията Durilium осигурява отлично приплъзване, перфектно разпределение на парата и устойчивост на надраскване за бързо и ефективно гладене. Easygliss е оборудванa с много добрa плоча, благодарение на технологията Durilium, която предлага отлично плъзгане за бързо и леко гладене. Освен това автоматичната функция за регулиране на парата и температурата, в зависимост от избрания материал, допълнителния спусък на пара и върха за прецизност, гарантират невероятни резултати всеки път, лесно изглаждат дори най-трудните гънки. Оптимално плъзгане, за ефективно гладене Проектирана специално за опростяване на гладенето, Easygliss отговаря на всички предизвикателства чрез оптимална и продължителна производителност.",
+        "specifics": [
+            {
+                "name": "Плоча",
+                "spec": "Durilium; Ultragliss"
+            },
+            {
+                "name": "Цвят",
+                "spec": "Бял/Червен"
+            },
+            {
+                "name": "Мощност",
+                "spec": "2200 W"
+            },
+            {
+                "name": "Дължина на кабела",
+                "spec": "2 м"
+            }
+        ]
+    },
+    {
+        "id": "160",
+        "name": "Ютия Tefal Turbo Pro FV5640E0",
+        "cathegory": "Малки електроуреди",
+        "subcathegory": "Прахосмукачки и ютии",
+        "type": "Ютии",
+        "quantity": "100",
+        "availability": true,
+        "main_url": "https://s11emagst.akamaized.net/products/5437/5436340/images/res_9ac6091815e39bc7cc2867295d1af0cd_450x450_kclm.jpg",
+        "brand": "Tefal",
+        "price": "127.99",
+        "salePrice": "",
+        "onSale": false,
+        "description": "Tefal Turbo Pro FV5640E0",
+        "specifics": [
+            {
+                "name": "Плоча",
+                "spec": "Airglide;Durilium;Autoclean"
+            },
+            {
+                "name": "Цвят",
+                "spec": "Черен"
+            },
+            {
+                "name": "Мощност",
+                "spec": "2600 W"
+            },
+            {
+                "name": "Дължина на кабела",
+                "spec": "2 м"
+            }
+        ]
+    },
+    {
+        "id": "161",
+        "name": "Ютия без кабел Tefal FreeMove FV9976",
+        "cathegory": "Малки електроуреди",
+        "subcathegory": "Прахосмукачки и ютии",
+        "type": "Ютии",
+        "quantity": "100",
+        "availability": true,
+        "main_url": "https://s11emagst.akamaized.net/products/8833/8832150/images/res_1922134f11b0efd76083c218a2e7f97f_450x450_eup4.jpg",
+        "brand": "Tefal",
+        "price": "239.99",
+        "salePrice": "",
+        "onSale": false,
+        "description": "Без кабел, за по-голяма свобода и удобство. Бързо зареждане Докато обърнете дреха за галдене от другата страна, ютията ще е готова за работа. Технология Durilium® за бързо и ефективно гладене Ютията е оборудвана с най-добрата технология за бързо и ефективно гладене от Tefal - Durilium®. В допълнение на това, има и функция за автоматично регулиране на парата и температурата, в зависимост от материята, за максимална прецизност и изглаждане на най-упоритите гънки.",
+        "specifics": [
+            {
+                "name": "Плоча",
+                "spec": "Durilium AirGlide Autoclean"
+            },
+            {
+                "name": "Цвят",
+                "spec": "Червена/Бяла"
+            },
+            {
+                "name": "Мощност",
+                "spec": "2600 W"
+            },
+            {
+                "name": "Дължина на кабела",
+                "spec": "1.8 м"
+            }
+        ]
+    },
+    {
+        "id": "162",
+        "name": "Кафемашина Caffe D`Italia Chikko",
+        "cathegory": "Малки електроуреди",
+        "subcathegory": "Приготвяне на напитки",
+        "type": "Кафемашини",
+        "quantity": "100",
+        "availability": true,
+        "main_url": "https://s11emagst.akamaized.net/products/9778/9777387/images/res_69c22ac2521a3a2c5d1d9186ce7be313_450x450_s0d5.jpg",
+        "brand": "Caffe D`Italia",
+        "price": "148.99",
+        "salePrice": "",
+        "onSale": false,
+        "description": "НАПРЕЖЕНИЕ: 220-240V -50 / 60HZ , Мощност: 1000 W , капацитет на резервоара за вода: 0,85lt , Налягане на помпата: 19 bar, Пестене на енергия система: в режим на готовност 0,5 W, Тегло: 4,00 кг , Размер на уреда: LxHxD мм 167x254x300 ",
+        "specifics": [
+            {
+                "name": "Цвят",
+                "spec": "Сив"
+            },
+            {
+                "name": "Мощност",
+                "spec": "1000 W"
+            },
+            {
+                "name": "Капацитет на воден резервоар (л)",
+                "spec": "0,85"
+            }
+        ]
+    },
+    {
+        "id": "163",
+        "name": "Кафемашина Caffe D`Italia Chikko",
+        "cathegory": "Малки електроуреди",
+        "subcathegory": "Приготвяне на напитки",
+        "type": "Кафемашини",
+        "quantity": "100",
+        "availability": true,
+        "main_url": "https://s11emagst.akamaized.net/products/9778/9777394/images/res_573ad1e38b225458b7a4ca43acdac793_450x450_irv5.jpg",
+        "brand": "Caffe D`Italia",
+        "price": "69.99",
+        "salePrice": "",
+        "onSale": false,
+        "description": "НАПРЕЖЕНИЕ: 220-240V -50 / 60HZ , Мощност: 1000 W , капацитет на резервоара за вода: 0,85lt , Налягане на помпата: 19 bar, Пестене на енергия система: в режим на готовност 0,5 W, Тегло: 4,00 кг , Размер на уреда: LxHxD мм 167x254x300 ",
+        "specifics": [
+            {
+                "name": "Цвят",
+                "spec": "Зелен"
+            },
+            {
+                "name": "Мощност",
+                "spec": "1000 W"
+            },
+            {
+                "name": "Капацитет на воден резервоар (л)",
+                "spec": "0,85"
+            }
+        ]
+    },
+    {
+        "id": "164",
+        "name": "Кафемашина Heinner HCM-900RBK",
+        "cathegory": "Малки електроуреди",
+        "subcathegory": "Приготвяне на напитки",
+        "type": "Кафемашини",
+        "quantity": "100",
+        "availability": true,
+        "main_url": "https://s11emagst.akamaized.net/products/8395/8394630/images/res_5678aef39106325a78e34389cb79ca20_450x450_6crh.jpg",
+        "brand": "Heinner",
+        "price": "92.99",
+        "salePrice": "",
+        "onSale": false,
+        "description": "Heinner HCM-900RBK",
+        "specifics": [
+            {
+                "name": "Цвят",
+                "spec": "Черен"
+            },
+            {
+                "name": "Мощност",
+                "spec": "900 W"
+            },
+            {
+                "name": "Капацитет на воден резервоар (л)",
+                "spec": "0,6"
+            }
+        ]
+    },
+    {
+        "id": "165",
+        "name": "Кафемашина Heinner HCM-750BK",
+        "cathegory": "Малки електроуреди",
+        "subcathegory": "Приготвяне на напитки",
+        "type": "Кафемашини",
+        "quantity": "100",
+        "availability": true,
+        "main_url": "https://s11emagst.akamaized.net/products/14003/14002164/images/res_03b086d2d432e3817bf27227c2ae02eb_450x450_6r63.jpg",
+        "brand": "Heinner",
+        "price": "25.99",
+        "salePrice": "",
+        "onSale": false,
+        "description": "Heinner HCM-750BK",
+        "specifics": [
+            {
+                "name": "Цвят",
+                "spec": "Черен"
+            },
+            {
+                "name": "Мощност",
+                "spec": "750 W"
+            },
+            {
+                "name": "Капацитет на воден резервоар (л)",
+                "spec": "1.25"
+            }
+        ]
+    },
+    {
+        "id": "166",
+        "name": "Кафемашина Elekom EK 207",
+        "cathegory": "Малки електроуреди",
+        "subcathegory": "Приготвяне на напитки",
+        "type": "Кафемашини",
+        "quantity": "100",
+        "availability": true,
+        "main_url": "https://s11emagst.akamaized.net/products/12757/12756041/images/res_aa21ed9fff13a34e28fd21d81c10dd3f_450x450_6gbb.jpg",
+        "brand": "Elekom",
+        "price": "128.99",
+        "salePrice": "",
+        "onSale": false,
+        "description": "Кафемашина за еспресо - Крема диск",
+        "specifics": [
+            {
+                "name": "Цвят",
+                "spec": "Сив"
+            },
+            {
+                "name": "Мощност",
+                "spec": "1050 W"
+            },
+            {
+                "name": "Капацитет на воден резервоар (л)",
+                "spec": "1"
+            }
+        ]
+    },
+    {
+        "id": "167",
+        "name": "Кафемашина Elekom EK 8008",
+        "cathegory": "Малки електроуреди",
+        "subcathegory": "Приготвяне на напитки",
+        "type": "Кафемашини",
+        "quantity": "100",
+        "availability": true,
+        "main_url": "https://s11emagst.akamaized.net/products/1733/1732499/images/res_03d6d7f194d78abc122ced9cf394d770_450x450_fkv.jpg",
+        "brand": "Elekom",
+        "price": "34.99",
+        "salePrice": "",
+        "onSale": false,
+        "description": "Филтър за многократна употреба",
+        "specifics": [
+            {
+                "name": "Цвят",
+                "spec": "Червен"
+            },
+            {
+                "name": "Мощност",
+                "spec": "450 W"
+            },
+            {
+                "name": "Капацитет на воден резервоар (л)",
+                "spec": "0.25"
+            }
+        ]
+    },
+    {
+        "id": "168",
+        "name": "Сокоизстисквачка за плодове Philips Avance Collection HR1880/01",
+        "cathegory": "Малки електроуреди",
+        "subcathegory": "Приготвяне на напитки",
+        "type": "Сокоистисквачки",
+        "quantity": "100",
+        "availability": true,
+        "main_url": "https://s11emagst.akamaized.net/products/927/926455/images/res_b26341529bebd12c84f28b859fa128fa_450x450_o5gk.jpg",
+        "brand": "Philips",
+        "price": "395.99",
+        "salePrice": "",
+        "onSale": false,
+        "description": "Този безшумен и надежден мотор ще ви позволи да изцедите максимално количество сок от плодовете и зеленчуците си. Той е толкова мощен, че можете лесно да обработвате твърди зеленчуци.",
+        "specifics": [
+            {
+                "name": "Цвят",
+                "spec": "Черен/сребрист"
+            },
+            {
+                "name": "Мощност",
+                "spec": "200 W"
+            },
+            {
+                "name": "Капацитет на кана за сок (л)",
+                "spec": "1.5"
+            }
+        ]
+    },
+    {
+        "id": "169",
+        "name": "Сокоизстисквачка PHILIPS HR1823/70",
+        "cathegory": "Малки електроуреди",
+        "subcathegory": "Приготвяне на напитки",
+        "type": "Сокоистисквачки",
+        "quantity": "100",
+        "availability": true,
+        "main_url": "https://s11emagst.akamaized.net/products/4913/4912766/images/res_19e4803871766eb47e5dc6f21c2c9d4a_450x450_r4fs.jpg",
+        "brand": "Philips",
+        "price": "71.99",
+        "salePrice": "",
+        "onSale": false,
+        "description": "мощност: 220 w вместимост: 500 мл анти-плъзгаща система",
+        "specifics": [
+            {
+                "name": "Цвят",
+                "spec": "Бял"
+            },
+            {
+                "name": "Мощност",
+                "spec": "220 W"
+            },
+            {
+                "name": "Капацитет на кана за сок (л)",
+                "spec": "1"
+            }
+        ]
+    },
+    {
+        "id": "170",
+        "name": "Сокоизстисквачка за плодове и зеленчуци PHILIPS Viva Collection HR1832/52",
+        "cathegory": "Малки електроуреди",
+        "subcathegory": "Приготвяне на напитки",
+        "type": "Сокоистисквачки",
+        "quantity": "100",
+        "availability": true,
+        "main_url": "https://s11emagst.akamaized.net/products/1964/1963809/images/res_e82e194eb4d66068c579189b60cc0604_450x450_onmp.jpg",
+        "brand": "Philips",
+        "price": "128.99",
+        "salePrice": "",
+        "onSale": false,
+        "description": "Спиране на прокапването, за да не капе сок Когато е активирана, системата за спиране на прокапването ще предотврати прокапването на сокоизстисквачката. Улеят на системата за спиране на прокапването е много лесен за почистване, тъй като е разглобяем и е направен от материали, подходящи за съдомиялна машина. С едно просто движение вие предотвратявате прокапването на сока и поддържате плота чист. Компактна сокоизстисквачка, винаги подръка на плота в кухнята ви ",
+        "specifics": [
+            {
+                "name": "Цвят",
+                "spec": "Бял/Зелен"
+            },
+            {
+                "name": "Мощност",
+                "spec": "500 W"
+            },
+            {
+                "name": "Капацитет на кана за сок (л)",
+                "spec": "1"
+            }
+        ]
+    },
+    {
+        "id": "171",
+        "name": "Сокоизстисквачка за плодове и зеленчуци Gorenje JC900E",
+        "cathegory": "Малки електроуреди",
+        "subcathegory": "Приготвяне на напитки",
+        "type": "Сокоистисквачки",
+        "quantity": "100",
+        "availability": true,
+        "main_url": "https://s11emagst.akamaized.net/products/3606/3605783/images/res_f09e9cd898a4a570a589f2abc09b8408_450x450_d5oe.jpg",
+        "brand": "Gorenje",
+        "price": "172.99",
+        "salePrice": "",
+        "onSale": false,
+        "description": "Изключително удобната и пракична сокоизтисквачка Gorenje JC900E е подходяща за всеки стил и всяка кухня.",
+        "specifics": [
+            {
+                "name": "Цвят",
+                "spec": "Черен/Инокс"
+            },
+            {
+                "name": "Мощност",
+                "spec": "900 W"
+            },
+            {
+                "name": "Капацитет на кана за сок (л)",
+                "spec": "1.1"
+            }
+        ]
+    },
+    {
+        "id": "172",
+        "name": "Цитрус преса Gorenje CJ40W",
+        "cathegory": "Малки електроуреди",
+        "subcathegory": "Приготвяне на напитки",
+        "type": "Сокоистисквачки",
+        "quantity": "100",
+        "availability": true,
+        "main_url": "https://s11emagst.akamaized.net/products/1605/1604625/images/res_c4e3449f2c4de58abbf5708ceed3e337_450x450_bft0.jpg",
+        "brand": "Gorenje",
+        "price": "37.99",
+        "salePrice": "",
+        "onSale": false,
+        "description": "Лесна за използване, цитрус преса Gorenje улеснява здравословното хранене",
+        "specifics": [
+            {
+                "name": "Цвят",
+                "spec": "Бял"
+            },
+            {
+                "name": "Мощност",
+                "spec": "40 W"
+            },
+            {
+                "name": "Капацитет на кана за сок (л)",
+                "spec": "1"
+            }
+        ]
+    },
+    {
+        "id": "173",
+        "name": "Блендер Tefal Mastermix BL850D38",
+        "cathegory": "Малки електроуреди",
+        "subcathegory": "Кухненски уреди",
+        "type": "Блендери",
+        "quantity": "100",
+        "availability": true,
+        "main_url": "https://s11emagst.akamaized.net/products/5142/5141727/images/res_287af1be51e3385ae890e9b73d14cdbe_450x450_2tgg.jpg",
+        "brand": "Tefal",
+        "price": "199.99",
+        "salePrice": "",
+        "onSale": false,
+        "description": "Tefal Mastermix BL850D38",
+        "specifics": [
+            {
+                "name": "Цвят",
+                "spec": "Бял"
+            },
+            {
+                "name": "Мощност",
+                "spec": "1400 W"
+            },
+            {
+                "name": "Капацитет (л)",
+                "spec": "1.75"
+            }
+        ]
+    },
+    {
+        "id": "174",
+        "name": "Блендер Tefal BlendForce Faciclic Plastic BL300138",
+        "cathegory": "Малки електроуреди",
+        "subcathegory": "Кухненски уреди",
+        "type": "Блендери",
+        "quantity": "100",
+        "availability": true,
+        "main_url": "https://s11emagst.akamaized.net/products/742/741354/images/res_226943f571d754d6d33421a57c212187_450x450_v9iq.jpg",
+        "brand": "Tefal",
+        "price": "62.99",
+        "salePrice": "",
+        "onSale": false,
+        "description": "Tefal BlendForce Faciclic Plastic BL300138",
+        "specifics": [
+            {
+                "name": "Цвят",
+                "spec": "Бял"
+            },
+            {
+                "name": "Мощност",
+                "spec": "400 W"
+            },
+            {
+                "name": "Капацитет (л)",
+                "spec": "1.25"
+            }
+        ]
+    },
+    {
+        "id": "175",
+        "name": "Блендер Tefal Click & Taste BL142A38",
+        "cathegory": "Малки електроуреди",
+        "subcathegory": "Кухненски уреди",
+        "type": "Блендери",
+        "quantity": "100",
+        "availability": true,
+        "main_url": "https://s11emagst.akamaized.net/products/2371/2370378/images/res_d24aeac759ad4f3f3f7f22a8587b2d5d_450x450_jbo5.jpg",
+        "brand": "Tefal",
+        "price": "124.99",
+        "salePrice": "",
+        "onSale": false,
+        "description": "Tefal Click & Taste BL142A38",
+        "specifics": [
+            {
+                "name": "Цвят",
+                "spec": "Сив"
+            },
+            {
+                "name": "Мощност",
+                "spec": "300 W"
+            },
+            {
+                "name": "Капацитет (л)",
+                "spec": "0.6"
+            }
+        ]
+    },
+    {
+        "id": "176",
+        "name": "Блендер KitchenAid Artisan Power Plus",
+        "cathegory": "Малки електроуреди",
+        "subcathegory": "Кухненски уреди",
+        "type": "Блендери",
+        "quantity": "100",
+        "availability": true,
+        "main_url": "https://s11emagst.akamaized.net/products/10596/10595118/images/res_98d23c732481d77f7340dc84ce0757b9_450x450_fpnf.jpg",
+        "brand": "KitchenAid",
+        "price": "1698.99",
+        "salePrice": "",
+        "onSale": false,
+        "description": "Най-силният и най-мощен блендер - Artisan Power Plus внася в кухнята на целия 100 годишен опит, на американската компания KitchenAid. Блендрът е повече от едно устройство, с което може да изберете лека диета и разнообразен, активен и здравословен начин на живот. Здрав и изключително мощен двигател (1800W / 3.5 к.с.), но в същото време много стабилен, блендера ще смели и перфектно ще хомонигезира различни рецепти от - сок, до смути, сосове или супи. Няма съставка, която да го затрудни без значения, колко е трудна за смилане. Перфектно се справя със замразени плодове и зеленчуци или такива с много фибри. Всеки всеки път резултата са перфектно хомогенни смеси с напълно запазени хранителни вещества",
+        "specifics": [
+            {
+                "name": "Цвят",
+                "spec": "Метално черно"
+            },
+            {
+                "name": "Мощност",
+                "spec": "1800 W"
+            },
+            {
+                "name": "Капацитет (л)",
+                "spec": "2.6"
+            }
+        ]
+    },
+    {
+        "id": "177",
+        "name": "Блендер KitchenAid Artisan",
+        "cathegory": "Малки електроуреди",
+        "subcathegory": "Кухненски уреди",
+        "type": "Блендери",
+        "quantity": "100",
+        "availability": true,
+        "main_url": "https://s11emagst.akamaized.net/products/10596/10595625/images/res_dbf0420ac1db079ac01d5c954f038c2c_450x450_ipps.jpg",
+        "brand": "KitchenAid",
+        "price": "449.99",
+        "salePrice": "",
+        "onSale": false,
+        "description": "Никога не сте виждали блендер, който доставя такива резултати. За секунди ще натроши кубчета лед, за да имате лед на сняг, перфектни смутита, пюрета и още много други. Със своя мощен мотор и intelli-speed контрол на скоротстта, винаги ще поддържа оптималната скорост за всяка настойка, независимо от количеството съставки. С функцията “soft start”, блендера ще започне работа по-бавно и постепенно ще достигне желаната скорост за смесване без пръски за перфектни резултати. Може да избирате между стъклената кана от 1.5L или допълнителната от 0.75L. Блендера е здрав, стабилен и издръжлив, а формата на каната гарантира лесно наливане и почистване.",
+        "specifics": [
+            {
+                "name": "Цвят",
+                "spec": "Имперско червено"
+            },
+            {
+                "name": "Мощност",
+                "spec": "550 W"
+            },
+            {
+                "name": "Капацитет (л)",
+                "spec": "1.5"
+            }
+        ]
+    },
+    {
+        "id": "178",
+        "name": "Мини блендер Concept SM-3381",
+        "cathegory": "Малки електроуреди",
+        "subcathegory": "Кухненски уреди",
+        "type": "Блендери",
+        "quantity": "100",
+        "availability": true,
+        "main_url": "https://s11emagst.akamaized.net/products/6706/6705844/images/res_e3d240e455273feb9f4328b9267838de_450x450_5njb.jpg",
+        "brand": "Concept",
+        "price": "75.99",
+        "salePrice": "",
+        "onSale": false,
+        "description": "Мини блендер Concept SM-3381",
+        "specifics": [
+            {
+                "name": "Цвят",
+                "spec": "Oранжев"
+            },
+            {
+                "name": "Мощност",
+                "spec": "500 W"
+            },
+            {
+                "name": "Капацитет (л)",
+                "spec": "0.57"
+            }
+        ]
+    },
+    {
+        "id": "179",
+        "name": "Блендер Concept SM-3410",
+        "cathegory": "Малки електроуреди",
+        "subcathegory": "Кухненски уреди",
+        "type": "Блендери",
+        "quantity": "100",
+        "availability": true,
+        "main_url": "https://s11emagst.akamaized.net/products/6706/6705859/images/res_2be7da2b47c3189ba8d44f8dc22cbb8c_450x450_fr5q.jpg",
+        "brand": "Concept",
+        "price": "165.99",
+        "salePrice": "",
+        "onSale": false,
+        "description": "Блендер Concept SM-3410",
+        "specifics": [
+            {
+                "name": "Цвят",
+                "spec": "Сив"
+            },
+            {
+                "name": "Мощност",
+                "spec": "1000 W"
+            },
+            {
+                "name": "Капацитет (л)",
+                "spec": "1.5"
+            }
+        ]
+    },
+    {
+        "id": "180",
+        "name": "Кухненски робот Bosch MCM3100W",
+        "cathegory": "Малки електроуреди",
+        "subcathegory": "Кухненски уреди",
+        "type": "Кухненски роботи",
+        "quantity": "100",
+        "availability": true,
+        "main_url": "https://s11emagst.akamaized.net/products/2333/2332121/images/res_9b22f4ab632f84da0eaebbc68c538415_450x450_smsm.jpg",
+        "brand": "Bosch",
+        "price": "117.99",
+        "salePrice": "",
+        "onSale": false,
+        "description": "Кухненски робот Bosch MCM3100W",
+        "specifics": [
+            {
+                "name": "Цвят",
+                "spec": "Бял/Сив"
+            },
+            {
+                "name": "Мощност",
+                "spec": "800 W"
+            },
+            {
+                "name": "Капацитет (л)",
+                "spec": "2.3"
+            }
+        ]
+    },
+    {
+        "id": "181",
+        "name": "Кухненски робот Bosch MUM4655EU",
+        "cathegory": "Малки електроуреди",
+        "subcathegory": "Кухненски уреди",
+        "type": "Кухненски роботи",
+        "quantity": "100",
+        "availability": true,
+        "main_url": "https://s11emagst.akamaized.net/products/1/406/images/res_406b6798013f2d7f1272c483a10cb6fb_450x450_m9ml.jpg",
+        "brand": "Bosch",
+        "price": "264.99",
+        "salePrice": "",
+        "onSale": false,
+        "description": "Уникални елипсовидни движения на аксесоарите за месене и разбъркване в 3 различни посоки едновременно, с постъпателно движение около централната ос. Постигнете перфектни резултати при смесването на продуктите, благодарение на динамичната система с 3D миксиране.",
+        "specifics": [
+            {
+                "name": "Цвят",
+                "spec": "Бял"
+            },
+            {
+                "name": "Мощност",
+                "spec": "550 W"
+            },
+            {
+                "name": "Капацитет (л)",
+                "spec": "3.9"
+            }
+        ]
+    },
+    {
+        "id": "182",
+        "name": "Кухненски робот Bosch MUM9BX5S22",
+        "cathegory": "Малки електроуреди",
+        "subcathegory": "Кухненски уреди",
+        "type": "Кухненски роботи",
+        "quantity": "100",
+        "availability": true,
+        "main_url": "https://s11emagst.akamaized.net/products/8225/8224216/images/res_81d73f33d42b6665b38eda7a27606950_450x450_a9pr.jpg",
+        "brand": "Bosch",
+        "price": "1139.99",
+        "salePrice": "",
+        "onSale": false,
+        "description": "Bosch MUM9BX5S22",
+        "specifics": [
+            {
+                "name": "Цвят",
+                "spec": "Инокс/Черен"
+            },
+            {
+                "name": "Мощност",
+                "spec": "1500 W"
+            },
+            {
+                "name": "Капацитет (л)",
+                "spec": "5.5"
+            }
+        ]
+    },
+    {
+        "id": "183",
+        "name": "Кухненски робот Bosch MCM42024",
+        "cathegory": "Малки електроуреди",
+        "subcathegory": "Кухненски уреди",
+        "type": "Кухненски роботи",
+        "quantity": "100",
+        "availability": true,
+        "main_url": "https://s11emagst.akamaized.net/products/10293/10292410/images/res_35c358aa36cd0f1431e6d5cc629ec325_450x450_hc4s.jpg",
+        "brand": "Bosch",
+        "price": "271.87",
+        "salePrice": "",
+        "onSale": false,
+        "description": "Материал: Пластичен, Неръждаема стомана",
+        "specifics": [
+            {
+                "name": "Цвят",
+                "spec": "Розов"
+            },
+            {
+                "name": "Мощност",
+                "spec": "800 W"
+            },
+            {
+                "name": "Капацитет (л)",
+                "spec": "1.2"
+            }
+        ]
     }
 ]

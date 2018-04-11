@@ -4072,5 +4072,612 @@
                 "spec": "1.8"
             }
         ]
+    },
+    {
+        "id": "107",
+        "name": "Телевизор LED Smart LG, 43'",
+        "cathegory": "TV, Електроника & Gaming",
+        "subcathegory": "Телевизори",
+        "type": "Телевизори",
+        "quantity": "100",
+        "availability": true,
+        "main_url": "https://s11emagst.akamaized.net/products/5877/5876913/images/res_89f8937b5113cc39420589a570b2f122_450x450_7irq.jpg",
+        "brand": "LG",
+        "price": "818.99",
+        "salePrice": "",
+        "onSale": false,
+        "description": "С помощта на магическото дистанционно управление Magic Remote и уникално усъвършенстваната лента за стартиране на webOS 3.5 можете да се потопите в безграничен свят на първокласно съдържание, предлагано от всички най-популярни доставчици на развлекателно съдържание. * Графичният потребителски интерфейс на webOS може да е различен в различните държави",
+        "specifics": [
+            {
+                "name": "Тип",
+                "spec": "LED"
+            },
+            {
+                "name": "Тип телевизор",
+                "spec": "Smart TV"
+            },
+            {
+                "name": "Диагонал на екрана (см)",
+                "spec": "108"
+            },
+            {
+                "name": "Резолюция на екрана (пиксели)",
+                "spec": "3840 x 2160"
+            },
+            {
+                "name": "Тип дисплей",
+                "spec": "Плосък"
+            }
+        ]
+    },
+    {
+        "id": "108",
+        "name": "Телевизор LED Smart LG, 55'",
+        "cathegory": "TV, Електроника & Gaming",
+        "subcathegory": "Телевизори",
+        "type": "Телевизори",
+        "quantity": "100",
+        "availability": true,
+        "main_url": "https://s11emagst.akamaized.net/products/5877/5876923/images/res_e25f9b20f5d3c35c343a2fab533ca414_450x450_p8vr.jpg",
+        "brand": "LG",
+        "price": "1238.99",
+        "salePrice": "",
+        "onSale": false,
+        "description": "С помощта на магическото дистанционно управление Magic Remote и уникално усъвършенстваната лента за стартиране на webOS 3.5 можете да се потопите в безграничен свят на първокласно съдържание, предлагано от всички най-популярни доставчици на развлекателно съдържание. * Графичният потребителски интерфейс на webOS може да е различен в различните държави",
+        "specifics": [
+            {
+                "name": "Тип",
+                "spec": "LED"
+            },
+            {
+                "name": "Тип телевизор",
+                "spec": "Smart TV"
+            },
+            {
+                "name": "Диагонал на екрана (см)",
+                "spec": "139"
+            },
+            {
+                "name": "Резолюция на екрана (пиксели)",
+                "spec": "3840 x 2160"
+            },
+            {
+                "name": "Тип дисплей",
+                "spec": "Плосък"
+            }
+        ]
+    },
+    {
+        "id": "109",
+        "name": "Телевизор LED Game TV LG, 32'",
+        "cathegory": "TV, Електроника & Gaming",
+        "subcathegory": "Телевизори",
+        "type": "Телевизори",
+        "quantity": "100",
+        "availability": true,
+        "main_url": "https://s11emagst.akamaized.net/products/5566/5565997/images/res_203e60bedf6450f76193757af18058f0_450x450_vsgr.jpg",
+        "brand": "LG",
+        "price": "349.99",
+        "salePrice": "",
+        "onSale": false,
+        "description": "Уникалната технология за обработка на LG не само подобрява цвета, но и настройва наситеността, сянката и яркостта. Цветовете оживяват, стават все по-интензивни и по-дълбоки. Подобрява всяко изображение с Upscaler за разделителна способност",
+        "specifics": [
+            {
+                "name": "Тип",
+                "spec": "LED"
+            },
+            {
+                "name": "Тип телевизор",
+                "spec": "Non Smart TV"
+            },
+            {
+                "name": "Диагонал на екрана (см)",
+                "spec": "80"
+            },
+            {
+                "name": "Резолюция на екрана (пиксели)",
+                "spec": "1366 x 768"
+            },
+            {
+                "name": "Тип дисплей",
+                "spec": "Плосък"
+            }
+        ]
+    },
+    {
+        "id": "110",
+        "name": "Телевизор Smart Philips, 50'",
+        "cathegory": "TV, Електроника & Gaming",
+        "subcathegory": "Телевизори",
+        "type": "Телевизори",
+        "quantity": "100",
+        "availability": true,
+        "main_url": "https://s11emagst.akamaized.net/products/8342/8341710/images/res_ecbf00361a29dd82dc64f5f7e78f5205_450x450_illj.jpg",
+        "brand": "Philips",
+        "price": "939.99",
+        "salePrice": "",
+        "onSale": false,
+        "description": "4K Ultra HD се отличава от всяка разделителна способност, която сте виждали някога Ultra HD телевизорът разполага с четири пъти по-висока разделителна способност в сравнение с обикновен Full HD телевизор. С над 8 милиона пиксела и уникалната ни технология за мащабиране Ultra Resolution ще се наслаждавате на най-доброто възможно качество на картината. Колкото по-високо е качеството на оригиналното съдържание, толкова по-добри изображения и разделителна способност ще можете да изживеете. ",
+        "specifics": [
+            {
+                "name": "Тип",
+                "spec": "LED"
+            },
+            {
+                "name": "Тип телевизор",
+                "spec": "Smart TV"
+            },
+            {
+                "name": "Диагонал на екрана (см)",
+                "spec": "126"
+            },
+            {
+                "name": "Резолюция на екрана (пиксели)",
+                "spec": "3840 x 2160"
+            },
+            {
+                "name": "Тип дисплей",
+                "spec": "Плосък"
+            }
+        ]
+    },
+    {
+        "id": "111",
+        "name": "Телевизор LED Philips, 32PHT4201/12",
+        "cathegory": "TV, Електроника & Gaming",
+        "subcathegory": "Телевизори",
+        "type": "Телевизори",
+        "quantity": "100",
+        "availability": true,
+        "main_url": "https://s11emagst.akamaized.net/products/3902/3901958/images/res_b77ab39129fa6a7df32b565bee79310b_450x450_vdb8.jpg",
+        "brand": "Philips",
+        "price": "419.99",
+        "salePrice": "",
+        "onSale": false,
+        "description": "Изключително елегантни линии за рафиниран профил Шикозен. Съвременен. Изтънчен. Прецизен. Свръхтънкият силует от Philips. Не би трябвало да се учудвате, че нещо толкова фино привлича такъв интерес, като имате предвид колко изтънченост ще придаде на интериора ви. LED TV за образ с невероятен контраст ",
+        "specifics": [
+            {
+                "name": "Тип",
+                "spec": "LED"
+            },
+            {
+                "name": "Тип телевизор",
+                "spec": "Non Smart TV"
+            },
+            {
+                "name": "Диагонал на екрана (см)",
+                "spec": "80"
+            },
+            {
+                "name": "Резолюция на екрана (пиксели)",
+                "spec": "1366 x 768"
+            },
+            {
+                "name": "Тип дисплей",
+                "spec": "Плосък"
+            }
+        ]
+    },
+    {
+        "id": "112",
+        "name": "Телевизор LED Smart Samsung, 49'",
+        "cathegory": "TV, Електроника & Gaming",
+        "subcathegory": "Телевизори",
+        "type": "Телевизори",
+        "quantity": "100",
+        "availability": true,
+        "main_url": "https://s11emagst.akamaized.net/products/5440/5439355/images/res_3cd0de14b84cf6d5a8472dca72b8cae4_450x450_vgcd.jpg",
+        "brand": "Samsung",
+        "price": "1249.99",
+        "salePrice": "1099.99",
+        "onSale": true,
+        "description": "Истинският 4K UHD телевизор UHD резолюция Изживейте подробности с 4 пъти по-висока резолюция на HD телевизор. Всичко, което видите, ще изглежда по-добре с реалистични цветове и яркост. PurColor Насладете се на естествения цвят с PurColor. Обърнете внимание на това, което телевизорът може да предложи и ще забележите всички цветове на природата в най-точни подробности.",
+        "specifics": [
+            {
+                "name": "Тип",
+                "spec": "LED"
+            },
+            {
+                "name": "Тип телевизор",
+                "spec": "Smart TV"
+            },
+            {
+                "name": "Диагонал на екрана (см)",
+                "spec": "123"
+            },
+            {
+                "name": "Резолюция на екрана (пиксели)",
+                "spec": "3840 x 2160"
+            },
+            {
+                "name": "Тип дисплей",
+                "spec": "Извит"
+            }
+        ]
+    },
+    {
+        "id": "113",
+        "name": "Телевизор LED Smart Samsung 32J4500",
+        "cathegory": "TV, Електроника & Gaming",
+        "subcathegory": "Телевизори",
+        "type": "Телевизори",
+        "quantity": "100",
+        "availability": true,
+        "main_url": "https://s11emagst.akamaized.net/products/1096/1095060/images/res_eb625ff2e80664c6f769293a1f179034_450x450_fho3.jpg",
+        "brand": "Samsung",
+        "price": "474.99",
+        "salePrice": "",
+        "onSale": false,
+        "description": "Посредством усъвършенстван алгоритъм за подобряване на качеството на изображението, технологията Wide Colour Enhancer на Samsung повишава изключително много качеството на всяко изображение и разкрива скритите детайли. С Wide Colour Enhancer сега виждате цветовете такива, каквито е предвидено да бъдат. Достъп до интернет без допълнителни устройства ",
+        "specifics": [
+            {
+                "name": "Тип",
+                "spec": "LED"
+            },
+            {
+                "name": "Тип телевизор",
+                "spec": "Smart TV"
+            },
+            {
+                "name": "Диагонал на екрана (см)",
+                "spec": "80"
+            },
+            {
+                "name": "Резолюция на екрана (пиксели)",
+                "spec": "1366 x 768"
+            },
+            {
+                "name": "Тип дисплей",
+                "spec": "Плосък"
+            }
+        ]
+    },
+    {
+        "id": "114",
+        "name": "Apple iPod Touch 16gb, Space Gray",
+        "cathegory": "TV, Електроника & Gaming",
+        "subcathegory": "Електроника",
+        "type": "iPod",
+        "quantity": "100",
+        "availability": true,
+        "main_url": "https://s11emagst.akamaized.net/products/1832/1831303/images/res_996293e549a14cf71e2975885b415191_450x450_6im4.jpg",
+        "brand": "Apple",
+        "price": "399.99",
+        "salePrice": "",
+        "onSale": false,
+        "description": "Apple iPod Touch 16gb",
+        "specifics": [
+            {
+                "name": "Капацитет",
+                "spec": "16 GB"
+            },
+            {
+                "name": "Поддържани формати",
+                "spec": "HE-AAC; Motion JPEG (M-JPEG) до 35 Mbps, 1280 х 720 пиксела; WAV; MP3 VBR; Protected AAC; MPEG-4 видео: до 2.5 Mbps, 640 х 480 пиксела; Apple Lossless; MP3; AAC; H.264 видео: 720p; Audible (Audible Enhanced 2-3-4 формат Audio, AAX и AAX +)"
+            },
+            {
+                "name": "Тегло",
+                "spec": "88гр"
+            }
+        ]
+    },
+    {
+        "id": "115",
+        "name": "Apple iPod Touch, 128 Gb",
+        "cathegory": "TV, Електроника & Gaming",
+        "subcathegory": "Електроника",
+        "type": "iPod",
+        "quantity": "100",
+        "availability": true,
+        "main_url": "https://s11emagst.akamaized.net/products/8985/8984942/images/res_38c1840f5181365f81ba256530b2e922_450x450_j4bo.jpg",
+        "brand": "Apple",
+        "price": "739.99",
+        "salePrice": "",
+        "onSale": false,
+        "description": "Apple iPod Touch 128gb, GOLD",
+        "specifics": [
+            {
+                "name": "Капацитет",
+                "spec": "128 GB"
+            },
+            {
+                "name": "Поддържани формати",
+                "spec": "HE-AAC; Motion JPEG (M-JPEG) до 35 Mbps, 1280 х 720 пиксела; WAV; MP3 VBR; Protected AAC; MPEG-4 видео: до 2.5 Mbps, 640 х 480 пиксела; Apple Lossless; MP3; AAC; H.264 видео: 720p; Audible (Audible Enhanced 2-3-4 формат Audio, AAX и AAX +)"
+            },
+            {
+                "name": "Тегло",
+                "spec": "88гр"
+            }
+        ]
+    },
+    {
+        "id": "116",
+        "name": "Слушалки In-ear Sony MDREX15LPB",
+        "cathegory": "TV, Електроника & Gaming",
+        "subcathegory": "Електроника",
+        "type": "Аудио слушалки",
+        "quantity": "100",
+        "availability": true,
+        "main_url": "https://s11emagst.akamaized.net/products/636/635232/images/res_345b7f9aa3af27f332436a1a6ef43b3e_450x450_k14n.jpg",
+        "brand": "Sony",
+        "price": "14.99",
+        "salePrice": "",
+        "onSale": false,
+        "description": "Удобени, силиконови, интуитивни и със сигурно закрепване.",
+        "specifics": [
+            {
+                "name": "Дизайн",
+                "spec": "In ear"
+            },
+            {
+                "name": "Технология",
+                "spec": "С кабел"
+            },
+            {
+                "name": "Честота (Hz)",
+                "spec": "8 - 22000"
+            }
+        ]
+    },
+    {
+        "id": "116",
+        "name": "Слушалки Sony MDRZX110APB",
+        "cathegory": "TV, Електроника & Gaming",
+        "subcathegory": "Електроника",
+        "type": "Аудио слушалки",
+        "quantity": "100",
+        "availability": true,
+        "main_url": "https://s11emagst.akamaized.net/products/672/671834/images/res_52c6ac818d2b735c5ba38bf0102c714d_450x450_ujrc.jpg",
+        "brand": "Sony",
+        "price": "34.99",
+        "salePrice": "",
+        "onSale": false,
+        "description": "Неодимовите динамични възбудители осигуряват прецизен звук Леките 30-милиметрови динамични неодимови възбудители позволяват на слушалките да представят силен, ритмичен отклик дори за най-взискателния запис. В комбинация с високо чувствителна диафрагма ще можете да усилите слушалките повече – без необходимост от усилвател – и все така да се радвате на ясен, прецизен звук в целия диапазон. Въртящата се сгъваема конструкция улеснява пътуванията Вземете тези слушалки навсякъде. Въртящата се конструкция на наушниците на слушалките позволява лесно съхранение, когато не ги използвате, и подобрява преносимостта, когато пътувате.",
+        "specifics": [
+            {
+                "name": "Дизайн",
+                "spec": "On ear"
+            },
+            {
+                "name": "Технология",
+                "spec": "С кабел"
+            },
+            {
+                "name": "Честота (Hz)",
+                "spec": "12 - 22000"
+            }
+        ]
+    },
+    {
+        "id": "117",
+        "name": "Слушалки с лента Panasonic RP-HF100ME-P",
+        "cathegory": "TV, Електроника & Gaming",
+        "subcathegory": "Електроника",
+        "type": "Аудио слушалки",
+        "quantity": "100",
+        "availability": true,
+        "main_url": "https://s11emagst.akamaized.net/products/3985/3984501/images/res_b692ac3d1caaad172fe76a62ec35dc78_450x450_md4f.jpg",
+        "brand": "Panasonic",
+        "price": "31.99",
+        "salePrice": "",
+        "onSale": false,
+        "description": "Panasonic RP-HF100ME-P",
+        "specifics": [
+            {
+                "name": "Дизайн",
+                "spec": "С диадема за придържане"
+            },
+            {
+                "name": "Технология",
+                "spec": "С кабел"
+            },
+            {
+                "name": "Честота (Hz)",
+                "spec": "10-23000"
+            }
+        ]
+    },
+    {
+        "id": "118",
+        "name": "Аудио слушалки on-ear Panasonic, RP-HF400BE-W",
+        "cathegory": "TV, Електроника & Gaming",
+        "subcathegory": "Електроника",
+        "type": "Аудио слушалки",
+        "quantity": "100",
+        "availability": true,
+        "main_url": "https://s11emagst.akamaized.net/products/8672/8671192/images/res_85f0d2c4f32fdec022bcb34f311b0c78_450x450_4fof.jpg",
+        "brand": "Panasonic",
+        "price": "88.99",
+        "salePrice": "",
+        "onSale": false,
+        "description": "Panasonic RP-HF400BE-W",
+        "specifics": [
+            {
+                "name": "Дизайн",
+                "spec": "С лента за придържане On-Ear"
+            },
+            {
+                "name": "Технология",
+                "spec": "С кабел"
+            },
+            {
+                "name": "Честота (Hz)",
+                "spec": "10-23000"
+            }
+        ]
+    },
+    {
+        "id": "119",
+        "name": "Дигитален фотоапарат Nikon COOLPIX P900",
+        "cathegory": "TV, Електроника & Gaming",
+        "subcathegory": "Фото и Видео",
+        "type": "Компактни фотоапарати",
+        "quantity": "100",
+        "availability": true,
+        "main_url": "https://s11emagst.akamaized.net/products/1482/1481649/images/res_5da87d34caa4de3ebc3461008e07294d_450x450_fj8l.png",
+        "brand": "Nikon",
+        "price": "1049.99",
+        "salePrice": "",
+        "onSale": false,
+        "description": "Ако сте запален фотограф на дивата природа или на нощното небе, невероятното 83-кратно оптично увеличение на 16-мегапикселовия COOLPIX P900 ви дава възможност да улавяте детайли, невидими за невъоръженото око. Снимайте незабавно с бърз АФ и намалено закъснение при снимане, докато оптичното VR (намаляване на вибрациите) с двойно детектиране и 5,0 стопа намалява размазването в по-голяма степен. Наслаждавайте се на гъвкава композиция посредством дисплея с променлив ъгъл и вградения електронен визьор и заснемайте детайлни неподвижни изображения чрез супер телефото, както и Full HD филми. ",
+        "specifics": [
+            {
+                "name": "Резолюция сензор",
+                "spec": "16.0 Mp"
+            },
+            {
+                "name": "Поддържани файлови формати",
+                "spec": "JPEG"
+            },
+            {
+                "name": "Резолюции изображение",
+                "spec": "1600 x 1200; 2272 x 1704; 640 x 480; 4608 x 3456"
+            }
+        ]
+    },
+    {
+        "id": "120",
+        "name": "Дигитален фотоапарат Nikon COOLPIX WATERPROOF W100",
+        "cathegory": "TV, Електроника & Gaming",
+        "subcathegory": "Фото и Видео",
+        "type": "Компактни фотоапарати",
+        "quantity": "100",
+        "availability": true,
+        "main_url": "https://s11emagst.akamaized.net/products/4611/4610551/images/res_00cb2de6d6df80ce03e08b33aead38ef_450x450_g5rt.jpg",
+        "brand": "Nikon",
+        "price": "313.99",
+        "salePrice": "",
+        "onSale": false,
+        "description": "Споделяйте мигновено всички забавления през ваканцията с водоустойчивия COOLPIX W100.С него можете да влизате под вода¹ до 10 м. Освен това той е устойчив на удар² при падане от височина до 1,8 м, на студ до -10°C и на прах¹, което означава, че е проектиран да издържа на всички неблагоприятни въздействия, на които е изложен в ежедневието.Заснемайте висококачествени снимки и Full HD видеоклипове със стереозвук и прехвърляйте изображенията автоматично чрез приложението SnapBridge към смарт устройството си за лесно споделяне и съхранение. ",
+        "specifics": [
+            {
+                "name": "Резолюция сензор",
+                "spec": "13,2MP"
+            },
+            {
+                "name": "Поддържани файлови формати",
+                "spec": "JPEG"
+            },
+            {
+                "name": "Резолюции изображение",
+                "spec": "4160 x 3120; 1600 x 1200"
+            }
+        ]
+    },
+    {
+        "id": "121",
+        "name": "Фотоапарат DSLR Canon EOS 1300D BK",
+        "cathegory": "TV, Електроника & Gaming",
+        "subcathegory": "Фото и Видео",
+        "type": "Фотоапарати DSLR",
+        "quantity": "100",
+        "availability": true,
+        "main_url": "https://s11emagst.akamaized.net/products/3273/3272405/images/res_790ad5ea25a8b88727483717e6f413b7_450x450_kcmo.jpg",
+        "brand": "Canon",
+        "price": "609.99",
+        "salePrice": "",
+        "onSale": false,
+        "description": "Правете отличителни снимки, които ви правят различни Правете снимки с превъзходни детайли благодарение на големия 18,0-мегапикселов сензор с размер APS-C. Можете да разпечатвате изображенията в размери до A2 или да ги изрязвате за повече креативност, като запазвате удивителното им качество. ",
+        "specifics": [
+            {
+                "name": "Резолюция сензор",
+                "spec": "18.0MP"
+            },
+            {
+                "name": "Размери сензор (мм)",
+                "spec": "22,3 х 14,9"
+            },
+            {
+                "name": "Точки на фокус",
+                "spec": "9"
+            }
+        ]
+    },
+    {
+        "id": "122",
+        "name": "Фотоапарат DSLR Canon EOS 77D, 24.2MP",
+        "cathegory": "TV, Електроника & Gaming",
+        "subcathegory": "Фото и Видео",
+        "type": "Фотоапарати DSLR",
+        "quantity": "100",
+        "availability": true,
+        "main_url": "https://s11emagst.akamaized.net/products/5399/5398687/images/res_23cd1c9285c5fb03215453541d485b3a_450x450_ub7a.jpg",
+        "brand": "Canon",
+        "price": "2739.99",
+        "salePrice": "",
+        "onSale": false,
+        "description": " Заснемайте снимки с характер благодарение на функции и контроли, които ви дават богати възможности за творчество. Реализирайте потенциала си като фотограф. Проучете нови обекти и нови начини на заснемане. Усъвършенстваният автофокус поставя акцента в рязкостта точно където го искате, независимо дали използвате оптичния визьор на фотоапарата, или неговия сензорен екран с висока резолюция. Заснемането на серия от снимки до 6 fps ви позволява да уловите и най-мимолетните изражения. Мощна производителност ",
+        "specifics": [
+            {
+                "name": "Резолюция сензор",
+                "spec": "24.2MP"
+            },
+            {
+                "name": "Размери сензор (мм)",
+                "spec": "22,3 х 14,9"
+            },
+            {
+                "name": "Точки на фокус",
+                "spec": "45"
+            }
+        ]
+    },
+    {
+        "id": "123",
+        "name": "Видеокамера Sony HDR-CX240E",
+        "cathegory": "TV, Електроника & Gaming",
+        "subcathegory": "Фото и Видео",
+        "type": "Видеокамери",
+        "quantity": "100",
+        "availability": true,
+        "main_url": "https://s11emagst.akamaized.net/products/561/560132/images/res_062120fecaf4765547ec3ed98abe416e_450x450_93n9.jpg",
+        "brand": "Canon",
+        "price": "359.99",
+        "salePrice": "",
+        "onSale": false,
+        "description": "Уловете живота точно както го виждате. CX240E Handycam® включва мощен процесор за изображения BIONZ X, сензор Exmor R® CMOS и широкоъгълен обектив ZEISS. По-фино, по-бързо снимане. Новият процесор за изображения BIONZ X е бърз, мощен и намалява нивата на шума по цялото изображение. Той работи в тандем с детайлния сензор Exmor R® CMOS, за да пресъздаде вярно всеки аспект на сцената с прецизен, естествен детайл. ",
+        "specifics": [
+            {
+                "name": "Резолюция сензор",
+                "spec": "9.2 MP"
+            },
+            {
+                "name": "Размери сензор (мм)",
+                "spec": "1/5.8 '"
+            },
+            {
+                "name": "Брой сензори",
+                "spec": "1"
+            }
+        ]
+    },
+    {
+        "id": "124",
+        "name": "Видеокамера Sony Handycam® HDR-CX900E",
+        "cathegory": "TV, Електроника & Gaming",
+        "subcathegory": "Фото и Видео",
+        "type": "Видеокамери",
+        "quantity": "100",
+        "availability": true,
+        "main_url": "https://s11emagst.akamaized.net/products/638/637456/images/res_b8c4109d321b6ac84e05f6630a82009e_450x450_9h5g.jpg",
+        "brand": "Canon",
+        "price": "2999.99",
+        "salePrice": "",
+        "onSale": false,
+        "description": "Насладете се на 29 мм широкоъгълен обектив ZEISS, идеален за улавяне на просторни пейзажи. Той също предоставя до 12-кратно оптично мащабиране. Сензор Exmor R® CMOS тип 1.0 с подсветка. HDR-CX900E разполага с голям сензор Exmor R® CMOS с област за възприемане на светлината около 4,9 пъти по-голяма от тази на сензор тип 1/2.88. Нова система за обработка на изображения BIONZ X™",
+        "specifics": [
+            {
+                "name": "Резолюция сензор",
+                "spec": "14.2 MP"
+            },
+            {
+                "name": "Размери сензор (мм)",
+                "spec": "1/5.8'"
+            },
+            {
+                "name": "Брой сензори",
+                "spec": "1"
+            }
+        ]
     }
 ]

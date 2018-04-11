@@ -60,7 +60,7 @@ function productPageController() {
                         type: type
                     }
                     localStorage.setItem('product', JSON.stringify(productStorage));
-                    location.replace('#products');
+                    location.replace(`#products/${type}`);
                 })
 
                 //sticky nav bars:            

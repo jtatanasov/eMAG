@@ -1,7 +1,7 @@
 document.addEventListener('DOMContentLoaded', function () {
     function router() {
         var page = location.hash.slice(1);
-        if(page.search("products") >= 0){
+        if((page.search("products") >= 0) && (page.search("favorite") < 0)){
             page = "products";
         };
 

@@ -23,6 +23,8 @@ var userService = (function () {
     function isValidTitle(title) {
         return (title === 'mr' || title === 'mrs' || title === 'miss')
     }
+
+    
     User = function (email, fullname, password) {
         this.id = ++User.nextId;
 

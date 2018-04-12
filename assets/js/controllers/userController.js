@@ -147,8 +147,10 @@ function searchInput() {
                                     type: searchResult.type
                                 }
                                 localStorage.setItem('product', JSON.stringify(product));
-                                if (page != 'product')
+                                if (page != 'product') {
+                                    $('#search').val('');
                                     location.replace('#product');
+                                }
                                 else {
                                     location.reload();
                                 }

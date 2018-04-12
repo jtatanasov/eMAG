@@ -56,7 +56,12 @@ var userService = (function () {
         this.processingOrder = null;
     }
 
-    User.nextId = 0;
+    if (localStorage.getItem('users')) {
+        var lsUsers = JSON.parse(localStorage.getItem('users'));
+        User.nextId = lsUsers[lsUsers.length - 1].id;
+    } else {
+        User.nextId = 0;
+    }
 
     function UserStorage() {
         if (localStorage.getItem('users')) {

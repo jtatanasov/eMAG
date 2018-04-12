@@ -63,7 +63,6 @@ function myFavoriteProductsController() {
                 var tmpCart = new Cart();
                 currUserCartProducts.forEach(pr => tmpCart.addToCart(pr));
                 tmpCart.addToCart(product);
-                console.log(tmpCart);
                 userService.updateCart(user.id, tmpCart);
             });
             

@@ -421,7 +421,6 @@ function userController() {
                                 subcathegory: subcat.subcat,
                                 type: type
                             }
-                            console.log(type);
                             localStorage.setItem('product', JSON.stringify(product));
                             location.replace('#products/' + type);
                         });

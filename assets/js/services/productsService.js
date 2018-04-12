@@ -19,17 +19,29 @@ var productsService = (function () {
         var self = this;
         var path = "/assets/data/products.json"
         this._productsList = null;
-        loadProducts(path).then(function (data) {
-            self._productsList = data;
-            self.cathegories = [];
-            self._productsList.forEach(el => {
-                if (!self.cathegories.some(cath => cath === el.cathegory)) {
-                    self.cathegories.push(el.cathegory);
+        if (localStorage.getItem('productsList')) {
+            this._productsList = JSON.parse(localStorage.getItem('productsList'));
+            this.cathegories = [];
+            this._productsList.forEach(el => {
+                if (!this.cathegories.some(cath => cath === el.cathegory)) {
+                    this.cathegories.push(el.cathegory);
                 }
             });
-        }).catch(function (error) {
-            throw new Error("Error occured: " + error);
-        });
+        }
+        else {
+            loadProducts(path).then(function (data  ) {
+                self._productsList = data;
+                localStorage.setItem('productsList', JSON.stringify(self._productsList));
+                self.cathegories = [];
+                self._productsList.forEach(el => {
+                    if (!self.cathegories.some(cath => cath === el.cathegory)) {
+                        self.cathegories.push(el.cathegory);
+                    }
+                });
+            }).catch(function (error) {
+                throw new Error("Error occured: " + error);
+            });
+        }
     }
 
     ProductsList.prototype.getProduct = function (id) {
@@ -119,11 +131,11 @@ var productsService = (function () {
         })
     }
 
-    ProductsList.prototype.getProductById = function(productId) {
+    ProductsList.prototype.getProductById = function (productId) {
         return this._productsList.find(pr => pr.id == productId);
     }
 
-    ProductsList.prototype.searchProducts = function(name) {
+    ProductsList.prototype.searchProducts = function (name) {
         var product = this._productsList.find(pr => (pr.name.toLowerCase() == name.toLowerCase() || pr.name.toLowerCase().includes(name.toLowerCase())));
         return product;
     }

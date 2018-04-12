@@ -44,8 +44,6 @@ var filtersService = (function () {
         if (this.activeFilters.findIndex(el => el.name === name) < 0) {
             var toPush = this.allFilters[index]
             this.activeFilters.push(toPush);
-        } else {
-            console.log("already active")
         }
     }
 
@@ -131,7 +129,6 @@ var filtersService = (function () {
             toReturn.brandsFilter.availableBrands.forEach(br => {
                 tempArr = tempArr.concat(arr.filter(el => el.brand === br.brandName));
             });
-            console.log(toReturn.filterArray(tempArr));
             return toReturn.filterArray(tempArr);
         } else {
             return toReturn.filterArray(arr);
@@ -140,7 +137,3 @@ var filtersService = (function () {
 
     return toReturn;
 })();
-
-// arr = [{name: "samsung", availability: true},{name: "nokia", availability: true}];
-// availableProducts = filtersService.findFilter("showAvailable").pass(arr);
-// console.log(availableProducts)

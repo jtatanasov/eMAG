@@ -42,7 +42,6 @@ function typesOfProductsPageController() {
         }
 
         var loadProductsOnPage = function (arr) {
-            // currentAvailableProducts = filtersService.filterArray(productsType);
             currentAvailableProducts = filtersService.findFilter("ultimateFilter").pass(productsType);
             availablePages = productsService.numberOfPages(currentAvailableProducts);
 
@@ -118,9 +117,6 @@ function typesOfProductsPageController() {
                             $("#fave-activity-heart-icon").attr("src", "assets/images/icons/red-heart-icon.png");
                             $("#fave-activity-text").html("Продуктът беше добавен в списъка с любими.");
 
-                            // $("#fave-activity").animate({
-                            //     $(this).show("slide", { direction: "left" }, 1000)
-                            // })
 
                         } else {
                             userService.deleteFavorite(user.id, product.id);
@@ -203,25 +199,6 @@ function typesOfProductsPageController() {
                 var productsOnSale = filtersService.findFilter("productsOnSale").pass(currentAvailableProducts);
                 var brands = filtersService.findFilter("availableBrands").pass(currentAvailableProducts);
 
-                //add brands side:
-                // filtersService.clearAllBrands();
-                // brands.forEach(el => {
-                //     console.log("206 - el => " + el)
-                //     filtersService.addABrand(currentAvailableProducts, el);
-                // })
-
-                // var brandsToLoop = filtersService.brandsFilter.allBrands;
-                // $("#manufacturer-filter-ul>li").each(function(){
-                //     var elId = (this.id).slice(0, -3);
-                //     var thisId = this.id;
-                //     if(brandsToLoop.findIndex(el => el.brandName == elId) >= 0){
-                //         var availableCurrBrand = filtersService.findFilter("filterByBrand").pass(currentAvailableProducts, elId);
-                //         $(`#${thisId}>span`).html(`(${availableCurrBrand.length})`);
-                //     } else {
-                //         $(`#${thisId}>span`).html(`(${0})`);
-                //     }
-                // });
-
                 //filters specifics
                 //availability
                 $($("#availability-filter ~ span")[0]).html(`(${availableProducts.length})`);
@@ -272,11 +249,6 @@ function typesOfProductsPageController() {
                         clearProductsOnPage();
                         loadProductsOnPage();
                     });
-
-                    // //TODO: логиката на буферния бутон??
-                    // if((availablePages.length > 4) && (index )){
-                    //     $(`<button disabled id="buffer-button">...</button>`).insertBefore(elToAppend);
-                    // }
                 })
 
                 //disable buttons
@@ -291,13 +263,9 @@ function typesOfProductsPageController() {
                     $("#forward-page").prop('disabled', false);
                 }
 
-                //TODO: придвиживане с бутоните за страниците отдолу
-                //TODO: delete filter event listener
                 $($(".delete-filter").parent()[0]).on("click", function (event) {
                     currentPage = 1;
                     var filterID = $(event.target).prev("select").attr('id');
-                    // var filter = event.target.closest("select").id;
-                    // console.log(filter);
                     if (filterID == "availability-select") {
                         $("#filters-top-nav-availability").css({ "display": "none" });
                         $("#availability-filter-list").parent().children("li").toArray().forEach(el => $(el).children().trigger("click"));
@@ -362,16 +330,11 @@ function typesOfProductsPageController() {
                     var updateProduct = JSON.parse(localStorage.getItem('product'));
                     updateProduct.type = currType;
                     localStorage.setItem("product", JSON.stringify(updateProduct));
-                    console.log(updateProduct);
-                    // window.location.reload(true);
                     location.replace(`#products/${currType}`);
                 });
 
                 //adding brands        
                 //BRANDS BEGINING ++++++++++++++++++++
-
-                // var forListening = $(`#manufacturer-filter-list>li`);
-                // var checkbox = $(`#manufacturer-filter-list>li>input[type=checkbox]`);
 
                 filtersService.brandsFilter.allBrands.forEach(el => {
                     $("#manufacturer-filter-ul").append(`<li id="${el.brandName}-li">
@@ -410,33 +373,27 @@ function typesOfProductsPageController() {
 
                         filtersService.addAvailableBrand(brandName);
                         var currentAvailableProducts = filtersService.brandsFilter.getAllAvailableBrandsProducts;
-                        clearProductsOnPage();
-                        loadProductsOnPage();
                     } else {
                         filtersService.removeAvailableBrand(brandName);
-                        if (filtersService.brandsFilter.activeFilters <= 0) {
+                        if (filtersService.brandsFilter.activeBrands <= 0) {
                             $("#filters-top-nav-distributor").css({ 'display': 'none' })
                             if ($("#filters-top-nav-availability").css({ "display": "none" })) {
                                 ($('#hr-filters-nav-top').css({ 'display': 'none' }));
                             }
                         }
-                        clearProductsOnPage();
-                        loadProductsOnPage();
-                    }
-                })
 
-                // $('#manufacturer-filter-ul>li').on("change", function(event){
-                //     var active = 0;
-                //     $('#manufacturer-filter-ul>li>input[type=checkbox]').each(function(){
-                //         if($(this).is(":checked")){
-                //             active++;
-                //         }
-                //     })
-                //     console.log(active);
-                //     if(active <= 0){
-                //         console.log("whoops")
-                //     }
-                // });
+                    }
+
+                    if (filtersService.brandsFilter.activeBrands > 1) {
+                        $("#distributor-select").prepend(`<option value="basic" id="basic-distributors-filter" selected disabled'>${filtersService.brandsFilter.activeBrands} филтри</option>`)
+                    } else {
+                        if ($("#basic-distributors-filter").length > 0) {
+                            $("#basic-distributors-filter").remove();
+                        }
+                    }
+                    clearProductsOnPage();
+                    loadProductsOnPage();
+                })
 
 
                 // BRANDS END ++++++++++++++++++++++++++++++++
@@ -508,7 +465,6 @@ function typesOfProductsPageController() {
                         }
                         filtersService.activateFilter(filterName);
                         filtersService.deactivateFilter("showAvailable");
-                        console.log(filtersService.activeFilters)
                     } else {
                         $("#filters-top-nav-availability").css({ "display": "none" });
                         if (!($('#hr-filters-nav-top').css('display') == 'none')
